@@ -17,15 +17,15 @@ get_header(); ?>
 <section class="clearfix vmarg-half">
   <h2 class="center">Containers</h2>
   <p class="center">Scratch Theme comes with 3 different containers.</p>
-  <figure class="flex-contain hpad clearfix block-image vmarg-half gray-bg">
+  <figure class="flex-contain hpad clearfix block-image gray-bg">
     <figcaption class="center valign">
       <small>Flex-Contain</small>
     </figcaption>
-  </figure>
-  <figure class="wrap hpad clearfix block-image vmarg-half gray-bg">
+  </figure><br>
+  <figure class="wrap hpad clearfix block-image gray-bg">
     <figcaption class="center valign"><small>Wrap</small></figcaption>
-  </figure>
-  <figure class="contain hpad clearfix block-image vmarg-half gray-bg">
+  </figure><br>
+  <figure class="contain hpad clearfix block-image gray-bg">
     <figcaption class="center valign"><small>Contain</small></figcaption>
   </figure>
 </section>
