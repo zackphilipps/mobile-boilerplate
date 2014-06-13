@@ -1,0 +1,14 @@
+{
+  "name": "ts-boilerplate",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-newer": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

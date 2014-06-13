@@ -1,0 +1,20 @@
+$px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
+
+@import '../core/scss/mixins';
+@import '../core/scss/variables';
+@import 'custom-variables';
+@import '../core/scss/normalize';
+@import '../core/scss/main';
+@import '../core/scss/grid-always';
+@import '../core/scss/grid'; /* Older versions of IE do not support media queries */
+@import '../core/scss/global';
+@import 'custom-global';
+@import 'header'; /* (for header.php) */
+@import 'page'; /* (for page.php) */
+@import 'archive'; /* (for archive.php) */
+@import 'single'; /* (for single.php) */
+@import 'home';
+@import 'footer'; /* (for footer.php) */
+@import 'responsive';
+
+/* Obviously if you`re renaming/creating the files the imports must match. :) */

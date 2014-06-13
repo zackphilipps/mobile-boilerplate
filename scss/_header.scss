@@ -1,0 +1,124 @@
+/********************HEADER********************/
+
+#header {
+  background-color: $olive;
+  .logo {
+    display: block;
+    max-width: 320px;
+    height: 80px;
+    width: 100%;
+    float: left;
+    figure {
+      height: 100%;
+      @include background(center center, no-repeat, contain);
+    }
+  }
+  .scratch-logo {
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    float: left;
+    span {
+      font-size: u(2rem);
+      font-family: $sanslight;
+      color: $white;
+    }
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Adds dropdown support, gives a good example of nesting
+ * with SCSS. The classes are specific to the Scratch
+ * Theme for WordPress. If you are not using Scratch, you
+ * can simply get rid of them.
+ */
+
+nav ul.main-nav {
+    display: none;
+	list-style: none;
+	position: absolute;
+    width: 100%;
+    top: 56px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    @extend .clearfix;
+    li {
+        display: block;
+        text-align: center;
+        a, a:link, a:active, a:visited {
+            background-color: $olive;
+            color: $white;
+            display: block;
+            padding: u(0.5rem 1rem);
+        }
+        a:hover, a:focus {
+    
+        }
+    }
+}
+
+@include w_breakpoint('p_ipad') {
+  nav ul.main-nav {
+      position: relative;
+      width: auto;
+      top: 0.25em;
+      float: right;
+      display: block;
+      li {
+          float: left;
+          a, a:link, a:active, a:visited {
+              background-color: transparent;
+              border-bottom: 0;
+              margin-right: u(0.5rem);
+          }
+          a:hover, a:focus {
+      
+          }
+      }
+      ul.sub-menu {
+          padding: 0;
+          position: absolute;
+          top: 100%;
+          display: none;
+          li {
+              float: none;
+              position: relative;
+              a, a:link, a:active, a:visited {
+                  margin-right: 0;
+              }
+              a:hover, a:focus {
+      
+              }
+          }
+          ul {
+              position: absolute;
+              left: 100%;
+              top: 0;
+          }
+      }
+  }
+  
+  nav ul.main-nav li:hover > ul.sub-menu {
+      display: block;
+  }
+}
+
+.nav-toggle {
+  @include w_breakpoint('p_ipad') {
+      display: none;
+  }
+  color: $white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  margin-bottom: 0;
+  font-size: u(2rem);
+  @include easing;
+  &.active {
+      transform: rotate(-90deg);
+  }
+}

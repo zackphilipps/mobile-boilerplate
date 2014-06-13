@@ -1,0 +1,22 @@
+$px-only: false; /* for http://davidwalsh.name/rem-px-browser-function-sass */
+
+@import '../core/scss/mixins';
+@import '../core/scss/variables';
+@import 'custom-variables';
+@import '../core/scss/normalize';
+@import '../core/scss/main';
+@import '../core/scss/grid-always';
+@media (min-width: 767px) {
+    @import '../core/scss/grid';
+}
+@import '../core/scss/global';
+@import 'custom-global';
+@import 'header'; /* (for header.php) */
+@import 'page'; /* (for page.php) */
+@import 'archive'; /* (for archive.php) */
+@import 'single'; /* (for single.php) */
+@import 'home';
+@import 'footer'; /* (for footer.php) */
+@import 'responsive';
+
+/* Obviously if you`re renaming/creating the files the imports must match. :) */

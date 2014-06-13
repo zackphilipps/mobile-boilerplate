@@ -1,0 +1,68 @@
+/********************CUSTOM VARIABLES********************/
+
+/********* Custom fonts example (put others below here) *********/
+@include font-face('open_sansregular', '../fonts', 'opensans-regular-webfont');
+$sans: 'open_sansregular', sans-serif;
+
+@include font-face('open_sanslight', '../fonts', 'opensans-light-webfont');
+$sanslight: 'open_sanslight', sans-serif;
+
+/********* Custom colors example (modify as needed) *********/
+
+/*
+Cool
+*/
+
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+/*
+Warm
+*/
+
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+/*
+Gray Scale 
+*/
+
+$white:  #fff;
+$gray:   #eee;
+$silver: #aaa;
+$black:  #444;
+
+/* Color classes (modify as needed) */
+
+.aqua { color: $aqua; } .aqua-bg { background-color: $aqua; }
+.blue { color: $blue; } .blue-bg { background-color: $blue; }
+.navy { color: $navy; } .navy-bg { background-color: $navy; }
+.teal { color: $teal; } .teal-bg { background-color: $teal; }
+.green { color: $green; } .green-bg { background-color: $green; }
+.olive { color: $olive; } .olive-bg { background-color: $olive; }
+.lime { color: $lime; } .lime-bg { background-color: $lime; }
+
+.yellow { color: $yellow; } .yellow-bg { background-color: $yellow; }
+.orange { color: $orange; } .orange-bg { background-color: $orange; }
+.red { color: $red; } .red-bg { background-color: $red; }
+.fuchsia { color: $fuchsia; } .fuchsia-bg { background-color: $fuchsia; }
+.purple { color: $purple; } .purple-bg { background-color: $purple; }
+.maroon { color: $maroon; } .maroon-bg { background-color: $maroon; }
+
+.white { color: $white; } .white-bg { background-color: $white; }
+.silver { color: $silver; } .silver-bg { background-color: $silver; }
+.gray { color: $gray; } .gray-bg { background-color: $gray; }
+.black { color: $black; } .black-bg { background-color: $black; }
+
+/*
+ * CUSTOM MIXINS below here
+ */
