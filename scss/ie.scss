@@ -1,5 +1,6 @@
 $px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
 
+@import 'plugins/ionicons';
 @import '../core/scss/mixins';
 @import '../core/scss/variables';
 @import 'custom-variables';
@@ -15,6 +16,8 @@ $px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
 @import 'single'; /* (for single.php) */
 @import 'home';
 @import 'footer'; /* (for footer.php) */
+@import 'plugins/glide';
+@import 'plugins/magnific';
 @import 'responsive';
 
 /* Obviously if you`re renaming/creating the files the imports must match. :) */

@@ -1,0 +1,79 @@
+/********************GLIDE********************/
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  @include easing(0.4s, 0s);
+}
+
+.slide {
+  height: 100%;
+  float: left;
+  clear: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: block;
+  @include background;
+}
+
+.slider-arrow {
+  position: absolute;
+  display: block;
+  margin-bottom: -20px;
+  padding: 20px;
+  @include icons;
+  font-size: 2.5em;
+}
+
+.slider-arrow--right {
+  bottom: 50%;
+  right: 30px;
+  &:before {
+    content: '\f152';
+  }
+}
+
+.slider-arrow--left {
+  bottom: 50%;
+  left: 30px;
+  &:before {
+    content: '\f150';
+  }
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+}
+
+.slider-nav__item {
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #fff;
+  @include circle;
+}
+
+.slider-nav__item:hover {
+  background: #ccc;
+}
+
+.slider-nav__item--current {
+  background: #ccc;
+}

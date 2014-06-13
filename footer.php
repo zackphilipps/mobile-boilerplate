@@ -24,6 +24,34 @@
       $('#menu-main-nav').slideToggle('fast');
       $(this).toggleClass('active');
     });
+    $('.popup-link').magnificPopup({
+      type:'inline',
+      midClick: true
+    });
+    $('.popup-gallery').each(function() {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1]
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title');
+                }
+            }
+        });
+    });
+    $('.scroll-link').click(function() {
+      $(this).blur();
+      $($(this).attr('href'))
+        .velocity('scroll', 400);
+    });
   });
 </script>
 
