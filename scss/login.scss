@@ -1,5 +1,7 @@
-@import 'standards/mixins';
-@import 'standards/variables';
+$px-only: false; /* for http://davidwalsh.name/rem-px-browser-function-sass */
+
+@import '../core/scss/mixins';
+@import '../core/scss/variables';
 @import 'custom-variables';
 @import 'custom-global';
 

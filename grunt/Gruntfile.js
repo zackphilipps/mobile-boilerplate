@@ -68,7 +68,7 @@ module.exports = function(grunt) {
                 tasks: ['newer:imagemin']
             },
             js: {
-                files: ['../js/*.js'],
+                files: ['../js/**/*.js'],
                 tasks: ['concat:js', 'uglify:js']
             },
             css: {

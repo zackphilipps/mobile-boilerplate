@@ -159,7 +159,7 @@ $pixelBase : 16;
       $list: append($list, ($val * $pixelBase) + px);
     }
 
-    @else if($unit == 'px') or ($unit == 'rem'){
+    @else if($unit == 'px') or ($unit == 'rem') or ($unit == '') {
       $list: append($list, $value);
     }
 
