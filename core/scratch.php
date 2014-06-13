@@ -370,6 +370,11 @@ function my_theme_register_required_plugins() {
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
         array(
+			'name' 		=> 'Advanced Custom Fields',
+			'slug' 		=> 'advanced-custom-fields',
+			'required' 	=> false,
+		),
+        array(
 			'name' 		=> 'CloudFlare',
 			'slug' 		=> 'cloudflare',
 			'required' 	=> false,
@@ -394,7 +399,7 @@ function my_theme_register_required_plugins() {
 			'slug' 		=> 'post-duplicator',
 			'required' 	=> false,
 		),
-      array(
+        array(
 			'name' 		=> 'Relevanssi - A Better Search',
 			'slug' 		=> 'relevanssi',
 			'required' 	=> false,
