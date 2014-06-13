@@ -133,21 +133,11 @@ function theme_js() {
     
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.1.min.js', array(), false, false );
     
-    wp_enqueue_script( 'helper', get_template_directory_uri() . '/js/helper.js', array('jquery'), false, true );
-    wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array(), false, true );
-    
-/*
- * Use the line below if NOT using grunt
- */
-    wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), false, true );
-    
-/*
- * Uncomment one of the lines below if you ARE using grunt -- this will be the only script you need to enqueue
- * (and modernizr, of course)
- */
+    /*wp_enqueue_script( 'helper', get_template_directory_uri() . '/js/helper.js', array('jquery'), false, true );
+    wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array(), false, true );*/
   
     /* FOR DEVELOPMENT */
-    /*wp_enqueue_script( 'main', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), false, true );*/
+    wp_enqueue_script( 'main', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), false, true );
   
     /* FOR PRODUCTION */
     /*wp_enqueue_script( 'main', get_template_directory_uri() . '/js/compiled/main.min.js', array('jquery'), false, true );*/
