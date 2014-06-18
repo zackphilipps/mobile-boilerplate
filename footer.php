@@ -47,7 +47,8 @@
             }
         });
     });
-    $('.scroll-link').click(function() {
+    $('.scroll-link').click(function(e) {
+      e.preventDefault();
       $(this).blur();
       $($(this).attr('href'))
         .velocity('scroll', 400);

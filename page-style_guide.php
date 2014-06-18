@@ -8,7 +8,7 @@ get_header(); ?>
 
 <header class="wrap hpad clearfix">
   <h1 class="center">Scratch Theme Style Guide</h1>
-  <p class="center">For a complete list of CSS helper classes, see <code>core/scss/_global.scss</code>. (Don't edit; it's for reference.)</p>
+  <p class="center">For a complete list of CSS helper classes, see <a href="https://github.com/zackphilipps/scratch-theme/blob/master/core/scss/_global.scss">core/scss/_global.scss</a>. (Don't edit; view it for reference.)</p>
   <p class="center">To make visible changes to the Style Guide, you'll need to edit <code>scss/_custom-variables.scss</code>, <code>scss/_custom-global.scss</code>, and <code>page-style_guide.php</code>.</p>
   <p class="center">Feel free to right-click anything and select "Inspect Element" to see color codes, fonts, etc. See the <a href="http://www.html5rocks.com/en/tutorials/developertools/part1/">Introduction to Chrome Developer Tools.</a> Resize your browser window to see how the different elements behave.</p>
   <p class="center">View <a href="http://scratchtheme.com">the Scratch Theme website</a> for further documentation.</p>
