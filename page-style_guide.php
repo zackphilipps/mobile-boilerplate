@@ -8,27 +8,10 @@ get_header(); ?>
 
 <header class="wrap hpad clearfix">
   <h1 class="center">Scratch Theme Style Guide</h1>
-  <p class="center">For a complete list of CSS helper classes, see <a href="https://github.com/zackphilipps/scratch-theme/blob/master/core/scss/_global.scss">core/scss/_global.scss</a>. (Don't edit; view it for reference.)</p>
-  <p class="center">To make visible changes to the Style Guide, you'll need to edit <code>scss/_custom-variables.scss</code>, <code>scss/_custom-global.scss</code>, and <code>page-style_guide.php</code>.</p>
+  <p class="center">To make visible changes to the Style Guide, you'll need to edit <a href="https://github.com/zackphilipps/scratch-theme/blob/master/scss/_custom-variables.scss">scss/_custom-variables.scss</a>, <a href="https://github.com/zackphilipps/scratch-theme/blob/master/scss/_custom-global.scss">scss/_custom-global.scss</a>, and <a href="https://github.com/zackphilipps/scratch-theme/blob/master/page-style_guide.php">page-style_guide.php</a>.</p>
   <p class="center">Feel free to right-click anything and select "Inspect Element" to see color codes, fonts, etc. See the <a href="http://www.html5rocks.com/en/tutorials/developertools/part1/">Introduction to Chrome Developer Tools.</a> Resize your browser window to see how the different elements behave.</p>
   <p class="center">View <a href="http://scratchtheme.com">the Scratch Theme website</a> for further documentation.</p>
 </header>
-
-<section class="clearfix vmarg-half">
-  <h2 class="center">Containers</h2>
-  <p class="center">Scratch Theme comes with 3 different containers.</p>
-  <figure class="flex-contain hpad clearfix block-image gray-bg">
-    <figcaption class="center valign">
-      <small>Flex-Contain</small>
-    </figcaption>
-  </figure><br>
-  <figure class="wrap hpad clearfix block-image gray-bg">
-    <figcaption class="center valign"><small>Wrap</small></figcaption>
-  </figure><br>
-  <figure class="contain hpad clearfix block-image gray-bg">
-    <figcaption class="center valign"><small>Contain</small></figcaption>
-  </figure>
-</section>
 
 <main class="wrap hpad clearfix">
 
