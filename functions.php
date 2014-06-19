@@ -115,13 +115,13 @@ function mobile_meta() { ?>
 
 function theme_styles() {
     
-    wp_enqueue_style( 'main', get_template_directory_uri() . '/css/master.css' );
+    wp_enqueue_style( 'scratch-main', get_template_directory_uri() . '/css/master.css' );
   
     global $wp_styles; /* call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way */
   
-    wp_register_style( 'ie', get_template_directory_uri() . '/css/ie.css' );
-    $wp_styles->add_data( 'ie', 'conditional', 'lt IE 9' );
-    wp_enqueue_style( 'ie' );
+    wp_register_style( 'scratch-ie', get_template_directory_uri() . '/css/ie.css' );
+    $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
+    wp_enqueue_style( 'scratch-ie' );
   
 }
 

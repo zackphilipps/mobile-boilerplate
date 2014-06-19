@@ -48,15 +48,22 @@ nav ul.main-nav {
     li {
         display: block;
         text-align: center;
-        a, a:link, a:active, a:visited {
+        a {
+          background-color: $olive;
+          color: $white;
+          display: block;
+          padding: u(0.5rem 1rem);
+          &:link, &:active, &:visited {
             background-color: $olive;
             color: $white;
-            display: block;
-            padding: u(0.5rem 1rem);
+          }
+          &:hover, &:focus {
+            
+          }
         }
-        a:hover, a:focus {
-    
-        }
+    }
+    ul.sub-menu {
+      display: none;
     }
 }
 
@@ -69,28 +76,33 @@ nav ul.main-nav {
       display: block;
       li {
           float: left;
-          a, a:link, a:active, a:visited {
+          a {
+            border-bottom: 0;
+            margin-right: u(0.5rem);
+            &:link, &:active, &:visited {
               background-color: transparent;
-              border-bottom: 0;
-              margin-right: u(0.5rem);
-          }
-          a:hover, a:focus {
-      
+            }
+            &:hover, &:focus {
+              
+            }
           }
       }
       ul.sub-menu {
+          background-color: $olive;
           padding: 0;
           position: absolute;
           top: 100%;
-          display: none;
           li {
               float: none;
               position: relative;
-              a, a:link, a:active, a:visited {
-                  margin-right: 0;
-              }
-              a:hover, a:focus {
-      
+              a {
+                margin-right: 0;
+                &:link, &:active, &:visited {
+                  
+                }
+                &:hover, &:focus {
+                  
+                }
               }
           }
           ul {
