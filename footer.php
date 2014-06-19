@@ -53,6 +53,11 @@
       $($(this).attr('href'))
         .velocity('scroll', 400);
     });
+    $('.slider').glide({
+      autoplay: false,
+      arrowRightText: '',
+      arrowLeftText: ''
+    });
   });
 </script>
 
