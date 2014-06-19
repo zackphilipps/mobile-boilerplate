@@ -72,6 +72,14 @@ em, i {
     
 }
 
+hr {
+  height: 1px;
+  width: 100%;
+  border: 0;
+  background-color: $gray;
+  margin: 3em auto; 
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $sans;
     small {
