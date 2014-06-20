@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 options: {
                     separator: ';'
                 },
-                src: ['../js/*.js'],
+                src: ['../core/js/*.js', '../js/helper.js', '../js/plugins.js', '../js/main.js'], /* add moar js here, but keep main.js last */
                 dest: '../js/concat/main.js'
             }
         },
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                     "../css/master.css" : "../scss/master.scss",
                     "../css/ie.css" : "../scss/ie.scss",
                     "../css/login.css" : "../scss/login.scss"
-                }
+                } /* add moar master files here */
             }
         },
         autoprefixer: {

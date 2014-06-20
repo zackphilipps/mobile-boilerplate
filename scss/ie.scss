@@ -1,23 +1,45 @@
 $px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
 
-@import 'plugins/ionicons';
+/*
+ * FOUNDATION
+ * Do not change the order of these imports.
+ */
+
+@import '../core/scss/ionicons';
 @import '../core/scss/mixins';
 @import '../core/scss/variables';
 @import 'custom-variables';
 @import '../core/scss/normalize';
 @import '../core/scss/main';
 @import '../core/scss/grid-always';
-@import '../core/scss/grid'; /* Older versions of IE do not support media queries */
+@import '../core/scss/grid'; /* older versions of IE do not support media queries */
 @import '../core/scss/global';
 @import 'custom-global';
+
+
+/*
+ * MIDDLE STUFF
+ * You're free to rearrange these how you like.
+ */
+
 @import 'header'; /* (for header.php) */
 @import 'page'; /* (for page.php) */
 @import 'archive'; /* (for archive.php) */
 @import 'single'; /* (for single.php) */
 @import 'home';
 @import 'footer'; /* (for footer.php) */
-@import 'plugins/glide';
-@import 'plugins/magnific';
+@import '../core/scss/glide'; /* for glide.js */
+@import '../core/scss/magnific'; /* for magnific popup */
+
+
+/*
+ * RESPONSIVE
+ * If you want a responsive stylesheet,
+ * it's best to import it last. This allows
+ * your @media queries to override other
+ * styles.
+ */
+
 @import 'responsive';
 
 /* Obviously if you`re renaming/creating the files the imports must match. :) */
