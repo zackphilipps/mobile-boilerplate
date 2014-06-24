@@ -4,8 +4,8 @@
   background-color: $olive;
   .logo {
     display: block;
-    max-width: 212px;
-    height: 80px;
+    max-width: 210px;
+    height: 56px;
     width: 100%;
     float: left;
     figure {
@@ -27,7 +27,7 @@ nav ul.main-nav {
 	list-style: none;
 	position: absolute;
     width: 100%;
-    top: 96px;
+    top: 72px;
     left: 0;
     margin: 0;
     padding: 0;
@@ -58,7 +58,7 @@ nav ul.main-nav {
   nav ul.main-nav {
       position: relative;
       width: auto;
-      top: 22px;
+      top: 10px;
       float: right;
       display: block;
       li {
@@ -112,7 +112,7 @@ nav ul.main-nav {
   color: $white;
   cursor: pointer;
   position: absolute;
-  top: 30px;
+  top: 16px;
   right: 16px;
   margin-bottom: 0;
   font-size: u(2rem);

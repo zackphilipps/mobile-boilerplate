@@ -131,7 +131,7 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function theme_js() {
     
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.1.min.js', array(), false, false );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.2.min.js', array(), false, false );
     
     /*wp_enqueue_script( 'helper', get_template_directory_uri() . '/js/helper.js', array('jquery'), false, true );
     wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array(), false, true );*/
@@ -179,7 +179,7 @@ function scratch_main_nav() {
 function scratch_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url('<?php echo get_template_directory_uri(); ?>/img/login-logo.png');
+            background-image: url('<?php echo get_template_directory_uri(); ?>/img/login-logo.svgz');
             -webkit-background-size: contain;
             -moz-background-size: contain;
             -ms-background-size: contain;
