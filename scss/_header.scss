@@ -4,27 +4,14 @@
   background-color: $olive;
   .logo {
     display: block;
-    max-width: 320px;
+    max-width: 212px;
     height: 80px;
     width: 100%;
     float: left;
     figure {
       height: 100%;
       @include background(center center, no-repeat, contain);
-    }
-  }
-  .scratch-logo {
-    display: block;
-    max-width: 320px;
-    width: 100%;
-    float: left;
-    span {
-      font-size: u(2rem);
-      font-family: $sanslight;
-      color: $white;
-    }
-    &:hover, &:focus {
-      text-decoration: none;
+      background-image: url('../img/site-logo.svgz');
     }
   }
 }
@@ -40,7 +27,7 @@ nav ul.main-nav {
 	list-style: none;
 	position: absolute;
     width: 100%;
-    top: 56px;
+    top: 96px;
     left: 0;
     margin: 0;
     padding: 0;
@@ -71,7 +58,7 @@ nav ul.main-nav {
   nav ul.main-nav {
       position: relative;
       width: auto;
-      top: 0.25em;
+      top: 22px;
       float: right;
       display: block;
       li {
@@ -125,7 +112,7 @@ nav ul.main-nav {
   color: $white;
   cursor: pointer;
   position: absolute;
-  top: 10px;
+  top: 30px;
   right: 16px;
   margin-bottom: 0;
   font-size: u(2rem);

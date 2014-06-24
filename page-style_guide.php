@@ -23,8 +23,6 @@ get_header(); ?>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
     
     <p>I barely knew Philip, but as a clergyman I have no problem telling his most intimate friends all about him. Ok, we'll go deliver this crate like professionals, and then we'll go ride the bumper cars. Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood! One hundred dollars. Say it in Russian! Who's brave enough to fly into something we all keep calling a death sphere?</p>
     
@@ -35,7 +33,6 @@ get_header(); ?>
     </ul>
     
     <blockquote>
-      <h3>Blockquote</h3>
       <p>Good man. Nixon's pro-war and pro-family. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
       <small> - A Clone of My Own</small>
     </blockquote>

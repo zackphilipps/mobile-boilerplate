@@ -179,7 +179,7 @@ function scratch_main_nav() {
 function scratch_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url('');
+            background-image: url('<?php echo get_template_directory_uri(); ?>/img/login-logo.png');
             -webkit-background-size: contain;
             -moz-background-size: contain;
             -ms-background-size: contain;

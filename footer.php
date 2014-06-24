@@ -21,7 +21,7 @@
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     $('.nav-toggle').click(function() {
-      $('#menu-main-nav').slideToggle('fast');
+      $('nav ul.main-nav').slideToggle('fast');
       $(this).toggleClass('active');
     });
     $('.popup-link').magnificPopup({

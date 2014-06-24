@@ -46,8 +46,8 @@
 <header id="header">
   <div class="wrap hpad vpad-half clearfix">
     
-    <a class="scratch-logo" href="http://scratchtheme.com" title="Scratch Theme for WordPress">
-      <span>Scratch Theme</span>
+    <a class="logo" href="http://scratchtheme.com" title="Scratch Theme for WordPress">
+      <figure></figure>
     </a>
       
     <span class="nav-toggle"><i class="icon ion-navicon"></i></span>
