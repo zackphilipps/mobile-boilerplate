@@ -140,7 +140,7 @@
  * http://davidwalsh.name/rem-px-browser-function-sass
  */
 
-$pixelBase : 16;
+$pixelBase : 18;
 
 @function parseInt($n) {
 	@return $n / ($n * 0 + 1);

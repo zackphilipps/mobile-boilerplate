@@ -4,6 +4,13 @@ body {
   color: $black;
   background-color: $white;
   @include sans;
+  /*
+   * if you change this font-size, you will
+   * also need to change the $pixelBase
+   * variable for the `REM to PX conversion 
+   * without duplicate CSS` function in 
+   * core/scss/_mixins.scss to match
+   */
   font-size: 18px;
   line-height: 1.375;
   @include w_breakpoint('p_ipad') {
