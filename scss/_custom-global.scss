@@ -3,6 +3,12 @@
 body {
   color: $black;
   background-color: $white;
+  @include sans;
+  font-size: 18px;
+  line-height: 1.375;
+  @include w_breakpoint('p_ipad') {
+      line-height: 1.5;
+  }
 }
 
 a {
@@ -55,7 +61,7 @@ p {
 
 blockquote, .blockquote {
     p, .p {
-    
+      @include sans-thin;
     }
     small, .small {
         &:before {
@@ -65,7 +71,7 @@ blockquote, .blockquote {
 }
 
 strong, b {
-    
+  @include sans-bold;
 }
 
 em, i {
@@ -81,7 +87,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    @include sans;
+    @include sans-thin;
     small {
         
     }
@@ -96,11 +102,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  
+  @include serif;
 }
 
 h4, .h4 {
-  
+  @include serif-bold;
 }
 
 h5, .h5 {

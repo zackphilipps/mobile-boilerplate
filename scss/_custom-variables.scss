@@ -1,17 +1,36 @@
 /********************CUSTOM VARIABLES********************/
 
 /********* Custom fonts example (put others below here) *********/
-@include font-face('open_sansregular', '../fonts', 'opensans-regular-webfont');
-@mixin sans {
-  font-family: 'open_sansregular', sans-serif;
+@include font-face('alegreyabold', '../fonts', 'alegreya-bold-webfont');
+@mixin serif-bold {
+  font-family: 'alegreyabold', 'Georgia', serif;
   font-weight: normal;
 }
 
-@include font-face('open_sanslight', '../fonts', 'opensans-light-webfont');
-@mixin sans-light {
-  font-family: 'open_sanslight', sans-serif;
+@include font-face('alegreyaregular', '../fonts', 'alegreya-regular-webfont');
+@mixin serif {
+  font-family: 'alegreyaregular', 'Georgia', serif;
   font-weight: normal;
 }
+
+@include font-face('alegreya_sanslight', '../fonts', 'alegreyasans-light-webfont');
+@mixin sans-thin {
+  font-family: 'alegreya_sanslight', sans-serif;
+  font-weight: normal;
+}
+
+@include font-face('alegreya_sansbold', '../fonts', 'alegreyasans-bold-webfont');
+@mixin sans-bold {
+  font-family: 'alegreya_sansbold', sans-serif;
+  font-weight: normal;
+}
+
+@include font-face('alegreya_sansregular', '../fonts', 'alegreyasans-regular-webfont');
+@mixin sans {
+  font-family: 'alegreya_sansregular', sans-serif;
+  font-weight: normal;
+}
+
 
 /********* Custom colors example (modify as needed) *********/
 
