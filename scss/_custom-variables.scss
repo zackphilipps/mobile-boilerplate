@@ -2,10 +2,16 @@
 
 /********* Custom fonts example (put others below here) *********/
 @include font-face('open_sansregular', '../fonts', 'opensans-regular-webfont');
-$sans: 'open_sansregular', sans-serif;
+@mixin sans {
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+}
 
 @include font-face('open_sanslight', '../fonts', 'opensans-light-webfont');
-$sanslight: 'open_sanslight', sans-serif;
+@mixin sans-light {
+  font-family: 'open_sanslight', sans-serif;
+  font-weight: normal;
+}
 
 /********* Custom colors example (modify as needed) *********/
 

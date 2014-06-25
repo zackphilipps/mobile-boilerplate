@@ -33,7 +33,7 @@ get_header(); ?>
     </ul>
     
     <blockquote>
-      <p>Good man. Nixon's pro-war and pro-family. Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
+      <p>Good man. Nixon's pro-war and pro-family. <strong>Son, as your lawyer</strong>, I declare y'all are in a <em>12-piece bucket o' trouble</em>. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
       <small> - A Clone of My Own</small>
     </blockquote>
 

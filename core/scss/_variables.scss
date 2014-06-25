@@ -1,11 +1,8 @@
 /********************VARIABLES********************/
 
 /* Colors */
-$black: lighten(black, 12%) !default;
-$white: darken(white, 12%) !default;
+$black: #444 !default;
+$gray: #eee !default;
+$white: #fff !default;
 
-/* Fonts */
-$sans: "Myriad Pro", Helvetica, sans-serif !default;
-$serif: Georgia, serif !default;
-
-/* Create your own custom colors/fonts in `_custom-variables.scss` */
+/* Create your own custom colors/fonts/mixins in `_custom-variables.scss` */

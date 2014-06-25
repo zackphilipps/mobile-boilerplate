@@ -23,7 +23,7 @@ button, .button {
   background-color: $olive;
   color: $white;
   padding: u(0.5rem 1rem);
-  font-family: $sans;
+  @include sans;
   @include easing;
   &:link, &:active, &:visited {
     background-color: $olive;
@@ -81,8 +81,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: $sans;
-    font-weight: normal;
+    @include sans;
     small {
         
     }

@@ -74,7 +74,7 @@ h4, .h4 {
 blockquote, .blockquote {
     padding: u(1rem 2rem);
     margin: u(0 0 2rem);
-    border-left: 5px solid darken($white, 20%);
+    border-left: 5px solid $gray;
     p, .p {
         font-size: u(1.25rem);
         font-weight: 300;
@@ -90,7 +90,7 @@ blockquote, .blockquote {
     small, .small {
         display: block;
         line-height: 1.428571429;
-        color: darken($white, 40%);
+        color: darken($gray, 20%);
     }
 }
 
