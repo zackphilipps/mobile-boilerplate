@@ -4,14 +4,9 @@
   background-color: $olive;
   .logo {
     display: block;
-    max-width: 245px;
-    height: 58px;
-    width: 100%;
     float: left;
-    figure {
-      height: 100%;
-      @include background(center center, no-repeat, contain);
-      background-image: url('../img/site-logo.svgz');
+    img {
+      max-width: 245px;
     }
   }
 }

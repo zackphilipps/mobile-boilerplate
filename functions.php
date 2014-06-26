@@ -185,7 +185,7 @@ function scratch_login_logo() { ?>
             -ms-background-size: contain;
             -o-background-size: contain;
             background-size: contain;
-            padding-bottom: 80px;
+            padding-bottom: 50px;
             width: 100%;
             height: 100%;
         }

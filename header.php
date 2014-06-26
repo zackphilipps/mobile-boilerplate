@@ -47,7 +47,7 @@
   <div class="wrap hpad vpad-half clearfix">
     
     <a class="logo" href="http://scratchtheme.com" title="Scratch Theme for WordPress">
-      <figure></figure>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
     </a>
       
     <span class="nav-toggle"><i class="icon ion-navicon"></i></span>
