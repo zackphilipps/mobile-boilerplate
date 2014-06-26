@@ -2,9 +2,15 @@
   <p class="center">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
 </footer>
 
+<div id="outdated">
+   <h6>Your browser is out-of-date!</h6>
+   <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+   <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
 <?php wp_footer(); ?>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 /* Uncomment this for a .svg to .png fallback (IE8 and below)
  * Filenames must be identical except the extension
  */
@@ -16,10 +22,15 @@
       });
     }
 });*/
-</script>
+</script>-->
 
 <script type="text/javascript">
   jQuery(document).ready(function($) {
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform'
+    });
     $('.nav-toggle').click(function() {
       $('nav ul.main-nav').slideToggle('fast');
       $(this).toggleClass('active');
