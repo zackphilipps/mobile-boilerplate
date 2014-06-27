@@ -1,47 +1,29 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
-<main>
+<main role="main">
 
 <p class="center">This is the single.php file</p>
-    
-
-
-
-
-  
-  
-  
   
   <section class="wrap hpad clearfix">
   
-  <?php if (have_posts()): ?>
-    <?php while (have_posts()): the_post(); ?>
-  
-    <article class="center">
+    <article id="post-<?php the_ID(); ?>"
+             <?php post_class(); ?>
+             role="article"
+             itemscope itemtype="http://schema.org/BlogPosting">
       
       <header>
-        <h2><?php the_title(); ?></h2>
+        <h1 itemprop="headline">
+          <?php the_title(); ?>
+        </h1>
       </header>
         
-      <?php the_content(); ?>
+      <div itemprop="articleBody">
+        <?php the_content(); ?>
+      </div>
       
     </article>
     
-    <?php endwhile; else: ?>
-    
-      <p>No posts here.</p>
-  
-  <?php endif; ?>
-  
   </section>
-
-
-
-
-
-
-
-
 
 </main>
 

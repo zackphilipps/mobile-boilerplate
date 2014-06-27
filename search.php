@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
-<main role="main">
+<main role="main" itemscope itemtype="http://schema.org/SearchResultsPage">
 
-<p class="center">This is the archive.php file</p>
+<p class="center">
+  <strong>Search results for:</strong>
+  <?php echo esc_attr(get_search_query()); ?>
+</p>
   
   <section class="wrap hpad clearfix">
   
@@ -11,19 +14,18 @@
   
     <article id="post-<?php the_ID(); ?>"
              <?php post_class(); ?>
-             role="article"
-             itemscope itemtype="http://schema.org/BlogPosting">
+             role="article">
       
       <header>
-        <a href="<?php the_permalink(); ?>"
-           title="<?php the_title_attribute(); ?>">
-          <h2 itemprop="headline">
+        <h2>
+          <a href="<?php the_permalink(); ?>"
+             title="<?php the_title_attribute(); ?>">
             <?php the_title(); ?>
-          </h2>
-        </a>
+          </a>
+        </h2>
       </header>
         
-      <div itemprop="articleBody">
+      <div itemprop="description">
         <?php the_content(); ?>
       </div>
       

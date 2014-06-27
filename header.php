@@ -52,7 +52,7 @@
       
     <span class="nav-toggle"><i class="icon ion-navicon"></i></span>
       
-    <nav id="nav">
+    <nav id="nav" role="navigation">
       <?php scratch_main_nav(); ?>
     </nav>
     

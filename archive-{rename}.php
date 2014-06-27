@@ -1,26 +1,23 @@
 <?php get_header(); ?>
 
-<main>
+<main role="main">
 
 <p class="center">This is the archive-{rename}.php file</p>
-    
-
-
-
-
-  
-  
-  
   
   <section class="wrap hpad clearfix">
   
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
   
-    <article class="center">
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
       
       <header>
-        <h2><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h2>
+        <h2>
+          <a href="<?php the_permalink(); ?>"
+             title="<?php the_title_attribute(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </h2>
       </header>
         
       <?php the_content(); ?>
@@ -35,14 +32,6 @@
   
   </section>
 
-
-
-
-
-
-
-
-
 </main>
-    
+
 <?php get_footer(); ?>

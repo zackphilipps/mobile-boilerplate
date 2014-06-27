@@ -1,47 +1,22 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
-<main>
+<main role="main">
 
 <p class="center">This is the single-{rename}.php file</p>
-    
-
-
-
-
-  
-  
-  
   
   <section class="wrap hpad clearfix">
   
-  <?php if (have_posts()): ?>
-    <?php while (have_posts()): the_post(); ?>
-  
-    <article class="center">
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
       
       <header>
-        <h2><?php the_title(); ?></h2>
+        <h1><?php the_title(); ?></h1>
       </header>
         
       <?php the_content(); ?>
       
     </article>
     
-    <?php endwhile; else: ?>
-    
-      <p>No posts here.</p>
-  
-  <?php endif; ?>
-  
   </section>
-
-
-
-
-
-
-
-
 
 </main>
 

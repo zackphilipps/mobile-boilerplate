@@ -176,23 +176,6 @@ function scratch_main_nav() {
 	));
 } /* end scratch main nav */
 
-function scratch_login_logo() { ?>
-    <style type="text/css">
-        body.login div#login h1 a {
-            background-image: url('<?php echo get_template_directory_uri(); ?>/img/login-logo.svgz');
-            -webkit-background-size: contain;
-            -moz-background-size: contain;
-            -ms-background-size: contain;
-            -o-background-size: contain;
-            background-size: contain;
-            padding-bottom: 50px;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'scratch_login_logo' );
-
 function scratch_login_stylesheet() { ?>
     <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_template_directory_uri() . '/css/login.css'; ?>" type="text/css" media="all" />
 <?php }

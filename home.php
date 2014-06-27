@@ -1,29 +1,31 @@
 <?php get_header(); ?>
 
-<main>
+<main role="main">
 
 <p class="center">This is the home.php file</p>
-    
-
-
-
-
-  
-  
-  
   
   <section class="wrap hpad clearfix">
   
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
   
-    <article class="center">
+    <article id="post-<?php the_ID(); ?>"
+             <?php post_class(); ?>
+             role="article"
+             itemscope itemtype="http://schema.org/BlogPosting">
       
       <header>
-        <h2><?php the_title(); ?></h2>
+        <a href="<?php the_permalink(); ?>"
+           title="<?php the_title_attribute(); ?>">
+          <h2 itemprop="headline">
+            <?php the_title(); ?>
+          </h2>
+        </a>
       </header>
         
-      <?php the_content(); ?>
+      <div itemprop="articleBody">
+        <?php the_content(); ?>
+      </div>
       
     </article>
     
@@ -34,14 +36,6 @@
   <?php endif; ?>
   
   </section>
-
-
-
-
-
-
-
-
 
 </main>
 
