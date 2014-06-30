@@ -380,6 +380,11 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
         array(
+			'name' 		=> 'CW Image Optimizer',
+			'slug' 		=> 'cw-image-optimizer',
+			'required' 	=> false,
+		),
+        array(
 			'name' 		=> 'Custom Post Type UI',
 			'slug' 		=> 'custom-post-type-ui',
 			'required' 	=> false,
@@ -387,6 +392,11 @@ function my_theme_register_required_plugins() {
         array(
 			'name' 		=> 'Relevanssi - A Better Search',
 			'slug' 		=> 'relevanssi',
+			'required' 	=> false,
+		),
+        array(
+			'name' 		=> 'Resize at Upload Plus',
+			'slug' 		=> 'resize-at-upload-plus',
 			'required' 	=> false,
 		),
         array(

@@ -3,27 +3,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [ 'watch' ]);
     
     grunt.initConfig({
-        imageNormalize: {
-          target: {
-            options: {
-              height: 1200,
-              preserveDirectories: true,
-              baseDirectory: "uploads"
-            },
-            src: ["../../../uploads/**/*.{png,jpg,jpeg,gif}"],
-            dest: "../../../uploads"
-          }
-        },
-        imagemin: {
-            dynamic: {  
-                files: [{
-                    expand: true,
-                    cwd: '../../../uploads',
-                    src: '**/*.{png,jpg,jpeg,gif}',
-                    dest: '../../../uploads'
-                }]
-            }
-        },
         concat: {
             js: {
                 options: {
@@ -74,10 +53,6 @@ module.exports = function(grunt) {
             php: {
                 files: ['../*.php']
             },
-            images: {
-                files: ['../../../uploads/**/*.{png,jpg,jpeg,gif}'],
-                tasks: ['newer:imagemin']
-            },
             js: {
                 files: ['../js/*.js', '../js/vendor/*.js'],
                 tasks: ['concat:js', 'uglify:js']
@@ -89,9 +64,6 @@ module.exports = function(grunt) {
         }
     });
     
-    grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-image-normalize');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
