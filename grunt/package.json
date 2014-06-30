@@ -5,6 +5,7 @@
     "grunt-cli": "latest",
     "grunt-newer": "latest",
     "grunt-contrib-imagemin": "latest",
+    "grunt-imageNormalize": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-sass": "latest",

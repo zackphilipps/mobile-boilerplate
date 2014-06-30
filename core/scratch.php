@@ -380,23 +380,8 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
         array(
-			'name' 		=> 'CMS Tree Page View',
-			'slug' 		=> 'cms-tree-page-view',
-			'required' 	=> false,
-		),
-        array(
 			'name' 		=> 'Custom Post Type UI',
 			'slug' 		=> 'custom-post-type-ui',
-			'required' 	=> false,
-		),
-        array(
-			'name' 		=> 'Optimize Database after Deleting Revisions',
-			'slug' 		=> 'rvg-optimize-database',
-			'required' 	=> false,
-		),
-        array(
-			'name' 		=> 'Post Duplicator',
-			'slug' 		=> 'post-duplicator',
 			'required' 	=> false,
 		),
         array(
@@ -405,23 +390,8 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
         array(
-			'name' 		=> 'Resize at Upload Plus',
-			'slug' 		=> 'resize-at-upload-plus',
-			'required' 	=> false,
-		),
-        array(
 			'name' 		=> 'WordPress Backup to Dropbox',
 			'slug' 		=> 'wordpress-backup-to-dropbox',
-			'required' 	=> false,
-		),
-        array(
-			'name' 		=> 'WP Migrate DB',
-			'slug' 		=> 'wp-migrate-db',
-			'required' 	=> false,
-		),
-        array(
-			'name' 		=> 'WP-PageNavi',
-			'slug' 		=> 'wp-pagenavi',
 			'required' 	=> false,
 		)
 
