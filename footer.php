@@ -50,7 +50,8 @@
     $('.scroll-link').click(function(e) {
       e.preventDefault();
       $(this).blur();
-      $($(this).attr('href'))
+      var string = $(this).attr('href').split('#')[1];
+      $('#' + string)
         .velocity('scroll', 400);
     });
     $('.slider').glide({
