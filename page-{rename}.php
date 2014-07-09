@@ -12,7 +12,9 @@ get_header(); the_post(); ?>
   
   <section class="wrap hpad clearfix">
   
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+    <article id="post-<?php the_ID(); ?>"
+             <?php post_class(); ?>
+             role="article">
       
       <header>
         <h1><?php the_title(); ?></h1>
