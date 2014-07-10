@@ -1,5 +1,10 @@
-<footer id="footer" class="clearfix" role="contentinfo">
-  <p class="center">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+<footer id="footer"
+        class="clearfix"
+        role="contentinfo">
+  <p class="center">
+    &copy; <?php echo date( 'Y' ); ?>
+    <?php bloginfo( 'name' ); ?>
+  </p>
 </footer>
 
 <?php wp_footer(); ?>

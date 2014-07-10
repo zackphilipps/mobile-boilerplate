@@ -146,6 +146,16 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
+/* Enable ACF Options Page */
+
+if(function_exists('acf_add_options_page')) { 
+ 
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
+ 
+}
+
 /* Enable Featured Image */
 
 add_theme_support( 'post-thumbnails' ); 

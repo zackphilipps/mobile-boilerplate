@@ -18,7 +18,7 @@ body {
   }
 }
 
-a {
+a, .a {
   color: $olive;
   text-decoration: none;
   &:link, &:active, &:visited {
@@ -31,7 +31,7 @@ a {
   }
 }
 
-button, .button {
+button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer;
   background-color: $olive;
   color: $white;
@@ -124,13 +124,8 @@ h6, .h6 {
     
 }
 
-* {
-    button, input[type="button"], input[type="reset"], input[type="submit"] {
-    
-    }
-    input, textarea {
-  
-    }
+input[type="checkbox"], input[type="radio"] {
+  cursor: pointer;
 }
 
 .full {
