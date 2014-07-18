@@ -1,36 +1,47 @@
 /********************CUSTOM VARIABLES********************/
 
 /********* Custom fonts example (put others below here) *********/
-@include font-face('alegreyabold', '../fonts', 'alegreya-bold-webfont');
+@include font-face("alegreyabold", "../fonts", "alegreya-bold-webfont");
+
 @mixin serif-bold {
   font-family: 'alegreyabold', 'Georgia', serif;
   font-weight: normal;
 }
 
-@include font-face('alegreyaregular', '../fonts', 'alegreya-regular-webfont');
+@include font-face("alegreyaregular", "../fonts", "alegreya-regular-webfont");
+
 @mixin serif {
   font-family: 'alegreyaregular', 'Georgia', serif;
   font-weight: normal;
 }
 
-@include font-face('alegreya_sanslight', '../fonts', 'alegreyasans-light-webfont');
+@include font-face("alegreya_sanslight", "../fonts", "alegreyasans-light-webfont");
+
 @mixin sans-thin {
   font-family: 'alegreya_sanslight', sans-serif;
   font-weight: normal;
 }
 
-@include font-face('alegreya_sansbold', '../fonts', 'alegreyasans-bold-webfont');
+@include font-face("alegreya_sansbold", "../fonts", "alegreyasans-bold-webfont");
+
 @mixin sans-bold {
   font-family: 'alegreya_sansbold', sans-serif;
   font-weight: normal;
 }
 
-@include font-face('alegreya_sansregular', '../fonts', 'alegreyasans-regular-webfont');
+@include font-face("alegreya_sansitalic", "../fonts", "AlegreyaSans-Italic-webfont");
+
+@mixin sans-italic {
+  font-family: 'alegreya_sansitalic', sans-serif;
+  font-weight: normal;
+}
+
+@include font-face("alegreya_sansregular", "../fonts", "alegreyasans-regular-webfont");
+
 @mixin sans {
   font-family: 'alegreya_sansregular', sans-serif;
   font-weight: normal;
 }
-
 
 /********* Custom colors example (modify as needed) *********/
 
@@ -38,55 +49,171 @@
 Cool
 */
 
-$aqua:  #7FDBFF;
-$blue:  #0074D9;
-$navy:  #001F3F;
-$teal:  #39CCCC;
-$green: #2ECC40;
-$olive: #3D9970;
-$lime:  #01FF70;
+$aqua: #7fdbff;
+$blue: #0074d9;
+$navy: #001f3f;
+$teal: #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime: #01ff70;
 
 /*
 Warm
 */
 
-$yellow:  #FFDC00;
-$orange:  #FF851B;
-$red:     #FF4136;
-$fuchsia: #F012BE;
-$purple:  #B10DC9;
-$maroon:  #85144B;
+$yellow: #ffdc00;
+$orange: #ff851b;
+$red: #ff4136;
+$fuchsia: #f012be;
+$purple: #b10dc9;
+$maroon: #85144b;
 
 /*
 Gray Scale 
 */
 
-$white:  #fff;
-$gray:   #eee;
-$silver: #aaa;
-$black:  #444;
+$white: white;
+$gray: #eeeeee;
+$silver: #aaaaaa;
+$black: #444444;
 
 /* Color classes (modify as needed) */
 
-.aqua { color: $aqua; } .aqua-bg { background-color: $aqua; }
-.blue { color: $blue; } .blue-bg { background-color: $blue; }
-.navy { color: $navy; } .navy-bg { background-color: $navy; }
-.teal { color: $teal; } .teal-bg { background-color: $teal; }
-.green { color: $green; } .green-bg { background-color: $green; }
-.olive { color: $olive; } .olive-bg { background-color: $olive; }
-.lime { color: $lime; } .lime-bg { background-color: $lime; }
+.aqua {
+  color: $aqua;
+}
 
-.yellow { color: $yellow; } .yellow-bg { background-color: $yellow; }
-.orange { color: $orange; } .orange-bg { background-color: $orange; }
-.red { color: $red; } .red-bg { background-color: $red; }
-.fuchsia { color: $fuchsia; } .fuchsia-bg { background-color: $fuchsia; }
-.purple { color: $purple; } .purple-bg { background-color: $purple; }
-.maroon { color: $maroon; } .maroon-bg { background-color: $maroon; }
+.aqua-bg {
+  background-color: $aqua;
+}
 
-.white { color: $white; } .white-bg { background-color: $white; }
-.silver { color: $silver; } .silver-bg { background-color: $silver; }
-.gray { color: $gray; } .gray-bg { background-color: $gray; }
-.black { color: $black; } .black-bg { background-color: $black; }
+.blue {
+  color: $blue;
+}
+
+.blue-bg {
+  background-color: $blue;
+}
+
+.navy {
+  color: $navy;
+}
+
+.navy-bg {
+  background-color: $navy;
+}
+
+.teal {
+  color: $teal;
+}
+
+.teal-bg {
+  background-color: $teal;
+}
+
+.green {
+  color: $green;
+}
+
+.green-bg {
+  background-color: $green;
+}
+
+.olive {
+  color: $olive;
+}
+
+.olive-bg {
+  background-color: $olive;
+}
+
+.lime {
+  color: $lime;
+}
+
+.lime-bg {
+  background-color: $lime;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.yellow-bg {
+  background-color: $yellow;
+}
+
+.orange {
+  color: $orange;
+}
+
+.orange-bg {
+  background-color: $orange;
+}
+
+.red {
+  color: $red;
+}
+
+.red-bg {
+  background-color: $red;
+}
+
+.fuchsia {
+  color: $fuchsia;
+}
+
+.fuchsia-bg {
+  background-color: $fuchsia;
+}
+
+.purple {
+  color: $purple;
+}
+
+.purple-bg {
+  background-color: $purple;
+}
+
+.maroon {
+  color: $maroon;
+}
+
+.maroon-bg {
+  background-color: $maroon;
+}
+
+.white {
+  color: $white;
+}
+
+.white-bg {
+  background-color: $white;
+}
+
+.silver {
+  color: $silver;
+}
+
+.silver-bg {
+  background-color: $silver;
+}
+
+.gray {
+  color: $gray;
+}
+
+.gray-bg {
+  background-color: $gray;
+}
+
+.black {
+  color: $black;
+}
+
+.black-bg {
+  background-color: $black;
+}
 
 /*
  * CUSTOM MIXINS below here

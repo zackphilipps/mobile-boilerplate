@@ -83,7 +83,9 @@ strong, b {
   @include sans-bold;
 }
 
-em, i {}
+em, i {
+  @include sans-italic;
+}
 
 hr {
   height: 1px;
