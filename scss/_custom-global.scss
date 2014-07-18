@@ -32,6 +32,12 @@ a, .a {
 }
 
 button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  height: auto;
+  line-height: normal;
+  font-size: u(1rem);
   cursor: pointer;
   background-color: $olive;
   color: $white;

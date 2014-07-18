@@ -289,14 +289,3 @@ $hidpi-min-pixel-ratio: 1.3 !default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* ACF, Gravity Forms, and WP Admin Button Styles Reset */
-@mixin button-reset {
-  @extend .button;
-  border-radius: 0;
-  border: 0;
-  box-shadow: none;
-  height: auto;
-  line-height: normal;
-  font-size: u(1rem);
-}
