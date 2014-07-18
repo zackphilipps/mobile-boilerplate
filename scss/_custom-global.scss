@@ -13,8 +13,8 @@ body {
    */
   font-size: 18px;
   line-height: 1.375;
-  @include w_breakpoint('p_ipad') {
-      line-height: 1.5;
+  @include w_breakpoint("p_ipad") {
+    line-height: 1.5;
   }
 }
 
@@ -62,51 +62,39 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
   }
 }
 
-p {
-    
-}
+p {}
 
 blockquote, .blockquote {
-    p, .p {
-      @include sans-thin;
-    }
-    small, .small {
-        &:before {
-            
-        }
-    }
+  p, .p {
+    @include sans-thin;
+  }
+  small, .small {
+    &:before {}
+  }
 }
 
 strong, b {
   @include sans-bold;
 }
 
-em, i {
-    
-}
+em, i {}
 
 hr {
   height: 1px;
   width: 100%;
   border: 0;
   background-color: $gray;
-  margin: 3em auto; 
+  margin: 3em auto;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    @include sans-thin;
-    small {
-        
-    }
+  @include sans-thin;
+  small {}
 }
 
-h1, .h1 {
-  
-}
+h1, .h1 {}
 
-h2, .h2 {
-  
-}
+h2, .h2 {}
 
 h3, .h3 {
   @include serif;
@@ -116,49 +104,47 @@ h4, .h4 {
   @include serif-bold;
 }
 
-h5, .h5 {
-    
-}
+h5, .h5 {}
 
-h6, .h6 {
-    
-}
+h6, .h6 {}
 
-input[type="checkbox"], input[type="radio"] {
-  cursor: pointer;
-}
+input[type="checkbox"], input[type="radio"] {}
+
+input[type=email], input[type=number], input[type=password], input[type=search], input[type=text], input[type=url], select, textarea {}
 
 .full {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrap {
-    max-width: 1024px;
-    margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .flex-contain {
-    margin: 0 auto;
-    @include w_breakpoint('p_ipad') {
-        width: 750px;
-    }
-    @include w_breakpoint('l_ipad') {
-        width: 1000px;
-    }
-    @include w_breakpoint('biggie') {
-        width: 1250px;
-    }
+  margin: 0 auto;
+  @include w_breakpoint("p_ipad") {
+    width: 750px;
+  }
+
+  @include w_breakpoint("l_ipad") {
+    width: 1000px;
+  }
+
+  @include w_breakpoint("biggie") {
+    width: 1250px;
+  }
 }
 
 .contain {
-    max-width: 700px;
-    margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .scratch-image, .scratch-video {
-    height: 200px;
-    @include background;
+  height: 200px;
+  @include background;
 }
 
 .white-popup {
@@ -170,48 +156,49 @@ input[type="checkbox"], input[type="radio"] {
   margin: 1em auto;
 }
 
-@include w_breakpoint('p_ipad') {
+@include w_breakpoint("p_ipad") {
   .twoptfourcol {
-      position: relative;
-      float: left;
-      margin-left: 2.762430939%;
-      width: 17.73757%;
-      &.first {
-          margin-left: 0;
-      }
-      &.last {
-          float: right;
-      }
+    position: relative;
+    float: left;
+    margin-left: 2.762430939%;
+    width: 17.73757%;
+    &.first {
+      margin-left: 0;
+    }
+    &.last {
+      float: right;
+    }
   }
 }
 
+
 .custom-col {
-    @media (min-width: 649px) {
-        position: relative;
-        float: left;
-        width: 50%;
-        &.even {
-            float: right;
-        }
+  @media (min-width: 649px) {
+    position: relative;
+    float: left;
+    width: 50%;
+    &.even {
+      float: right;
     }
-    @media (min-width: 899px) {
-        width: 33.333333333%;
-        &.even {
-            float: left;
-        }
-        &.three-last {
-            float: right;
-        }
+  }
+  @media (min-width: 899px) {
+    width: 33.333333333%;
+    &.even {
+      float: left;
     }
-    @media (min-width: 1149px) {
-        width: 25%;
-        &.three-last {
-            float: left;
-        }
-        &.four-last {
-            float: right;
-        }
+    &.three-last {
+      float: right;
     }
+  }
+  @media (min-width: 1149px) {
+    width: 25%;
+    &.three-last {
+      float: left;
+    }
+    &.four-last {
+      float: right;
+    }
+  }
 }
 
 /* For iOS7 Web Apps
