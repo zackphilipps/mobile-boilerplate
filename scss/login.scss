@@ -1,15 +1,17 @@
-$px-only: false; /* for http://davidwalsh.name/rem-px-browser-function-sass */
+$px-only: false;
 
-@import '../core/scss/mixins';
-@import '../core/scss/variables';
-@import 'custom-variables';
-@import 'custom-global';
+/* for http://davidwalsh.name/rem-px-browser-function-sass */
+
+@import "../core/scss/mixins";
+@import "../core/scss/variables";
+@import "custom-variables";
+@import "custom-global";
 
 body.login {
   div#login {
     h1 {
       a {
-        background-image: url('../img/login-logo.svgz');
+        background-image: url("../img/login-logo.svgz");
         @include background(center center, no-repeat, contain);
         padding-bottom: 49px;
         width: 100%;
@@ -23,26 +25,17 @@ body.login {
           @include sans-bold;
         }
         &.forgetmenot {
-          input#rememberme {
-          }
+          input#rememberme {}
         }
         &.submit {
           input#wp-submit {
-            @extend .button;
-            border-radius: 0;
-            box-shadow: none;
-            height: auto;
-            line-height: normal;
-            font-size: u(1rem);
+            @include button-reset;
           }
         }
       }
-      input {
-      }
-      input#user_login {
-      }
-      input#user_pass {
-      }
+      input {}
+      input#user_login {}
+      input#user_pass {}
     }
     p#nav {
       a {
