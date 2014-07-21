@@ -18,91 +18,84 @@
  */
 
 nav ul.main-nav {
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  top: 74px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  @extend .clearfix;
+  li {
+    display: block;
+    text-align: center;
+    a {
+      background-color: $olive;
+      color: $white;
+      display: block;
+      padding: u(0.5rem 1rem);
+      &:link, &:active, &:visited {
+        background-color: $olive;
+        color: $white;
+      }
+      &:hover, &:focus {}
+    }
+  }
+  ul.sub-menu {
     display: none;
-	list-style: none;
-	position: absolute;
-    width: 100%;
-    top: 74px;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    @extend .clearfix;
+  }
+}
+
+@include w_breakpoint("p_ipad") {
+  nav ul.main-nav {
+    position: relative;
+    width: auto;
+    top: 8px;
+    float: right;
+    display: block;
     li {
-        display: block;
-        text-align: center;
-        a {
-          background-color: $olive;
-          color: $white;
-          display: block;
-          padding: u(0.5rem 1rem);
-          &:link, &:active, &:visited {
-            background-color: $olive;
-            color: $white;
-          }
-          &:hover, &:focus {
-            
-          }
+      float: left;
+      a {
+        margin-right: u(0.5rem);
+        &:link, &:active, &:visited {
+          background-color: transparent;
         }
+        &:hover, &:focus {}
+      }
     }
     ul.sub-menu {
-      display: none;
+      background-color: $olive;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      li {
+        float: none;
+        position: relative;
+        a {
+          margin-right: 0;
+          &:link, &:active, &:visited {}
+          &:hover, &:focus {}
+        }
+      }
+      ul {
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
     }
+  }
+  nav ul.main-nav li:hover > ul.sub-menu {
+    display: block;
+  }
 }
 
-@include w_breakpoint('p_ipad') {
-  nav ul.main-nav {
-      position: relative;
-      width: auto;
-      top: 8px;
-      float: right;
-      display: block;
-      li {
-          float: left;
-          a {
-            margin-right: u(0.5rem);
-            &:link, &:active, &:visited {
-              background-color: transparent;
-            }
-            &:hover, &:focus {
-              
-            }
-          }
-      }
-      ul.sub-menu {
-          background-color: $olive;
-          padding: 0;
-          position: absolute;
-          top: 100%;
-          li {
-              float: none;
-              position: relative;
-              a {
-                margin-right: 0;
-                &:link, &:active, &:visited {
-                  
-                }
-                &:hover, &:focus {
-                  
-                }
-              }
-          }
-          ul {
-              position: absolute;
-              left: 100%;
-              top: 0;
-          }
-      }
-  }
-  
-  nav ul.main-nav li:hover > ul.sub-menu {
-      display: block;
-  }
-}
 
 .nav-toggle {
-  @include w_breakpoint('p_ipad') {
-      display: none;
+  @include w_breakpoint("p_ipad") {
+    display: none;
   }
+
   color: $white;
   cursor: pointer;
   position: absolute;
@@ -112,6 +105,6 @@ nav ul.main-nav {
   font-size: u(2rem);
   @include easing;
   &.active {
-      transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
 }
