@@ -369,32 +369,27 @@ function my_theme_register_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-        array(
+    array(
 			'name' 		=> 'CloudFlare',
 			'slug' 		=> 'cloudflare',
 			'required' 	=> false,
 		),
-        array(
-			'name' 		=> 'CW Image Optimizer',
-			'slug' 		=> 'cw-image-optimizer',
-			'required' 	=> false,
-		),
-        array(
+    array(
 			'name' 		=> 'Custom Post Type UI',
 			'slug' 		=> 'custom-post-type-ui',
 			'required' 	=> false,
 		),
-        array(
+    array(
 			'name' 		=> 'Relevanssi - A Better Search',
 			'slug' 		=> 'relevanssi',
 			'required' 	=> false,
 		),
-        array(
+    array(
 			'name' 		=> 'Resize at Upload Plus',
 			'slug' 		=> 'resize-at-upload-plus',
 			'required' 	=> false,
 		),
-        array(
+    array(
 			'name' 		=> 'WordPress Backup to Dropbox',
 			'slug' 		=> 'wordpress-backup-to-dropbox',
 			'required' 	=> false,
