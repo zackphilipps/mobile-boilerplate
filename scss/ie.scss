@@ -1,38 +1,40 @@
-$px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
+$px-only: true;
+
+/* for http://davidwalsh.name/rem-px-browser-function-sass */
 
 /*
  * FOUNDATION
  * Do not change the order of these imports.
  */
 
-@import '../core/scss/ionicons';
-@import '../core/scss/mixins';
-@import '../core/scss/variables';
-@import 'custom-variables';
-@import '../core/scss/normalize';
-@import '../core/scss/main';
-@import '../core/scss/grid-always';
-@import '../core/scss/grid'; /* older versions of IE do not support media queries */
-@import '../core/scss/global';
-@import 'custom-global';
+@import "../core/scss/ionicons";
+@import "../core/scss/mixins";
+@import "../core/scss/variables";
+@import "custom-variables";
+@import "../core/scss/normalize";
+@import "../core/scss/main";
+@import "../core/scss/grid-always";
+@import "../core/scss/grid";
 
+/* older versions of IE do not support media queries */
+@import "../core/scss/global";
+@import "custom-global";
 
 /*
  * MIDDLE STUFF
  * You're free to rearrange these how you like.
  */
 
-@import 'header'; /* (for header.php) */
-@import 'page'; /* (for page.php) */
-@import 'archive'; /* (for archive.php) */
-@import 'search'; /* (for search.php) */
-@import 'single'; /* (for single.php) */
-@import 'sidebar'; /* (for sidebar.php) */
-@import 'home';
-@import 'footer'; /* (for footer.php) */
-@import '../core/scss/glide'; /* for glide.js */
-@import '../core/scss/magnific'; /* for magnific popup */
-
+@import "header";
+@import "page";
+@import "archive";
+@import "search";
+@import "single";
+@import "sidebar";
+@import "home";
+@import "footer";
+@import "../core/scss/glide";
+@import "../core/scss/magnific";
 
 /*
  * RESPONSIVE
@@ -42,6 +44,6 @@ $px-only: true; /* for http://davidwalsh.name/rem-px-browser-function-sass */
  * styles.
  */
 
-@import 'responsive';
+@import "responsive";
 
 /* Obviously if you`re renaming/creating the files the imports must match. :) */
