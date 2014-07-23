@@ -22,7 +22,8 @@ body.login {
       p {
         label {
           color: $black;
-          @include sans-bold;
+          font-family: $sans;
+          font-weight: bold;
         }
         &.forgetmenot {
           input#rememberme {}
