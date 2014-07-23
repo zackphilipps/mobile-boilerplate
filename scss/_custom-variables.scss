@@ -1,7 +1,12 @@
 /********************CUSTOM VARIABLES********************/
 
-/********* Custom fonts example (put others below here) *********/
-@include font-face("alegreyabold", "../fonts", "alegreya-bold-webfont");
+/********* Custom fonts example (modify as needed) *********/
+
+/*
+`@font-face` examples
+*/
+
+/* @include font-face("alegreyabold", "../fonts", "alegreya-bold-webfont");
 
 @mixin serif-bold {
   font-family: 'alegreyabold', 'Georgia', serif;
@@ -41,7 +46,21 @@
 @mixin sans {
   font-family: 'alegreya_sansregular', sans-serif;
   font-weight: normal;
+} */
+
+/*
+Google Fonts Example
+*/
+
+$families: "Alegreya", "Alegreya+Sans";
+
+@each $family in $families {
+  $clean: unquote(#{$family});
+  @import url("http://fonts.googleapis.com/css?family=#{$clean}");
 }
+
+$serif: "Alegreya", "Georgia", serif;
+$sans: "Alegreya Sans", sans-serif;
 
 /********* Custom colors example (modify as needed) *********/
 

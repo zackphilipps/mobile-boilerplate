@@ -3,7 +3,7 @@
 body {
   color: $black;
   background-color: $white;
-  @include sans;
+  font-family: $sans;
   /*
    * if you change this font-size, you will
    * also need to change the $pixelBase
@@ -44,7 +44,7 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
   background-color: $olive;
   color: $white;
   padding: u(0.5rem 1rem);
-  @include sans;
+  font-family: $sans;
   @include easing;
   &:link, &:active, &:visited {
     background-color: $olive;
@@ -74,7 +74,7 @@ p {}
 
 blockquote, .blockquote {
   p, .p {
-    @include sans-thin;
+    font-family: $sans;
   }
   small, .small {
     &:before {}
@@ -82,11 +82,8 @@ blockquote, .blockquote {
 }
 
 strong, b {
-  @include sans-bold;
-}
 
 em, i {
-  @include sans-italic;
 }
 
 hr {
@@ -98,7 +95,8 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  @include sans-thin;
+  font-family: $sans;
+  font-weight: 300;
   small {}
 }
 
@@ -107,11 +105,13 @@ h1, .h1 {}
 h2, .h2 {}
 
 h3, .h3 {
-  @include serif;
+  font-family: $serif;
+  font-weight: normal;
 }
 
 h4, .h4 {
-  @include serif-bold;
+  font-family: $serif;
+  font-weight: bold;
 }
 
 h5, .h5 {}
