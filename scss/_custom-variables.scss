@@ -49,7 +49,7 @@
 } */
 
 /*
-Google Fonts Example
+Google Fonts Examples
 */
 
 $families: "Alegreya", "Alegreya+Sans";
@@ -98,140 +98,31 @@ $black: #444444;
 
 /* Color classes (modify as needed) */
 
-.aqua {
-  color: $aqua;
-}
+$colors: (aqua $aqua),
+(blue $blue),
+(navy $navy),
+(teal $teal),
+(green $green),
+(olive $olive),
+(lime $lime),
+(yellow $yellow),
+(orange $orange),
+(red $red),
+(fuchsia $fuchsia),
+(purple $purple),
+(maroon $maroon),
+(white $white),
+(gray $gray),
+(silver $silver),
+(black $black);
 
-.aqua-bg {
-  background-color: $aqua;
-}
-
-.blue {
-  color: $blue;
-}
-
-.blue-bg {
-  background-color: $blue;
-}
-
-.navy {
-  color: $navy;
-}
-
-.navy-bg {
-  background-color: $navy;
-}
-
-.teal {
-  color: $teal;
-}
-
-.teal-bg {
-  background-color: $teal;
-}
-
-.green {
-  color: $green;
-}
-
-.green-bg {
-  background-color: $green;
-}
-
-.olive {
-  color: $olive;
-}
-
-.olive-bg {
-  background-color: $olive;
-}
-
-.lime {
-  color: $lime;
-}
-
-.lime-bg {
-  background-color: $lime;
-}
-
-.yellow {
-  color: $yellow;
-}
-
-.yellow-bg {
-  background-color: $yellow;
-}
-
-.orange {
-  color: $orange;
-}
-
-.orange-bg {
-  background-color: $orange;
-}
-
-.red {
-  color: $red;
-}
-
-.red-bg {
-  background-color: $red;
-}
-
-.fuchsia {
-  color: $fuchsia;
-}
-
-.fuchsia-bg {
-  background-color: $fuchsia;
-}
-
-.purple {
-  color: $purple;
-}
-
-.purple-bg {
-  background-color: $purple;
-}
-
-.maroon {
-  color: $maroon;
-}
-
-.maroon-bg {
-  background-color: $maroon;
-}
-
-.white {
-  color: $white;
-}
-
-.white-bg {
-  background-color: $white;
-}
-
-.silver {
-  color: $silver;
-}
-
-.silver-bg {
-  background-color: $silver;
-}
-
-.gray {
-  color: $gray;
-}
-
-.gray-bg {
-  background-color: $gray;
-}
-
-.black {
-  color: $black;
-}
-
-.black-bg {
-  background-color: $black;
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+  .#{$name}-bg {
+    background-color: $color;
+  }
 }
 
 /*
