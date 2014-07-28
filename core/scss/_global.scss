@@ -93,7 +93,7 @@ blockquote, .blockquote {
   small, .small {
     display: block;
     line-height: 1.428571429;
-    color: darken($gray, 20%);
+    color: $silver;
   }
 }
 
@@ -122,26 +122,9 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   }
 }
 
-/* Resets input styles */
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-  border: 0;
-}
-
-input[type="checkbox"], input[type="radio"] {
-  cursor: pointer;
-}
-
-input[type=email], input[type=number], input[type=password], input[type=search], input[type=text], input[type=url], select, textarea {
-  border: 1px solid $gray;
-}
-
 /*
  * HELPER CLASSES
  */
-
-.alignleft, .alignright, .aligncenter {
-  max-width: 100%;
-}
 
 .pad-half {
   padding: u(0.5rem);
@@ -271,7 +254,6 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 }
 
 .aligncenter {
-  display: block;
   margin: 1em auto;
 }
 

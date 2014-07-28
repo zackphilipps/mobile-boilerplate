@@ -117,10 +117,35 @@ h5, .h5 {}
 
 h6, .h6 {}
 
-input[type="checkbox"], input[type="radio"] {}
+input[type="checkbox"], input[type="radio"] {
+  cursor: pointer;
+}
 
-input[type=email], input[type=number], input[type=password], input[type=search], input[type=text], input[type=url], select, textarea {}
+input[type=email], input[type=number], input[type=password], input[type=search], input[type=text], input[type=url], select, textarea {
+  border: 1px solid $silver;
+}
 
+/* WordPress Image Styles */
+[class^="wp-image-"], [class*=" wp-image-"], .wp-caption {
+  display: block;
+  padding: 4px;
+  background-color: $gray;
+  border: 1px solid $silver;
+  height: auto;
+  width: 100%;
+  .wp-caption & {
+    padding: 0;
+    border: 0;
+  }
+  .wp-caption-text {
+    font-size: 75%;
+    font-style: italic;
+    margin: 0;
+    padding: 16px 16px 12px;
+  }
+}
+
+/* Containers */
 .full, .wrap, .flex-contain, .contain {
   margin: 0 auto;
   width: 100%;
@@ -149,20 +174,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
   max-width: 700px;
 }
 
-.scratch-image, .scratch-video {
-  height: 200px;
-  @include background;
-}
-
-.white-popup {
-  position: relative;
-  background: $white;
-  padding: 20px;
-  width: auto;
-  max-width: 700px;
-  margin: 1em auto;
-}
-
+/* Custom Grid Styles */
 @include w_breakpoint("p_ipad") {
   .twoptfourcol {
     position: relative;
@@ -206,6 +218,57 @@ input[type=email], input[type=number], input[type=password], input[type=search],
       float: right;
     }
   }
+}
+
+/* Toggles */
+.toggle-content {
+  display: none;
+  position: relative;
+  padding-bottom: 0;
+  * {
+    margin: 0;
+  }
+}
+
+.toggle-heading {
+  display: block;
+  padding: 0.25em 0.5em;
+  margin: 1.5em auto 0;
+  color: $olive;
+  cursor: pointer;
+  border: 1px solid $olive;
+  &:after {
+    @include icons;
+    content: "\f151";
+    color: $olive;
+    position: relative;
+    left: 100%;
+    top: -25px;
+    margin-bottom: -25px;
+    margin-left: -12px;
+    display: block;
+    width: 24px;
+  }
+  &.active {
+    &:after {
+      content: "\f155";
+    }
+  }
+}
+
+/* Misc. */
+.scratch-image, .scratch-video {
+  height: 200px;
+  @include background;
+}
+
+.white-popup {
+  position: relative;
+  background: $white;
+  padding: 20px;
+  width: auto;
+  max-width: 700px;
+  margin: 1em auto;
 }
 
 /* For iOS7 Web Apps

@@ -52,7 +52,7 @@
 Google Fonts Examples
 */
 
-$families: "Alegreya", "Alegreya+Sans";
+$families: "Alegreya:400italic,400,700", "Alegreya+Sans:100,300,400,700,300italic,400italic,100italic";
 
 @each $family in $families {
   $clean: unquote(#{$family});
@@ -93,7 +93,7 @@ Gray Scale
 
 $white: white;
 $gray: #eeeeee;
-$silver: #aaaaaa;
+$silver: #cccccc;
 $black: #444444;
 
 /* Color classes (modify as needed) */
