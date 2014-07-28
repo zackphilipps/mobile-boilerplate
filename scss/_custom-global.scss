@@ -224,7 +224,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 .toggle-content {
   display: none;
   position: relative;
-  padding-bottom: 0;
+  padding: u(1rem 1rem 0);
   * {
     margin: 0;
   }
@@ -243,8 +243,8 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     color: $olive;
     position: relative;
     left: 100%;
-    top: -25px;
-    margin-bottom: -25px;
+    top: -20px;
+    margin-bottom: -20px;
     margin-left: -12px;
     display: block;
     width: 24px;

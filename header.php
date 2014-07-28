@@ -50,7 +50,10 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
     </a>
       
-    <span class="nav-toggle"><i class="icon ion-navicon"></i></span>
+    <span class="nav-toggle"
+          data-direction="down">
+      <i class="icon ion-navicon"></i>
+    </span>
       
     <nav id="nav" role="navigation">
       <?php scratch_main_nav(); ?>

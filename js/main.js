@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
         });
       $(this).data('direction', 'down');
     }
+    $(this).toggleClass('active');
   });
   $('.toggle-heading').click(function() {
     if ($(this).data('direction') === 'down') {
