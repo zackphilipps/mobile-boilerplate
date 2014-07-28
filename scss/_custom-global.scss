@@ -132,7 +132,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
   background-color: $gray;
   border: 1px solid $silver;
   height: auto;
-  width: 100%;
+  max-width: 100%;
   .wp-caption & {
     padding: 0;
     border: 0;
