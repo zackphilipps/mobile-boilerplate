@@ -36,7 +36,8 @@ module.exports = function(grunt) {
     sass: {
       style: {
         options: {
-          style: 'compressed'
+          style: 'compressed',
+          sourcemap: true
         },
         files: {
           "../css/master.css": "../scss/master.scss",
@@ -47,7 +48,8 @@ module.exports = function(grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1']
+        browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1'],
+        map: true
       },
       no_dest_multiple: {
         src: '../css/*.css'
