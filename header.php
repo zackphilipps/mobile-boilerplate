@@ -11,33 +11,15 @@
     
 <?php wp_head(); ?>
     
-<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
-    
-<!-- The bottom part resumes the web app where the user left off -->
-        
-<!--        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
-    
-        if (window.navigator.standalone) {
-   				 var setLastUrl = function() {
-       				 localStorage['lastUrl'] = window.location;
-    			}
-   			 if (sessionStorage['init']) {
-       			 setLastUrl();
-   			 } else {
-      			 sessionStorage['init'] = true;
-        	if (localStorage['lastUrl']) {
-            if (localStorage['lastUrl'] != window.location) {
-                document.location.href = localStorage['lastUrl'];
-            } else {
-                setLastUrl();
-            }
-       		 } else {
-           		 setLastUrl();
-       			 }
-   			 }
-		}
-
-        </script>-->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
     
 </head>
 
