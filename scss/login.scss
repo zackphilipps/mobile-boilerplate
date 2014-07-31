@@ -23,6 +23,7 @@ body.login {
         label {
           color: $black;
           font-family: $sans;
+          font-weight: 700;
         }
         &.forgetmenot {
           input#rememberme {}
