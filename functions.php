@@ -22,9 +22,6 @@ function mobile_meta() { ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cleartype" content="on">
 
-  <!-- Disable phone number detection. -->
-  <!--<meta name="format-detection" content="telephone=no">-->
-
   <!--<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/touch/apple-touch-icon-144x144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/img/touch/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/touch/apple-touch-icon-72x72-precomposed.png">
@@ -39,23 +36,6 @@ function mobile_meta() { ?>
   <!--[if IE]>
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<![endif]-->
-
-
-  <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
-  <!--
-  <link rel="canonical" href="http://www.example.com/" >
-  -->
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <!--
-  <meta name="mobile-web-app-capable" content="yes">
-  -->
-
-  <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-  <!--
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
 
   <!-- Startup images -->
 
@@ -104,6 +84,25 @@ function mobile_meta() { ?>
         media="(device-width: 320px) and (device-height: 480px)
            and (-webkit-device-pixel-ratio: 1)"
         rel="apple-touch-startup-image">-->
+
+  <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/" >
+  -->
+
+  <!-- Disable phone number detection. -->
+  <!--<meta name="format-detection" content="telephone=no">-->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <!--
+  <meta name="mobile-web-app-capable" content="yes">
+  -->
+
+  <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+  <!--
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
 
   <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 
