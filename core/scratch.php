@@ -342,6 +342,53 @@ function three_columns_flex($blocks, $count) {
 
 
 
+function four_columns_flex($blocks, $count) {
+    $block_count = count($blocks);
+    if($block_count % 4 == 0) {
+        return four_columns($count);
+    } elseif(($block_count + 1) % 4 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2)) {
+            if(($count - 1) % 4 == 0) {
+                return "fourcol first";
+            } elseif(($count - 2) % 4 == 0) {
+                return "fourcol";
+            } else {
+                return "fourcol last";
+            }
+        } else {
+            return four_columns($count);
+        }
+    } elseif(($block_count + 2) % 4 == 0) {
+        if($count == $block_count || $count == ($block_count - 1)) {
+            if(($count - 1) % 4 == 0) {
+                return "sixcol first";
+            } else {
+                return "sixcol last";
+            }
+        } else {
+            return four_columns($count);
+        }
+    } elseif(($block_count - 1) % 4 == 0) {
+        if($count == $block_count) {
+            return "twelvecol first";
+        } else {
+            return four_columns($count);
+        }
+    } else {
+        return "error";
+    }
+}
+
+
+
+
+
+
+
+
+
 /**
  * Include the TGM_Plugin_Activation class.
  */
