@@ -28,7 +28,6 @@ a, .a {
     text-decoration: none;
   }
   &:hover, &:focus {
-    color: $olive;
     text-decoration: underline;
   }
 }
@@ -52,7 +51,6 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
   }
   &:hover, &:focus {
     background-color: lighten($olive, 8%);
-    color: $white;
     text-decoration: none;
   }
   /* Example alternate button color */
@@ -65,7 +63,6 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
     }
     &:hover, &:focus {
       background-color: lighten($black, 8%);
-      color: $white;
     }
   }
 }
@@ -146,7 +143,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 }
 
 /* Containers */
-.full, .wrap, .flex-contain, .contain {
+.full, .wrap, .flex-contain, .contain, .constrain {
   margin: 0 auto;
   width: 100%;
   word-wrap: break-word;
@@ -172,6 +169,10 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 
 .contain {
   max-width: 700px;
+}
+
+.constrain {
+  max-width: 450px;
 }
 
 /* Custom Grid Styles */
