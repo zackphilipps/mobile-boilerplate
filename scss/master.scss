@@ -48,4 +48,8 @@ $px-only: false;
 
 @import "responsive";
 
+@media print {
+  @import "print";
+}
+
 /* Obviously if you`re renaming/creating the files the imports must match. :) */
