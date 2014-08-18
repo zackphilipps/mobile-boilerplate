@@ -283,8 +283,16 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   width: 100%;
 }
 
+.halign {
+  @include halign;
+}
+
 .valign {
   @include valign;
+}
+
+.hvalign {
+  @include hvalign;
 }
 
 .circle {
