@@ -3,12 +3,21 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
 
   grunt.initConfig({
+    chown: {
+      options: {
+        uid: 33, // must be a number, change to your user id
+        gid: 33 // must be a number, this should be your web server process, i.e. `www-data`
+      },
+      target: {
+        src: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}']
+      }
+    },
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
           cwd: '../../../uploads',
-          src: '**/*.{png,jpg,jpeg,gif}',
+          src: '**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}',
           dest: '../../../uploads'
         }]
       }
@@ -67,8 +76,8 @@ module.exports = function(grunt) {
         files: ['../*.php']
       },
       images: {
-        files: ['../../../uploads/**/*.{png,jpg,jpeg,gif}'],
-        tasks: ['newer:imagemin']
+        files: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}'],
+        tasks: ['newer:chown', 'newer:imagemin']
       },
       js: {
         files: ['../js/*.js', '../js/vendor/*.js'],
@@ -82,6 +91,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-chown');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');

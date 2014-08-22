@@ -4,6 +4,7 @@
   "dependencies": {
     "grunt-cli": "latest",
     "grunt-newer": "latest",
+    "grunt-chown": "latest",
     "grunt-contrib-imagemin": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-uglify": "latest",
