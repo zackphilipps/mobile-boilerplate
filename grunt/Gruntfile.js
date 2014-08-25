@@ -5,8 +5,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     chown: {
       options: {
-        uid: 33, // must be a number, change to your user id
-        gid: 33 // must be a number, this should be your web server process, i.e. `www-data`
+        uid: 33, /* must be a number, change to your user id */
+        gid: 33 /* must be a number, this should be your web server process, i.e. `www-data` */
       },
       target: {
         src: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}']
@@ -77,14 +77,23 @@ module.exports = function(grunt) {
       },
       images: {
         files: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}'],
+        options: {
+          debounceDelay: 15000
+        },
         tasks: ['newer:chown', 'newer:imagemin']
       },
       js: {
         files: ['../js/*.js', '../js/vendor/*.js'],
+        options: {
+          atBegin: true
+        },
         tasks: ['concat:js', 'uglify:js']
       },
       css: {
         files: ['../scss/**/*.scss'],
+        options: {
+          atBegin: true
+        },
         tasks: ['sass:style', 'autoprefixer:no_dest_multiple']
       }
     }

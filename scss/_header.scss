@@ -47,7 +47,7 @@ nav ul.main-nav {
   }
 }
 
-@include w_breakpoint("p_ipad") {
+@media (min-width: 767px) {
   nav ul.main-nav {
     position: relative;
     width: auto;
@@ -90,12 +90,10 @@ nav ul.main-nav {
   }
 }
 
-
 .nav-toggle {
-  @include w_breakpoint("p_ipad") {
+  @media (min-width: 767px) {
     display: none;
   }
-
   color: $white;
   cursor: pointer;
   position: absolute;

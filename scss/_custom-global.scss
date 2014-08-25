@@ -13,10 +13,9 @@ body {
    */
   font-size: 18px;
   line-height: 1.375;
-  @include w_breakpoint("p_ipad") {
+  @media (min-width: 767px) {
     line-height: 1.5;
   }
-
   overflow-x: hidden;
 }
 
@@ -154,15 +153,13 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 }
 
 .flex-contain {
-  @include w_breakpoint("p_ipad") {
+  @media (min-width: 767px) {
     width: 750px;
   }
-
-  @include w_breakpoint("l_ipad") {
+  @media (min-width: 1023px) {
     width: 1000px;
   }
-
-  @include w_breakpoint("biggie") {
+  @media (min-width: 1279px) {
     width: 1250px;
   }
 }
@@ -176,7 +173,7 @@ input[type=email], input[type=number], input[type=password], input[type=search],
 }
 
 /* Custom Grid Styles */
-@include w_breakpoint("p_ipad") {
+@media (min-width: 767px) {
   .twoptfourcol {
     position: relative;
     float: left;
@@ -190,7 +187,6 @@ input[type=email], input[type=number], input[type=password], input[type=search],
     }
   }
 }
-
 
 .custom-col {
   @media (min-width: 649px) {
