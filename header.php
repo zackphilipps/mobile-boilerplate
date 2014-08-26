@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 
 <header id="header">
-  <div class="wrap hpad vpad-half clearfix">
+  <div class="wrap hpad clearfix">
     
     <a class="logo" href="http://scratchtheme.com" title="Scratch Theme for WordPress">
       <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
