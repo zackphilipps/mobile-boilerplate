@@ -88,8 +88,16 @@ nav ul.main-nav {
         text-align: left;
         a {
           padding: u(0.5rem 1rem);
-          &:link, &:active, &:visited {}
-          &:hover, &:focus {}
+          background-color: $olive;
+          color: $white;
+          &:link, &:active, &:visited {
+            background-color: $olive;
+            color: $white;
+          }
+          &:hover, &:focus {
+            background-color: darken($olive, 5%);
+            text-decoration: none;
+          }
         }
       }
       ul {
