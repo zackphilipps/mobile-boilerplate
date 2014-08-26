@@ -48,6 +48,14 @@ nav ul.main-nav {
         text-decoration: none;
       }
     }
+    &.current_page_item {
+      a {
+        background-color: darken($olive, 5%);
+        &:link, &:active, &:visited {
+          background-color: darken($olive, 5%);
+        }
+      }
+    }
   }
   ul.sub-menu {
     display: none;
@@ -65,9 +73,7 @@ nav ul.main-nav {
       float: left;
       a {
         padding: u(24px 1rem);
-        &:link, &:active, &:visited {
-          background-color: transparent;
-        }
+        &:link, &:active, &:visited {}
         &:hover, &:focus {}
       }
     }
