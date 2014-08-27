@@ -28,7 +28,9 @@
 <header id="header">
   <div class="wrap hpad clearfix">
     
-    <a class="logo" href="http://scratchtheme.com" title="Scratch Theme for WordPress">
+    <a class="logo"
+       href="http://scratchtheme.com"
+       title="Scratch Theme for WordPress">
       <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
     </a>
       
@@ -37,7 +39,8 @@
       <i class="icon ion-navicon"></i>
     </span>
       
-    <nav id="nav" role="navigation">
+    <nav id="nav"
+         role="navigation">
       <?php scratch_main_nav(); ?>
     </nav>
     

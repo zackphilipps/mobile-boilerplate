@@ -2,11 +2,10 @@
 
 #header {
   background-color: $olive;
-  height: 75px;
   .logo {
     display: block;
     float: left;
-    margin: 8px auto;
+    margin: 11px auto;
     img {
       width: 245px;
       height: 58px;
@@ -25,7 +24,7 @@ nav ul.main-nav {
   list-style: none;
   position: absolute;
   width: 100%;
-  top: 75px;
+  top: 80px;
   left: 0;
   margin: 0;
   padding: 0;
@@ -72,7 +71,7 @@ nav ul.main-nav {
     li {
       float: left;
       a {
-        padding: u(24px 1rem);
+        padding: u(27px 1rem 26px);
         &:link, &:active, &:visited {}
         &:hover, &:focus {}
       }
@@ -119,10 +118,13 @@ nav ul.main-nav {
   color: $white;
   cursor: pointer;
   position: absolute;
-  top: 18px;
-  right: 16px;
+  top: u(1rem);
+  right: u(1rem);
   margin-bottom: 0;
   font-size: u(2rem);
+  i {
+    vertical-align: middle;
+  }
   @include easing;
   &.active {
     transform: rotate(-90deg);
