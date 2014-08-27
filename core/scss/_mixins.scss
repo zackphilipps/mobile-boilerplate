@@ -44,16 +44,15 @@
 /*
  * @font-face mixin
  * Bulletproof font-face via Font Squirrel
- * @include fontface(`family`, `assets/fonts`, `myfontname`);
- * Demonstrated in variables.scss
+ * @include fontface(`family`, `assets/fonts`, `myfontname`, 300, italic);
  */
 
-@mixin font-face($font-family, $font-url, $font-name) {
+@mixin font-face($font-family, $font-url, $font-name, $font-weight: 400, $font-style: normal) {
   @font-face {
     font: {
       family: $font-family;
-      style: normal;
-      weight: normal;
+      weight: $font-weight;
+      style: $font-style;
     };
     src: url($font-url + "/" + $font-name + ".eot");
     src: url($font-url + "/" + $font-name + ".eot#iefix") format("embedded-opentype"), url($font-url + "/" + $font-name + ".woff") format("woff"), url($font-url + "/" + $font-name + ".ttf") format("truetype"), url($font-url + "/" + $font-name + ".svg#" + $font-family) format("svg");
