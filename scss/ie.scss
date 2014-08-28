@@ -1,6 +1,8 @@
-$px-only: true;
+// for http://davidwalsh.name/rem-px-browser-function-sass
+$px-only: false;
 
-/* for http://davidwalsh.name/rem-px-browser-function-sass */
+// grid breakpoint, defining it here is just to avoid the sass error
+$gbp: 767px;
 
 /*
  * FOUNDATION

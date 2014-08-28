@@ -65,6 +65,12 @@
   background-size: $size;
 }
 
+@mixin m {
+  @media (min-width: $gbp) {
+    @content;
+  }
+}
+
 /*
  * REM to PX conversion without duplicate CSS
  * http://davidwalsh.name/rem-px-browser-function-sass

@@ -1,6 +1,8 @@
+// for http://davidwalsh.name/rem-px-browser-function-sass
 $px-only: false;
 
-/* for http://davidwalsh.name/rem-px-browser-function-sass */
+// grid breakpoint
+$gbp: 767px;
 
 /*
  * FOUNDATION
@@ -15,7 +17,7 @@ $px-only: false;
 @import "../core/scss/main";
 @import "../core/scss/grid-always";
 
-@media (min-width: 767px) {
+@media (min-width: $gbp) {
   @import "../core/scss/grid";
 }
 
