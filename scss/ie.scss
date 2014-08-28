@@ -15,8 +15,6 @@ $px-only: true;
 @import "../core/scss/main";
 @import "../core/scss/grid-always";
 @import "../core/scss/grid";
-
-/* older versions of IE do not support media queries */
 @import "../core/scss/global";
 @import "custom-global";
 
@@ -35,19 +33,5 @@ $px-only: true;
 @import "footer";
 @import "../core/scss/glide";
 @import "../core/scss/magnific";
-
-/*
- * RESPONSIVE
- * If you want a responsive stylesheet,
- * it's best to import it last. This allows
- * your @media queries to override other
- * styles.
- */
-
-@import "responsive";
-
-@media print {
-  @import "print";
-}
 
 /* Obviously if you`re renaming/creating the files the imports must match. :) */
