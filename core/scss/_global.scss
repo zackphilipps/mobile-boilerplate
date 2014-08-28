@@ -284,11 +284,13 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 }
 
 .valign {
-  @include valign;
+  @include m {
+    @include valign;
+  }
 }
 
-.hvalign {
-  @include hvalign;
+.valign-always {
+  @include valign;
 }
 
 .circle {
