@@ -44,21 +44,8 @@ function bones_head_cleanup() {
   remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
   // links for adjacent posts
   remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-  // WP version
-  remove_action( 'wp_head', 'wp_generator' );
-  // remove WP version from css
-  add_filter( 'style_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
-  // remove Wp version from scripts
-  add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
 } /* end bones head cleanup */
-
-// remove WP version from scripts
-function bones_remove_wp_ver_css_js( $src ) {
-    if ( strpos( $src, 'ver=' ) )
-        $src = remove_query_arg( 'ver', $src );
-    return $src;
-}
 
 
 
