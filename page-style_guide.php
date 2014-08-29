@@ -42,40 +42,40 @@ get_header(); ?>
   <section class="clearfix vmarg-half">
     <h2 class="center">Colors</h2>
     <figure class="threecol first scratch-image black-bg">
-      <figcaption class="white center valign">Black</figcaption>
+      <figcaption class="white center valign-always">Black</figcaption>
     </figure>
     <figure class="threecol scratch-image red-bg">
-      <figcaption class="white center valign">Red</figcaption>
+      <figcaption class="white center valign-always">Red</figcaption>
     </figure>
     <figure class="threecol scratch-image orange-bg">
-      <figcaption class="white center valign">Orange</figcaption>
+      <figcaption class="white center valign-always">Orange</figcaption>
     </figure>
     <figure class="threecol last scratch-image yellow-bg">
-      <figcaption class="center valign">Yellow</figcaption>
+      <figcaption class="center valign-always">Yellow</figcaption>
     </figure>
   </section>
   <section class="clearfix vmarg-half">
     <figure class="threecol first scratch-image green-bg">
-      <figcaption class="white center valign">Green</figcaption>
+      <figcaption class="white center valign-always">Green</figcaption>
     </figure>
     <figure class="threecol scratch-image blue-bg">
-      <figcaption class="white center valign">Blue</figcaption>
+      <figcaption class="white center valign-always">Blue</figcaption>
     </figure>
     <figure class="threecol scratch-image purple-bg">
-      <figcaption class="white center valign">Purple</figcaption>
+      <figcaption class="white center valign-always">Purple</figcaption>
     </figure>
     <figure class="threecol last scratch-image gray-bg">
-      <figcaption class="center valign">Gray</figcaption>
+      <figcaption class="center valign-always">Gray</figcaption>
     </figure>
   </section>
   
   <section class="clearfix vmarg-half">
     <h2 class="center">Links</h2>
     <figure class="sixcol first scratch-image gray-bg">
-      <figcaption class="center valign"><a href="">Normal</a></figcaption>
+      <figcaption class="center valign-always"><a href="">Normal</a></figcaption>
     </figure>
     <figure class="sixcol last scratch-image gray-bg">
-      <figcaption class="center valign">
+      <figcaption class="center valign-always">
         <a href="" class="button">Button</a><br><br>
         <a href="" class="button black">Button</a>
       </figcaption>
