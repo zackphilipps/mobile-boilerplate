@@ -140,12 +140,12 @@ function mobile_meta() { ?>
 
 function theme_styles() {
     
-    wp_register_style( 'scratch-main', get_template_directory_uri() . '/css/master.css', false, filemtime(dirname(__FILE__) . '/css/master.css' );
+    wp_register_style( 'scratch-main', get_template_directory_uri() . '/css/master.css', false, filemtime(dirname(__FILE__) . '/css/master.css') );
     wp_enqueue_style( 'scratch-main' );
   
     global $wp_styles; /* call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way */
   
-    wp_register_style( 'scratch-ie', get_template_directory_uri() . '/css/ie.css', false, filemtime(dirname(__FILE__) . '/css/ie.css' );
+    wp_register_style( 'scratch-ie', get_template_directory_uri() . '/css/ie.css', false, filemtime(dirname(__FILE__) . '/css/ie.css') );
     $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
     wp_enqueue_style( 'scratch-ie' );
   
@@ -159,9 +159,9 @@ function theme_js() {
     
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', false, false, false );
 
-    wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/concat/main.js', true );
+    wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/concat/main.js'), true );
 
-    wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/compiled/main.min.js', true );
+    wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/compiled/main.min.js'), true );
   
     /* FOR DEVELOPMENT */
     wp_enqueue_script( 'scratch-main-concat' );
