@@ -29,8 +29,8 @@
   <div class="wrap hpad clearfix">
     
     <a class="logo"
-       href="http://scratchtheme.com"
-       title="Scratch Theme for WordPress">
+       href="/"
+       title="<?php bloginfo('name'); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
     </a>
       

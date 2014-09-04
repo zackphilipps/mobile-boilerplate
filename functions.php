@@ -173,12 +173,13 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
-/* Enable ACF Options Page */
+/* Enable ACF Options Pages */
 
 if(function_exists('acf_add_options_page')) { 
  
 	acf_add_options_page();
-	acf_add_options_sub_page('Header');
+  acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Sidebar');
 	acf_add_options_sub_page('Footer');
  
 }
@@ -200,21 +201,25 @@ register_nav_menus(
 function scratch_main_nav() {
 	// display the wp3 menu if available
 	wp_nav_menu(array(
-		'container' => false,                           // remove nav container
-		'container_class' => '',           // class of container (should you choose to use it)
-		'menu' => __( 'Main Nav', 'scratch' ),  // nav name
-		'menu_class' => 'main-nav',         // adding custom nav class
-		'theme_location' => 'main-nav',                 // where it's located in the theme
-		'before' => '',                                 // before the menu
-		'after' => '',                                  // after the menu
-		'link_before' => '',                            // before each link
-		'link_after' => '',                             // after each link
+		'container' => false, // remove nav container
+		'container_class' => '', // class of container (should you choose to use it)
+		'menu' => __( 'Main Nav', 'scratch' ), // nav name
+		'menu_class' => 'main-nav', // adding custom nav class
+		'theme_location' => 'main-nav', // where it's located in the theme
+		'before' => '', // before the menu
+		'after' => '', // after the menu
+		'link_before' => '', // before each link
+		'link_after' => '', // after each link
 		'depth' => 0    // fallback function
 	));
 } /* end scratch main nav */
 
 function scratch_login_stylesheet() { ?>
-    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_template_directory_uri() . '/css/login.css'; ?>" type="text/css" media="all" />
+  <link rel="stylesheet"
+        id="custom_wp_admin_css"
+        href="<?php echo get_template_directory_uri() . '/css/login.css?ver=' . filemtime(dirname(__FILE__) . '/css/login.css'); ?>"
+        type="text/css"
+        media="all" />
 <?php }
 add_action( 'login_enqueue_scripts', 'scratch_login_stylesheet' );
 
