@@ -432,6 +432,11 @@ function my_theme_register_required_plugins() {
             'name'      => 'WordPress SEO by Yoast',
             'slug'      => 'wordpress-seo',
             'required'  => false,
+        ),
+    array(
+            'name'      => 'WP Migrate DB',
+            'slug'      => 'wp-migrate-db',
+            'required'  => false,
         )
 
 	);
