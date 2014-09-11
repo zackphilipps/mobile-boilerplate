@@ -85,6 +85,8 @@ $pixelBase: 18;
 @function u($values) {
   $list: ();
   @each $value in $values {
+    $unit: null;
+    $val: null;
     @if $value == "auto" {
       $unit: "";
       $val: $value;
