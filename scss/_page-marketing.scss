@@ -1,0 +1,121 @@
+/********************STANDARD MARKETING PAGE********************/
+
+/* Base Styles */
+$icon-circle-size: 96px;
+$image-size: 250px;
+$staggered-row-height: 500px;
+$button-color: $olive;
+$button-hover-color: lighten($olive, 8%);
+$overlay-color: rgba($black, 0.4);
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $overlay-color;
+}
+
+/* Hero Unit */
+.hero-unit {
+  .scratch-image {
+    height: auto;
+  }
+  .content {
+    margin: u(10rem auto);
+    width: 65%;
+    color: $white;
+  }
+  .left {
+    .content {
+      float: left;
+    }
+  }
+  .right {
+    .content {
+      float: right;
+    }
+  }
+}
+
+/* Flexible Columns */
+.flexible-columns {
+  [class^="row-"], [class*=" row-"] {
+    // row-specific styles here
+ 
+  }
+  [class^="column-"], [class*=" column-"] {
+    // column-specific styles here
+    padding: u(1rem);
+    a {
+      &:hover, &:focus {
+        text-decoration: none;
+        .circle {
+          background-color: $button-hover-color;
+        }
+        i {
+          color: $slate;
+        }
+      }
+    }
+  }
+  .circle {
+    width: $icon-circle-size;
+    height: $icon-circle-size;
+    background-color: $button-color;
+    margin: 0 auto;
+    @include easing(background-color);
+  }
+  i {
+    display: block;
+    font-size: u(3rem);
+    color: $white;
+    @include easing(color);
+  }
+}
+
+/* Staggered Images with Text */
+.staggered {
+  .row {
+    .scratch-image {
+      width: $image-size;
+      height: $image-size;
+      margin: 0 auto;
+    }
+    &:nth-child(odd) {
+      background-color: $gray;
+    }
+    @include m {
+      height: $staggered-row-height;
+      .first, .last, .wrap {
+        height: 100%;
+        h3 {
+          margin-top: 0;
+        }
+      }
+      &:nth-child(even) {
+        .first {
+          float: right;
+        }
+        .last {
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+/* Slider */
+.slider {
+  // slider styles here
+  .slide-text {
+    margin: 0 auto;
+    padding: u(1rem);
+    @include m {
+      padding: u(1rem 6rem);
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}

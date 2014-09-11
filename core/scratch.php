@@ -71,14 +71,6 @@ function two_columns($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function two_columns_12($count) {
     if($count % 2 == 0) {
         $string = "eightcol last";
@@ -88,14 +80,6 @@ function two_columns_12($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function two_columns_21($count) {
     if($count % 2 == 0) {
         $string = "fourcol last";
@@ -104,14 +88,6 @@ function two_columns_21($count) {
     }
     return $string;
 }
-
-
-
-
-
-
-
-
 
 function three_columns($count) {
     $string = "fourcol";
@@ -123,14 +99,6 @@ function three_columns($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function three_columns_112($count) {
     $string = "threecol";
     if($count % 3 == 0) {
@@ -140,14 +108,6 @@ function three_columns_112($count) {
     }
     return $string;
 }
-
-
-
-
-
-
-
-
 
 function three_columns_121($count) {
     $string = "sixcol";
@@ -159,14 +119,6 @@ function three_columns_121($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function three_columns_211($count) {
     $string = "threecol";
     if($count % 3 == 0) {
@@ -176,14 +128,6 @@ function three_columns_211($count) {
     }
     return $string;
 }
-
-
-
-
-
-
-
-
 
 function four_columns($count) {
     $string = "threecol";
@@ -195,14 +139,6 @@ function four_columns($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function five_columns($count) {
     $string = "twoptfourcol";
     if($count % 5 == 0) {
@@ -213,14 +149,6 @@ function five_columns($count) {
     return $string;
 }
 
-
-
-
-
-
-
-
-
 function six_columns($count) {
     $string = "twocol";
     if($count % 6 == 0) {
@@ -230,14 +158,6 @@ function six_columns($count) {
     }
     return $string;
 }
-
-
-
-
-
-
-
-
 
 function custom_columns($count) {
   
@@ -265,14 +185,6 @@ function custom_columns($count) {
   
 }
 
-
-
-
-
-
-
-
-
 function two_columns_flex($blocks, $count) {
     $block_count = count($blocks);
     if($block_count % 2 == 0) {
@@ -287,14 +199,6 @@ function two_columns_flex($blocks, $count) {
         return "error";
     }
 }
-
-
-
-
-
-
-
-
 
 function three_columns_flex($blocks, $count) {
     $block_count = count($blocks);
@@ -320,14 +224,6 @@ function three_columns_flex($blocks, $count) {
         return "error";
     }
 }
-
-
-
-
-
-
-
-
 
 function four_columns_flex($blocks, $count) {
     $block_count = count($blocks);
@@ -366,6 +262,500 @@ function four_columns_flex($blocks, $count) {
     } else {
         return "error";
     }
+}
+
+
+
+
+
+
+
+
+
+/*
+ * NEW LAYOUT FUNCTIONS (v1.2 and up)
+ * Feel free to create your own layout functions, or write your own calls to these
+ * in your template files.
+ */
+
+function five_columns_flex($blocks, $count) {
+    $block_count = count($blocks);
+    if($block_count % 5 == 0) {
+        return five_columns($count);
+    } elseif(($block_count + 1) % 5 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2) ||
+           $count == ($block_count - 3)) {
+            if(($count - 1) % 5 == 0) {
+                return "threecol first";
+            } elseif(($count - 2) % 5 == 0 ||
+                     ($count - 3) % 5 == 0) {
+                return "threecol";
+            } else {
+                return "threecol last";
+            }
+        } else {
+            return five_columns($count);
+        }
+    } elseif(($block_count + 2) % 5 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2)) {
+            if(($count - 1) % 4 == 0) {
+                return "fourcol first";
+            } elseif(($count - 2) % 4 == 0) {
+                return "fourcol";
+            } else {
+                return "fourcol last";
+            }
+        } else {
+            return five_columns($count);
+        }
+    } elseif(($block_count + 3) % 5 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1)) {
+            if(($count - 1) % 5 == 0) {
+                return "sixcol first";
+            } else {
+                return "sixcol last";
+            }
+        } else {
+            return five_columns($count);
+        }
+    } elseif(($block_count - 1) % 5 == 0) {
+        if($count == $block_count) {
+            return "twelvecol first";
+        } else {
+            return five_columns($count);
+        }
+    } else {
+        return "error";
+    }
+}
+
+function six_columns_flex($blocks, $count) {
+    $block_count = count($blocks);
+    if($block_count % 6 == 0) {
+        return six_columns($count);
+    } elseif(($block_count + 1) % 6 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2) ||
+           $count == ($block_count - 3) ||
+           $count == ($block_count - 4)) {
+            if(($count - 1) % 6 == 0) {
+                return "twoptfourcol first";
+            } elseif(($count - 2) % 5 == 0 ||
+                     ($count - 3) % 5 == 0 ||
+                     ($count - 4) % 5 == 0) {
+                return "twoptfourcol";
+            } else {
+                return "twoptfourcol last";
+            }
+        } else {
+            return six_columns($count);
+        }
+    } elseif(($block_count + 2) % 6 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2) ||
+           $count == ($block_count - 3)) {
+            if(($count - 1) % 6 == 0) {
+                return "threecol first";
+            } elseif(($count - 2) % 6 == 0 ||
+                     ($count - 3) % 6 == 0) {
+                return "threecol";
+            } else {
+                return "threecol last";
+            }
+        } else {
+            return six_columns($count);
+        }
+    } elseif(($block_count + 3) % 6 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1) ||
+           $count == ($block_count - 2)) {
+            if(($count - 1) % 6 == 0) {
+                return "fourcol first";
+            } elseif(($count - 2) % 6 == 0) {
+                return "fourcol";
+            } else {
+                return "fourcol last";
+            }
+        } else {
+            return six_columns($count);
+        }
+    } elseif(($block_count + 4) % 6 == 0) {
+        if($count == $block_count ||
+           $count == ($block_count - 1)) {
+            if(($count - 1) % 6 == 0) {
+                return "sixcol first";
+            } else {
+                return "sixcol last";
+            }
+        } else {
+            return six_columns($count);
+        }
+    } elseif(($block_count - 1) % 6 == 0) {
+        if($count == $block_count) {
+            return "twelvecol first";
+        } else {
+            return six_columns($count);
+        }
+    } else {
+        return "error";
+    }
+}
+
+function scratch_row_start() {
+  global $row_count, $column_count, $columns;
+  if($columns !== 'custom') {
+    if(($column_count - 1) % $columns === 0) {
+      echo '<div class="clearfix row-' . $row_count . '">';
+    }
+  }
+}
+
+function scratch_column_start() {
+  global $blocks, $column_count, $last, $twelvecol, $columns;
+  $class = scratch_column_class();
+  echo '<div class="' . $class . ' column-' . $column_count . '">';
+  $last = strpos($class, 'last');
+  $twelvecol = strpos($class, 'twelvecol');
+}
+
+function scratch_column_end($column_count) {
+  global $column_count;
+  echo '</div> <!-- /.column-' . $column_count . ' -->';
+}
+
+function scratch_row_end() {
+  global $row_count, $column_count, $last, $twelvecol, $columns;
+  if($columns !== 'custom') {
+    if($last !== false || $twelvecol !== false) {
+      echo '</div> <!-- /.row-' . $row_count . ' -->';
+      $row_count++;
+    }
+  }
+  $column_count++;
+}
+
+function scratch_column_class() {
+  global $blocks, $column_count, $columns;
+  switch($columns) {
+    case 2:
+      return two_columns_flex($blocks, $column_count);
+      break;
+    case 3:
+      return three_columns_flex($blocks, $column_count);
+      break;
+    case 4:
+      return four_columns_flex($blocks, $column_count);
+      break;
+    case 5:
+      return five_columns_flex($blocks, $column_count);
+      break;
+    case 6:
+      return six_columns_flex($blocks, $column_count);
+      break;
+    case 'custom':
+      return custom_columns($column_count);
+      break;
+    default:
+      return 'error';
+      break;
+  }
+}
+
+function scratch_layout_declare($args, $columns, $option = null) {
+  if(is_array($args)) {
+    $GLOBALS['blocks'] = get_posts($args);
+  } else {
+    if($option !== null) {
+      $GLOBALS['blocks'] = get_field($args, $option);
+    } else {
+      $GLOBALS['blocks'] = get_field($args);
+    }
+  }
+  $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
+  $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
+  $GLOBALS['columns'] = $columns;
+}
+
+function scratch_sub_layout_declare($args, $columns, $option = null) {
+  if(is_array($args)) {
+    $GLOBALS['blocks'] = get_posts($args);
+  } else {
+    if($option !== null) {
+      $GLOBALS['blocks'] = get_sub_field($args, $option);
+    } else {
+      $GLOBALS['blocks'] = get_sub_field($args);
+    }
+  }
+  $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
+  $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
+  $GLOBALS['columns'] = $columns;
+}
+
+function scratch_layout_start() {
+  scratch_row_start();
+  scratch_column_start();
+}
+
+function scratch_layout_end() {
+  scratch_column_end();
+  scratch_row_end();
+}
+
+
+
+
+
+
+
+
+
+/*
+ * ACF FUNCTIONS (v1.2 and up)
+ * Feel free to create your own ACF functions, or write your own calls to these
+ * in your template files.
+ */
+
+function scratch_field($field_name, $tag = null, $option = null) {
+  if($tag !== null) {
+    $opening_tag = '<' . $tag . '>';
+    $closing_tag = '</' . $tag . '>';
+    if($option !== null) {
+      if(get_field($field_name, $option)) {
+        echo $opening_tag;
+        the_field($field_name, $option);
+        echo $closing_tag;
+      }
+    } else {
+      if(get_field($field_name)) {
+        echo $opening_tag;
+        the_field($field_name);
+        echo $closing_tag;
+      }
+    }
+  } else {
+    if($option !== null) {
+      if(get_field($field_name, $option)) {
+        the_field($field_name, $option);
+      }
+    } else {
+      if(get_field($field_name)) {
+        the_field($field_name);
+      }
+    }
+  }
+}
+
+function scratch_sub_field($field_name, $tag = null, $option = null) {
+  if($tag !== null) {
+    $opening_tag = '<' . $tag . '>';
+    $closing_tag = '</' . $tag . '>';
+    if($option !== null) {
+      if(get_sub_field($field_name, $option)) {
+        echo $opening_tag;
+        the_sub_field($field_name, $option);
+        echo $closing_tag;
+      }
+    } else {
+      if(get_sub_field($field_name)) {
+        echo $opening_tag;
+        the_sub_field($field_name);
+        echo $closing_tag;
+      }
+    }
+  } else {
+    if($option !== null) {
+      if(get_sub_field($field_name, $option)) {
+        the_sub_field($field_name, $option);
+      }
+    } else {
+      if(get_sub_field($field_name)) {
+        the_sub_field($field_name);
+      }
+    }
+  }
+}
+
+function scratch_link_start($href, $title, $option = null) {
+  if($option !== null) {
+    if(get_field($href, $option)) {
+      echo '<a href="' . get_field($href, $option) . '"';
+      echo ' title="' . get_field($title, $option) . '">';
+    }
+  } else {
+    if(get_field($href)) {
+      echo '<a href="' . get_field($href) . '"';
+      echo ' title="' . get_field($title) . '">';
+    }
+  }
+}
+
+function scratch_link_end($href, $option = null) {
+  if($option !== null) {
+    if(get_field($href, $option)) {
+      echo '</a>';
+    }
+  } else {
+    if(get_field($href)) {
+      echo '</a>';
+    }
+  }
+}
+
+function scratch_sub_link_start($href, $title, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($href, $option)) {
+      echo '<a href="' . get_sub_field($href, $option) . '"';
+      echo ' title="' . get_sub_field($title, $option) . '">';
+    }
+  } else {
+    if(get_sub_field($href)) {
+      echo '<a href="' . get_sub_field($href) . '"';
+      echo ' title="' . get_sub_field($title) . '">';
+    }
+  }
+}
+
+function scratch_sub_link_end($href, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($href, $option)) {
+      echo '</a>';
+    }
+  } else {
+    if(get_sub_field($href)) {
+      echo '</a>';
+    }
+  }
+}
+
+function scratch_icon($field_name, $option = null) {
+  if($option !== null) {
+    if(get_field($field_name, $option)) {
+      echo '<i class="' . get_field($field_name, $option) . '"></i>';
+    }
+  } else {
+    if(get_field($field_name)) {
+      echo '<i class="' . get_field($field_name) . '"></i>';
+    }
+  }
+}
+
+function scratch_sub_icon($field_name, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($field_name, $option)) {
+      echo '<i class="' . get_sub_field($field_name, $option) . '"></i>';
+    }
+  } else {
+    if(get_sub_field($field_name)) {
+      echo '<i class="' . get_sub_field($field_name) . '"></i>';
+    }
+  }
+}
+
+function scratch_icon_circle($field_name, $option = null) {
+  if($option !== null) {
+    if(get_field($field_name, $option)) {
+      echo '<div class="circle">';
+      echo '<i class="' . get_field($field_name, $option) . ' valign"></i>';
+      echo '</div>';
+    }
+  } else {
+    if(get_field($field_name)) {
+      echo '<div class="circle">';
+      echo '<i class="' . get_field($field_name) . ' valign"></i>';
+      echo '</div>';
+    }
+  }
+}
+
+function scratch_sub_icon_circle($field_name, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($field_name, $option)) {
+      echo '<div class="circle">';
+      echo '<i class="' . get_sub_field($field_name, $option) . ' valign"></i>';
+      echo '</div>';
+    }
+  } else {
+    if(get_sub_field($field_name)) {
+      echo '<div class="circle">';
+      echo '<i class="' . get_sub_field($field_name) . ' valign"></i>';
+      echo '</div>';
+    }
+  }
+}
+
+function scratch_button($href, $title, $option = null) { ?>
+
+<?php if($option !== null) { ?>
+
+  <?php if(get_field($title, $option)) { ?>
+
+    <p>
+      <a class="button"
+         href="<?php the_field($href, $option); ?>"
+         title="<?php the_field($title, $option); ?>">
+        <?php the_field($title, $option); ?>
+      </a>
+    </p>
+
+  <?php } ?>
+
+<?php } else { ?>
+
+  <?php if(get_field($title)) { ?>
+
+    <p>
+      <a class="button"
+         href="<?php the_field($href); ?>"
+         title="<?php the_field($title); ?>">
+        <?php the_field($title); ?>
+      </a>
+    </p>
+
+  <?php } ?>
+
+<?php }
+
+}
+
+function scratch_sub_button($href, $title, $option = null) { ?>
+
+<?php if($option !== null) { ?>
+
+  <?php if(get_sub_field($title, $option)) { ?>
+
+    <p>
+      <a class="button"
+         href="<?php the_sub_field($href, $option); ?>"
+         title="<?php the_sub_field($title, $option); ?>">
+        <?php the_sub_field($title, $option); ?>
+      </a>
+    </p>
+
+  <?php } ?>
+
+<?php } else { ?>
+
+  <?php if(get_sub_field($title)) { ?>
+
+    <p>
+      <a class="button"
+         href="<?php the_sub_field($href); ?>"
+         title="<?php the_sub_field($title); ?>">
+        <?php the_sub_field($title); ?>
+      </a>
+    </p>
+
+  <?php } ?>
+
+<?php }
+
 }
 
 
@@ -429,15 +819,15 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
     array(
-            'name'      => 'WordPress SEO by Yoast',
-            'slug'      => 'wordpress-seo',
-            'required'  => false,
-        ),
+      'name'      => 'WordPress SEO by Yoast',
+      'slug'      => 'wordpress-seo',
+      'required'  => false,
+    ),
     array(
-            'name'      => 'WP Migrate DB',
-            'slug'      => 'wp-migrate-db',
-            'required'  => false,
-        )
+      'name'      => 'WP Migrate DB',
+      'slug'      => 'wp-migrate-db',
+      'required'  => false,
+    )
 
 	);
 
