@@ -141,6 +141,13 @@ input[type=email], input[type=number], input[type=password], input[type=search],
   }
 }
 
+/* oEmbed Styles */
+iframe, object, embed {
+  max-width: 100%;
+  display: block;
+  margin: 1em auto;
+}
+
 /* Containers */
 .full, .wrap, .flex-contain, .contain, .constrain {
   margin: 0 auto;

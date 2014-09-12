@@ -51,7 +51,7 @@ if( have_rows('layout') ) {
             if(get_sub_field('use_custom_columns')) {
               $columns = 'custom';
             } else {
-              $columns = 4; // set your columns here
+              $columns = 4; // set your # of columns here (2-6 or 'custom')
             }
             scratch_sub_layout_declare('columns', $columns);
             while(has_sub_field('columns')) {
@@ -121,6 +121,56 @@ if( have_rows('layout') ) {
               </ul>
             </div>
           <?php } ?>
+        </div>
+      </section>
+
+    <?php
+    } elseif( get_row_layout() === 'wysiwygs' ) {
+    ?>
+  
+      <section class="wysiwygs">
+        <div class="wrap hpad clearfix">
+          <h2 class="center">
+            <?php scratch_sub_field('header'); ?>
+          </h2>
+          <?php
+            if(get_sub_field('offset') !== 'Flexible') {
+              $blocks = get_sub_field('wysiwygs');
+              if($blocks) {
+                $count = 1;
+                if(get_sub_field('offset') === '2 to 1') {
+                  while(has_sub_field('wysiwygs')) {
+          ?>
+          
+            <div class="<?php echo two_columns_21($count); ?>">
+              <?php scratch_sub_field('wysiwyg'); ?>
+            </div>
+          
+          <?php
+                    $count++;
+                  }
+                } else {
+                  while(has_sub_field('wysiwygs')) {
+          ?>
+          
+            <div class="<?php echo two_columns_12($count); ?>">
+              <?php scratch_sub_field('wysiwyg'); ?>
+            </div>
+          
+          <?php
+                    $count++;
+                  }
+                }
+              }
+            } else {
+              scratch_sub_layout_declare('wysiwygs', 2);
+              while(has_sub_field('wysiwygs')) {
+                scratch_layout_start();
+                  scratch_sub_field('wysiwyg');
+                scratch_layout_end();
+              }
+            }
+          ?>
         </div>
       </section>
 
