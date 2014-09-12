@@ -52,11 +52,21 @@ if( have_rows('layout') ) {
             } else {
               $columns = 4;
             }
+            if(get_sub_field('icon_or_image') === 'Icon') {
+              $icon_or_image = 'icon';
+            } else {
+              $icon_or_image = 'image';
+            }
             scratch_sub_layout_declare('columns', $columns);
             while(has_sub_field('columns')) {
               scratch_layout_start();
                 scratch_sub_link_start('link', 'header');
-                  scratch_sub_icon_circle('icon');
+                  if($icon_or_image === 'icon') {
+                    scratch_sub_icon_circle('icon');
+                  } else {
+                    scratch_sub_image_start('image', 'circle');
+                    scratch_sub_image_end('image');
+                  }
                   scratch_sub_field('header', 'h4');
                 scratch_sub_link_end('link');
                 scratch_sub_field('blurb');
@@ -72,13 +82,24 @@ if( have_rows('layout') ) {
     ?>
   
       <section class="staggered vpad-3x">
+        <?php
+          if(get_sub_field('icon_or_image') === 'Icon') {
+            $icon_or_image = 'icon';
+          } else {
+            $icon_or_image = 'image';
+          }
+        ?>
         <?php while(has_sub_field('rows')) { ?>
           <div class="row vpad-2x">
             <div class="wrap hpad clearfix">
               <div class="fivecol first">
                 <?php
-                  scratch_sub_image_start('image', 'circle valign');
-                  scratch_sub_image_end('image');
+                  if($icon_or_image === 'icon') {
+                    scratch_sub_icon_circle('icon');
+                  } else {
+                    scratch_sub_image_start('image', 'circle');
+                    scratch_sub_image_end('image');
+                  }
                 ?>
               </div>
               <div class="sevencol last">

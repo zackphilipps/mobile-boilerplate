@@ -190,6 +190,25 @@
                             "default_value": 0
                         },
                         {
+                            "key": "field_54130f7a69f9e",
+                            "label": "Icon or Image",
+                            "name": "icon_or_image",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "choices": {
+                                "Icon": "Icon",
+                                "Image": "Image"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        },
+                        {
                             "key": "field_5409d74ad3962",
                             "label": "Columns",
                             "name": "columns",
@@ -214,7 +233,15 @@
                                     "type": "text",
                                     "instructions": "Get it from <a href=\"http:\/\/ionicons.com\" target=\"_blank\">here<\/a>",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_54130f7a69f9e",
+                                                "operator": "==",
+                                                "value": "Icon"
+                                            }
+                                        ]
+                                    ],
                                     "column_width": "",
                                     "default_value": "",
                                     "placeholder": "",
@@ -223,6 +250,28 @@
                                     "maxlength": "",
                                     "readonly": 0,
                                     "disabled": 0
+                                },
+                                {
+                                    "key": "field_54130fa069f9f",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "prefix": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_54130f7a69f9e",
+                                                "operator": "==",
+                                                "value": "Image"
+                                            }
+                                        ]
+                                    ],
+                                    "column_width": "",
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all"
                                 },
                                 {
                                     "key": "field_5409d78bd3964",
@@ -448,6 +497,25 @@
                     "display": "table",
                     "sub_fields": [
                         {
+                            "key": "field_5413104b87ab9",
+                            "label": "Icon or Image",
+                            "name": "icon_or_image",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": 10,
+                            "choices": {
+                                "Icon": "Icon",
+                                "Image": "Image"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical"
+                        },
+                        {
                             "key": "field_5409d95c3770f",
                             "label": "Rows",
                             "name": "rows",
@@ -465,6 +533,32 @@
                             "max": 0,
                             "sub_fields": [
                                 {
+                                    "key": "field_54130ffb69fa1",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "prefix": "",
+                                    "type": "text",
+                                    "instructions": "Get it from <a href=\"http:\/\/ionicons.com\" target=\"_blank\">here<\/a>",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5413104b87ab9",
+                                                "operator": "==",
+                                                "value": "Icon"
+                                            }
+                                        ]
+                                    ],
+                                    "column_width": "",
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
                                     "key": "field_5409d96a37710",
                                     "label": "Image",
                                     "name": "image",
@@ -472,11 +566,19 @@
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5413104b87ab9",
+                                                "operator": "==",
+                                                "value": "Image"
+                                            }
+                                        ]
+                                    ],
                                     "column_width": "",
+                                    "return_format": "url",
                                     "preview_size": "medium",
-                                    "library": "all",
-                                    "return_format": "url"
+                                    "library": "all"
                                 },
                                 {
                                     "key": "field_5409d98c37711",

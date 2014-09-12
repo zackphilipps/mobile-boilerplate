@@ -749,13 +749,13 @@ function scratch_sub_icon($field_name, $option = null) {
 function scratch_icon_circle($field_name, $option = null) {
   if($option !== null) {
     if(get_field($field_name, $option)) {
-      echo '<div class="circle">';
+      echo '<div class="circle center">';
       echo '<i class="' . get_field($field_name, $option) . ' valign"></i>';
       echo '</div>';
     }
   } else {
     if(get_field($field_name)) {
-      echo '<div class="circle">';
+      echo '<div class="circle center">';
       echo '<i class="' . get_field($field_name) . ' valign"></i>';
       echo '</div>';
     }
@@ -765,13 +765,13 @@ function scratch_icon_circle($field_name, $option = null) {
 function scratch_sub_icon_circle($field_name, $option = null) {
   if($option !== null) {
     if(get_sub_field($field_name, $option)) {
-      echo '<div class="circle">';
+      echo '<div class="circle center">';
       echo '<i class="' . get_sub_field($field_name, $option) . ' valign"></i>';
       echo '</div>';
     }
   } else {
     if(get_sub_field($field_name)) {
-      echo '<div class="circle">';
+      echo '<div class="circle center">';
       echo '<i class="' . get_sub_field($field_name) . ' valign"></i>';
       echo '</div>';
     }
