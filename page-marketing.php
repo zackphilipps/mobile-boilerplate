@@ -14,8 +14,7 @@ if( have_rows('layout') ) {
     if( get_row_layout() === 'hero_unit' ) { ?>
 
       <section class="hero-unit">
-        <figure class="scratch-image"
-                style="background-image: url('<?php the_sub_field('image'); ?>');">
+        <?php scratch_sub_image_start('image'); ?>
           <div class="overlay clearfix">
             <?php
               if(get_sub_field('text_align') === 'Left') {
@@ -36,7 +35,7 @@ if( have_rows('layout') ) {
               </div>
             </figcaption>
           </div>
-        </figure>
+        <?php scratch_sub_image_end('image'); ?>
       </section>
 
     <?php
@@ -51,7 +50,7 @@ if( have_rows('layout') ) {
             if(get_sub_field('use_custom_columns')) {
               $columns = 'custom';
             } else {
-              $columns = 4; // set your # of columns here (2-6 or 'custom')
+              $columns = 4;
             }
             scratch_sub_layout_declare('columns', $columns);
             while(has_sub_field('columns')) {
@@ -77,9 +76,10 @@ if( have_rows('layout') ) {
           <div class="row vpad-2x">
             <div class="wrap hpad clearfix">
               <div class="fivecol first">
-                <div class="circle valign scratch-image"
-                     style="background-image: url('<?php the_sub_field('image'); ?>');">
-                </div>
+                <?php
+                  scratch_sub_image_start('image', 'circle valign');
+                  scratch_sub_image_end('image');
+                ?>
               </div>
               <div class="sevencol last">
                 <div class="content valign">
@@ -135,40 +135,19 @@ if( have_rows('layout') ) {
           </h2>
           <?php
             if(get_sub_field('offset') !== 'Flexible') {
-              $blocks = get_sub_field('wysiwygs');
-              if($blocks) {
-                $count = 1;
-                if(get_sub_field('offset') === '2 to 1') {
-                  while(has_sub_field('wysiwygs')) {
-          ?>
-          
-            <div class="<?php echo two_columns_21($count); ?>">
-              <?php scratch_sub_field('wysiwyg'); ?>
-            </div>
-          
-          <?php
-                    $count++;
-                  }
-                } else {
-                  while(has_sub_field('wysiwygs')) {
-          ?>
-          
-            <div class="<?php echo two_columns_12($count); ?>">
-              <?php scratch_sub_field('wysiwyg'); ?>
-            </div>
-          
-          <?php
-                    $count++;
-                  }
-                }
+              if(get_sub_field('offset') === '2 to 1') {
+                $offset = '2:1';
+              } else {
+                $offset = '1:2';
               }
             } else {
-              scratch_sub_layout_declare('wysiwygs', 2);
-              while(has_sub_field('wysiwygs')) {
-                scratch_layout_start();
-                  scratch_sub_field('wysiwyg');
-                scratch_layout_end();
-              }
+              $offset = null;
+            }
+            scratch_sub_layout_declare('wysiwygs', 2, $offset);
+            while(has_sub_field('wysiwygs')) {
+              scratch_layout_start();
+                scratch_sub_field('wysiwyg');
+              scratch_layout_end();
             }
           ?>
         </div>

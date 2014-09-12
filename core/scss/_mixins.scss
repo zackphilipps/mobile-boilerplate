@@ -87,7 +87,7 @@ $pixelBase: 18;
   @each $value in $values {
     $unit: null;
     $val: null;
-    @if $value == "auto" {
+    @if $value == auto {
       $unit: "";
       $val: $value;
     }

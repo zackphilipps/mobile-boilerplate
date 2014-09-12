@@ -442,13 +442,27 @@ function scratch_row_end() {
 }
 
 function scratch_column_class() {
-  global $blocks, $column_count, $columns;
+  global $blocks, $column_count, $columns, $offset;
   switch($columns) {
     case 2:
-      return two_columns_flex($blocks, $column_count);
+      if($offset === '1:2') {
+        return two_columns_12($column_count);
+      } elseif($offset === '2:1') {
+        return two_columns_21($column_count);
+      } else {
+        return two_columns_flex($blocks, $column_count);
+      }
       break;
     case 3:
-      return three_columns_flex($blocks, $column_count);
+      if($offset === '1:1:2') {
+        return three_columns_112($column_count);
+      } elseif($offset === '1:2:1') {
+        return three_columns_121($column_count);
+      } elseif($offset === '2:1:1') {
+        return three_columns_211($column_count);
+      } else {
+        return three_columns_flex($blocks, $column_count);
+      }
       break;
     case 4:
       return four_columns_flex($blocks, $column_count);
@@ -468,7 +482,7 @@ function scratch_column_class() {
   }
 }
 
-function scratch_layout_declare($args, $columns, $option = null) {
+function scratch_layout_declare($args, $columns, $offset = null, $option = null) {
   if(is_array($args)) {
     $GLOBALS['blocks'] = get_posts($args);
   } else {
@@ -481,9 +495,10 @@ function scratch_layout_declare($args, $columns, $option = null) {
   $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
   $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
   $GLOBALS['columns'] = $columns;
+  $GLOBALS['offset'] = $offset;
 }
 
-function scratch_sub_layout_declare($args, $columns, $option = null) {
+function scratch_sub_layout_declare($args, $columns, $offset = null, $option = null) {
   if(is_array($args)) {
     $GLOBALS['blocks'] = get_posts($args);
   } else {
@@ -496,6 +511,7 @@ function scratch_sub_layout_declare($args, $columns, $option = null) {
   $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
   $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
   $GLOBALS['columns'] = $columns;
+  $GLOBALS['offset'] = $offset;
 }
 
 function scratch_layout_start() {
@@ -630,6 +646,78 @@ function scratch_sub_link_end($href, $option = null) {
   } else {
     if(get_sub_field($href)) {
       echo '</a>';
+    }
+  }
+}
+
+function scratch_image_start($src, $classes = null, $option = null) {
+  if($option !== null) {
+    if(get_field($src, $option)) {
+      echo '<figure class="scratch-image';
+      if($classes !== null) {
+        echo ' ' . $classes . '"';
+      } else {
+        echo '"';
+      }
+      echo ' style="background-image: url(' . get_field($src, $option) . ');">';
+    }
+  } else {
+    if(get_field($src)) {
+      echo '<figure class="scratch-image';
+      if($classes !== null) {
+        echo ' ' . $classes . '"';
+      } else {
+        echo '"';
+      }
+      echo ' style="background-image: url(' . get_field($src) . ');">';
+    }
+  }
+}
+
+function scratch_image_end($src, $option = null) {
+  if($option !== null) {
+    if(get_field($src, $option)) {
+      echo '</figure>';
+    }
+  } else {
+    if(get_field($src)) {
+      echo '</figure>';
+    }
+  }
+}
+
+function scratch_sub_image_start($src, $classes = null, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($src, $option)) {
+      echo '<figure class="scratch-image';
+      if($classes !== null) {
+        echo ' ' . $classes . '"';
+      } else {
+        echo '"';
+      }
+      echo ' style="background-image: url(' . get_sub_field($src, $option) . ');">';
+    }
+  } else {
+    if(get_sub_field($src)) {
+      echo '<figure class="scratch-image';
+      if($classes !== null) {
+        echo ' ' . $classes . '"';
+      } else {
+        echo '"';
+      }
+      echo ' style="background-image: url(' . get_sub_field($src) . ');">';
+    }
+  }
+}
+
+function scratch_sub_image_end($src, $option = null) {
+  if($option !== null) {
+    if(get_sub_field($src, $option)) {
+      echo '</figure>';
+    }
+  } else {
+    if(get_sub_field($src)) {
+      echo '</figure>';
     }
   }
 }
