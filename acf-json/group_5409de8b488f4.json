@@ -36,6 +36,46 @@
                             "return_format": "url"
                         },
                         {
+                            "key": "field_54171a326fa31",
+                            "label": "Image Position X",
+                            "name": "image_position_x",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "choices": {
+                                "Left": "Left",
+                                "Center": "Center",
+                                "Right": "Right"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "Center",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_54171a5e6fa32",
+                            "label": "Image Position Y",
+                            "name": "image_position_y",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "choices": {
+                                "Top": "Top",
+                                "Middle": "Middle",
+                                "Bottom": "Bottom"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "Middle",
+                            "layout": "horizontal"
+                        },
+                        {
                             "key": "field_5411772229ef6",
                             "label": "Text Align",
                             "name": "text_align",
@@ -54,6 +94,26 @@
                             "save_other_choice": 0,
                             "default_value": "",
                             "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_54171af1f5c0d",
+                            "label": "Text Margin",
+                            "name": "text_margin",
+                            "prefix": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": 10,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "em",
+                            "min": 1,
+                            "max": 25,
+                            "step": "",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_5409d70cd395d",

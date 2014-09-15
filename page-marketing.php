@@ -9,12 +9,34 @@ get_header(); the_post(); ?>
 <main role="main">
 
 <?php
+function scratch_bg_position() {
+  $string = null;
+  if(get_sub_field('image_position_y') === 'Top') {
+    $string = 'top';
+  } elseif(get_sub_field('image_position_y') === 'Middle') {
+    $string = 'center';
+  } elseif(get_sub_field('image_position_y') === 'Bottom') {
+    $string = 'bottom';
+  }
+  if(get_sub_field('image_position_x') === 'Left') {
+    $string .= ' left;';
+  } elseif(get_sub_field('image_position_x') === 'Center') {
+    $string .= ' center;';
+  } elseif(get_sub_field('image_position_x') === 'Right') {
+    $string .= ' right;';
+  }
+  echo $string;
+}
+?>
+
+<?php
 if( have_rows('layout') ) {
   while ( have_rows('layout') ) { the_row();
     if( get_row_layout() === 'hero_unit' ) { ?>
 
       <section class="hero-unit">
-        <?php scratch_sub_image_start('image'); ?>
+        <figure class="scratch-image"
+                style="background-image: url('<?php the_sub_field('image'); ?>'); background-position: <?php scratch_bg_position(); ?>">
           <div class="overlay clearfix">
             <?php
               if(get_sub_field('text_align') === 'Left') {
@@ -26,7 +48,8 @@ if( have_rows('layout') ) {
               }
             ?>
             <figcaption class="wrap <?php echo $text_align_class; ?> hpad clearfix white">
-              <div class="content">
+              <div class="content"
+                   style="margin: <?php the_sub_field('text_margin'); ?>em auto;">
                 <?php
                   scratch_sub_field('header', 'h2');
                   scratch_sub_field('blurb');
@@ -35,7 +58,7 @@ if( have_rows('layout') ) {
               </div>
             </figcaption>
           </div>
-        <?php scratch_sub_image_end('image'); ?>
+        </figure>
       </section>
 
     <?php
