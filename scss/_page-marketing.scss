@@ -42,7 +42,10 @@ $overlay-color: rgba($black, 0.4);
   }
   .content {
     margin: u(10rem auto);
-    width: 65%;
+    @include m {
+      width: 65%;
+    }
+
     color: $white;
   }
   .left {

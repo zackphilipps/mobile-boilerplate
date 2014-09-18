@@ -90,7 +90,7 @@ if( have_rows('layout') ) {
                     scratch_sub_image_start('image', 'circle');
                     scratch_sub_image_end('image');
                   }
-                  scratch_sub_field('header', 'h4');
+                  scratch_sub_field('header', 'h3');
                 scratch_sub_link_end('link');
                 scratch_sub_field('blurb');
               scratch_layout_end();
@@ -120,7 +120,7 @@ if( have_rows('layout') ) {
                   if($icon_or_image === 'icon') {
                     scratch_sub_icon_circle('icon');
                   } else {
-                    scratch_sub_image_start('image', 'circle');
+                    scratch_sub_image_start('image', 'circle valign');
                     scratch_sub_image_end('image');
                   }
                 ?>
