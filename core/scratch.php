@@ -533,7 +533,7 @@ function scratch_layout_end() {
 
 
 /*
- * ACF FUNCTIONS (v1.2 and up)
+ * ACF SHORTCUTS (v1.2 and up)
  * Feel free to create your own ACF functions, or write your own calls to these
  * in your template files.
  */
@@ -778,14 +778,14 @@ function scratch_sub_icon_circle($field_name, $option = null) {
   }
 }
 
-function scratch_button($href, $title, $option = null) { ?>
+function scratch_button($href, $title, $classes = null, $option = null) { ?>
 
 <?php if($option !== null) { ?>
 
   <?php if(get_field($title, $option)) { ?>
 
     <p>
-      <a class="button"
+      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
          href="<?php the_field($href, $option); ?>"
          title="<?php the_field($title, $option); ?>">
         <?php the_field($title, $option); ?>
@@ -799,7 +799,7 @@ function scratch_button($href, $title, $option = null) { ?>
   <?php if(get_field($title)) { ?>
 
     <p>
-      <a class="button"
+      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
          href="<?php the_field($href); ?>"
          title="<?php the_field($title); ?>">
         <?php the_field($title); ?>
@@ -812,14 +812,14 @@ function scratch_button($href, $title, $option = null) { ?>
 
 }
 
-function scratch_sub_button($href, $title, $option = null) { ?>
+function scratch_sub_button($href, $title, $classes = null, $option = null) { ?>
 
 <?php if($option !== null) { ?>
 
   <?php if(get_sub_field($title, $option)) { ?>
 
     <p>
-      <a class="button"
+      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
          href="<?php the_sub_field($href, $option); ?>"
          title="<?php the_sub_field($title, $option); ?>">
         <?php the_sub_field($title, $option); ?>
@@ -833,7 +833,7 @@ function scratch_sub_button($href, $title, $option = null) { ?>
   <?php if(get_sub_field($title)) { ?>
 
     <p>
-      <a class="button"
+      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
          href="<?php the_sub_field($href); ?>"
          title="<?php the_sub_field($title); ?>">
         <?php the_sub_field($title); ?>
