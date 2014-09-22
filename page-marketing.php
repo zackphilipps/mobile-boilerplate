@@ -120,7 +120,7 @@ if( have_rows('layout') ) {
                   if($icon_or_image === 'icon') {
                     scratch_sub_icon_circle('icon');
                   } else {
-                    scratch_sub_image_start('image', 'circle valign');
+                    scratch_sub_image_start('image', 'circle');
                     scratch_sub_image_end('image');
                   }
                 ?>
