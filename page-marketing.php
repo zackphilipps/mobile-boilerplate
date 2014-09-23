@@ -104,7 +104,7 @@ if( have_rows('layout') ) {
     } elseif( get_row_layout() === 'staggered_images_with_text' ) {
     ?>
   
-      <section class="staggered vpad-3x">
+      <section class="staggered">
         <?php
           if(get_sub_field('icon_or_image') === 'Icon') {
             $icon_or_image = 'icon';
