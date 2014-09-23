@@ -93,7 +93,10 @@ $overlay-color: rgba($black, 0.4);
     .circle {
       width: $staggered-circle-size;
       height: $staggered-circle-size;
-      @include valign;
+      @include m {
+        @include valign;
+      }
+
       i {
         font-size: u($staggered-icon-size);
       }
