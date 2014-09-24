@@ -4,8 +4,6 @@ $px-only: false;
 // grid breakpoint
 $gbp: 767px;
 
-/* for http://davidwalsh.name/rem-px-browser-function-sass */
-
 @import "../core/scss/mixins";
 @import "../core/scss/variables";
 @import "custom-variables";
