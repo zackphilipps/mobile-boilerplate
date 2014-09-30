@@ -31,10 +31,11 @@ function scratch_bg_position() {
 
 <?php
 if( have_rows('layout') ) {
-  while ( have_rows('layout') ) { the_row();
+  $layout_count = 1; while ( have_rows('layout') ) { the_row();
     if( get_row_layout() === 'hero_unit' ) { ?>
 
-      <section class="hero-unit">
+      <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
+               class="hero-unit">
         <figure class="scratch-image"
                 style="background-image: url('<?php the_sub_field('image'); ?>'); background-position: <?php scratch_bg_position(); ?>">
           <div class="overlay clearfix">
@@ -65,7 +66,8 @@ if( have_rows('layout') ) {
     } elseif( get_row_layout() === 'flexible_columns' ) {
     ?>
 
-      <section class="flexible-columns vpad-3x">
+      <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
+               class="flexible-columns vpad-3x">
         <div class="wrap hpad clearfix center">
           <?php
             scratch_sub_field('header', 'h2');
@@ -104,7 +106,8 @@ if( have_rows('layout') ) {
     } elseif( get_row_layout() === 'staggered_images_with_text' ) {
     ?>
   
-      <section class="staggered">
+      <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
+               class="staggered">
         <?php
           if(get_sub_field('icon_or_image') === 'Icon') {
             $icon_or_image = 'icon';
@@ -143,7 +146,8 @@ if( have_rows('layout') ) {
     } elseif( get_row_layout() === 'slider' ) {
     ?>
   
-      <section class="slider-row">
+      <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
+               class="slider-row">
         <div class="wrap hpad vpad-gap clearfix">
           <?php if(get_sub_field('slides')) { ?>
             <div class="slider clearfix">
@@ -172,7 +176,8 @@ if( have_rows('layout') ) {
     } elseif( get_row_layout() === 'wysiwygs' ) {
     ?>
   
-      <section class="wysiwygs">
+      <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
+               class="wysiwygs">
         <div class="wrap hpad clearfix">
           <h2 class="center">
             <?php scratch_sub_field('header'); ?>
@@ -201,7 +206,8 @@ if( have_rows('layout') ) {
     }
     ?>
 
-  <?php 
+  <?php
+    $layout_count++;
   }
   ?>
 

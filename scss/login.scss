@@ -13,7 +13,7 @@ body.login {
   div#login {
     h1 {
       a {
-        background-image: url("../img/login-logo.svgz");
+        background-image: url("../img/login-logo.svg");
         @include background(center center, no-repeat, contain);
         padding-bottom: 49px;
         width: 100%;

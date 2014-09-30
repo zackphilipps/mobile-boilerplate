@@ -31,7 +31,7 @@
     <a class="logo"
        href="/"
        title="<?php bloginfo('name'); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svgz">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svg">
     </a>
       
     <span class="nav-toggle"
