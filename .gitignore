@@ -39,6 +39,7 @@
 ehthumbs.db
 Thumbs.db
 
-# Sass cache #
-##############
-.sass-cache/
+# Sass cache and node modules #
+###############################
+grunt/.sass-cache/
+grunt/node_modules/
