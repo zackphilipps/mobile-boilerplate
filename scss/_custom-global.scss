@@ -51,7 +51,7 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
     color: $white;
   }
   &:hover, &:focus {
-    background-color: lighten($olive, 8%);
+    background-color: darken($olive, 5%);
     text-decoration: none;
   }
   /* Example alternate button color */
