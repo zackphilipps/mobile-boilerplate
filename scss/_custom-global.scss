@@ -71,11 +71,15 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
 p {}
 
 blockquote, .blockquote {
+  padding: u(1rem 2rem);
+  margin: u(0 0 2rem);
+  border-left: 5px solid $gray;
   p, .p {
     font-family: $sans;
+    font-weight: 300;
   }
   small, .small {
-    &:before {}
+    color: $silver;
   }
 }
 
@@ -287,6 +291,24 @@ iframe, object, embed {
     &:after {
       content: "\f155";
     }
+  }
+}
+
+/* Code */
+code, kbd, pre, samp, .code, .kbd, .pre, .samp {
+  background-color: $black;
+  color: $white;
+  padding: 1px 3px;
+  font-size: 15px;
+  &.codeblock {
+    display: block;
+    margin: 2em auto;
+    padding: 8px 12px 10px;
+    overflow-x: scroll;
+  }
+  strong {
+    background-color: $white;
+    color: $black;
   }
 }
 
