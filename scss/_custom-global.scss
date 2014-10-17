@@ -230,8 +230,8 @@ iframe, object, embed {
 }
 
 .custom-col {
+  position: relative;
   @media (min-width: 649px) {
-    position: relative;
     float: left;
     width: 50%;
     &.even {
