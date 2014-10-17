@@ -128,7 +128,7 @@ $black: #444444;
 
 /* Color classes (modify as needed) */
 
-$colors: "aqua" $aqua, "blue" $blue, "navy" $navy, "teal" $teal, "green" $green, "olive" $olive, "lime" $lime, "yellow" $yellow, "orange" $orange, "red" $red, "magenta" $fuchsia, "purple" $purple, "maroon" $maroon, "white" $white, "gray" $gray, "silver" $silver, "black" $black;
+$colors: "aqua" $aqua, "blue" $blue, "navy" $navy, "teal" $teal, "green" $green, "olive" $olive, "lime" $lime, "yellow" $yellow, "orange" $orange, "red" $red, "fuchsia" $fuchsia, "purple" $purple, "maroon" $maroon, "white" $white, "gray" $gray, "silver" $silver, "black" $black;
 
 @each $color in $colors {
   $label: nth($color, 1);
