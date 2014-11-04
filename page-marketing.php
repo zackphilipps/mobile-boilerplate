@@ -179,10 +179,8 @@ if( have_rows('layout') ) {
       <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
                class="wysiwygs">
         <div class="wrap hpad clearfix">
-          <h2 class="center">
-            <?php scratch_sub_field('header'); ?>
-          </h2>
           <?php
+            scratch_sub_field('header', 'h2');
             if(get_sub_field('offset') !== 'Flexible') {
               if(get_sub_field('offset') === '2 to 1') {
                 $offset = '2:1';
