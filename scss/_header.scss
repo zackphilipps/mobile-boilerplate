@@ -67,7 +67,7 @@ nav ul.main-nav {
     width: auto;
     top: 0;
     float: right;
-    display: block;
+    display: block !important;
     li {
       float: left;
       a {
