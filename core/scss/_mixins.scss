@@ -227,3 +227,13 @@ $hidpi-min-pixel-ratio: 1.3 !default;
   position: relative;
   overflow: hidden;
 }
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+ 
+// Add percentage of black to a color
+@function shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}

@@ -5,7 +5,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     chown: {
       options: {
-        uid: 33, /* must be a number, change to your user id */
+        uid: 33,
+        /* must be a number, change to your user id */
         gid: 33 /* must be a number, this should be your web server process, i.e. `www-data` */
       },
       target: {
@@ -45,8 +46,8 @@ module.exports = function(grunt) {
     sass: {
       style: {
         options: {
-          style: 'compressed',
-          sourcemap: true
+          outputStyle: 'compressed',
+          sourceMap: true
         },
         files: {
           "../css/master.css": "../scss/master.scss",
@@ -104,7 +105,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
