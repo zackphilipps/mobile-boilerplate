@@ -20,7 +20,7 @@ body.login {
         height: 100%;
       }
     }
-    form#loginform {
+    form#loginform, form#registerform {
       p {
         label {
           color: $black;
