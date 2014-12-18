@@ -277,7 +277,7 @@ iframe, object, embed {
   border: 1px solid $olive;
   &:after {
     @include icons;
-    content: "\f151";
+    content: "\f3d0";
     color: $olive;
     position: relative;
     left: 100%;
@@ -289,7 +289,7 @@ iframe, object, embed {
   }
   &.active {
     &:after {
-      content: "\f155";
+      content: "\f3d8";
     }
   }
 }
@@ -325,6 +325,13 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   width: auto;
   max-width: 700px;
   margin: 1em auto;
+}
+
+br.mbr {
+  @include m {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 /* For iOS7 Web Apps
