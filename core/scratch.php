@@ -62,206 +62,206 @@ function bones_head_cleanup() {
  */
 
 function two_columns($count) {
-    $string = "sixcol";
-    if($count % 2 == 0) {
-        $string .= " last";
-    } else {
-        $string .= " first";
-    }
-    return $string;
+  $string = "sixcol";
+  if($count % 2 == 0) {
+    $string .= " last";
+  } else {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function two_columns_12($count) {
-    if($count % 2 == 0) {
-        $string = "eightcol last";
-    } else {
-        $string = "fourcol first";
-    }
-    return $string;
+  if($count % 2 == 0) {
+    $string = "eightcol last";
+  } else {
+    $string = "fourcol first";
+  }
+  return $string;
 }
 
 function two_columns_21($count) {
-    if($count % 2 == 0) {
-        $string = "fourcol last";
-    } else {
-        $string = "eightcol first";
-    }
-    return $string;
+  if($count % 2 == 0) {
+    $string = "fourcol last";
+  } else {
+    $string = "eightcol first";
+  }
+  return $string;
 }
 
 function three_columns($count) {
-    $string = "fourcol";
-    if($count % 3 == 0) {
-        $string .= " last";
-    } elseif(($count - 1) % 3 == 0) {
-        $string .= " first";
-    }
-    return $string;
+  $string = "fourcol";
+  if($count % 3 == 0) {
+    $string .= " last";
+  } elseif(($count - 1) % 3 == 0) {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function three_columns_112($count) {
-    $string = "threecol";
-    if($count % 3 == 0) {
-        $string = "sixcol last";
-    } elseif(($count - 1) % 3 == 0) {
-        $string .= " first";
-    }
-    return $string;
+  $string = "threecol";
+  if($count % 3 == 0) {
+    $string = "sixcol last";
+  } elseif(($count - 1) % 3 == 0) {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function three_columns_121($count) {
-    $string = "sixcol";
-    if($count % 3 == 0) {
-        $string = "threecol last";
-    } elseif(($count - 1) % 3 == 0) {
-        $string = "threecol first";
-    }
-    return $string;
+  $string = "sixcol";
+  if($count % 3 == 0) {
+    $string = "threecol last";
+  } elseif(($count - 1) % 3 == 0) {
+    $string = "threecol first";
+  }
+  return $string;
 }
 
 function three_columns_211($count) {
-    $string = "threecol";
-    if($count % 3 == 0) {
-        $string .= " last";
-    } elseif(($count - 1) % 3 == 0) {
-        $string = "sixcol first";
-    }
-    return $string;
+  $string = "threecol";
+  if($count % 3 == 0) {
+    $string .= " last";
+  } elseif(($count - 1) % 3 == 0) {
+    $string = "sixcol first";
+  }
+  return $string;
 }
 
 function four_columns($count) {
-    $string = "threecol";
-    if($count % 4 == 0) {
-        $string .= " last";
-    } elseif(($count - 1) % 4 == 0) {
-        $string .= " first";
-    }
-    return $string;
+  $string = "threecol";
+  if($count % 4 == 0) {
+    $string .= " last";
+  } elseif(($count - 1) % 4 == 0) {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function five_columns($count) {
-    $string = "twoptfourcol";
-    if($count % 5 == 0) {
-        $string .= " last";
-    } elseif(($count - 1) % 5 == 0) {
-        $string .= " first";
-    }
-    return $string;
+  $string = "twoptfourcol";
+  if($count % 5 == 0) {
+    $string .= " last";
+  } elseif(($count - 1) % 5 == 0) {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function six_columns($count) {
-    $string = "twocol";
-    if($count % 6 == 0) {
-        $string .= " last";
-    } elseif(($count - 1) % 6 == 0) {
-        $string .= " first";
-    }
-    return $string;
+  $string = "twocol";
+  if($count % 6 == 0) {
+    $string .= " last";
+  } elseif(($count - 1) % 6 == 0) {
+    $string .= " first";
+  }
+  return $string;
 }
 
 function custom_columns($count) {
+
+  $string = "custom-col";
   
-    $string = "custom-col";
+  if($count % 2 == 0) {
+    $string .= " even";
+  } else {
+    $string .= " odd";
+  }
   
-    if($count % 2 == 0) {
-        $string .= " even";
-    } else {
-        $string .= " odd";
-    }
+  if($count % 3 == 0) {
+    $string .= " three-last";
+  } elseif(($count - 1) % 3 == 0) {
+    $string .= " three-first";
+  }
   
-    if($count % 3 == 0) {
-        $string .= " three-last";
-    } elseif(($count - 1) % 3 == 0) {
-        $string .= " three-first";
-    }
+  if($count % 4 == 0) {
+    $string .= " four-last";
+  } elseif(($count - 1) % 4 == 0) {
+    $string .= " four-first";
+  }
   
-    if($count % 4 == 0) {
-        $string .= " four-last";
-    } elseif(($count - 1) % 4 == 0) {
-        $string .= " four-first";
-    }
-  
-    return $string;
+  return $string;
   
 }
 
 function two_columns_flex($blocks, $count) {
-    $block_count = count($blocks);
-    if($block_count % 2 == 0) {
-        return two_columns($count);
-    } elseif(($block_count - 1) % 2 == 0) {
-        if($count == $block_count) {
-            return "twelvecol first";
-        } else {
-            return two_columns($count);
-        }
+  $block_count = count($blocks);
+  if($block_count % 2 == 0) {
+    return two_columns($count);
+  } elseif(($block_count - 1) % 2 == 0) {
+    if($count == $block_count) {
+      return "twelvecol first";
     } else {
-        return "error";
+      return two_columns($count);
     }
+  } else {
+    return "error";
+  }
 }
 
 function three_columns_flex($blocks, $count) {
-    $block_count = count($blocks);
-    if($block_count % 3 == 0) {
-        return three_columns($count);
-    } elseif(($block_count + 1) % 3 == 0) {
-        if($count == $block_count || $count == ($block_count - 1)) {
-            if(($count - 1) % 3 == 0) {
-                return "sixcol first";
-            } else {
-                return "sixcol last";
-            }
-        } else {
-            return three_columns($count);
-        }
-    } elseif(($block_count - 1) % 3 == 0) {
-        if($count == $block_count) {
-            return "twelvecol first";
-        } else {
-            return three_columns($count);
-        }
+  $block_count = count($blocks);
+  if($block_count % 3 == 0) {
+    return three_columns($count);
+  } elseif(($block_count + 1) % 3 == 0) {
+    if($count == $block_count || $count == ($block_count - 1)) {
+      if(($count - 1) % 3 == 0) {
+        return "sixcol first";
+      } else {
+        return "sixcol last";
+      }
     } else {
-        return "error";
+      return three_columns($count);
     }
+  } elseif(($block_count - 1) % 3 == 0) {
+    if($count == $block_count) {
+      return "twelvecol first";
+    } else {
+      return three_columns($count);
+    }
+  } else {
+    return "error";
+  }
 }
 
 function four_columns_flex($blocks, $count) {
-    $block_count = count($blocks);
-    if($block_count % 4 == 0) {
-        return four_columns($count);
-    } elseif(($block_count + 1) % 4 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2)) {
-            if(($count - 1) % 4 == 0) {
-                return "fourcol first";
-            } elseif(($count - 2) % 4 == 0) {
-                return "fourcol";
-            } else {
-                return "fourcol last";
-            }
-        } else {
-            return four_columns($count);
-        }
-    } elseif(($block_count + 2) % 4 == 0) {
-        if($count == $block_count || $count == ($block_count - 1)) {
-            if(($count - 1) % 4 == 0) {
-                return "sixcol first";
-            } else {
-                return "sixcol last";
-            }
-        } else {
-            return four_columns($count);
-        }
-    } elseif(($block_count - 1) % 4 == 0) {
-        if($count == $block_count) {
-            return "twelvecol first";
-        } else {
-            return four_columns($count);
-        }
+  $block_count = count($blocks);
+  if($block_count % 4 == 0) {
+    return four_columns($count);
+  } elseif(($block_count + 1) % 4 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2)) {
+      if(($count - 1) % 4 == 0) {
+        return "fourcol first";
+      } elseif(($count - 2) % 4 == 0) {
+        return "fourcol";
+      } else {
+        return "fourcol last";
+      }
     } else {
-        return "error";
+      return four_columns($count);
     }
+  } elseif(($block_count + 2) % 4 == 0) {
+    if($count == $block_count || $count == ($block_count - 1)) {
+      if(($count - 1) % 4 == 0) {
+        return "sixcol first";
+      } else {
+        return "sixcol last";
+      }
+    } else {
+      return four_columns($count);
+    }
+  } elseif(($block_count - 1) % 4 == 0) {
+    if($count == $block_count) {
+      return "twelvecol first";
+    } else {
+      return four_columns($count);
+    }
+  } else {
+    return "error";
+  }
 }
 
 
@@ -279,133 +279,133 @@ function four_columns_flex($blocks, $count) {
  */
 
 function five_columns_flex($blocks, $count) {
-    $block_count = count($blocks);
-    if($block_count % 5 == 0) {
-        return five_columns($count);
-    } elseif(($block_count + 1) % 5 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2) ||
-           $count == ($block_count - 3)) {
-            if(($count - 1) % 5 == 0) {
-                return "threecol first";
-            } elseif(($count - 2) % 5 == 0 ||
-                     ($count - 3) % 5 == 0) {
-                return "threecol";
-            } else {
-                return "threecol last";
-            }
-        } else {
-            return five_columns($count);
-        }
-    } elseif(($block_count + 2) % 5 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2)) {
-            if(($count - 1) % 4 == 0) {
-                return "fourcol first";
-            } elseif(($count - 2) % 4 == 0) {
-                return "fourcol";
-            } else {
-                return "fourcol last";
-            }
-        } else {
-            return five_columns($count);
-        }
-    } elseif(($block_count + 3) % 5 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1)) {
-            if(($count - 1) % 5 == 0) {
-                return "sixcol first";
-            } else {
-                return "sixcol last";
-            }
-        } else {
-            return five_columns($count);
-        }
-    } elseif(($block_count - 1) % 5 == 0) {
-        if($count == $block_count) {
-            return "twelvecol first";
-        } else {
-            return five_columns($count);
-        }
+  $block_count = count($blocks);
+  if($block_count % 5 == 0) {
+    return five_columns($count);
+  } elseif(($block_count + 1) % 5 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2) ||
+       $count == ($block_count - 3)) {
+      if(($count - 1) % 5 == 0) {
+        return "threecol first";
+      } elseif(($count - 2) % 5 == 0 ||
+               ($count - 3) % 5 == 0) {
+        return "threecol";
+      } else {
+        return "threecol last";
+      }
     } else {
-        return "error";
+      return five_columns($count);
     }
+  } elseif(($block_count + 2) % 5 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2)) {
+      if(($count - 1) % 4 == 0) {
+        return "fourcol first";
+      } elseif(($count - 2) % 4 == 0) {
+        return "fourcol";
+      } else {
+        return "fourcol last";
+      }
+    } else {
+      return five_columns($count);
+    }
+  } elseif(($block_count + 3) % 5 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1)) {
+      if(($count - 1) % 5 == 0) {
+        return "sixcol first";
+      } else {
+        return "sixcol last";
+      }
+    } else {
+      return five_columns($count);
+    }
+  } elseif(($block_count - 1) % 5 == 0) {
+    if($count == $block_count) {
+      return "twelvecol first";
+    } else {
+      return five_columns($count);
+    }
+  } else {
+    return "error";
+  }
 }
 
 function six_columns_flex($blocks, $count) {
-    $block_count = count($blocks);
-    if($block_count % 6 == 0) {
-        return six_columns($count);
-    } elseif(($block_count + 1) % 6 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2) ||
-           $count == ($block_count - 3) ||
-           $count == ($block_count - 4)) {
-            if(($count - 1) % 6 == 0) {
-                return "twoptfourcol first";
-            } elseif(($count - 2) % 5 == 0 ||
-                     ($count - 3) % 5 == 0 ||
-                     ($count - 4) % 5 == 0) {
-                return "twoptfourcol";
-            } else {
-                return "twoptfourcol last";
-            }
-        } else {
-            return six_columns($count);
-        }
-    } elseif(($block_count + 2) % 6 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2) ||
-           $count == ($block_count - 3)) {
-            if(($count - 1) % 6 == 0) {
-                return "threecol first";
-            } elseif(($count - 2) % 6 == 0 ||
-                     ($count - 3) % 6 == 0) {
-                return "threecol";
-            } else {
-                return "threecol last";
-            }
-        } else {
-            return six_columns($count);
-        }
-    } elseif(($block_count + 3) % 6 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1) ||
-           $count == ($block_count - 2)) {
-            if(($count - 1) % 6 == 0) {
-                return "fourcol first";
-            } elseif(($count - 2) % 6 == 0) {
-                return "fourcol";
-            } else {
-                return "fourcol last";
-            }
-        } else {
-            return six_columns($count);
-        }
-    } elseif(($block_count + 4) % 6 == 0) {
-        if($count == $block_count ||
-           $count == ($block_count - 1)) {
-            if(($count - 1) % 6 == 0) {
-                return "sixcol first";
-            } else {
-                return "sixcol last";
-            }
-        } else {
-            return six_columns($count);
-        }
-    } elseif(($block_count - 1) % 6 == 0) {
-        if($count == $block_count) {
-            return "twelvecol first";
-        } else {
-            return six_columns($count);
-        }
+  $block_count = count($blocks);
+  if($block_count % 6 == 0) {
+    return six_columns($count);
+  } elseif(($block_count + 1) % 6 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2) ||
+       $count == ($block_count - 3) ||
+       $count == ($block_count - 4)) {
+      if(($count - 1) % 6 == 0) {
+        return "twoptfourcol first";
+      } elseif(($count - 2) % 5 == 0 ||
+               ($count - 3) % 5 == 0 ||
+               ($count - 4) % 5 == 0) {
+        return "twoptfourcol";
+      } else {
+        return "twoptfourcol last";
+      }
     } else {
-        return "error";
+      return six_columns($count);
     }
+  } elseif(($block_count + 2) % 6 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2) ||
+       $count == ($block_count - 3)) {
+      if(($count - 1) % 6 == 0) {
+        return "threecol first";
+      } elseif(($count - 2) % 6 == 0 ||
+               ($count - 3) % 6 == 0) {
+        return "threecol";
+      } else {
+        return "threecol last";
+      }
+    } else {
+      return six_columns($count);
+    }
+  } elseif(($block_count + 3) % 6 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1) ||
+       $count == ($block_count - 2)) {
+      if(($count - 1) % 6 == 0) {
+        return "fourcol first";
+      } elseif(($count - 2) % 6 == 0) {
+        return "fourcol";
+      } else {
+        return "fourcol last";
+      }
+    } else {
+      return six_columns($count);
+    }
+  } elseif(($block_count + 4) % 6 == 0) {
+    if($count == $block_count ||
+       $count == ($block_count - 1)) {
+      if(($count - 1) % 6 == 0) {
+        return "sixcol first";
+      } else {
+        return "sixcol last";
+      }
+    } else {
+      return six_columns($count);
+    }
+  } elseif(($block_count - 1) % 6 == 0) {
+    if($count == $block_count) {
+      return "twelvecol first";
+    } else {
+      return six_columns($count);
+    }
+  } else {
+    return "error";
+  }
 }
 
 function scratch_row_start() {
@@ -445,40 +445,40 @@ function scratch_column_class() {
   global $blocks, $column_count, $columns, $offset;
   switch($columns) {
     case 2:
-      if($offset === '1:2') {
-        return two_columns_12($column_count);
-      } elseif($offset === '2:1') {
-        return two_columns_21($column_count);
-      } else {
-        return two_columns_flex($blocks, $column_count);
-      }
-      break;
+    if($offset === '1:2') {
+      return two_columns_12($column_count);
+    } elseif($offset === '2:1') {
+      return two_columns_21($column_count);
+    } else {
+      return two_columns_flex($blocks, $column_count);
+    }
+    break;
     case 3:
-      if($offset === '1:1:2') {
-        return three_columns_112($column_count);
-      } elseif($offset === '1:2:1') {
-        return three_columns_121($column_count);
-      } elseif($offset === '2:1:1') {
-        return three_columns_211($column_count);
-      } else {
-        return three_columns_flex($blocks, $column_count);
-      }
-      break;
+    if($offset === '1:1:2') {
+      return three_columns_112($column_count);
+    } elseif($offset === '1:2:1') {
+      return three_columns_121($column_count);
+    } elseif($offset === '2:1:1') {
+      return three_columns_211($column_count);
+    } else {
+      return three_columns_flex($blocks, $column_count);
+    }
+    break;
     case 4:
-      return four_columns_flex($blocks, $column_count);
-      break;
+    return four_columns_flex($blocks, $column_count);
+    break;
     case 5:
-      return five_columns_flex($blocks, $column_count);
-      break;
+    return five_columns_flex($blocks, $column_count);
+    break;
     case 6:
-      return six_columns_flex($blocks, $column_count);
-      break;
+    return six_columns_flex($blocks, $column_count);
+    break;
     case 'custom':
-      return custom_columns($column_count);
-      break;
+    return custom_columns($column_count);
+    break;
     default:
-      return 'error';
-      break;
+    return 'error';
+    break;
   }
 }
 
@@ -782,31 +782,31 @@ function scratch_button($href, $title, $classes = null, $option = null) { ?>
 
 <?php if($option !== null) { ?>
 
-  <?php if(get_field($title, $option)) { ?>
+<?php if(get_field($title, $option)) { ?>
 
-    <p>
-      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-         href="<?php the_field($href, $option); ?>"
-         title="<?php the_field($title, $option); ?>">
-        <?php the_field($title, $option); ?>
-      </a>
-    </p>
+<p>
+  <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
+   href="<?php the_field($href, $option); ?>"
+   title="<?php the_field($title, $option); ?>">
+   <?php the_field($title, $option); ?>
+ </a>
+</p>
 
-  <?php } ?>
+<?php } ?>
 
 <?php } else { ?>
 
-  <?php if(get_field($title)) { ?>
+<?php if(get_field($title)) { ?>
 
-    <p>
-      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-         href="<?php the_field($href); ?>"
-         title="<?php the_field($title); ?>">
-        <?php the_field($title); ?>
-      </a>
-    </p>
+<p>
+  <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
+   href="<?php the_field($href); ?>"
+   title="<?php the_field($title); ?>">
+   <?php the_field($title); ?>
+ </a>
+</p>
 
-  <?php } ?>
+<?php } ?>
 
 <?php }
 
@@ -816,31 +816,31 @@ function scratch_sub_button($href, $title, $classes = null, $option = null) { ?>
 
 <?php if($option !== null) { ?>
 
-  <?php if(get_sub_field($title, $option)) { ?>
+<?php if(get_sub_field($title, $option)) { ?>
 
-    <p>
-      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-         href="<?php the_sub_field($href, $option); ?>"
-         title="<?php the_sub_field($title, $option); ?>">
-        <?php the_sub_field($title, $option); ?>
-      </a>
-    </p>
+<p>
+  <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
+   href="<?php the_sub_field($href, $option); ?>"
+   title="<?php the_sub_field($title, $option); ?>">
+   <?php the_sub_field($title, $option); ?>
+ </a>
+</p>
 
-  <?php } ?>
+<?php } ?>
 
 <?php } else { ?>
 
-  <?php if(get_sub_field($title)) { ?>
+<?php if(get_sub_field($title)) { ?>
 
-    <p>
-      <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-         href="<?php the_sub_field($href); ?>"
-         title="<?php the_sub_field($title); ?>">
-        <?php the_sub_field($title); ?>
-      </a>
-    </p>
+<p>
+  <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
+   href="<?php the_sub_field($href); ?>"
+   title="<?php the_sub_field($title); ?>">
+   <?php the_sub_field($title); ?>
+ </a>
+</p>
 
-  <?php } ?>
+<?php } ?>
 
 <?php }
 
@@ -881,46 +881,41 @@ function my_theme_register_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-    array(
-			'name' 		=> 'CloudFlare',
-			'slug' 		=> 'cloudflare',
-			'required' 	=> false,
-		),
-    array(
-			'name' 		=> 'Custom Post Type UI',
-			'slug' 		=> 'custom-post-type-ui',
-			'required' 	=> false,
-		),
-    array(
-			'name' 		=> 'Relevanssi - A Better Search',
-			'slug' 		=> 'relevanssi',
-			'required' 	=> false,
-		),
-    array(
-			'name' 		=> 'Resize at Upload Plus',
-			'slug' 		=> 'resize-at-upload-plus',
-			'required' 	=> false,
-		),
-    array(
-			'name' 		=> 'WordPress Backup to Dropbox',
-			'slug' 		=> 'wordpress-backup-to-dropbox',
-			'required' 	=> false,
-		),
-    array(
-      'name'      => 'WordPress SEO by Yoast',
-      'slug'      => 'wordpress-seo',
-      'required'  => false,
-    ),
-    array(
-      'name'      => 'WP Migrate DB',
-      'slug'      => 'wp-migrate-db',
-      'required'  => false,
-    )
+                   array(
+                         'name' 		=> 'Custom Post Type UI',
+                         'slug' 		=> 'custom-post-type-ui',
+                         'required' 	=> false,
+                         ),
+                   array(
+                         'name' 		=> 'Relevanssi - A Better Search',
+                         'slug' 		=> 'relevanssi',
+                         'required' 	=> false,
+                         ),
+                   array(
+                         'name' 		=> 'Resize at Upload Plus',
+                         'slug' 		=> 'resize-at-upload-plus',
+                         'required' 	=> false,
+                         ),
+                   array(
+                         'name' 		=> 'WordPress Backup to Dropbox',
+                         'slug' 		=> 'wordpress-backup-to-dropbox',
+                         'required' 	=> false,
+                         ),
+                   array(
+                         'name'      => 'WordPress SEO by Yoast',
+                         'slug'      => 'wordpress-seo',
+                         'required'  => false,
+                         ),
+                   array(
+                         'name'      => 'WP Migrate DB',
+                         'slug'      => 'wp-migrate-db',
+                         'required'  => false,
+                         )
 
-	);
+                   );
 
 	// Change this to your theme text domain, used for internationalising strings
-	$theme_text_domain = 'tgmpa';
+$theme_text_domain = 'tgmpa';
 
 	/**
 	 * Array of configuration settings. Amend each line as needed.
@@ -939,8 +934,8 @@ function my_theme_register_required_plugins() {
 		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
-			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
-			'menu_title'                       			=> __( 'Install Plugins', $theme_text_domain ),
+                             'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
+                             'menu_title'                       			=> __( 'Install Plugins', $theme_text_domain ),
 			'installing'                       			=> __( 'Installing Plugin: %s', $theme_text_domain ), // %1$s = plugin name
 			'oops'                             			=> __( 'Something went wrong with the plugin API.', $theme_text_domain ),
 			'notice_can_install_required'     			=> _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s)
@@ -957,10 +952,10 @@ function my_theme_register_required_plugins() {
 			'plugin_activated'                 			=> __( 'Plugin activated successfully.', $theme_text_domain ),
 			'complete' 									=> __( 'All plugins installed and activated successfully. %s', $theme_text_domain ), // %1$s = dashboard link
 			'nag_type'									=> 'updated' // Determines admin notice type - can only be 'updated' or 'error'
-		)
-	);
+      )
+);
 
-	tgmpa( $plugins, $config );
+tgmpa( $plugins, $config );
 
 }
 
