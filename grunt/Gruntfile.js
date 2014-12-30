@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         options: {
           separator: ';'
         },
-        src: ['../core/js/*.js', '../js/helper.js', '../js/plugins.js', '../js/main.js'],
+        src: ['../core/js/*.js', '../js/helper.js', '../js/plugins.js', '../js/acf-google-maps.js', '../js/main.js'],
         /* add moar js here, but keep main.js last */
         dest: '../js/concat/main.js'
       }
