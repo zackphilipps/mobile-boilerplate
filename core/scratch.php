@@ -425,7 +425,7 @@ function scratch_column_start() {
   $twelvecol = strpos($class, 'twelvecol');
 }
 
-function scratch_column_end($column_count) {
+function scratch_column_end() {
   global $column_count;
   echo '</div> <!-- /.column-' . $column_count . ' -->';
 }
@@ -750,13 +750,13 @@ function scratch_icon_circle($field_name, $option = null) {
   if($option !== null) {
     if(get_field($field_name, $option)) {
       echo '<div class="circle center">';
-      echo '<i class="' . get_field($field_name, $option) . ' valign"></i>';
+      echo '<i class="' . get_field($field_name, $option) . ' valign-always"></i>';
       echo '</div>';
     }
   } else {
     if(get_field($field_name)) {
       echo '<div class="circle center">';
-      echo '<i class="' . get_field($field_name) . ' valign"></i>';
+      echo '<i class="' . get_field($field_name) . ' valign-always"></i>';
       echo '</div>';
     }
   }
@@ -766,13 +766,13 @@ function scratch_sub_icon_circle($field_name, $option = null) {
   if($option !== null) {
     if(get_sub_field($field_name, $option)) {
       echo '<div class="circle center">';
-      echo '<i class="' . get_sub_field($field_name, $option) . ' valign"></i>';
+      echo '<i class="' . get_sub_field($field_name, $option) . ' valign-always"></i>';
       echo '</div>';
     }
   } else {
     if(get_sub_field($field_name)) {
       echo '<div class="circle center">';
-      echo '<i class="' . get_sub_field($field_name) . ' valign"></i>';
+      echo '<i class="' . get_sub_field($field_name) . ' valign-always"></i>';
       echo '</div>';
     }
   }
