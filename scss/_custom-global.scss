@@ -49,6 +49,8 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   &:link, &:active, &:visited {
     background-color: $olive;
     color: $white;
+    line-height: normal;
+    outline: none;
   }
   &:hover, &:focus {
     background-color: darken($olive, 5%);
@@ -64,6 +66,14 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
     }
     &:hover, &:focus {
       background-color: lighten($black, 8%);
+    }
+  }
+}
+
+.acf-button {
+  &.blue {
+    &:hover, &:focus {
+      background-color: darken($olive, 5%);
     }
   }
 }
