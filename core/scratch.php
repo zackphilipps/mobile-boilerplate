@@ -892,8 +892,8 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
-                         'name' 		=> 'Resize at Upload Plus',
-                         'slug' 		=> 'resize-at-upload-plus',
+                         'name' 		=> 'Resize Image After Upload',
+                         'slug' 		=> 'resize-image-after-upload',
                          'required' 	=> false,
                          ),
                    array(
