@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+  $('.slider').glide({
+    autoplay: false,
+    arrowRightText: '',
+    arrowLeftText: ''
+  });
   $('.nav-toggle').click(function() {
     if ($(this).data('direction') === 'down') {
       $('nav ul.main-nav')
@@ -64,10 +69,5 @@ jQuery(document).ready(function($) {
     var string = $(this).attr('href').split('#')[1];
     $('#' + string)
       .velocity('scroll', 400);
-  });
-  $('.slider').glide({
-    autoplay: false,
-    arrowRightText: '',
-    arrowLeftText: ''
   });
 });
