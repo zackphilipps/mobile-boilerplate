@@ -282,7 +282,7 @@ iframe, object, embed {
 
 .toggle-heading {
   display: block;
-  padding: u(0.25rem 0.5rem);
+  padding: u(0.25rem 1.75rem 0.25rem 0.5rem);
   margin: u(1.5rem auto 0);
   color: $olive;
   cursor: pointer;
@@ -291,13 +291,10 @@ iframe, object, embed {
     @include icons;
     content: "\f3d0";
     color: $olive;
-    position: relative;
-    left: 100%;
-    top: -20px;
-    margin-bottom: -20px;
-    margin-left: -12px;
+    position: absolute;
     display: block;
-    width: 24px;
+    bottom: u(0.25rem);
+    right: u(0.5rem);
   }
   &.active {
     &:after {
