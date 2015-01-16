@@ -538,9 +538,14 @@ function scratch_layout_end() {
  * in your template files.
  */
 
-function scratch_field($field_name, $tag = null, $option = null) {
+function scratch_field($field_name, $tag = null, $classes = null, $option = null) {
   if($tag !== null) {
-    $opening_tag = '<' . $tag . '>';
+    $opening_tag = '<' . $tag;
+    if($classes !== null) {
+      $opening_tag .= ' class="' . $classes . '">';
+    } else {
+      $opening_tag .= '>';
+    }
     $closing_tag = '</' . $tag . '>';
     if($option !== null) {
       if(get_field($field_name, $option)) {
@@ -568,9 +573,32 @@ function scratch_field($field_name, $tag = null, $option = null) {
   }
 }
 
-function scratch_sub_field($field_name, $tag = null, $option = null) {
+function scratch_raw_field($field_name, $before = null, $after = null, $option = null) {
+  if($before !== null) {
+    echo $before;
+  }
+  if($option !== null) {
+    if(get_field($field_name, $option)) {
+      the_field($field_name, $option);
+    }
+  } else {
+    if(get_field($field_name)) {
+      the_field($field_name);
+    }
+  }
+  if($after !== null) {
+    echo $after;
+  }
+}
+
+function scratch_sub_field($field_name, $tag = null, $classes = null, $option = null) {
   if($tag !== null) {
-    $opening_tag = '<' . $tag . '>';
+    $opening_tag = '<' . $tag;
+    if($classes !== null) {
+      $opening_tag .= ' class="' . $classes . '">';
+    } else {
+      $opening_tag .= '>';
+    }
     $closing_tag = '</' . $tag . '>';
     if($option !== null) {
       if(get_sub_field($field_name, $option)) {
@@ -598,16 +626,44 @@ function scratch_sub_field($field_name, $tag = null, $option = null) {
   }
 }
 
-function scratch_link_start($href, $title, $option = null) {
+function scratch_raw_sub_field($field_name, $before = null, $after = null, $option = null) {
+  if($before !== null) {
+    echo $before;
+  }
+  if($option !== null) {
+    if(get_sub_field($field_name, $option)) {
+      the_sub_field($field_name, $option);
+    }
+  } else {
+    if(get_sub_field($field_name)) {
+      the_sub_field($field_name);
+    }
+  }
+  if($after !== null) {
+    echo $after;
+  }
+}
+
+function scratch_link_start($href, $title, $classes = null, $option = null) {
   if($option !== null) {
     if(get_field($href, $option)) {
       echo '<a href="' . get_field($href, $option) . '"';
-      echo ' title="' . get_field($title, $option) . '">';
+      echo ' title="' . get_field($title, $option) . '"';
+      if($classes !== null) {
+        echo ' class="' . $classes . '">';
+      } else {
+        echo '>';
+      }
     }
   } else {
     if(get_field($href)) {
       echo '<a href="' . get_field($href) . '"';
-      echo ' title="' . get_field($title) . '">';
+      echo ' title="' . get_field($title) . '"';
+      if($classes !== null) {
+        echo ' class="' . $classes . '">';
+      } else {
+        echo '>';
+      }
     }
   }
 }
@@ -624,16 +680,26 @@ function scratch_link_end($href, $option = null) {
   }
 }
 
-function scratch_sub_link_start($href, $title, $option = null) {
+function scratch_sub_link_start($href, $title, $classes = null, $option = null) {
   if($option !== null) {
     if(get_sub_field($href, $option)) {
       echo '<a href="' . get_sub_field($href, $option) . '"';
-      echo ' title="' . get_sub_field($title, $option) . '">';
+      echo ' title="' . get_sub_field($title, $option) . '"';
+      if($classes !== null) {
+        echo ' class="' . $classes . '">';
+      } else {
+        echo '>';
+      }
     }
   } else {
     if(get_sub_field($href)) {
       echo '<a href="' . get_sub_field($href) . '"';
-      echo ' title="' . get_sub_field($title) . '">';
+      echo ' title="' . get_sub_field($title) . '"';
+      if($classes !== null) {
+        echo ' class="' . $classes . '">';
+      } else {
+        echo '>';
+      }
     }
   }
 }
@@ -722,26 +788,42 @@ function scratch_sub_image_end($src, $option = null) {
   }
 }
 
-function scratch_icon($field_name, $option = null) {
+function scratch_icon($field_name, $classes = null, $option = null) {
   if($option !== null) {
     if(get_field($field_name, $option)) {
-      echo '<i class="' . get_field($field_name, $option) . '"></i>';
+      if($classes !== null) {
+        echo '<i class="' . get_field($field_name, $option) . ' ' . $classes . '"></i>';
+      } else {
+        echo '<i class="' . get_field($field_name, $option) . '"></i>';
+      }
     }
   } else {
     if(get_field($field_name)) {
-      echo '<i class="' . get_field($field_name) . '"></i>';
+      if($classes !== null) {
+        echo '<i class="' . get_field($field_name) . ' ' . $classes . '"></i>';
+      } else {
+        echo '<i class="' . get_field($field_name) . '"></i>';
+      }
     }
   }
 }
 
-function scratch_sub_icon($field_name, $option = null) {
+function scratch_sub_icon($field_name, $classes = null, $option = null) {
   if($option !== null) {
     if(get_sub_field($field_name, $option)) {
-      echo '<i class="' . get_sub_field($field_name, $option) . '"></i>';
+      if($classes !== null) {
+        echo '<i class="' . get_sub_field($field_name, $option) . ' ' . $classes . '"></i>';
+      } else {
+        echo '<i class="' . get_sub_field($field_name, $option) . '"></i>';
+      }
     }
   } else {
     if(get_sub_field($field_name)) {
-      echo '<i class="' . get_sub_field($field_name) . '"></i>';
+      if($classes !== null) {
+        echo '<i class="' . get_sub_field($field_name) . ' ' . $classes . '"></i>';
+      } else {
+        echo '<i class="' . get_sub_field($field_name) . '"></i>';
+      }
     }
   }
 }

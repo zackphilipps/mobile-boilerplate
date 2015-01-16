@@ -336,10 +336,20 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   margin: u(1rem auto);
 }
 
-br.mbr {
-  @include m {
+br {
+  &.mbr {
+    @include m {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  &.brm {
     display: none;
     visibility: hidden;
+    @include m {
+      display: block;
+      visibility: visible;
+    }
   }
 }
 

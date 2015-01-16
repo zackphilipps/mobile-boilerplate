@@ -95,6 +95,17 @@ if( have_rows('layout') ) {
                   scratch_sub_field('header', 'h3');
                 scratch_sub_link_end('link');
                 scratch_sub_field('blurb');
+                if(get_sub_field('link')) :
+          ?>
+            <p>
+              <a href="<?php the_sub_field('link'); ?>"
+                 class="button"
+                 title="Learn More">
+                Learn More
+              </a>
+            </p>
+          <?php
+                endif;
               scratch_layout_end();
             }
             scratch_sub_button('cta_link', 'cta_text');
