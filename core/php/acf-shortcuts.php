@@ -42,20 +42,26 @@ function scratch_field($field_name, $tag = null, $classes = null, $option = null
 }
 
 function scratch_raw_field($field_name, $before = null, $after = null, $option = null) {
-  if($before !== null) {
-    echo $before;
-  }
   if($option !== null) {
     if(get_field($field_name, $option)) {
+      if($before !== null) {
+        echo $before;
+      }
       the_field($field_name, $option);
+      if($after !== null) {
+        echo $after;
+      }
     }
   } else {
     if(get_field($field_name)) {
+      if($before !== null) {
+        echo $before;
+      }
       the_field($field_name);
+      if($after !== null) {
+        echo $after;
+      }
     }
-  }
-  if($after !== null) {
-    echo $after;
   }
 }
 
@@ -95,20 +101,26 @@ function scratch_sub_field($field_name, $tag = null, $classes = null, $option = 
 }
 
 function scratch_raw_sub_field($field_name, $before = null, $after = null, $option = null) {
-  if($before !== null) {
-    echo $before;
-  }
   if($option !== null) {
     if(get_sub_field($field_name, $option)) {
+      if($before !== null) {
+        echo $before;
+      }
       the_sub_field($field_name, $option);
+      if($after !== null) {
+        echo $after;
+      }
     }
   } else {
     if(get_sub_field($field_name)) {
+      if($before !== null) {
+        echo $before;
+      }
       the_sub_field($field_name);
+      if($after !== null) {
+        echo $after;
+      }
     }
-  }
-  if($after !== null) {
-    echo $after;
   }
 }
 
