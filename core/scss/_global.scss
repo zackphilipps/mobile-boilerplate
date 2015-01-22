@@ -224,17 +224,26 @@ blockquote, .blockquote {
 
 .alignleft {
   float: left;
-  margin: u(1rem 1rem 1rem 0);
+  margin-top: u(1rem);
+  margin-right: u(1rem);
+  margin-bottom: u(1rem);
+  margin-left: 0;
 }
 
 .aligncenter {
   display: block;
-  margin: 1em auto;
+  margin-top: u(1rem);
+  margin-right: 0;
+  margin-bottom: u(1rem);
+  margin-left: 0;
 }
 
 .alignright {
   float: right;
-  margin: u(1rem 0 1rem 1rem);
+  margin-top: u(1rem);
+  margin-right: 0;
+  margin-bottom: u(1rem);
+  margin-left: u(1rem);
 }
 
 .left {
@@ -247,6 +256,15 @@ blockquote, .blockquote {
 
 .right {
   text-align: right;
+}
+
+.block-0-auto {
+  display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  @extend .center;
 }
 
 .fullh {
