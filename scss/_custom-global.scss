@@ -292,6 +292,7 @@ iframe, object, embed {
   color: $olive;
   cursor: pointer;
   border: 1px solid $olive;
+  position: relative;
   &:after {
     @include icons;
     content: "\f3d0";
