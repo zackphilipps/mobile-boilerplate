@@ -80,6 +80,13 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
+                        'name'               => 'Github Updater',
+                        'slug'               => 'github-updater',
+                        'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip',
+                        'required'           => false,
+                        'external_url'       => 'https://github.com/afragen/github-updater',
+                    ),
+                   array(
                          'name' 		=> 'Relevanssi - A Better Search',
                          'slug' 		=> 'relevanssi',
                          'required' 	=> false,
@@ -100,10 +107,12 @@ function my_theme_register_required_plugins() {
                          'required'  => false,
                          ),
                    array(
-                         'name'      => 'WP Migrate DB',
-                         'slug'      => 'wp-migrate-db',
-                         'required'  => false,
-                         )
+                        'name'               => 'WP Sync DB',
+                        'slug'               => 'wp-sync-db',
+                        'source'             => 'https://github.com/wp-sync-db/wp-sync-db/archive/master.zip',
+                        'required'           => false,
+                        'external_url'       => 'https://github.com/wp-sync-db/wp-sync-db',
+                    )
 
                    );
 
