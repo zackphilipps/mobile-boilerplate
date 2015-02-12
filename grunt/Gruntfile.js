@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
 
   grunt.initConfig({
     chown: {
@@ -66,9 +66,6 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        livereload: true
-      },
       files: ['Gruntfile.js'],
       html: {
         files: ['../*.html']
@@ -81,21 +78,23 @@ module.exports = function(grunt) {
         options: {
           debounceDelay: 15000
         },
-        tasks: ['newer:chown', 'newer:imagemin']
+        tasks: ['newer:imagemin']
       },
       js: {
         files: ['../js/*.js', '../js/vendor/*.js'],
-        options: {
-          atBegin: true
-        },
         tasks: ['concat:js', 'uglify:js']
       },
       css: {
         files: ['../scss/**/*.scss'],
-        options: {
-          atBegin: true
-        },
         tasks: ['sass:style', 'autoprefixer:no_dest_multiple']
+      }
+    },
+    browserSync: {
+      files: ['../css/*.css', '../js/concat/main.js', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}'],
+      options: {
+        proxy: "localhost:7888",
+        watchTask: true,
+        tunnel: true
       }
     }
   });
@@ -108,5 +107,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
 };
