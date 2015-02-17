@@ -90,7 +90,7 @@ module.exports = function(grunt) {
       }
     },
     browserSync: {
-      files: ['../css/*.css', '../js/concat/main.js', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}'],
+      files: ['../*.html', '../*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
         proxy: "localhost:7888",
         watchTask: true,
