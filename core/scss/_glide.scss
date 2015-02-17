@@ -3,7 +3,6 @@
 .slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
   height: 350px;
   @media (min-width: 567px) {
     height: 500px;
@@ -11,20 +10,22 @@
   @media (min-width: 767px) {
     height: 620px;
   }
+  overflow: hidden;
 }
 
-.slides {
+.slider__wrapper {
   height: 100%;
+  list-style: none;
+  overflow: hidden;
+  *zoom: 1;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  list-style-type: none;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   @include easing(0.4s, 0s);
 }
 
-.slide {
+.slider__item {
   height: 100%;
   float: left;
   clear: none;
@@ -35,21 +36,15 @@
   @include background;
 }
 
-.slider-arrows {
+.slider__arrows-item {
+  position: absolute;
   display: none;
-}
-
-@media (min-width: 767px) {
-  .slider-arrows {
+  @media (min-width: 767px) {
     display: block;
   }
-}
-
-.slider-arrow {
-  position: absolute;
-  display: block;
   margin-bottom: -20px;
   padding: 20px;
+  cursor: pointer;
   @include icons;
   font-size: 2.5em;
   color: rgba($white, 0.5);
@@ -63,7 +58,7 @@
   }
 }
 
-.slider-arrow--right {
+.slider__arrows-item--right {
   bottom: 50%;
   right: 30px;
   &:before {
@@ -71,7 +66,7 @@
   }
 }
 
-.slider-arrow--left {
+.slider__arrows-item--left {
   bottom: 50%;
   left: 30px;
   &:before {
@@ -79,12 +74,12 @@
   }
 }
 
-.slider-nav {
+.slider__nav {
   position: absolute;
   bottom: 30px;
 }
 
-.slider-nav__item {
+.slider__nav-item {
   width: 12px;
   height: 12px;
   float: left;
@@ -95,10 +90,10 @@
   background-color: rgba($white, 0.5);
 }
 
-.slider-nav__item:hover {
+.slider__nav-item--current {
   background: $white;
 }
 
-.slider-nav__item--current {
+.slider__nav-item:hover {
   background: $white;
 }
