@@ -94,7 +94,8 @@ module.exports = function(grunt) {
       options: {
         proxy: "localhost:7888",
         watchTask: true,
-        tunnel: true
+        tunnel: true,
+        ghostMode: false
       }
     }
   });
