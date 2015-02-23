@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
 
   grunt.initConfig({
     chown: {
@@ -82,11 +83,17 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['../js/*.js', '../js/vendor/*.js'],
-        tasks: ['concat:js', 'uglify:js']
+        tasks: ['concat:js', 'uglify:js'],
+        options: {
+          interrupt: true
+        }
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['sass:style', 'autoprefixer:no_dest_multiple']
+        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
+        options: {
+          interrupt: true
+        }
       }
     },
     browserSync: {
