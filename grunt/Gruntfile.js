@@ -1,19 +1,9 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple', 'criticalcss:custom']);
 
   grunt.initConfig({
-    chown: {
-      options: {
-        uid: 33,
-        /* must be a number, change to your user id */
-        gid: 33 /* must be a number, this should be your web server process, i.e. `www-data` */
-      },
-      target: {
-        src: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}']
-      }
-    },
     imagemin: {
       dynamic: {
         files: [{
@@ -66,6 +56,19 @@ module.exports = function(grunt) {
         src: '../css/*.css'
       }
     },
+    criticalcss: {
+      custom: {
+        options: {
+          url: "http://localhost:3000",
+          width: 1200,
+          height: 900,
+          outputfile: "../css/critical.css",
+          filename: "../css/master.css",
+          buffer: 800 * 1024,
+          ignoreConsole: false
+        }
+      }
+    },
     watch: {
       files: ['Gruntfile.js'],
       html: {
@@ -90,7 +93,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
+        tasks: ['sass:style', 'autoprefixer:no_dest_multiple', 'criticalcss:custom'],
         options: {
           interrupt: true
         }
@@ -108,12 +111,12 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-chown');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-criticalcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
