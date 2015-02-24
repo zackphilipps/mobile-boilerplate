@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple', 'criticalcss:custom']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
 
   grunt.initConfig({
     imagemin: {
