@@ -44,6 +44,10 @@ jQuery(document).ready(function($) {
     type: 'image',
     midClick: true
   });
+  $('.iframe-link').magnificPopup({
+    type: 'iframe',
+    midClick: true
+  });
   $('.popup-gallery').each(function() {
     $(this).magnificPopup({
       delegate: 'a',
