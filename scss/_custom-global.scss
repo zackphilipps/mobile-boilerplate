@@ -7,8 +7,8 @@ html, body {
   /*
    * if you change this font-size, you will
    * also need to change the $pixelBase
-   * variable for the `REM to PX conversion 
-   * without duplicate CSS` function in 
+   * variable for the `REM to PX conversion
+   * without duplicate CSS` function in
    * core/scss/_mixins.scss to match
    */
   font-size: 18px;
@@ -343,13 +343,13 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 }
 
 br {
-  &.mbr {
+  &.brm {
     @include m {
       display: none;
       visibility: hidden;
     }
   }
-  &.brm {
+  &.mbr {
     display: none;
     visibility: hidden;
     @include m {
