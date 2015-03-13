@@ -56,19 +56,6 @@ module.exports = function(grunt) {
         src: '../css/*.css'
       }
     },
-    criticalcss: {
-      custom: {
-        options: {
-          url: "http://localhost:3000",
-          width: 1200,
-          height: 900,
-          outputfile: "../css/critical.css",
-          filename: "../css/master.css",
-          buffer: 800 * 1024,
-          ignoreConsole: false
-        }
-      }
-    },
     watch: {
       files: ['Gruntfile.js'],
       html: {
@@ -93,7 +80,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['sass:style', 'autoprefixer:no_dest_multiple', 'criticalcss:custom'],
+        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
         options: {
           interrupt: true
         }
@@ -116,7 +103,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-criticalcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
