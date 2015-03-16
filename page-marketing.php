@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
  * Template Name: Standard Marketing Page
@@ -112,11 +112,11 @@ if( have_rows('layout') ) {
           ?>
         </div>
       </section>
-  
+
     <?php
     } elseif( get_row_layout() === 'staggered_images_with_text' ) {
     ?>
-  
+
       <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
                class="staggered">
         <?php
@@ -152,19 +152,19 @@ if( have_rows('layout') ) {
           </div>
         <?php } ?>
       </section>
-  
+
     <?php
     } elseif( get_row_layout() === 'slider' ) {
     ?>
-  
+
       <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
                class="slider-row">
         <div class="wrap hpad vpad-gap clearfix">
           <?php if(get_sub_field('slides')) { ?>
             <div class="slider clearfix">
-              <ul class="slides">
+              <ul class="slider__wrapper">
                 <?php while(has_sub_field('slides')) { ?>
-                  <li class="slide"
+                  <li class="slider__item"
                       style="background-image: url('<?php the_sub_field('background'); ?>');">
                     <div class="overlay clearfix">
                       <div class="slide-text center valign-always">
@@ -186,7 +186,7 @@ if( have_rows('layout') ) {
     <?php
     } elseif( get_row_layout() === 'wysiwygs' ) {
     ?>
-  
+
       <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
                class="wysiwygs">
         <div class="wrap hpad clearfix">
@@ -211,7 +211,7 @@ if( have_rows('layout') ) {
         </div>
       </section>
 
-    <?php 
+    <?php
     }
     ?>
 
@@ -220,11 +220,11 @@ if( have_rows('layout') ) {
   }
   ?>
 
-<?php 
-} else { 
+<?php
+} else {
 ?>
 
-<?php 
+<?php
 }
 ?>
 
