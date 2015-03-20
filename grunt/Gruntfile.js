@@ -90,9 +90,7 @@ module.exports = function(grunt) {
       files: ['../*.html', '../*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
         proxy: "localhost:7888",
-        watchTask: true,
-        tunnel: true,
-        ghostMode: false
+        watchTask: true
       }
     }
   });
