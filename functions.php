@@ -19,7 +19,7 @@ function mobile_meta() { ?>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cleartype" content="on">
 
   <!--<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/touch/apple-touch-icon-144x144-precomposed.png">
