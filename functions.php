@@ -149,7 +149,7 @@ function theme_styles() {
     $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
     wp_enqueue_style( 'scratch-ie' );
 
-    wp_register_style( 'scratch-custom', get_template_directory_uri() . 'custom.css', false, filemtime(dirname(__FILE__) . 'custom.css') );
+    wp_register_style( 'scratch-custom', get_template_directory_uri() . 'custom.css', false, filemtime(dirname(__FILE__) . '/custom.css') );
     wp_enqueue_style( 'scratch-custom' );
 
 }
