@@ -47,6 +47,15 @@ module.exports = function(grunt) {
         } /* add moar master files here */
       }
     },
+    scsslint: {
+      allFiles: [
+        '../scss/**/*.scss',
+      ],
+      options: {
+        colorizeOutput: true,
+        compact: true,
+      },
+    },
     autoprefixer: {
       options: {
         browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1'],
@@ -100,6 +109,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
