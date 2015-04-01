@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'scsslint:allFiles', 'sass:style', 'autoprefixer:no_dest_multiple']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
 
   grunt.initConfig({
     imagemin: {
@@ -33,16 +33,6 @@ module.exports = function(grunt) {
           '../js/compiled/main.min.js': ['../js/concat/main.js']
         }
       }
-    },
-    scsslint: {
-      allFiles: [
-        '../scss/**/*.scss',
-      ],
-      options: {
-        colorizeOutput: true,
-        compact: true,
-        force: true
-      },
     },
     sass: {
       style: {
@@ -90,7 +80,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['scsslint:allFiles', 'sass:style', 'autoprefixer:no_dest_multiple'],
+        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
         options: {
           interrupt: true
         }
@@ -109,7 +99,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
