@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'scsslint:allFiles', 'sass:style', 'autoprefixer:no_dest_multiple']);
 
   grunt.initConfig({
     imagemin: {
@@ -34,6 +34,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    scsslint: {
+      allFiles: [
+        '../scss/**/*.scss',
+      ],
+      options: {
+        bundleExec: true,
+        colorizeOutput: true,
+        compact: true,
+        force: true
+      },
+    },
     sass: {
       style: {
         options: {
@@ -46,15 +57,6 @@ module.exports = function(grunt) {
           "../css/login.css": "../scss/login.scss"
         } /* add moar master files here */
       }
-    },
-    scsslint: {
-      allFiles: [
-        '../scss/**/*.scss',
-      ],
-      options: {
-        colorizeOutput: true,
-        compact: true,
-      },
     },
     autoprefixer: {
       options: {
@@ -89,7 +91,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
+        tasks: ['scsslint:allFiles', 'sass:style', 'autoprefixer:no_dest_multiple'],
         options: {
           interrupt: true
         }
@@ -108,8 +110,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-scss-lint');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
