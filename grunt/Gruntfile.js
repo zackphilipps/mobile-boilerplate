@@ -39,7 +39,6 @@ module.exports = function(grunt) {
         '../scss/**/*.scss',
       ],
       options: {
-        bundleExec: false,
         colorizeOutput: true,
         compact: true,
         force: true
