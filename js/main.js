@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     var video = document.querySelector('.scratch-video');
 
     function checkLoad() {
-      if (video.readyState === 4) {
+      if (video && video.readyState === 4) {
         $('.scratch-video').velocity({
           opacity: 1
         }, {
