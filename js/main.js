@@ -1,8 +1,34 @@
 jQuery(document).ready(function($) {
+  window.addEventListener('load', function() {
+    var video = document.querySelector('.scratch-video');
+
+    function checkLoad() {
+      if (video.readyState === 4) {
+        $('.scratch-video').velocity({
+          opacity: 1
+        }, {
+          duration: 400,
+          display: 'block'
+        });
+      } else {
+        setTimeout(checkLoad, 100);
+      }
+    }
+
+    checkLoad();
+  }, false);
   $('.slider').glide({
     autoplay: false,
     arrowRightText: '',
-    arrowLeftText: ''
+    arrowLeftText: '',
+    afterInit: function() {
+      $('.slider .slides').velocity({
+        opacity: 1
+      }, {
+        duration: 400,
+        delay: 1000
+      });
+    }
   });
   $('.nav-toggle').click(function() {
     if ($(this).data('direction') === 'down') {

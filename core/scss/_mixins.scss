@@ -38,7 +38,7 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;
+  z-index: 0;
 }
 
 /*
@@ -232,7 +232,7 @@ $hidpi-min-pixel-ratio: 1.3 !default;
 @function tint($color, $percent) {
   @return mix(white, $color, $percent);
 }
- 
+
 // Add percentage of black to a color
 @function shade($color, $percent) {
   @return mix(black, $color, $percent);

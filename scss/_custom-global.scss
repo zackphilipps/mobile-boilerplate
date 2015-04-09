@@ -13,6 +13,7 @@ html, body {
    */
   font-size: 18px;
   line-height: 1.375;
+
   @media (min-width: 767px) {
     line-height: 1.5;
   }
@@ -23,11 +24,13 @@ html, body {
 a, .a {
   color: $olive;
   text-decoration: none;
+
   &:link, &:active, &:visited {
     color: $olive;
     text-decoration: none;
     outline: none;
   }
+
   &:hover, &:focus {
     text-decoration: underline;
   }
@@ -47,24 +50,29 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   padding: u(0.5rem 1rem);
   font-family: $sans;
   @include easing;
+
   &:link, &:active, &:visited {
     background-color: $olive;
     color: $white;
     line-height: normal;
     outline: none;
   }
+
   &:hover, &:focus {
     background-color: darken($olive, 5%);
     text-decoration: none;
   }
+
   /* Example alternate button color */
   &.black {
     background-color: $black;
     color: $white;
+
     &:link, &:active, &:visited {
       background-color: $black;
       color: $white;
     }
+
     &:hover, &:focus {
       background-color: lighten($black, 8%);
     }
@@ -85,10 +93,12 @@ blockquote, .blockquote {
   padding: u(1rem 2rem);
   margin: u(0 0 2rem);
   border-left: 5px solid $gray;
+
   p, .p {
     font-family: $sans;
     font-weight: 300;
   }
+
   small, .small {
     color: $silver;
   }
@@ -154,10 +164,12 @@ img {
   border: 1px solid $silver;
   height: auto;
   max-width: 100%;
+
   .wp-caption & {
     padding: 0;
     border: 0;
   }
+
   .wp-caption-text {
     font-size: 75%;
     font-style: italic;
@@ -184,6 +196,7 @@ iframe, object, embed {
   max-width: 100%;
   display: block;
   margin: u(1rem auto);
+
   .embed-container & {
     position: absolute;
     top: 0;
@@ -209,9 +222,11 @@ iframe, object, embed {
   @media (min-width: 767px) {
     width: 750px;
   }
+
   @media (min-width: 1023px) {
     width: 1000px;
   }
+
   @media (min-width: 1279px) {
     width: 1250px;
   }
@@ -232,9 +247,11 @@ iframe, object, embed {
     float: left;
     margin-left: 2.762430939%;
     width: 17.73757%;
+
     &.first {
       margin-left: 0;
     }
+
     &.last {
       float: right;
     }
@@ -243,27 +260,35 @@ iframe, object, embed {
 
 .custom-col {
   position: relative;
+
   @media (min-width: 649px) {
     float: left;
     width: 50%;
+
     &.even {
       float: right;
     }
   }
+
   @media (min-width: 899px) {
     width: 33.333333333%;
+
     &.even {
       float: left;
     }
+
     &.three-last {
       float: right;
     }
   }
+
   @media (min-width: 1149px) {
     width: 25%;
+
     &.three-last {
       float: left;
     }
+
     &.four-last {
       float: right;
     }
@@ -275,10 +300,12 @@ iframe, object, embed {
   display: none;
   position: relative;
   padding: u(1rem 1rem 0);
+
   p {
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -293,6 +320,7 @@ iframe, object, embed {
   cursor: pointer;
   border: 1px solid $olive;
   position: relative;
+
   &:after {
     @include icons;
     content: "\f3d0";
@@ -302,6 +330,7 @@ iframe, object, embed {
     bottom: u(0.25rem);
     right: u(0.5rem);
   }
+
   &.active {
     &:after {
       content: "\f3d8";
@@ -315,12 +344,14 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   color: $white;
   padding: 1px 3px;
   font-size: 15px;
+
   &.codeblock {
     display: block;
     margin: u(2rem auto);
     padding: 8px 12px 10px;
     overflow-x: scroll;
   }
+
   strong {
     background-color: $white;
     color: $black;
@@ -331,6 +362,19 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 .scratch-image, .scratch-video {
   height: 200px;
   @include background;
+}
+
+// hide video until it is fully loaded, see `js/main.js`
+.scratch-video {
+  display: none;
+  opacity: 0;
+}
+
+// hide slider until it is fully loaded, see `js/main.js`
+.slider {
+  .slides {
+    opacity: 0;
+  }
 }
 
 .white-popup {
@@ -349,9 +393,11 @@ br {
       visibility: hidden;
     }
   }
+
   &.mbr {
     display: none;
     visibility: hidden;
+
     @include m {
       display: block;
       visibility: visible;
@@ -379,12 +425,15 @@ br {
 body {
     font: -apple-system-body;
 }
+
 h1, h2, h3 {
     font: -apple-system-headline;
 }
+
 h4, h5, h6 {
     font: -apple-system-subheadline;
 }
+
 .hairline {
     background: repeat-x bottom left
       url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#ff0000' x='0' y='0' width='1' height='0.5'/></svg>");
