@@ -14,7 +14,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ![Scratch's Standard Marketing Page in action](http://scratchtheme.com/wp-content/themes/scratch-theme/img/marketing-page-slower.gif)
 
-*Note:* must have [Advanced Custom Fields Pro](http://www.advancedcustomfields.com/pro) installed and activated.
+**NOTE:** must have [Advanced Custom Fields Pro](http://www.advancedcustomfields.com/pro) installed and activated.
 
 ### Mobile-Friendly
 
