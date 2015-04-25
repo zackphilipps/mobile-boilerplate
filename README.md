@@ -8,7 +8,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 - [Getting Started](http://scratchtheme.com/docs/getting-started)
 - [Screencasts](http://scratchtheme.com/docs/screencasts/)
 
-## Features:
+## Features
 
 ### Rapidize your development time and add robust layouts on-the-fly with the [Standard Marketing Page](http://scratchtheme.com/docs/advanced/#marketing-page)
 
