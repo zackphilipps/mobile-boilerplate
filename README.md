@@ -1,6 +1,6 @@
 # Scratch Theme for WordPress + ACF
 
-![Codeship Build Status](https://codeship.com/projects/e3e8c2e0-9db0-0132-4699-4ef4301ddd41/status?branch=master)
+[ ![Codeship Status for zackphilipps/scratch-theme](https://codeship.com/projects/e3e8c2e0-9db0-0132-4699-4ef4301ddd41/status?branch=master)](https://codeship.com/projects/64584)
 
 Powerful automated workflow for WordPress + [Advanced Custom Fields](http://advancedcustomfields.com) developers.
 
