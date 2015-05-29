@@ -17,18 +17,21 @@ $overlay-color: rgba($black, 0.4);
     position: relative;
     background-color: $overlay-color;
   }
+
   .circle {
     width: $circle-size;
     height: $circle-size;
     background-color: $button-color;
     margin: 0 auto;
     @include easing;
+
     i {
       display: block;
       color: $white;
       font-size: u($icon-size);
       @include easing(color);
     }
+
     &.scratch-image {
       background-color: transparent;
     }
@@ -40,19 +43,23 @@ $overlay-color: rgba($black, 0.4);
   .scratch-image {
     height: auto;
   }
+
   .content {
     margin: u(10rem auto);
+
     @include m {
       width: 65%;
     }
 
     color: $white;
   }
+
   .left {
     .content {
       float: left;
     }
   }
+
   .right {
     .content {
       float: right;
@@ -64,21 +71,26 @@ $overlay-color: rgba($black, 0.4);
 .flexible-columns {
   [class^="row-"], [class*=" row-"] {
     // row-specific styles here
- 
+
   }
+
   [class^="column-"], [class*=" column-"] {
     // column-specific styles here
     padding: u(1rem);
+
     a {
       &:hover, &:focus {
         text-decoration: none;
+
         .circle {
           background-color: $button-hover-color;
+
           &.scratch-image {
             background-color: transparent;
             opacity: 0.8;
           }
         }
+
         i {
           color: $button-color;
         }
@@ -93,6 +105,7 @@ $overlay-color: rgba($black, 0.4);
     .circle {
       width: $staggered-circle-size;
       height: $staggered-circle-size;
+
       @include m {
         @include valign;
       }
@@ -101,23 +114,31 @@ $overlay-color: rgba($black, 0.4);
         font-size: u($staggered-icon-size);
       }
     }
+
     &:nth-child(odd) {
       background-color: $gray;
     }
+
     @include m {
       height: $staggered-row-height;
+
       .first, .last, .wrap {
         height: 100%;
+
         h3 {
           margin-top: 0;
         }
       }
+
       &:nth-child(even) {
         .first {
           float: right;
+          margin-left: 2.762430939%;
         }
+
         .last {
           float: left;
+          margin-left: 0;
         }
       }
     }
@@ -132,6 +153,7 @@ $overlay-color: rgba($black, 0.4);
       margin: 0 auto;
       padding: u(1rem);
       color: $white;
+
       @include m {
         padding: u(1rem 6rem);
       }
@@ -143,10 +165,11 @@ $overlay-color: rgba($black, 0.4);
 .wysiwygs {
   [class^="row-"], [class*=" row-"] {
     // row-specific styles here
- 
+
   }
+
   [class^="column-"], [class*=" column-"] {
     // column-specific styles here
- 
+
   }
 }

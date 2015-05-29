@@ -10,6 +10,8 @@ $gbp: 767px;
 @import "custom-global";
 
 body.login {
+  #login_error, .message {}
+
   div#login {
     h1 {
       a {
@@ -20,16 +22,19 @@ body.login {
         height: 100%;
       }
     }
-    form#loginform, form#registerform {
+
+    form#loginform, form#registerform, form#lostpasswordform {
       p {
         label {
           color: $black;
           font-family: $sans;
           font-weight: 700;
         }
+
         &.forgetmenot {
           input#rememberme {}
         }
+
         &.submit {
           input#wp-submit {
             @extend .button;
@@ -40,11 +45,13 @@ body.login {
       input#user_login {}
       input#user_pass {}
     }
+
     p#nav {
       a {
         @extend .a;
       }
     }
+
     p#backtoblog {
       a {
         @extend .a;
