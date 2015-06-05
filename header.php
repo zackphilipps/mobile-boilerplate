@@ -8,9 +8,10 @@
 <head>
 <meta charset="utf-8">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-    
+
 <?php wp_head(); ?>
-    
+
+<?php if(!is_preview()): ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -20,29 +21,30 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X');ga('send','pageview');
 </script>
-    
+<?php endif; ?>
+
 </head>
 
 <body <?php body_class(); ?>>
 
 <header id="header">
   <div class="wrap hpad clearfix">
-    
+
     <a class="logo"
        href="/"
        title="<?php bloginfo('name'); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svg">
     </a>
-      
+
     <span class="nav-toggle"
           data-direction="down">
       <i class="icon ion-navicon"></i>
     </span>
-      
+
     <nav id="nav"
          role="navigation">
       <?php scratch_main_nav(); ?>
     </nav>
-    
+
   </div>
 </header>

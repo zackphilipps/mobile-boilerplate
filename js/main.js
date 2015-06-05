@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     arrowRightText: '',
     arrowLeftText: '',
     afterInit: function() {
-      $('.slider .slides').velocity({
+      $('.slider .slider__wrapper').velocity({
         opacity: 1
       }, {
         duration: 400,

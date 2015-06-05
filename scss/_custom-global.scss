@@ -372,7 +372,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 
 // hide slider until it is fully loaded, see `js/main.js`
 .slider {
-  .slides {
+  .slider__wrapper {
     opacity: 0;
   }
 }
