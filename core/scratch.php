@@ -97,11 +97,6 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
-                         'name' 		=> 'Simple Custom Post Order',
-                         'slug' 		=> 'simple-custom-post-order',
-                         'required' 	=> false,
-                         ),
-                   array(
                          'name' 		=> 'WordPress Backup to Dropbox',
                          'slug' 		=> 'wordpress-backup-to-dropbox',
                          'required' 	=> false,
