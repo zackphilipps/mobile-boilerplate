@@ -1,3 +1,5 @@
+<!-- <p>test</p> -->
+
 <?php
 function scratch_bg_position() {
   $string = null;
