@@ -1,5 +1,3 @@
-<!-- <p>test</p> -->
-
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
          class="flexible-columns vpad-3x">
   <div class="wrap hpad clearfix center">
