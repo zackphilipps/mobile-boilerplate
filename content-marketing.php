@@ -21,7 +21,7 @@ function scratch_bg_position() {
 
 <?php
 if( have_rows('layout') ) {
-  $layout_count = 1; while ( have_rows('layout') ) { the_row();
+  $GLOBALS['layout_count'] = 1; while ( have_rows('layout') ) { the_row();
     if( get_row_layout() === 'hero_unit' ) { ?>
 
       <?php get_template_part( 'layouts/layout', 'hero_unit' ); ?>
@@ -55,7 +55,7 @@ if( have_rows('layout') ) {
     ?>
 
   <?php
-    $layout_count++;
+    $GLOBALS['layout_count']++;
   }
   ?>
 

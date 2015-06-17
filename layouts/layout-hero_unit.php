@@ -1,3 +1,4 @@
+<?php global $layout_count; ?>
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
          class="hero-unit">
   <figure class="scratch-image"
