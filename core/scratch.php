@@ -80,12 +80,22 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
+                         'name' 		=> 'CloudFlare',
+                         'slug' 		=> 'cloudflare',
+                         'required' 	=> false,
+                         ),
+                   array(
                         'name'               => 'Github Updater',
                         'slug'               => 'github-updater',
                         'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip',
                         'required'           => false,
                         'external_url'       => 'https://github.com/afragen/github-updater',
                     ),
+                   array(
+                         'name' 		=> 'Mailgun',
+                         'slug' 		=> 'mailgun',
+                         'required' 	=> false,
+                         ),
                    array(
                          'name' 		=> 'Relevanssi - A Better Search',
                          'slug' 		=> 'relevanssi',

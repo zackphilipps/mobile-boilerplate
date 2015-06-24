@@ -223,7 +223,7 @@ $hidpi-min-pixel-ratio: 1.3 !default;
 @mixin webkit-proof {
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  transform: rotate(0);
+  -webkit-transform: rotateY(0deg);
   position: relative;
   overflow: hidden;
 }
