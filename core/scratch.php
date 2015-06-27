@@ -107,6 +107,11 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
+                         'name' 		=> 'Sucuri Security',
+                         'slug' 		=> 'sucuri-scanner',
+                         'required' 	=> false,
+                         ),
+                   array(
                          'name' 		=> 'WordPress Backup to Dropbox',
                          'slug' 		=> 'wordpress-backup-to-dropbox',
                          'required' 	=> false,
