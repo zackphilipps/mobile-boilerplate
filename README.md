@@ -34,6 +34,6 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 - Mobile Boilerplate Docs: [https://github.com/h5bp/mobile-boilerplate/tree/master/doc](https://github.com/h5bp/mobile-boilerplate/tree/master/doc)
 - Scratch Docs: [http://scratchtheme.com/docs](http://scratchtheme.com/docs)
 - About: [http://www.tribeswell.com/custom-wordpress-theme-framework-scratch-tribeswell/](http://www.tribeswell.com/custom-wordpress-theme-framework-scratch-tribeswell/)
-- Changelog: [https://github.com/zackphilipps/scratch-theme/releases](/releases)
+- Changelog: [https://github.com/zackphilipps/scratch-theme/releases](https://github.com/zackphilipps/scratch-theme/releases)
 
 Created by [Tribeswell](http://tribeswell.com)
