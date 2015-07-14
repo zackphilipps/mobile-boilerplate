@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         files: ['../*.html']
       },
       php: {
-        files: ['../*.php']
+        files: ['../*.php', '../layouts/*.php']
       },
       images: {
         files: ['../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}'],
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
       }
     },
     browserSync: {
-      files: ['../*.html', '../*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
+      files: ['Gruntfile.js', '../*.html', '../*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
         proxy: "localhost:7888",
         watchTask: true
