@@ -5,11 +5,15 @@
     "key": "field_5409d668d395b",
     "label": "Layout",
     "name": "layout",
-    "prefix": "",
     "type": "flexible_content",
     "instructions": "",
     "required": 0,
     "conditional_logic": 0,
+    "wrapper": {
+      "width": "",
+      "class": "",
+      "id": ""
+    },
     "button_label": "Add Layout",
     "min": "",
     "max": "",
@@ -22,25 +26,38 @@
         "key": "field_5409d6fbd395c",
         "label": "Image",
         "name": "image",
-        "prefix": "",
         "type": "image",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "preview_size": "medium",
         "library": "all",
-        "return_format": "url"
+        "return_format": "url",
+        "min_width": 0,
+        "min_height": 0,
+        "min_size": 0,
+        "max_width": 0,
+        "max_height": 0,
+        "max_size": 0,
+        "mime_types": ""
       }, {
         "key": "field_54171a326fa31",
         "label": "Image Position X",
         "name": "image_position_x",
-        "prefix": "",
         "type": "radio",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Left": "Left",
           "Center": "Center",
@@ -54,12 +71,15 @@
         "key": "field_54171a5e6fa32",
         "label": "Image Position Y",
         "name": "image_position_y",
-        "prefix": "",
         "type": "radio",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Top": "Top",
           "Middle": "Middle",
@@ -73,12 +93,15 @@
         "key": "field_5411772229ef6",
         "label": "Text Align",
         "name": "text_align",
-        "prefix": "",
         "type": "radio",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Left": "Left",
           "Center": "Center",
@@ -92,12 +115,15 @@
         "key": "field_54171af1f5c0d",
         "label": "Text Margin",
         "name": "text_margin",
-        "prefix": "",
         "type": "number",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": 10,
         "placeholder": "",
         "prepend": "",
@@ -111,12 +137,15 @@
         "key": "field_5409d70cd395d",
         "label": "Header",
         "name": "header",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -129,12 +158,15 @@
         "key": "field_5409d714d395e",
         "label": "Blurb",
         "name": "blurb",
-        "prefix": "",
         "type": "textarea",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "maxlength": "",
@@ -146,12 +178,15 @@
         "key": "field_5409d71ed395f",
         "label": "CTA Link",
         "name": "cta_link",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -163,12 +198,15 @@
         "key": "field_5409d730d3960",
         "label": "CTA Text",
         "name": "cta_text",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -189,12 +227,15 @@
         "key": "field_5409d7dbd3968",
         "label": "Header",
         "name": "header",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -207,12 +248,15 @@
         "key": "field_5409d7eed3969",
         "label": "Blurb",
         "name": "blurb",
-        "prefix": "",
         "type": "textarea",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "maxlength": "",
@@ -224,24 +268,30 @@
         "key": "field_5410a93937554",
         "label": "Use Custom Columns",
         "name": "use_custom_columns",
-        "prefix": "",
         "type": "true_false",
         "instructions": "When checked, your repeater will use <code>custom_columns()<\/code> instead of <code>x_columns_flex()<\/code>.",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "message": "Use Custom Columns",
         "default_value": 0
       }, {
         "key": "field_54130f7a69f9e",
         "label": "Icon or Image",
         "name": "icon_or_image",
-        "prefix": "",
         "type": "radio",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Icon": "Icon",
           "Image": "Image"
@@ -254,12 +304,15 @@
         "key": "field_5409d74ad3962",
         "label": "Columns",
         "name": "columns",
-        "prefix": "",
         "type": "repeater",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "row_min": "",
         "row_limit": "",
         "layout": "table",
@@ -270,7 +323,6 @@
           "key": "field_5409d762d3963",
           "label": "Icon",
           "name": "icon",
-          "prefix": "",
           "type": "text",
           "instructions": "Get it from <a href=\"http:\/\/ionicons.com\" target=\"_blank\">here<\/a>",
           "required": 0,
@@ -281,7 +333,11 @@
               "value": "Icon"
             }]
           ],
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -293,7 +349,6 @@
           "key": "field_54130fa069f9f",
           "label": "Image",
           "name": "image",
-          "prefix": "",
           "type": "image",
           "instructions": "",
           "required": 0,
@@ -304,20 +359,34 @@
               "value": "Image"
             }]
           ],
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "return_format": "url",
           "preview_size": "thumbnail",
-          "library": "all"
+          "library": "all",
+          "min_width": 0,
+          "min_height": 0,
+          "min_size": 0,
+          "max_width": 0,
+          "max_height": 0,
+          "max_size": 0,
+          "mime_types": ""
         }, {
           "key": "field_5409d78bd3964",
           "label": "Header",
           "name": "header",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -330,12 +399,15 @@
           "key": "field_5409d796d3965",
           "label": "Blurb",
           "name": "blurb",
-          "prefix": "",
           "type": "textarea",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "maxlength": "",
@@ -347,12 +419,15 @@
           "key": "field_5409d7a4d3966",
           "label": "Link",
           "name": "link",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -365,12 +440,15 @@
         "key": "field_5409db672ee9a",
         "label": "CTA Link",
         "name": "cta_link",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -383,12 +461,15 @@
         "key": "field_5409db6f2ee9b",
         "label": "CTA Text",
         "name": "cta_text",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -409,12 +490,15 @@
         "key": "field_5409d8e837708",
         "label": "Slides",
         "name": "slides",
-        "prefix": "",
         "type": "repeater",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "row_min": "",
         "row_limit": "",
         "layout": "table",
@@ -425,25 +509,38 @@
           "key": "field_5409d8f637709",
           "label": "Background",
           "name": "background",
-          "prefix": "",
           "type": "image",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "preview_size": "medium",
           "library": "all",
-          "return_format": "url"
+          "return_format": "url",
+          "min_width": 0,
+          "min_height": 0,
+          "min_size": 0,
+          "max_width": 0,
+          "max_height": 0,
+          "max_size": 0,
+          "mime_types": ""
         }, {
           "key": "field_5409d9063770a",
           "label": "Header",
           "name": "header",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -456,12 +553,15 @@
           "key": "field_5409d9133770b",
           "label": "Blurb",
           "name": "blurb",
-          "prefix": "",
           "type": "textarea",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "maxlength": "",
@@ -473,12 +573,15 @@
           "key": "field_5409d91b3770c",
           "label": "CTA Link",
           "name": "cta_link",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -491,12 +594,15 @@
           "key": "field_5409d9233770d",
           "label": "CTA Text",
           "name": "cta_text",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -518,12 +624,15 @@
         "key": "field_5413104b87ab9",
         "label": "Icon or Image",
         "name": "icon_or_image",
-        "prefix": "",
         "type": "radio",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": 10,
+        "wrapper": {
+          "width": 10,
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Icon": "Icon",
           "Image": "Image"
@@ -536,12 +645,15 @@
         "key": "field_5409d95c3770f",
         "label": "Rows",
         "name": "rows",
-        "prefix": "",
         "type": "repeater",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "row_min": "",
         "row_limit": "",
         "layout": "table",
@@ -552,7 +664,6 @@
           "key": "field_54130ffb69fa1",
           "label": "Icon",
           "name": "icon",
-          "prefix": "",
           "type": "text",
           "instructions": "Get it from <a href=\"http:\/\/ionicons.com\" target=\"_blank\">here<\/a>",
           "required": 0,
@@ -563,7 +674,11 @@
               "value": "Icon"
             }]
           ],
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -575,7 +690,6 @@
           "key": "field_5409d96a37710",
           "label": "Image",
           "name": "image",
-          "prefix": "",
           "type": "image",
           "instructions": "",
           "required": 0,
@@ -586,20 +700,34 @@
               "value": "Image"
             }]
           ],
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "return_format": "url",
           "preview_size": "medium",
-          "library": "all"
+          "library": "all",
+          "min_width": 0,
+          "min_height": 0,
+          "min_size": 0,
+          "max_width": 0,
+          "max_height": 0,
+          "max_size": 0,
+          "mime_types": ""
         }, {
           "key": "field_5409d98c37711",
           "label": "Header",
           "name": "header",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -612,12 +740,15 @@
           "key": "field_5409d99137712",
           "label": "Blurb",
           "name": "blurb",
-          "prefix": "",
           "type": "textarea",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "maxlength": "",
@@ -629,12 +760,15 @@
           "key": "field_5409d99c37713",
           "label": "CTA Link",
           "name": "cta_link",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -647,12 +781,15 @@
           "key": "field_5409d9ab37714",
           "label": "CTA Text",
           "name": "cta_text",
-          "prefix": "",
           "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "placeholder": "",
           "prepend": "",
@@ -674,12 +811,15 @@
         "key": "field_5412c28a2a2f6",
         "label": "Header",
         "name": "header",
-        "prefix": "",
         "type": "text",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "default_value": "",
         "placeholder": "",
         "prepend": "",
@@ -691,12 +831,15 @@
         "key": "field_5412ce61ab045",
         "label": "Offset",
         "name": "offset",
-        "prefix": "",
         "type": "radio",
         "instructions": "<pre>\r\n<em>Flexible:<\/em><br>\r\n|---||---|<br>\r\n|--------|<br>\r\n<em>2 to 1:<\/em><br>\r\n|----||--|<br>\r\n<em>1 to 2:<\/em><br>\r\n|--||----|\r\n<\/pre>",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "choices": {
           "Flexible": "Flexible",
           "2 to 1": "2 to 1",
@@ -710,12 +853,15 @@
         "key": "field_5412c2c02a2f7",
         "label": "WYSIWYGs",
         "name": "wysiwygs",
-        "prefix": "",
         "type": "repeater",
         "instructions": "",
         "required": 0,
         "conditional_logic": 0,
-        "column_width": "",
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
         "min": "",
         "max": "",
         "layout": "table",
@@ -724,12 +870,15 @@
           "key": "field_5412c2da2a2f8",
           "label": "WYSIWYG",
           "name": "wysiwyg",
-          "prefix": "",
           "type": "wysiwyg",
           "instructions": "Switch from \"Visual\" tab to \"Text\" tab to write code. <strong>Button example:<\/strong><br>\r\n<code>&lt;a class=\"button\" href=\"\/page\/\" title=\"Page\"&gt;Page&lt;\/a&gt;<\/code>\r\n",
           "required": 0,
           "conditional_logic": 0,
-          "column_width": "",
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
           "default_value": "",
           "tabs": "all",
           "toolbar": "full",
@@ -744,7 +893,7 @@
     [{
       "param": "page_template",
       "operator": "==",
-      "value": "page-marketing.php"
+      "value": "page-layouts.php"
     }]
   ],
   "menu_order": 0,
@@ -766,5 +915,6 @@
     "categories",
     "tags",
     "send-trackbacks"
-  ]
+  ],
+  "modified": 1436905404
 }
