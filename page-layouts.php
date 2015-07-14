@@ -1,14 +1,14 @@
 <?php
 
 /*
- * Template Name: Standard Marketing Page
+ * Template Name: Layouts
  */
 
 get_header(); the_post(); ?>
 
 <main role="main">
 
-	<?php get_template_part('content', 'marketing'); ?>
+	<?php get_template_part('content', 'layouts'); ?>
 
 </main>
 

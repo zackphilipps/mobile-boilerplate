@@ -10,9 +10,9 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ## Features
 
-### Rapidize your development time and add robust layouts on-the-fly with the [Standard Marketing Page](http://scratchtheme.com/docs/advanced/#marketing-page)
+### Rapidize your development time and add robust layouts on-the-fly with the [Layouts Page Template](http://scratchtheme.com/docs/advanced/#layouts)
 
-![Scratch's Standard Marketing Page in action](http://scratchtheme.com/wp-content/themes/scratch-theme/img/marketing-page-slower.gif)
+![Scratch's Layouts in action](http://scratchtheme.com/wp-content/themes/scratch-theme/img/marketing-page-slower.gif)
 
 **NOTE:** must have [Advanced Custom Fields Pro](http://www.advancedcustomfields.com/pro) installed and activated.
 
