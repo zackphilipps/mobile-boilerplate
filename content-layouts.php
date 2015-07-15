@@ -1,25 +1,4 @@
 <?php
-function scratch_bg_position() {
-  $string = null;
-  if(get_sub_field('image_position_y') === 'Top') {
-    $string = 'top';
-  } elseif(get_sub_field('image_position_y') === 'Middle') {
-    $string = 'center';
-  } elseif(get_sub_field('image_position_y') === 'Bottom') {
-    $string = 'bottom';
-  }
-  if(get_sub_field('image_position_x') === 'Left') {
-    $string .= ' left;';
-  } elseif(get_sub_field('image_position_x') === 'Center') {
-    $string .= ' center;';
-  } elseif(get_sub_field('image_position_x') === 'Right') {
-    $string .= ' right;';
-  }
-  echo $string;
-}
-?>
-
-<?php
 if( have_rows('layout') ) {
   $GLOBALS['layout_count'] = 1; while ( have_rows('layout') ) { the_row();
     if( get_row_layout() === 'hero_unit' ) { ?>
