@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'autoprefixer:no_dest_multiple']);
+  grunt.registerTask('test', ['newer:imagemin', 'concat:js', 'uglify:js', 'sass:style', 'postcss:no_dest_multiple']);
 
   grunt.initConfig({
     imagemin: {
@@ -47,10 +47,12 @@ module.exports = function(grunt) {
         } /* add moar master files here */
       }
     },
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1'],
-        map: true
+        map: true,
+        processors: [
+          require('autoprefixer-core')({browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1']})
+        ]
       },
       no_dest_multiple: {
         src: '../css/*.css'
@@ -80,7 +82,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['../scss/**/*.scss'],
-        tasks: ['sass:style', 'autoprefixer:no_dest_multiple'],
+        tasks: ['sass:style', 'postcss:no_dest_multiple'],
         options: {
           interrupt: true
         }
@@ -100,7 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
