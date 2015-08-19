@@ -21,22 +21,12 @@ jQuery(document).ready(function($) {
     autoplay: false,
     arrowRightText: '',
     arrowLeftText: '',
-    beforeInit: function() {
-      $('.slider').after('<i class="ion-load-d slider__spinner"></i>');
-    },
     afterInit: function() {
       $('.slider .slider__wrapper').velocity({
         opacity: 1
       }, {
         duration: 400,
         delay: 1000
-      });
-      $('.slider__spinner').velocity({
-        opacity: 0
-      }, {
-        duration: 400,
-        delay: 1000,
-        display: 'none'
       });
     }
   });

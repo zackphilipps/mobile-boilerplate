@@ -385,20 +385,6 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   }
 }
 
-.slider__spinner {
-  z-index: 5;
-  font-size: u(3rem);
-  color: rgba($white, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%);
-
-  &:before {
-    @extend .spin;
-  }
-}
-
 .white-popup {
   position: relative;
   background: $white;
