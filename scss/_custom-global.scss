@@ -4,6 +4,7 @@ html, body {
   color: $black;
   background-color: $white;
   font-family: $sans;
+
   /*
    * if you change this font-size, you will
    * also need to change the $pixelBase
@@ -17,6 +18,7 @@ html, body {
   @media (min-width: 767px) {
     line-height: 1.5;
   }
+
   overflow-x: hidden;
 }
 
@@ -49,6 +51,7 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   color: $white;
   padding: u(0.5rem 1rem);
   font-family: $sans;
+
   @include easing;
 
   &:link, &:active, &:visited {
@@ -120,6 +123,7 @@ hr {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $sans;
   font-weight: 300;
+
   small {}
 }
 
@@ -323,6 +327,7 @@ iframe, object, embed {
 
   &:after {
     @include icons;
+
     content: "\f3d0";
     color: $olive;
     position: absolute;
@@ -361,6 +366,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 /* Misc. */
 .scratch-image, .scratch-video {
   height: 200px;
+
   @include background;
 }
 
@@ -372,8 +378,24 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 
 // hide slider until it is fully loaded, see `js/main.js`
 .slider {
+  background-color: rgba(black, 0.1);
+
   .slider__wrapper {
     opacity: 0;
+  }
+}
+
+.slider__spinner {
+  z-index: 5;
+  font-size: u(3rem);
+  color: rgba($white, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+
+  &:before {
+    @extend .spin;
   }
 }
 
