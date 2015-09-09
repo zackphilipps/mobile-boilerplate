@@ -74,6 +74,11 @@ function my_theme_register_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
+		               array(
+                         'name' 		=> 'BackUpWordPress',
+                         'slug' 		=> 'backupwordpress',
+                         'required' 	=> false,
+                         ),
                    array(
                          'name' 		=> 'Custom Post Type UI',
                          'slug' 		=> 'custom-post-type-ui',
@@ -109,11 +114,6 @@ function my_theme_register_required_plugins() {
                    array(
                          'name' 		=> 'Sucuri Security',
                          'slug' 		=> 'sucuri-scanner',
-                         'required' 	=> false,
-                         ),
-                   array(
-                         'name' 		=> 'WordPress Backup to Dropbox',
-                         'slug' 		=> 'wordpress-backup-to-dropbox',
                          'required' 	=> false,
                          ),
                    array(
