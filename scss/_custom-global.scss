@@ -371,7 +371,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 }
 
 // hide video until it is fully loaded, see `js/main.js`
-.scratch-video {
+video.scratch-video {
   display: none;
   opacity: 0;
 }
