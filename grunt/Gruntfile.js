@@ -51,7 +51,9 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')({browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1']})
+          require('autoprefixer-core')({
+            browsers: ['last 4 versions', 'Firefox ESR', 'Opera 12.1']
+          })
         ]
       },
       no_dest_multiple: {
@@ -92,7 +94,8 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', '../*.html', '../*.php', '../layouts/*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
         proxy: "localhost:7888",
-        watchTask: true
+        watchTask: true,
+        tunnel: true
       }
     }
   });
