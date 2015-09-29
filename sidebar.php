@@ -1,5 +1,4 @@
 <aside id="sidebar"
-       class="fourcol last"
-       role="navigation">
+       class="fourcol last">
   <p>This is the sidebar.php file</p>
 </aside>

@@ -41,8 +41,7 @@
       <i class="icon ion-navicon"></i>
     </span>
 
-    <nav id="nav"
-         role="navigation">
+    <nav id="nav">
       <?php scratch_main_nav(); ?>
     </nav>
 

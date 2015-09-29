@@ -85,11 +85,6 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
-                         'name' 		=> 'CloudFlare',
-                         'slug' 		=> 'cloudflare',
-                         'required' 	=> false,
-                         ),
-                   array(
                         'name'               => 'Github Updater',
                         'slug'               => 'github-updater',
                         'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip',

@@ -1,6 +1,5 @@
 <footer id="footer"
-        class="clearfix"
-        role="contentinfo">
+        class="clearfix">
   <p class="center">
     &copy; <?php echo date( 'Y' ); ?>
     <?php bloginfo( 'name' ); ?>
