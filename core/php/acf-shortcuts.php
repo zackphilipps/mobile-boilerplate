@@ -199,7 +199,7 @@ function scratch_sub_link_end($href, $option = null) {
 function scratch_image_start($src, $classes = null, $option = null) {
   if($option !== null) {
     if(get_field($src, $option)) {
-      echo '<figure class="scratch-image';
+      echo '<div class="scratch-image';
       if($classes !== null) {
         echo ' ' . $classes . '"';
       } else {
@@ -209,7 +209,7 @@ function scratch_image_start($src, $classes = null, $option = null) {
     }
   } else {
     if(get_field($src)) {
-      echo '<figure class="scratch-image';
+      echo '<div class="scratch-image';
       if($classes !== null) {
         echo ' ' . $classes . '"';
       } else {
@@ -223,11 +223,11 @@ function scratch_image_start($src, $classes = null, $option = null) {
 function scratch_image_end($src, $option = null) {
   if($option !== null) {
     if(get_field($src, $option)) {
-      echo '</figure>';
+      echo '</div>';
     }
   } else {
     if(get_field($src)) {
-      echo '</figure>';
+      echo '</div>';
     }
   }
 }
@@ -235,7 +235,7 @@ function scratch_image_end($src, $option = null) {
 function scratch_sub_image_start($src, $classes = null, $option = null) {
   if($option !== null) {
     if(get_sub_field($src, $option)) {
-      echo '<figure class="scratch-image';
+      echo '<div class="scratch-image';
       if($classes !== null) {
         echo ' ' . $classes . '"';
       } else {
@@ -245,7 +245,7 @@ function scratch_sub_image_start($src, $classes = null, $option = null) {
     }
   } else {
     if(get_sub_field($src)) {
-      echo '<figure class="scratch-image';
+      echo '<div class="scratch-image';
       if($classes !== null) {
         echo ' ' . $classes . '"';
       } else {
@@ -259,11 +259,11 @@ function scratch_sub_image_start($src, $classes = null, $option = null) {
 function scratch_sub_image_end($src, $option = null) {
   if($option !== null) {
     if(get_sub_field($src, $option)) {
-      echo '</figure>';
+      echo '</div>';
     }
   } else {
     if(get_sub_field($src)) {
-      echo '</figure>';
+      echo '</div>';
     }
   }
 }

@@ -22,7 +22,7 @@ function scratch_bg_position() {
 <?php global $layout_count; ?>
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
          class="hero-unit">
-  <figure class="scratch-image"
+  <div class="scratch-image"
           style="background-image: url('<?php the_sub_field('image'); ?>'); background-position: <?php scratch_bg_position(); ?>">
     <div class="overlay clearfix">
       <?php
@@ -34,7 +34,7 @@ function scratch_bg_position() {
           $text_align_class = 'center';
         }
       ?>
-      <figcaption class="wrap <?php echo $text_align_class; ?> hpad clearfix white">
+      <div class="wrap <?php echo $text_align_class; ?> hpad clearfix white">
         <div class="content"
              style="margin: <?php the_sub_field('text_margin'); ?>em auto;">
           <?php
@@ -43,7 +43,7 @@ function scratch_bg_position() {
             scratch_sub_button('cta_link', 'cta_text');
           ?>
         </div>
-      </figcaption>
+      </div>
     </div>
-  </figure>
+  </div>
 </section>

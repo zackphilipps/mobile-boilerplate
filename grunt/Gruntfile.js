@@ -19,8 +19,7 @@ module.exports = function(grunt) {
         options: {
           separator: ';'
         },
-        src: ['../core/js/*.js', '../js/helper.js', '../js/plugins.js', '../js/acf-google-maps.js', '../js/main.js'],
-        /* add moar js here, but keep main.js last */
+        src: ['../core/js/*.js', '../js/helper.js', '../js/plugins.js', '../js/acf-google-maps.js', '../js/main.js'], // add moar js here, but keep main.js last
         dest: '../js/concat/main.js'
       }
     },
@@ -43,8 +42,8 @@ module.exports = function(grunt) {
         files: {
           "../css/master.css": "../scss/master.scss",
           "../css/ie.css": "../scss/ie.scss",
-          "../css/login.css": "../scss/login.scss"
-        } /* add moar master files here */
+          "../css/login.css": "../scss/login.scss" // add moar master files here
+        }
       }
     },
     postcss: {
@@ -93,7 +92,7 @@ module.exports = function(grunt) {
     browserSync: {
       files: ['Gruntfile.js', '../*.html', '../*.php', '../layouts/*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
-        proxy: "localhost:7888",
+        proxy: "localhost:8888", // change this to match your host
         watchTask: true,
         tunnel: true
       }
