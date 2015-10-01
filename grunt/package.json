@@ -1,6 +1,6 @@
 {
   "name": "scratch-theme",
-  "version": "1.4.31",
+  "version": "1.4.32",
   "dependencies": {
     "grunt": "0.4.x",
     "grunt-cli": "~0.1.13",

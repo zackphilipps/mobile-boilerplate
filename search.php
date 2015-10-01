@@ -1,21 +1,20 @@
 <?php get_header(); ?>
 
-<main role="main" itemscope itemtype="http://schema.org/SearchResultsPage">
+<main itemscope itemtype="http://schema.org/SearchResultsPage">
 
 <p class="center">
   <strong>Search results for:</strong>
   <?php echo esc_attr(get_search_query()); ?>
 </p>
-  
+
   <section class="wrap hpad clearfix">
-  
+
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
-  
+
     <article id="post-<?php the_ID(); ?>"
-             <?php post_class(); ?>
-             role="article">
-      
+             <?php post_class(); ?>>
+
       <header>
         <h2>
           <a href="<?php the_permalink(); ?>"
@@ -24,19 +23,19 @@
           </a>
         </h2>
       </header>
-        
+
       <div itemprop="description">
         <?php the_content(); ?>
       </div>
-      
+
     </article>
-    
+
     <?php endwhile; else: ?>
-    
+
       <p>No posts here.</p>
-  
+
   <?php endif; ?>
-  
+
   </section>
 
 </main>
