@@ -1,4 +1,4 @@
-# Scratch Theme for WordPress
+# Scratch Theme for WordPress + ACF
 
 ## Images
 
