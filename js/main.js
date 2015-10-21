@@ -17,12 +17,11 @@ jQuery(document).ready(function($) {
 
     checkLoad();
   }, false);
-  $('.slider').glide({
+  $('.glide').glide({
+    type: 'slider',
     autoplay: false,
-    arrowRightText: '',
-    arrowLeftText: '',
     afterInit: function() {
-      $('.slider .slider__wrapper').velocity({
+      $('.glide .glide__wrapper').velocity({
         opacity: 1
       }, {
         duration: 400,
