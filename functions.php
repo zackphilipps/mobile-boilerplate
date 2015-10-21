@@ -21,8 +21,8 @@ function scratch_meta() { ?>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
-  <!-- Place favicon.ico in the theme directory -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
 <?php }
 
