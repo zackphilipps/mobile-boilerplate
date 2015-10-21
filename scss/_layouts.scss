@@ -1,0 +1,179 @@
+/********************STANDARD MARKETING PAGE********************/
+
+/* Base Styles */
+$circle-size: 160px;
+$icon-size: 3rem;
+$staggered-circle-size: 250px;
+$staggered-icon-size: 6rem;
+$staggered-row-height: 500px;
+$button-color: $olive;
+$button-hover-color: lighten($olive, 8%);
+$overlay-color: rgba($black, 0.4);
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $overlay-color;
+}
+
+.hero-unit, .flexible-columns, .staggered, .wysiwygs, .slider {
+  .circle {
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $button-color;
+    margin: 0 auto;
+
+    @include easing;
+
+    i {
+      display: block;
+      color: $white;
+      font-size: u($icon-size);
+
+      @include easing(color);
+    }
+
+    &.scratch-image {
+      background-color: transparent;
+    }
+  }
+}
+
+/* Hero Unit */
+.hero-unit {
+  .scratch-image {
+    height: auto;
+  }
+
+  .content {
+    margin: u(10rem auto);
+
+    @include m {
+      width: 65%;
+    }
+
+
+    color: $white;
+  }
+
+  .left {
+    .content {
+      float: left;
+    }
+  }
+
+  .right {
+    .content {
+      float: right;
+    }
+  }
+}
+
+/* Flexible Columns */
+.flexible-columns {
+  [class^="row-"], [class*=" row-"] {
+    // row-specific styles here
+
+  }
+
+  [class^="column-"], [class*=" column-"] {
+    // column-specific styles here
+    padding: u(1rem);
+
+    a {
+      &:hover, &:focus {
+        text-decoration: none;
+
+        .circle {
+          background-color: $button-hover-color;
+
+          &.scratch-image {
+            background-color: transparent;
+            opacity: 0.8;
+          }
+        }
+
+        i {
+          color: $button-color;
+        }
+      }
+    }
+  }
+}
+
+/* Staggered Images with Text */
+.staggered {
+  .row {
+    .circle {
+      width: $staggered-circle-size;
+      height: $staggered-circle-size;
+
+      @include m {
+        @include valign;
+      }
+
+
+      i {
+        font-size: u($staggered-icon-size);
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: $gray;
+    }
+
+    @include m {
+      height: $staggered-row-height;
+
+      .first, .last, .wrap {
+        height: 100%;
+
+        h3 {
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        .first {
+          float: right;
+          margin-left: 2.762430939%;
+        }
+
+        .last {
+          float: left;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Slider */
+.slider-row {
+  .slider {
+    // slider styles here
+    .slide-text {
+      margin: 0 auto;
+      padding: u(1rem);
+      color: $white;
+
+      @include m {
+        padding: u(1rem 6rem);
+      }
+    }
+  }
+}
+
+/* WYSIWYGs */
+.wysiwygs {
+  [class^="row-"], [class*=" row-"] {
+    // row-specific styles here
+
+  }
+
+  [class^="column-"], [class*=" column-"] {
+    // column-specific styles here
+
+  }
+}

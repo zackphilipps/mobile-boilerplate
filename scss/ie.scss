@@ -1,0 +1,39 @@
+// for http://davidwalsh.name/rem-px-browser-function-sass
+$px-only: true;
+
+// grid breakpoint, defining it here is just to avoid the sass error
+$gbp: 767px;
+
+/*
+ * FOUNDATION
+ * Do not change the order of these imports.
+ */
+
+@import "../core/scss/ionicons";
+@import "../core/scss/mixins";
+@import "../core/scss/variables";
+@import "custom-variables";
+@import "../core/scss/normalize";
+@import "../core/scss/main";
+@import "../core/scss/grid-always";
+@import "../core/scss/grid";
+@import "../core/scss/global";
+@import "custom-global";
+
+/*
+ * MIDDLE STUFF
+ * You're free to rearrange these how you like.
+ */
+
+@import "header";
+@import "page";
+@import "layouts";
+@import "archive";
+@import "single";
+@import "sidebar";
+@import "home";
+@import "footer";
+@import "../core/scss/glide";
+@import "../core/scss/magnific";
+
+/* Obviously if you`re renaming/creating the files the imports must match. :) */

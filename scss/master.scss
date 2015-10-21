@@ -1,0 +1,57 @@
+// for http://davidwalsh.name/rem-px-browser-function-sass
+$px-only: false;
+
+// grid breakpoint
+$gbp: 767px;
+
+/*
+ * FOUNDATION
+ * Do not change the order of these imports.
+ */
+
+@import "../core/scss/ionicons";
+@import "../core/scss/mixins";
+@import "../core/scss/variables";
+@import "custom-variables";
+@import "../core/scss/normalize";
+@import "../core/scss/main";
+@import "../core/scss/grid-always";
+
+@media (min-width: $gbp) {
+  @import "../core/scss/grid";
+}
+
+@import "../core/scss/global";
+@import "custom-global";
+
+/*
+ * MIDDLE STUFF
+ * You're free to rearrange these how you like.
+ */
+
+@import "header";
+@import "page";
+@import "layouts";
+@import "archive";
+@import "single";
+@import "sidebar";
+@import "home";
+@import "footer";
+@import "../core/scss/glide";
+@import "../core/scss/magnific";
+
+/*
+ * RESPONSIVE
+ * If you want a responsive stylesheet,
+ * it's best to import it last. This allows
+ * your @media queries to override other
+ * styles.
+ */
+
+@import "responsive";
+
+@media print {
+  @import "print";
+}
+
+/* Obviously if you`re renaming/creating the files the imports must match. :) */

@@ -1,0 +1,137 @@
+/********************HEADER********************/
+
+/*
+ * This file should house all of the styles for
+ * header.php.
+ */
+
+#header {
+  background-color: $olive;
+  .logo {
+    display: block;
+    float: left;
+    margin: 11px auto;
+    img {
+      width: 245px;
+      height: 58px;
+    }
+  }
+}
+
+/* Adds dropdown support, gives a good example of nesting
+ * with SCSS. The classes are specific to the Scratch
+ * Theme for WordPress. If you are not using Scratch, you
+ * can simply get rid of them.
+ */
+
+nav ul.main-nav {
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  @extend .clearfix;
+  li {
+    display: block;
+    text-align: center;
+    a {
+      background-color: $olive;
+      color: $white;
+      display: block;
+      padding: u(0.5rem 1rem);
+      @include easing(background-color);
+      &:link, &:active, &:visited {
+        background-color: $olive;
+        color: $white;
+      }
+      &:hover, &:focus {
+        background-color: darken($olive, 5%);
+        text-decoration: none;
+      }
+    }
+    &.current_page_item {
+      a {
+        background-color: darken($olive, 5%);
+        &:link, &:active, &:visited {
+          background-color: darken($olive, 5%);
+        }
+      }
+    }
+  }
+  ul.sub-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  nav ul.main-nav {
+    position: relative;
+    width: auto;
+    top: 0;
+    float: right;
+    display: block !important;
+    li {
+      float: left;
+      a {
+        padding: u(27px 1rem 26px);
+        &:link, &:active, &:visited {}
+        &:hover, &:focus {}
+      }
+    }
+    ul.sub-menu {
+      background-color: $olive;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      li {
+        float: none;
+        position: relative;
+        text-align: left;
+        a {
+          padding: u(0.5rem 1rem);
+          background-color: $olive;
+          color: $white;
+          &:link, &:active, &:visited {
+            background-color: $olive;
+            color: $white;
+          }
+          &:hover, &:focus {
+            background-color: darken($olive, 5%);
+            text-decoration: none;
+          }
+        }
+      }
+      ul {
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+  nav ul.main-nav li:hover > ul.sub-menu {
+    display: block;
+  }
+}
+
+.nav-toggle {
+  @media (min-width: 767px) {
+    display: none;
+  }
+  color: $white;
+  cursor: pointer;
+  position: absolute;
+  top: u(1rem);
+  right: u(1rem);
+  margin-bottom: 0;
+  font-size: u(2rem);
+  i {
+    vertical-align: middle;
+  }
+  @include easing;
+  &.active {
+    transform: rotate(-90deg);
+  }
+}
