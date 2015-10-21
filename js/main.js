@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
     checkLoad();
   }, false);
   $('.glide').glide({
-    type: 'slider',
     autoplay: false,
     afterInit: function() {
       $('.glide .glide__wrapper').velocity({
