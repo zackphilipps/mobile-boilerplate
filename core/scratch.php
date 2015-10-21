@@ -74,11 +74,6 @@ function my_theme_register_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-		               array(
-                         'name' 		=> 'BackUpWordPress',
-                         'slug' 		=> 'backupwordpress',
-                         'required' 	=> false,
-                         ),
                    array(
                          'name' 		=> 'Custom Post Type UI',
                          'slug' 		=> 'custom-post-type-ui',
@@ -92,11 +87,6 @@ function my_theme_register_required_plugins() {
                         'external_url'       => 'https://github.com/afragen/github-updater',
                     ),
                    array(
-                         'name' 		=> 'Mailgun',
-                         'slug' 		=> 'mailgun',
-                         'required' 	=> false,
-                         ),
-                   array(
                          'name' 		=> 'Relevanssi - A Better Search',
                          'slug' 		=> 'relevanssi',
                          'required' 	=> false,
@@ -104,11 +94,6 @@ function my_theme_register_required_plugins() {
                    array(
                          'name' 		=> 'Resize Image After Upload',
                          'slug' 		=> 'resize-image-after-upload',
-                         'required' 	=> false,
-                         ),
-                   array(
-                         'name' 		=> 'Sucuri Security',
-                         'slug' 		=> 'sucuri-scanner',
                          'required' 	=> false,
                          ),
                    array(
