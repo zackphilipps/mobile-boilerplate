@@ -1,8 +1,6 @@
-# Scratch Theme for WordPress
+# Scratch Theme for WordPress + ACF
 
 ## Images
-
-View the `mobile_meta()` function in [`functions.php`](https://github.com/zackphilipps/scratch-theme/blob/master/functions.php) to see how the `startup/` and `touch/` image files are referenced.
 
 Both of the Scratch logos are referenced in [`header.php`](https://github.com/zackphilipps/scratch-theme/blob/master/header.php) and [`login.scss`](https://github.com/zackphilipps/scratch-theme/blob/master/scss/login.scss).
 

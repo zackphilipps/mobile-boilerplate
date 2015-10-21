@@ -354,7 +354,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
     display: block;
     margin: u(2rem auto);
     padding: 8px 12px 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   strong {
