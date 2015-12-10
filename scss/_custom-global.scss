@@ -51,8 +51,10 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   color: $white;
   padding: u(0.5rem 1rem);
   font-family: $sans;
-
-  @include easing;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
 
   &:link, &:active, &:visited {
     background-color: $olive;
