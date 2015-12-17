@@ -380,10 +380,10 @@ video.scratch-video {
 }
 
 // hide slider until it is fully loaded, see `js/main.js`
-.slider {
+.glide {
   background-color: rgba(black, 0.1);
 
-  .slider__wrapper {
+  .glide__wrapper {
     opacity: 0;
   }
 }
