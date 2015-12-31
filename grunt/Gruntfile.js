@@ -93,8 +93,7 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', '../*.html', '../*.php', '../layouts/*.php', '../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
       options: {
         proxy: "localhost:8888", // change this to match your host
-        watchTask: true,
-        tunnel: true
+        watchTask: true
       }
     }
   });
