@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) {
   window.addEventListener('load', function() {
-    var video = document.querySelector('.scratch-video');
+    var video = document.querySelector('video.scratch-video');
 
     function checkLoad() {
       if (video && video.readyState === 4) {
-        $('.scratch-video').velocity({
+        $('video.scratch-video').velocity({
           opacity: 1
         }, {
           duration: 400,
@@ -17,12 +17,10 @@ jQuery(document).ready(function($) {
 
     checkLoad();
   }, false);
-  $('.slider').glide({
+  $('.glide').glide({
     autoplay: false,
-    arrowRightText: '',
-    arrowLeftText: '',
     afterInit: function() {
-      $('.slider .slider__wrapper').velocity({
+      $('.glide .glide__wrapper').velocity({
         opacity: 1
       }, {
         duration: 400,

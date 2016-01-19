@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -11,21 +11,13 @@
 
 <?php wp_head(); ?>
 
-<?php if(!is_preview()): ?>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>
-<?php endif; ?>
-
 </head>
 
 <body <?php body_class(); ?>>
+
+<!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
 <header id="header">
   <div class="wrap hpad clearfix">
@@ -41,8 +33,7 @@
       <i class="icon ion-navicon"></i>
     </span>
 
-    <nav id="nav"
-         role="navigation">
+    <nav id="nav">
       <?php scratch_main_nav(); ?>
     </nav>
 

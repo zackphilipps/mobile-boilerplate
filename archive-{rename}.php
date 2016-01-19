@@ -1,18 +1,17 @@
 <?php get_header(); ?>
 
-<main role="main">
+<main>
 
 <p class="center">This is the archive-{rename}.php file</p>
-  
+
   <section class="wrap hpad clearfix">
-  
+
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
-  
+
     <article id="post-<?php the_ID(); ?>"
-             <?php post_class(); ?>
-             role="article">
-      
+             <?php post_class(); ?>>
+
       <header>
         <h2>
           <a href="<?php the_permalink(); ?>"
@@ -21,17 +20,17 @@
           </a>
         </h2>
       </header>
-        
+
       <?php the_content(); ?>
-      
+
     </article>
-    
+
     <?php endwhile; else: ?>
-    
+
       <p>No posts here.</p>
-  
+
   <?php endif; ?>
-  
+
   </section>
 
 </main>

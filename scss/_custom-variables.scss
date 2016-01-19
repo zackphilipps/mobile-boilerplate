@@ -6,91 +6,10 @@
  * Google Fonts Examples
  */
 
-$families: "Alegreya:400italic,400,700", "Alegreya+Sans:300,400,700,300italic,400italic";
-
-@each $family in $families {
-  $clean: unquote(#{$family});
-  @import url("//fonts.googleapis.com/css?family=#{$clean}");
-}
+@import url("https://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+Sans:300,400,700,300italic,400italic");
 
 $serif: "Alegreya", "Georgia", serif;
 $sans: "Alegreya Sans", sans-serif;
-
-/*
- * `@font-face` examples
- */
-
-/*
- * SERIF
- */
-
-/*@include font-face("alegreyaregular", "../fonts", "alegreya-regular-webfont");
-
-@mixin serif {
-  font-family: 'alegreyaregular', 'Georgia', serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@include font-face("alegreyaitalic", "../fonts", "alegreya-italic-webfont", 400, italic);
-
-@mixin serif-italic {
-  font-family: 'alegreyaitalic', 'Georgia', serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-@include font-face("alegreyabold", "../fonts", "alegreya-bold-webfont", 700, normal);
-
-@mixin serif-bold {
-  font-family: 'alegreyabold', 'Georgia', serif;
-  font-weight: 700;
-  font-style: normal;
-}*/
-
-/*
- * SANS-SERIF
- */
-
-/*@include font-face("alegreya_sanslight", "../fonts", "alegreyasans-light-webfont", 300, normal);
-
-@mixin sans-light {
-  font-family: 'alegreya_sanslight', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-@include font-face("alegreya_sanslight_italic", "../fonts", "AlegreyaSans-LightItalic-webfont", 300, italic);
-
-@mixin sans-light-italic {
-  font-family: 'alegreya_sanslight_italic', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-@include font-face("alegreya_sansregular", "../fonts", "alegreyasans-regular-webfont");
-
-@mixin sans {
-  font-family: 'alegreya_sansregular', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@include font-face("alegreya_sansitalic", "../fonts", "AlegreyaSans-Italic-webfont", 400, italic);
-
-@mixin sans-italic {
-  font-family: 'alegreya_sansitalic', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-@include font-face("alegreya_sansbold", "../fonts", "alegreyasans-bold-webfont", 700, normal);
-
-@mixin sans-bold {
-  font-family: 'alegreya_sansbold', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}*/
 
 /********* Custom colors example (modify as needed) *********/
 
@@ -118,7 +37,7 @@ $purple: #b10dc9;
 $maroon: #85144b;
 
 /*
-Gray Scale 
+Gray Scale
 */
 
 $white: white;
@@ -133,9 +52,11 @@ $colors: "aqua" $aqua, "blue" $blue, "navy" $navy, "teal" $teal, "green" $green,
 @each $color in $colors {
   $label: nth($color, 1);
   $value: nth($color, 2);
+
   .#{$label} {
     color: $value;
   }
+
   .#{$label}-bg {
     background-color: $value;
   }

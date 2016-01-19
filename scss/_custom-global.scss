@@ -4,6 +4,7 @@ html, body {
   color: $black;
   background-color: $white;
   font-family: $sans;
+
   /*
    * if you change this font-size, you will
    * also need to change the $pixelBase
@@ -17,6 +18,7 @@ html, body {
   @media (min-width: 767px) {
     line-height: 1.5;
   }
+
   overflow-x: hidden;
 }
 
@@ -41,6 +43,7 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   border-radius: 0;
   border: 0;
   box-shadow: none;
+  text-shadow: none;
   height: auto;
   line-height: normal;
   font-size: u(1rem);
@@ -49,7 +52,10 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   color: $white;
   padding: u(0.5rem 1rem);
   font-family: $sans;
-  @include easing;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
 
   &:link, &:active, &:visited {
     background-color: $olive;
@@ -120,6 +126,7 @@ hr {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $sans;
   font-weight: 300;
+
   small {}
 }
 
@@ -323,6 +330,7 @@ iframe, object, embed {
 
   &:after {
     @include icons;
+
     content: "\f3d0";
     color: $olive;
     position: absolute;
@@ -349,7 +357,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
     display: block;
     margin: u(2rem auto);
     padding: 8px 12px 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   strong {
@@ -361,18 +369,21 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
 /* Misc. */
 .scratch-image, .scratch-video {
   height: 200px;
+
   @include background;
 }
 
 // hide video until it is fully loaded, see `js/main.js`
-.scratch-video {
+video.scratch-video {
   display: none;
   opacity: 0;
 }
 
 // hide slider until it is fully loaded, see `js/main.js`
-.slider {
-  .slider__wrapper {
+.glide {
+  background-color: rgba(black, 0.1);
+
+  .glide__wrapper {
     opacity: 0;
   }
 }

@@ -80,22 +80,12 @@ function my_theme_register_required_plugins() {
                          'required' 	=> false,
                          ),
                    array(
-                         'name' 		=> 'CloudFlare',
-                         'slug' 		=> 'cloudflare',
-                         'required' 	=> false,
-                         ),
-                   array(
                         'name'               => 'Github Updater',
                         'slug'               => 'github-updater',
                         'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip',
                         'required'           => false,
                         'external_url'       => 'https://github.com/afragen/github-updater',
                     ),
-                   array(
-                         'name' 		=> 'Mailgun',
-                         'slug' 		=> 'mailgun',
-                         'required' 	=> false,
-                         ),
                    array(
                          'name' 		=> 'Relevanssi - A Better Search',
                          'slug' 		=> 'relevanssi',
@@ -104,16 +94,6 @@ function my_theme_register_required_plugins() {
                    array(
                          'name' 		=> 'Resize Image After Upload',
                          'slug' 		=> 'resize-image-after-upload',
-                         'required' 	=> false,
-                         ),
-                   array(
-                         'name' 		=> 'Sucuri Security',
-                         'slug' 		=> 'sucuri-scanner',
-                         'required' 	=> false,
-                         ),
-                   array(
-                         'name' 		=> 'WordPress Backup to Dropbox',
-                         'slug' 		=> 'wordpress-backup-to-dropbox',
                          'required' 	=> false,
                          ),
                    array(
