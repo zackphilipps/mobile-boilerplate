@@ -1,11 +1,12 @@
 {
   "name": "scratch-theme",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "dependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
+    "gulp-newer": "^1.1.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-postcss": "^6.0.1",
