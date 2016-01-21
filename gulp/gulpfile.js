@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -57,8 +56,7 @@ gulp.task('watch', function() {
 gulp.task('browserSync', function() {
   browserSync.init({
     proxy: 'localhost:8888', // change this to match your host
-    watchTask: true,
-    tunnel: true
+    watchTask: true
   });
 });
 

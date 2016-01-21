@@ -41,5 +41,5 @@ Thumbs.db
 
 # Sass cache and node modules #
 ###############################
-grunt/.sass-cache/
-grunt/node_modules/
+.sass-cache/
+node_modules/
