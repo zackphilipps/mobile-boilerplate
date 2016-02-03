@@ -39,7 +39,7 @@ a, .a {
 }
 
 /* Buttons */
-button, .button, .acf-button, input[type="button"], input[type="reset"], input[type="submit"] {
+button, .button, a.acf-button, input[type="button"], input[type="reset"], input[type="submit"] {
   border-radius: 0;
   border: 0;
   box-shadow: none;
@@ -85,7 +85,7 @@ button, .button, .acf-button, input[type="button"], input[type="reset"], input[t
   }
 }
 
-.acf-button {
+a.acf-button {
   &.blue {
     &:hover, &:focus {
       background-color: darken($olive, 5%);
