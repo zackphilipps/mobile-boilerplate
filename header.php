@@ -23,9 +23,8 @@
   <div class="wrap hpad clearfix">
 
     <a class="logo"
-       href="/"
-       title="<?php bloginfo('name'); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svg">
+       href="<?php bloginfo('url'); ?>">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svg" alt="<?php bloginfo('name'); ?>">
     </a>
 
     <span class="nav-toggle"
