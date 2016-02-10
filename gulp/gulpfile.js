@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var browserSync = require('browser-sync').create();
+var gulp = require('gulp'),
+  $ = require('gulp-load-plugins')(),
+  browserSync = require('browser-sync').create();
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
