@@ -1,6 +1,6 @@
 {
   "name": "scratch-theme",
-  "version": "1.5.12",
+  "version": "1.5.13",
   "dependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
