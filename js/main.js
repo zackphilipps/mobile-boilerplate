@@ -1,4 +1,7 @@
 jQuery(document).ready(function($) {
+  $('.glide').glide({
+    autoplay: false
+  });
   $('.nav-toggle').click(function() {
     if ($(this).data('direction') === 'down') {
       $('nav ul.main-nav')
