@@ -14,12 +14,12 @@
              itemscope itemtype="http://schema.org/BlogPosting">
 
       <header>
-        <a href="<?php the_permalink(); ?>"
-           title="<?php the_title_attribute(); ?>">
-          <h2 itemprop="headline">
+        <h2 itemprop="headline">
+          <a href="<?php the_permalink(); ?>"
+             title="<?php the_title_attribute(); ?>">
             <?php the_title(); ?>
-          </h2>
-        </a>
+          </a>
+        </h2>
       </header>
 
       <div itemprop="articleBody">
