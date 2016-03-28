@@ -348,8 +348,8 @@ function scratch_button($href, $title, $classes = null, $option = null) { ?>
 
 <p>
   <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-   href="<?php the_field($href, $option); ?>"
-   title="<?php the_field($title, $option); ?>">
+     href="<?php the_field($href, $option); ?>"
+     title="<?php the_field($title, $option); ?>">
    <?php the_field($title, $option); ?>
  </a>
 </p>
@@ -362,8 +362,8 @@ function scratch_button($href, $title, $classes = null, $option = null) { ?>
 
 <p>
   <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-   href="<?php the_field($href); ?>"
-   title="<?php the_field($title); ?>">
+     href="<?php the_field($href); ?>"
+     title="<?php the_field($title); ?>">
    <?php the_field($title); ?>
  </a>
 </p>
@@ -382,8 +382,8 @@ function scratch_sub_button($href, $title, $classes = null, $option = null) { ?>
 
 <p>
   <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-   href="<?php the_sub_field($href, $option); ?>"
-   title="<?php the_sub_field($title, $option); ?>">
+     href="<?php the_sub_field($href, $option); ?>"
+     title="<?php the_sub_field($title, $option); ?>">
    <?php the_sub_field($title, $option); ?>
  </a>
 </p>
@@ -396,8 +396,8 @@ function scratch_sub_button($href, $title, $classes = null, $option = null) { ?>
 
 <p>
   <a class="button<?php if($classes !== null) { echo ' ' . $classes; } ?>"
-   href="<?php the_sub_field($href); ?>"
-   title="<?php the_sub_field($title); ?>">
+     href="<?php the_sub_field($href); ?>"
+     title="<?php the_sub_field($title); ?>">
    <?php the_sub_field($title); ?>
  </a>
 </p>
