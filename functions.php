@@ -32,17 +32,17 @@ add_action('wp_head', 'scratch_meta');
 
 function theme_styles() {
 
-    wp_register_style( 'scratch-main', get_template_directory_uri() . '/css/master.css', false, filemtime(dirname(__FILE__) . '/css/master.css') );
-    wp_enqueue_style( 'scratch-main' );
+  wp_register_style( 'scratch-main', get_template_directory_uri() . '/css/master.css', false, filemtime(dirname(__FILE__) . '/css/master.css') );
+  wp_enqueue_style( 'scratch-main' );
 
-    global $wp_styles; /* call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way */
+  global $wp_styles; /* call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way */
 
-    wp_register_style( 'scratch-ie', get_template_directory_uri() . '/css/ie.css', false, filemtime(dirname(__FILE__) . '/css/ie.css') );
-    $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
-    wp_enqueue_style( 'scratch-ie' );
+  wp_register_style( 'scratch-ie', get_template_directory_uri() . '/css/ie.css', false, filemtime(dirname(__FILE__) . '/css/ie.css') );
+  $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
+  wp_enqueue_style( 'scratch-ie' );
 
-    wp_register_style( 'scratch-custom', get_template_directory_uri() . '/custom.css', false, filemtime(dirname(__FILE__) . '/custom.css') );
-    wp_enqueue_style( 'scratch-custom' );
+  wp_register_style( 'scratch-custom', get_template_directory_uri() . '/custom.css', false, filemtime(dirname(__FILE__) . '/custom.css') );
+  wp_enqueue_style( 'scratch-custom' );
 
 }
 
@@ -52,17 +52,17 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function theme_js() {
 
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', false, false, false );
+  wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', false, false, false );
 
-    wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/concat/main.js'), true );
+  wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/concat/main.js'), true );
 
-    wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/compiled/main.min.js'), true );
+  wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/js/compiled/main.min.js'), true );
 
-    /* FOR DEVELOPMENT */
-    wp_enqueue_script( 'scratch-main-concat' );
+  /* FOR DEVELOPMENT */
+  wp_enqueue_script( 'scratch-main-concat' );
 
-    /* FOR PRODUCTION */
-    /*wp_enqueue_script( 'scratch-main-min' );*/
+  /* FOR PRODUCTION */
+  /*wp_enqueue_script( 'scratch-main-min' );*/
 
 }
 
@@ -72,10 +72,10 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 if(function_exists('acf_add_options_page')) {
 
-	acf_add_options_page();
-	acf_add_options_sub_page('Header');
-	acf_add_options_sub_page('Sidebar');
-	acf_add_options_sub_page('Footer');
+  acf_add_options_page();
+  acf_add_options_sub_page('Header');
+  acf_add_options_sub_page('Sidebar');
+  acf_add_options_sub_page('Footer');
 
 }
 
@@ -88,25 +88,25 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'menus' );
 
 register_nav_menus(
-    array(
-        'main-nav' => __( 'Main Nav', 'scratch' )   // main nav in header
-    )
+  array(
+    'main-nav' => __( 'Main Nav', 'scratch' )   // main nav in header
+  )
 );
 
 function scratch_main_nav() {
-	// display the wp3 menu if available
-	wp_nav_menu(array(
-		'container' => false, // remove nav container
-		'container_class' => '', // class of container (should you choose to use it)
-		'menu' => __( 'Main Nav', 'scratch' ), // nav name
-		'menu_class' => 'main-nav', // adding custom nav class
-		'theme_location' => 'main-nav', // where it's located in the theme
-		'before' => '', // before the menu
-		'after' => '', // after the menu
-		'link_before' => '', // before each link
-		'link_after' => '', // after each link
-		'depth' => 0    // fallback function
-	));
+  // display the wp3 menu if available
+  wp_nav_menu(array(
+    'container' => false, // remove nav container
+    'container_class' => '', // class of container (should you choose to use it)
+    'menu' => __( 'Main Nav', 'scratch' ), // nav name
+    'menu_class' => 'main-nav', // adding custom nav class
+    'theme_location' => 'main-nav', // where it's located in the theme
+    'before' => '', // before the menu
+    'after' => '', // after the menu
+    'link_before' => '', // before each link
+    'link_after' => '', // after each link
+    'depth' => 0    // fallback function
+  ));
 } /* end scratch main nav */
 
 function scratch_login_stylesheet() { ?>
@@ -119,12 +119,12 @@ function scratch_login_stylesheet() { ?>
 add_action( 'login_enqueue_scripts', 'scratch_login_stylesheet' );
 
 function scratch_login_logo_url() {
-    return home_url();
+  return home_url();
 }
 add_filter( 'login_headerurl', 'scratch_login_logo_url' );
 
 function scratch_login_logo_url_title() {
-    return get_bloginfo('name');
+  return get_bloginfo('name');
 }
 add_filter( 'login_headertitle', 'scratch_login_logo_url_title' );
 
