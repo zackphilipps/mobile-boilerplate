@@ -41,60 +41,60 @@ function scratch_column_class() {
   global $blocks, $column_count, $columns, $flex, $offset;
   switch($columns) {
     case 2:
-	    if($offset === '1:2') {
-	      return two_columns_12($column_count);
-	    } elseif($offset === '2:1') {
-	      return two_columns_21($column_count);
-	    } else {
-	    	if($flex === true) {
-		      return two_columns_flex($blocks, $column_count);
-		    } else {
-		    	return two_columns($column_count);
-		    }
-	    }
-	    break;
+      if($offset === '1:2') {
+        return two_columns_12($column_count);
+      } elseif($offset === '2:1') {
+        return two_columns_21($column_count);
+      } else {
+        if($flex === true) {
+          return two_columns_flex($blocks, $column_count);
+        } else {
+          return two_columns($column_count);
+        }
+      }
+      break;
     case 3:
-	    if($offset === '1:1:2') {
-	      return three_columns_112($column_count);
-	    } elseif($offset === '1:2:1') {
-	      return three_columns_121($column_count);
-	    } elseif($offset === '2:1:1') {
-	      return three_columns_211($column_count);
-	    } else {
-	    	if($flex === true) {
-		      return three_columns_flex($blocks, $column_count);
-		    } else {
-		    	return three_columns($column_count);
-		    }
-	    }
-	    break;
+      if($offset === '1:1:2') {
+        return three_columns_112($column_count);
+      } elseif($offset === '1:2:1') {
+        return three_columns_121($column_count);
+      } elseif($offset === '2:1:1') {
+        return three_columns_211($column_count);
+      } else {
+        if($flex === true) {
+          return three_columns_flex($blocks, $column_count);
+        } else {
+          return three_columns($column_count);
+        }
+      }
+      break;
     case 4:
-	    if($flex === true) {
-		    return four_columns_flex($blocks, $column_count);
-		  } else {
-		  	return four_columns($column_count);
-		  }
-	    break;
+      if($flex === true) {
+        return four_columns_flex($blocks, $column_count);
+      } else {
+        return four_columns($column_count);
+      }
+      break;
     case 5:
-	    if($flex === true) {
-		    return five_columns_flex($blocks, $column_count);
-		  } else {
-		  	return five_columns($column_count);
-		  }
-	    break;
+      if($flex === true) {
+        return five_columns_flex($blocks, $column_count);
+      } else {
+        return five_columns($column_count);
+      }
+      break;
     case 6:
-	    if($flex === true) {
-		    return six_columns_flex($blocks, $column_count);
-		  } else {
-		  	return six_columns($column_count);
-		  }
-	    break;
+      if($flex === true) {
+        return six_columns_flex($blocks, $column_count);
+      } else {
+        return six_columns($column_count);
+      }
+      break;
     case 'custom':
-	    return custom_columns($column_count);
-	    break;
+      return custom_columns($column_count);
+      break;
     default:
-	    return 'error';
-	    break;
+      return 'error';
+      break;
   }
 }
 
