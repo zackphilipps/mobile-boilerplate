@@ -1,0 +1,23 @@
+{
+  "name": "scratch-theme",
+  "version": "1.5.20",
+  "description": "Scratch is the world's absolute most minimal, extendable, and ultimately useful WordPress theme.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zackphilipps/scratch-theme.git"
+  },
+  "author": "Tribeswell LLC",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/zackphilipps/scratch-theme/issues"
+  },
+  "homepage": "http://scratchtheme.com",
+  "dependencies": {
+    "glidejs": "^2.0.8",
+    "ionicons": "^3.0.0",
+    "magnific-popup": "^1.1.0",
+    "normalize.css": "^4.1.1",
+    "velocity-animate": "^1.2.3",
+    "waypoints": "^4.0.0"
+  }
+}
