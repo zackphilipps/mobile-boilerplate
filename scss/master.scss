@@ -37,7 +37,9 @@ $gbp: 767px;
 @import "sidebar";
 @import "home";
 @import "footer";
-@import "../core/scss/glide";
+@import "../core/scss/glide-core";
+@import "../core/scss/glide-theme";
+@import "../core/scss/glide-custom";
 @import "../core/scss/magnific";
 
 /*
