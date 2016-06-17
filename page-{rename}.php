@@ -4,7 +4,7 @@
  * Template Name: Rename
  */
 
-get_header(); the_post(); ?>
+get_template_part('_parts/header'); the_post(); ?>
 
 <main>
 
@@ -27,4 +27,4 @@ get_header(); the_post(); ?>
 
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('_parts/footer'); ?>

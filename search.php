@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('_parts/header'); ?>
 
 <main itemscope itemtype="http://schema.org/SearchResultsPage">
 
@@ -40,4 +40,4 @@
 
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('_parts/footer'); ?>

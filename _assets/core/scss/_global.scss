@@ -1,0 +1,93 @@
+/********************GLOBAL********************/
+
+/* Create your own global styles in `_custom-global.scss` */
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.25;
+	@media (min-width: 767px) {
+		line-height: 1.375;
+	}
+}
+
+* {
+	/* (http://paulirish.com/2012/box-sizing-border-box-ftw/) */
+	box-sizing: border-box;
+
+	&:after,
+	&:before {
+		box-sizing: border-box;
+	}
+}
+
+/*
+ * HELPER CLASSES
+ */
+
+.alignleft {
+	@extend .floatLeft;
+}
+
+.aligncenter {
+	@extend .floatCenter;
+}
+
+.alignright {
+	@extend .floatRight;
+}
+
+.halign {
+	@include halign;
+}
+
+.valign {
+	@include m {
+		 @include valign;
+	}
+}
+
+.valign-always {
+	@include valign;
+}
+
+.hvalign {
+	@include hvalign;
+}
+
+.circle {
+	@include circle;
+}
+
+/* Spin Animation */
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.spin {
+	animation: spin 2s linear infinite;
+}
+
+/* Blink Animation */
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+.blink {
+	animation: blink 2s ease infinite;
+}
+
+/* Create your own helper classes in `_custom-global.scss` */

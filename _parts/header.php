@@ -24,7 +24,7 @@
 
     <a class="logo"
        href="<?php bloginfo('url'); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/site-logo.svg" alt="<?php bloginfo('name'); ?>">
+      <img src="<?php echo get_template_directory_uri(); ?>/_assets/img/site-logo.svg" alt="<?php bloginfo('name'); ?>">
     </a>
 
     <span class="nav-toggle"

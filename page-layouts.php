@@ -4,12 +4,12 @@
  * Template Name: Layouts
  */
 
-get_header(); the_post(); ?>
+get_template_part('_parts/header'); the_post(); ?>
 
 <main>
 
-	<?php get_template_part('content', 'layouts'); ?>
+	<?php get_template_part('_parts/content', 'layouts'); ?>
 
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('_parts/footer'); ?>
