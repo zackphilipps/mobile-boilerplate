@@ -43,13 +43,13 @@ function bones_head_cleanup() {
  * Include Layout Functions and Layout Declarations.
  */
 
-require_once dirname( __FILE__ ) . '/php/layout-functions.php';
-require_once dirname( __FILE__ ) . '/php/layout-declarations.php';
+require_once dirname( __FILE__ ) . '/layout-functions.php';
+require_once dirname( __FILE__ ) . '/layout-declarations.php';
 
 /**
  * Include the TGM_Plugin_Activation class.
  */
-require_once dirname( __FILE__ ) . '/php/class-tgm-plugin-activation.php';
+require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 /**

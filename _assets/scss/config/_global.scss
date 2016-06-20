@@ -1,18 +1,5 @@
 /********************GLOBAL********************/
 
-html, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $white;
-  overflow-x: hidden;
-  // font-size: #{$base + 'px'};
-  font-size: #{$base-font-size + '%'};
-  font-family: $font-body;
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    font-size: #{$base-font-size-desktop / 100 + 'rem'};
-  }
-}
-
 * {
   /* (http://paulirish.com/2012/box-sizing-border-box-ftw/) */
   box-sizing: border-box;
@@ -23,17 +10,30 @@ html, body {
   }
 
   @include line-height(1);
-  @include margin(0, 0, 1);
+  // @include margin(0, 0, 1);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
     @include line-height(1);
-    @include margin-bottom(1);
-    max-width: #{$max-width + 'rem'};
-    margin-left: auto;
-    margin-right: auto;
+    // @include margin-bottom(1);
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  color: $color-font-body;
+  overflow-x: hidden;
+  font-size: #{$base + 'px'};
+  font-size: #{$base-font-size + '%'};
+  font-family: $font-body;
+  @include m {
+    font-size: #{$base-font-size-desktop / 100 + 'rem'};
   }
 }
 
@@ -66,7 +66,7 @@ button, .button, a.acf-button, input[type="button"], input[type="reset"], input[
   background-color: $olive;
   color: $white;
   padding: 0.5rem 1rem;
-  font-family: $sans;
+  font-family: $font-headings;
   transition-property: background-color, color;
   transition-duration: 0.25s;
   transition-delay: 0s;
@@ -114,15 +114,13 @@ figcaption {
   color: $color-font-figcaption;
   font-size: 0.8125rem;
   font-style: italic;
-  margin-bottom: 0;
   text-align: center;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
     @include line-height(1);
-    margin-bottom: 0;
   }
 
 }
@@ -130,7 +128,7 @@ figcaption {
 figure.alignleft,
 figure.alignright {
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
@@ -145,45 +143,25 @@ figure.alignright {
 
   }
 
-  blockquote {
-
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      $leading: $leading-desktop;
-      $leading-rem: $leading-rem-desktop;
-
-      @include padding-equal(0);
-      text-align: left;
-
-      @if $paragraph-indent == true {
-        @include margin-top(1);
-      }
-
-    }
-
-    p {
-
-      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-        $leading: $leading-desktop;
-        $leading-rem: $leading-rem-desktop;
-
-        font-size: 1.2rem;
-        @include line-height(1);
-      }
-
-    }
-
-  }
-
 }
 
 blockquote {
-  font-style: italic;
-  padding-left: 1.4375rem;
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    padding-left: 2rem;
+  background: $gray;
+  border-left: 0.25rem solid $silver;
+  margin: 1.5rem 0;
+  padding: 1rem 0.5rem;
+  quotes: "\201C""\201D""\2018""\2019";
+  position: relative;
+  &:before {
+    color: $silver;
+    content: open-quote;
+    font-size: 4rem;
+    position: absolute;
+    top: 2px;
   }
-
+  p {
+    display: inline;
+  }
 }
 
 cite {
@@ -191,40 +169,12 @@ cite {
   font-style: normal;
 }
 
-// Quotes
-figure blockquote {
-  @include padding(1, 0);
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    @include padding(2, 0, 1);
-    text-align: center;
-  }
-
-  p {
-    font-size: 1.6875rem;
-    @include line-height(1.5);
-
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      $leading: $leading-desktop;
-      $leading-rem: $leading-rem-desktop;
-
-      font-size: 1.6875rem;
-      @include line-height(1.5);
-    }
-
-  }
-
-}
-
 small {
   @include line-height(.5);
 
   font-size: 70%;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
@@ -236,6 +186,15 @@ small {
 /* Paragraph
    ========================================================================== */
 
+p {
+  @include margin(0, 0, 1);
+  @include m {
+    @include margin-bottom(1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @if $paragraph-indent == true {
 
   p + p {
@@ -245,29 +204,17 @@ small {
     .alignleft + p,
     .alignright + p {
 
-      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      @include m {
         $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
-
         text-indent: #{ $leading-rem + 'rem'};
       }
 
     }
-
-  }
-
-  .attention-grabber + p {
-    margin-top: 0;
-    text-indent: 0;
   }
 }
 
-// Attention grabber
-.attention-grabber {
-  font-size: 1.2rem;
-}
-
-@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+@include m {
   $leading: $leading-desktop;
   $leading-rem: $leading-rem-desktop;
 
@@ -305,38 +252,23 @@ $headings: (
   h4: (1.2, 1, 1.5, .5),
   h5: (1, 1, 2.5, .5),
   h6: (1, 1, 2.5, .5)
-) !default;
+);
 
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
-  #{$heading} {
-    font-size: nth($properties, 1) + 'rem';
+  #{$heading}, .#{$heading} {
+    font-size: unquote(nth($properties, 1) + 'rem');
     @include line-height(nth($properties, 2));
     @include margin-top(nth($properties, 3));
     @include margin-bottom(nth($properties, 4));
   }
 }
 
-@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-  $leading: $leading-desktop;
-  $leading-rem: $leading-rem-desktop;
-
-  @each $heading, $properties in $headings {
-    #{$heading} {
-      font-size: nth($properties, 1) + 'rem';
-      @include line-height(nth($properties, 2));
-      @include margin-top(nth($properties, 3));
-      @include margin-bottom(nth($properties, 4));
-    }
-  }
-
-}
-
 // Set margins between headings
-h1 + h2 {
+h1 + h2, .h1 + .h2 {
   @include margin-top(1);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
@@ -346,11 +278,14 @@ h1 + h2 {
 }
 
 h2 + h3,
+.h2 + .h3,
 h3 + h4,
-h4 + h5 {
+.h3 + .h4,
+h4 + h5,
+.h4 + .h5 {
   @include margin-top(.5);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
@@ -359,10 +294,10 @@ h4 + h5 {
 
 }
 
-h5 + h6 {
+h5 + h6, .h5 + .h6 {
   @include margin-top(-.5);
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
 
@@ -371,25 +306,21 @@ h5 + h6 {
 
 }
 
-h6 {
+h6, .h6 {
   font-style: italic;
   font-weight: normal;
 }
 
 // Change headings font if a heading font is set
 @if $font-headings != null {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
     font-family: $font-headings;
   }
-}
-
-hgroup {
-  display: block;
 }
 
 /* Form Inputs */
@@ -586,7 +517,7 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   border: 1px solid $silver;
 }
 
-pre {
+pre, .pre {
   display: block;
   margin: 2rem auto;
   padding: 8px 12px 10px;
@@ -644,21 +575,38 @@ br {
  * HELPER CLASSES
  */
 
+.hpad {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
 .alignleft {
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     float: left;
   }
 }
 
 .aligncenter {
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 .alignright {
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  @include m {
     float: right;
   }
 }

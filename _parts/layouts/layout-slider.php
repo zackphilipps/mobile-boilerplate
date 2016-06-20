@@ -1,7 +1,7 @@
 <?php global $layout_count; ?>
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
          class="slider-row">
-  <div class="wrap hpad vpad-gap clearfix">
+  <div class="wrap hpad clearfix">
     <?php if(get_sub_field('slides')) { ?>
       <div class="glide">
         <div class="glide__arrows">

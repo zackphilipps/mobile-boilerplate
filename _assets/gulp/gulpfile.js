@@ -53,13 +53,13 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
 	gulp.watch(['../../**/*.html', '../../**/*.php']).on('change', browserSync.reload);
 	gulp.watch(['../../../../uploads/**/*'], ['images']);
-	gulp.watch(['../js/*.js', '../js/vendor/*.js'], ['javascript']);
-	gulp.watch(['../scss/**/*.scss'], ['styles']);
+	gulp.watch(['../js/*.js', '../js/vendor/*.js', '../core/js/*.js'], ['javascript']);
+	gulp.watch(['../scss/**/*.scss', '../core/scss/**/*.scss'], ['styles']);
 });
 
 gulp.task('browserSync', function() {
 	browserSync.init({
-		proxy: 'localhost:8888', // change this to match your host
+		proxy: 'test.com', // change this to match your host
 		watchTask: true
 	});
 });

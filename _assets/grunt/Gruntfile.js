@@ -74,14 +74,14 @@ module.exports = function(grunt) {
 				tasks: ['newer:imagemin']
 			},
 			js: {
-				files: ['../js/*.js', '../js/vendor/*.js'],
+				files: ['../js/*.js', '../js/vendor/*.js', '../core/js/*.js'],
 				tasks: ['concat:js', 'uglify:js'],
 				options: {
 					interrupt: true
 				}
 			},
 			css: {
-				files: ['../scss/**/*.scss'],
+				files: ['../scss/**/*.scss', '../core/scss/**/*.scss'],
 				tasks: ['sass:style', 'postcss:no_dest_multiple'],
 				options: {
 					interrupt: true
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
 		browserSync: {
 			files: ['Gruntfile.js', '../../**/*.html', '../../**/*.php', '../../../../uploads/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,gif,GIF}', '../js/concat/main.js', '../css/*.css'],
 			options: {
-				proxy: "localhost:8888", // change this to match your host
+				proxy: "test.com", // change this to match your host
 				watchTask: true
 			}
 		}

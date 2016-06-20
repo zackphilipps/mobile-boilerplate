@@ -1,7 +1,7 @@
 <?php
 
 /* Do not remove this line. */
-require_once('core/scratch.php');
+require_once('_includes/scratch.php');
 
 
 
@@ -34,12 +34,6 @@ function theme_styles() {
 
   wp_register_style( 'scratch-main', get_template_directory_uri() . '/_assets/css/master.css', false, filemtime(dirname(__FILE__) . '/_assets/css/master.css') );
   wp_enqueue_style( 'scratch-main' );
-
-  global $wp_styles; /* call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way */
-
-  wp_register_style( 'scratch-ie', get_template_directory_uri() . '/_assets/css/ie.css', false, filemtime(dirname(__FILE__) . '/_assets/css/ie.css') );
-  $wp_styles->add_data( 'scratch-ie', 'conditional', 'lt IE 9' );
-  wp_enqueue_style( 'scratch-ie' );
 
   wp_register_style( 'scratch-custom', get_template_directory_uri() . '/custom.css', false, filemtime(dirname(__FILE__) . '/custom.css') );
   wp_enqueue_style( 'scratch-custom' );

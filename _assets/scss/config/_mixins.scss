@@ -89,3 +89,9 @@
 	position: relative;
 	overflow: hidden;
 }
+
+@mixin m {
+  @media (min-width: #{ $max-width + 5 + 'em' }) {
+    @content;
+  }
+}

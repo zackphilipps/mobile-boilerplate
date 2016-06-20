@@ -16,72 +16,69 @@ get_template_part('_parts/header'); ?>
 <main class="wrap hpad clearfix">
 
   <section>
-    
-    <h2 class="center">Typography</h2>
-    
+
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Heading 4</h4>
-    
+
     <p>I barely knew Philip, but as a clergyman I have no problem telling his most intimate friends all about him. Ok, we'll go deliver this crate like professionals, and then we'll go ride the bumper cars. Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood! One hundred dollars. Say it in Russian! Who's brave enough to fly into something we all keep calling a death sphere?</p>
-    
+
     <ul>
 
       <li>I've got to find a way to escape the <strong>horrible ravages of youth</strong>. Suddenly, I'm going to the bathroom like clockwork, every three hours. And those jerks at Social Security stopped sending me checks. Now 'I'' have to pay ''them'!</li>
       <li>Kif, <em>I have mated with a woman</em>. Inform the men.</li>
     </ul>
-    
+
     <blockquote>
       <p>Good man. Nixon's pro-war and pro-family. <strong>Son, as your lawyer</strong>, I declare y'all are in a <em>12-piece bucket o' trouble</em>. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
-      <small> - A Clone of My Own</small>
     </blockquote>
 
   </section>
-  
-  <section class="clearfix vmarg-half">
+
+  <section class="clearfix">
     <h2 class="center">Colors</h2>
-    <figure class="threecol first scratch-image black-bg">
-      <figcaption class="white center valign-always">Black</figcaption>
-    </figure>
-    <figure class="threecol scratch-image red-bg">
-      <figcaption class="white center valign-always">Red</figcaption>
-    </figure>
-    <figure class="threecol scratch-image orange-bg">
-      <figcaption class="white center valign-always">Orange</figcaption>
-    </figure>
-    <figure class="threecol last scratch-image yellow-bg">
-      <figcaption class="center valign-always">Yellow</figcaption>
-    </figure>
+    <div class="threecol first scratch-image black-bg">
+      <div class="white center valign-always">Black</div>
+    </div>
+    <div class="threecol scratch-image red-bg">
+      <div class="white center valign-always">Red</div>
+    </div>
+    <div class="threecol scratch-image orange-bg">
+      <div class="white center valign-always">Orange</div>
+    </div>
+    <div class="threecol last scratch-image yellow-bg">
+      <div class="center valign-always">Yellow</div>
+    </div>
   </section>
-  <section class="clearfix vmarg-half">
-    <figure class="threecol first scratch-image green-bg">
-      <figcaption class="white center valign-always">Green</figcaption>
-    </figure>
-    <figure class="threecol scratch-image blue-bg">
-      <figcaption class="white center valign-always">Blue</figcaption>
-    </figure>
-    <figure class="threecol scratch-image purple-bg">
-      <figcaption class="white center valign-always">Purple</figcaption>
-    </figure>
-    <figure class="threecol last scratch-image gray-bg">
-      <figcaption class="center valign-always">Gray</figcaption>
-    </figure>
+  <section class="clearfix">
+    <div class="threecol first scratch-image green-bg">
+      <div class="white center valign-always">Green</div>
+    </div>
+    <div class="threecol scratch-image blue-bg">
+      <div class="white center valign-always">Blue</div>
+    </div>
+    <div class="threecol scratch-image purple-bg">
+      <div class="white center valign-always">Purple</div>
+    </div>
+    <div class="threecol last scratch-image gray-bg">
+      <div class="center valign-always">Gray</div>
+    </div>
   </section>
-  
-  <section class="clearfix vmarg-half">
+
+  <section class="clearfix">
     <h2 class="center">Links</h2>
-    <figure class="sixcol first scratch-image gray-bg">
-      <figcaption class="center valign-always"><a href="">Normal</a></figcaption>
-    </figure>
-    <figure class="sixcol last scratch-image gray-bg">
-      <figcaption class="center valign-always">
+    <div class="sixcol first scratch-image gray-bg">
+      <div class="center valign-always"><a href="">Normal</a></div>
+    </div>
+    <div class="sixcol last scratch-image gray-bg">
+      <div class="center valign-always">
         <a href="" class="button">Button</a><br><br>
         <a href="" class="button black">Button</a>
-      </figcaption>
-    </figure>
+      </div>
+    </div>
   </section>
-  
+
 </main>
 
 <?php get_template_part('_parts/footer'); ?>

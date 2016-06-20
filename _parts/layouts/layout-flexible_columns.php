@@ -1,6 +1,6 @@
 <?php global $layout_count; ?>
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
-         class="flexible-columns vpad-3x">
+         class="flexible-columns">
   <div class="wrap hpad clearfix center">
     <?php if( get_sub_field('header')): ?>
       <h2><?php the_sub_field('header'); ?></h2>

@@ -9,7 +9,7 @@
     }
   ?>
   <?php while(has_sub_field('rows')) { ?>
-    <div class="row vpad-2x">
+    <div class="row">
       <div class="wrap hpad clearfix">
         <div class="fivecol first">
           <?php if($icon_or_image === 'icon'): ?>

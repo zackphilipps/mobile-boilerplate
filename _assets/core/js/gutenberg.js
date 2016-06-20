@@ -1,83 +1,6 @@
 (function(window, document) {
   'use strict';
 
-  /* Toggle grid button
-     ========================================================================== */
-
-  /*
-  // 1. THE JQUERY WAY
-  var flip = 0;
-  $('#btnToggleGrid').on('click', function(){
-    // Get line-height
-    var vcLineHeight = parseInt($('p').css('line-height'));
-    console.log(vcLineHeight);
-    if(flip == 0){
-      $('body').addClass('grid');
-      // $('.verticalGrid').css('background', vcImg);
-      flip = 1;
-    } else if (flip == 1) {
-      $('body').addClass('grid-double');
-      flip = 2;
-    } else if (flip == 2) {
-      $('body').removeClass('grid-double');
-      $('body').removeClass('grid');
-      // $('.verticalGrid').css('background', 'none');
-      flip = 0;
-    };
-  });
-  */
-
-  // 2. THE JAVASCRIPT WAY
-  var flip = 0;
-
-  function toggleGrid() {
-    var body = document.getElementsByTagName('body')[0];
-    var button = document.getElementById('btnToggleGrid');
-
-    if (flip === 0) {
-      body.classList.add('grid');
-      button.textContent = 'Turn Double Grid On';
-      button.classList.add('double-grid');
-      flip = 1;
-    } else if (flip === 1) {
-      body.classList.add('grid-double');
-      button.textContent = 'Turn Grid Off';
-      button.classList.remove('double-grid');
-      button.classList.add('grid-off');
-      flip = 2;
-    } else if (flip === 2) {
-      body.classList.remove('grid');
-      body.classList.remove('grid-double');
-      button.classList.remove('grid-off');
-      button.textContent = 'Turn Grid On';
-      flip = 0;
-    }
-  }
-
-  /* Fix image height to fit into the baseline grid
-     ========================================================================== */
-
-  /*
-  // 1. THE JQUERY WAY
-  Construct the function
-  $.fn.imgFixHeight = function(){
-
-    // get image original height
-    var imgOriginalHeight = this.height();
-
-    // Get Line-height
-    var lineHeight = parseInt($('p').css('line-height'));
-
-    // Calculate the new image height
-    var div = Math.floor(imgOriginalHeight/lineHeight);
-    var imgNewHeight = lineHeight * div;
-
-    // Apply the new image height
-    this.css('height', imgNewHeight);
-  };
-  */
-
-
   // 2. THE JAVASCRIPT WAY
   // Construct the function
   function fixImgHeight() {
@@ -112,8 +35,6 @@
       images[i].style.height = imgNewHeight + 'px';
     }
   }
-
-  document.getElementById('btnToggleGrid').onclick = toggleGrid;
 
   //Fix once on first page load
   fixImgHeight();
