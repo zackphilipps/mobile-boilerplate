@@ -1,1 +1,1 @@
-../../node_modules/magnific-popup/dist/jquery.magnific-popup.js
+../../../node_modules/magnific-popup/dist/jquery.magnific-popup.js

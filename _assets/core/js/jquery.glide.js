@@ -1,1 +1,1 @@
-../../node_modules/glidejs/dist/glide.js
+../../../node_modules/glidejs/dist/glide.js

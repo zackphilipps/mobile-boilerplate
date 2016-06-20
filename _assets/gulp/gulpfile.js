@@ -37,7 +37,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src(['../scss/master.scss', '../scss/ie.scss', '../scss/login.scss'])
+	return gulp.src(['../scss/master.scss', '../scss/login.scss'])
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({
 			outputStyle: 'compressed'

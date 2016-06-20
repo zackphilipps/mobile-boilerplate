@@ -41,7 +41,6 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"../css/master.css": "../scss/master.scss",
-					"../css/ie.css": "../scss/ie.scss",
 					"../css/login.css": "../scss/login.scss" // add moar master files here
 				}
 			}

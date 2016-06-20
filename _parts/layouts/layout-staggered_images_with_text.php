@@ -12,22 +12,35 @@
     <div class="row vpad-2x">
       <div class="wrap hpad clearfix">
         <div class="fivecol first">
-          <?php
-            if($icon_or_image === 'icon') {
-              scratch_sub_icon_circle('icon');
-            } else {
-              scratch_sub_image_start('image', 'circle');
-              scratch_sub_image_end('image');
-            }
-          ?>
+          <?php if($icon_or_image === 'icon'): ?>
+            <?php if(get_sub_field('icon')): ?>
+              <div class="circle center">
+                <i class="<?php the_sub_field('icon'); ?> valign-always"></i>
+              </div>
+            <?php endif; ?>
+          <?php else: ?>
+            <?php if(get_sub_field('image')): ?>
+              <div class="scratch-image circle"
+                   style="background-image: url('<?php the_sub_field('image'); ?>');">
+              </div>
+            <?php endif; ?>
+          <?php endif; ?>
         </div>
         <div class="sevencol last">
           <div class="content valign">
-            <?php
-              scratch_sub_field('header', 'h3');
-              scratch_sub_field('blurb');
-              scratch_sub_button('cta_link', 'cta_text');
-            ?>
+            <?php if(get_sub_field('header')): ?>
+              <h3><?php the_sub_field('header'); ?></h3>
+            <?php endif; ?>
+            <?php the_sub_field('blurb'); ?>
+            <?php if(get_sub_field('cta_link') && get_sub_field('cta_text')): ?>
+              <p>
+                <a class="button"
+                   href="<?php the_sub_field('cta_link'); ?>"
+                   title="<?php the_sub_field('cta_text'); ?>">
+                  <?php the_sub_field('cta_text'); ?>
+                </a>
+              </p>
+            <?php endif; ?>
           </div>
         </div>
       </div>

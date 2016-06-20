@@ -1,1 +1,1 @@
-../../node_modules/waypoints/lib/jquery.waypoints.js
+../../../node_modules/waypoints/lib/jquery.waypoints.js

@@ -1,1 +1,1 @@
-../../node_modules/velocity-animate/velocity.ui.js
+../../../node_modules/velocity-animate/velocity.ui.js

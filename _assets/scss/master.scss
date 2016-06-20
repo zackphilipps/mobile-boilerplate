@@ -1,18 +1,13 @@
-// for http://davidwalsh.name/rem-px-browser-function-sass
-$px-only: false;
-
-// grid breakpoint
-$gbp: 767px;
-
 /*
  * FOUNDATION
  * Do not change the order of these imports.
  */
 
 @import "../core/scss/ionicons";
-@import "../core/scss/mixins";
-@import "../core/scss/variables";
-@import "custom-variables";
+@import "../core/scss/default-variables";
+@import "config/mixins";
+@import "config/variables";
+@import "config/color-classes";
 @import "../core/scss/normalize";
 @import "../core/scss/main";
 @import "../core/scss/grid-always";
@@ -21,8 +16,8 @@ $gbp: 767px;
   @import "../core/scss/grid";
 }
 
-@import "../core/scss/global";
-@import "custom-global";
+@import '../../core/scss/gutenberg/grid';
+@import "config/global";
 
 /*
  * MIDDLE STUFF
@@ -37,9 +32,9 @@ $gbp: 767px;
 @import "sidebar";
 @import "home";
 @import "footer";
-@import "../core/scss/glide-core";
-@import "../core/scss/glide-theme";
-@import "../core/scss/glide-custom";
+@import "../core/scss/glide/glide-core";
+@import "../core/scss/glide/glide-theme";
+@import "../core/scss/glide/glide-custom";
 @import "../core/scss/magnific";
 
 /*

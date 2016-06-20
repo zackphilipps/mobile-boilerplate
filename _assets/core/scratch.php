@@ -40,12 +40,11 @@ function bones_head_cleanup() {
 } /* end bones head cleanup */
 
 /*
- * Include Layout Functions, Layout Declarations, and ACF Shortcuts.
+ * Include Layout Functions and Layout Declarations.
  */
 
 require_once dirname( __FILE__ ) . '/php/layout-functions.php';
 require_once dirname( __FILE__ ) . '/php/layout-declarations.php';
-require_once dirname( __FILE__ ) . '/php/acf-shortcuts.php';
 
 /**
  * Include the TGM_Plugin_Activation class.

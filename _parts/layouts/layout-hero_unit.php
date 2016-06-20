@@ -37,11 +37,19 @@ function scratch_bg_position() {
       <div class="wrap <?php echo $text_align_class; ?> hpad clearfix white">
         <div class="content"
              style="margin: <?php the_sub_field('text_margin'); ?>em auto;">
-          <?php
-            scratch_sub_field('header', 'h2');
-            scratch_sub_field('blurb');
-            scratch_sub_button('cta_link', 'cta_text');
-          ?>
+          <?php if(get_sub_field('header')): ?>
+            <h2><?php the_sub_field('header'); ?></h2>
+          <?php endif; ?>
+          <?php the_sub_field('blurb'); ?>
+          <?php if(get_sub_field('cta_link') && get_sub_field('cta_text')): ?>
+            <p>
+              <a class="button"
+                 href="<?php the_sub_field('cta_link'); ?>"
+                 title="<?php the_sub_field('cta_text'); ?>">
+                <?php the_sub_field('cta_text'); ?>
+              </a>
+            </p>
+          <?php endif; ?>
         </div>
       </div>
     </div>

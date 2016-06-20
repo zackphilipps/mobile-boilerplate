@@ -23,15 +23,16 @@ $overlay-color: rgba($black, 0.4);
     height: $circle-size;
     background-color: $button-color;
     margin: 0 auto;
-
-    @include easing;
+    transition-property: background-color, color, opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
 
     i {
       display: block;
       color: $white;
-      font-size: u($icon-size);
-
-      @include easing(color);
+      font-size: $icon-size;
+      transition: color 0.25s ease-in-out 0s;
     }
 
     &.scratch-image {
@@ -47,7 +48,7 @@ $overlay-color: rgba($black, 0.4);
   }
 
   .content {
-    margin: u(10rem auto);
+    margin: 10rem auto;
 
     @include m {
       width: 65%;
@@ -79,7 +80,7 @@ $overlay-color: rgba($black, 0.4);
 
   [class^="column-"], [class*=" column-"] {
     // column-specific styles here
-    padding: u(1rem);
+    padding: 1rem;
 
     a {
       &:hover, &:focus {
@@ -115,7 +116,7 @@ $overlay-color: rgba($black, 0.4);
 
 
       i {
-        font-size: u($staggered-icon-size);
+        font-size: $staggered-icon-size;
       }
     }
 
@@ -155,11 +156,11 @@ $overlay-color: rgba($black, 0.4);
     // slider styles here
     .slide-text {
       margin: 0 auto;
-      padding: u(1rem);
+      padding: 1rem;
       color: $white;
 
       @include m {
-        padding: u(1rem 6rem);
+        padding: 1rem 6rem;
       }
     }
   }

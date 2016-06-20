@@ -41,8 +41,8 @@ nav ul.main-nav {
       background-color: $olive;
       color: $white;
       display: block;
-      padding: u(0.5rem 1rem);
-      @include easing(background-color);
+      padding: 0.5rem 1rem;
+      transition: background-color 0.25s ease-in-out 0s;
       &:link, &:active, &:visited {
         background-color: $olive;
         color: $white;
@@ -76,7 +76,7 @@ nav ul.main-nav {
     li {
       float: left;
       a {
-        padding: u(27px 1rem 26px);
+        padding: 27px 1rem 26px;
         &:link, &:active, &:visited {}
         &:hover, &:focus {}
       }
@@ -91,7 +91,7 @@ nav ul.main-nav {
         position: relative;
         text-align: left;
         a {
-          padding: u(0.5rem 1rem);
+          padding: 0.5rem 1rem;
           background-color: $olive;
           color: $white;
           &:link, &:active, &:visited {
@@ -123,14 +123,14 @@ nav ul.main-nav {
   color: $white;
   cursor: pointer;
   position: absolute;
-  top: u(1rem);
-  right: u(1rem);
+  top: 1rem;
+  right: 1rem;
   margin-bottom: 0;
-  font-size: u(2rem);
+  font-size: 2rem;
   i {
     vertical-align: middle;
   }
-  @include easing;
+  transition: transform 0.25s ease-in-out 0s;
   &.active {
     transform: rotate(-90deg);
   }
