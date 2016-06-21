@@ -26,12 +26,12 @@ get_template_part('_parts/header'); ?>
 
     <ul>
 
-      <li>I've got to find a way to escape the <strong>horrible ravages of youth</strong>. Suddenly, I'm going to the bathroom like clockwork, every three hours. And those jerks at Social Security stopped sending me checks. Now 'I'' have to pay ''them'!</li>
-      <li>Kif, <em>I have mated with a woman</em>. Inform the men.</li>
+      <li>I've got to find a way to escape the <strong>horrible ravages of youth.</strong> Suddenly, I'm going to the bathroom like clockwork, every three hours. And those jerks at Social Security stopped sending me checks. Now I have to pay them!</li>
+      <li>Kif, <em>I have mated with a woman.</em> Inform the men.</li>
     </ul>
 
     <blockquote>
-      <p>Good man. Nixon's pro-war and pro-family. <strong>Son, as your lawyer</strong>, I declare y'all are in a <em>12-piece bucket o' trouble</em>. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
+      <p>Good man. Nixon's pro-war and pro-family. <strong>Son, as your lawyer,</strong> I declare y'all are in a <em>12-piece bucket o' trouble.</em> But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused.</p>
     </blockquote>
 
   </section>

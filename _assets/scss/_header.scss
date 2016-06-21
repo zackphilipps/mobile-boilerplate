@@ -14,7 +14,6 @@
     img {
       width: 245px;
       height: 58px;
-      margin-bottom: 0;
     }
   }
 }
@@ -26,7 +25,6 @@
  */
 
 nav {
-  margin-bottom: 0;
   ul.main-nav {
     display: none;
     list-style: none;
@@ -40,14 +38,12 @@ nav {
     li {
       display: block;
       text-align: center;
-      margin-bottom: 0;
       a {
         background-color: $olive;
         color: $white;
         display: block;
         padding: 0.5rem 1rem;
         transition: background-color 0.25s ease-in-out 0s;
-        margin-bottom: 0;
         &:link, &:active, &:visited {
           background-color: $olive;
           color: $white;
@@ -131,7 +127,6 @@ nav {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  margin-bottom: 0;
   font-size: 2rem;
   i {
     vertical-align: middle;

@@ -1,0 +1,70 @@
+template:
+  # Name of the directory containing the website template (default is "website")
+  directory: _website
+  # Name of the index file (default is "README.md")
+  index: index.md
+
+# List of directories to include in the processing (by default it's empty, so all markdown files are parsed)
+# Paths are relative to the optional source path given when generating the website, repository root by default
+include:
+  - _docs
+
+# List of directories to exclude from the processing (default contains "vendor" and "website")
+# Paths are relative to the optional include paths given when generating the website, repository root by default
+exclude:
+  - .DS_Store
+  - .DS_Store?
+  - ._*
+  - .Spotlight-V100
+  - .Trashes
+  - ehthumbs.db
+  - Thumbs.db
+  - node_modules/
+
+# Set this variable to use a Custom Domain
+# The content of this variable will be directly inserted into the CNAME file
+cname: scratchtheme.com
+
+# Set the target branch in which to deploy the generated website
+branch: gh-pages
+
+# Any variable you put in this file is also available in the Twig layouts:
+title: Scratch Theme for WordPress + ACF
+subTitle: Scratch is the world's first Advanced Custom Fields-ready WordPress theme. It's not so much a theme as a springboard for building your own fully custom WordPress themes.
+
+# Base URL of the published website (no "/" at the end!)
+# You are advised to set and use this variable to write your links in the HTML layouts
+baseUrl: http://zackphilipps.github.io/scratch-theme
+
+menu:
+  items:
+    changelog:
+      text: Changelog
+      absoluteUrl: https://github.com/zackphilipps/scratch-theme/releases
+      target: _blank
+    download:
+      text: Download v1.6
+      absoluteUrl: https://github.com/zackphilipps/scratch-theme/archive/master.zip
+      target: _blank
+    github:
+      text: GitHub
+      absoluteUrl: https://github.com/zackphilipps/scratch-theme
+      target: _blank
+
+sidebarMenu:
+  items:
+    gettingStarted:
+      text: Getting Started
+      relativeUrl: /
+    screencasts:
+      text: Screencasts
+      relativeUrl: /screencasts.html
+    css:
+      text: CSS
+      relativeUrl: /css.html
+    js:
+      text: JS
+      relativeUrl: /js.html
+    acf:
+      text: ACF
+      relativeUrl: /acf.html

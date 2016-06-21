@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="{{ baseUrl }}/_assets/css/master.css">
+    <link rel="stylesheet" href="{{ baseUrl }}/_assets/css/website.css">
+    <link rel="stylesheet" href="{{ baseUrl }}/_assets/css/highlight.dark.css">
+    <script src="{{ baseUrl }}/_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="header">
+      <div class="wrap hpad clearfix">
+
+        <a class="logo"
+           href="{{ baseUrl }}">
+          <img src="{{ baseUrl }}/_assets/img/site-logo.svg" alt="{{ title }}">
+        </a>
+
+        <span class="nav-toggle"
+              data-direction="down">
+          <i class="icon ion-navicon"></i>
+        </span>
+
+        <nav id="nav">
+          <ul class="main-nav">
+            {% for itemId, item in menu.items %}
+              <li class="{{ itemId == currentMenu ? 'active' }}">
+                <a href="{{ item.absoluteUrl|default(baseUrl ~ item.relativeUrl) }}" {% if item.target is defined %}target="{{ item.target }}"{% endif %}>
+                  {{ item.text|raw }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <header id="masthead"
+              role="banner">
+        <div class="title center valign-always">
+          <div>Scratch Docs</div>
+          <h1>{{ title }}</h1>
+        </div>
+      </header>
+
+      <div class="wrap hpad clearfix" id="docs-main">
+
+        <aside id="sidebar" class="fourcol last">
+          <nav id="docs-nav" class="clearfix">
+            <ul>
+              {% for itemId, item in sidebarMenu.items %}
+                <li class="{{ itemId == currentMenu ? 'active' }}">
+                  <a href="{{ item.absoluteUrl|default(baseUrl ~ item.relativeUrl) }}">
+                    {{ item.text|raw }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </aside>
+
+        <article class="eightcol first">
+          {{ content|raw }}
+        </article>
+
+      </div>
+    </main>
+
+    <footer id="footer"
+            class="clearfix">
+      <p class="center">
+        &copy; 2016 Scratch Theme for WordPress + ACF //
+        Created by <a href="http://zackphilipps.com" target="_blank">Zack Philipps</a> //
+        Licensed under <a href="http://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL</a>
+      </p>
+    </footer>
+
+    <!-- BEGIN FOOTER -->
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ baseUrl }}/_assets/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+
+    <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+    <script>
+      $(function() {
+        // Syntax highlighting
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    <!-- FOR DEVELOPMENT -->
+    <!-- <script src="{{ baseUrl }}/_assets/js/concat/main.js"></script> -->
+    <!-- FOR PRODUCTION -->
+    <script src="{{ baseUrl }}/_assets/js/compiled/main.min.js"></script>
+    <script src="{{ baseUrl }}/_assets/js/website.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <!-- END FOOTER -->
+  </body>
+</html>

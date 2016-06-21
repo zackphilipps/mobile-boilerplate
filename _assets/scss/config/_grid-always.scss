@@ -78,3 +78,41 @@
 .last-always {
   float: right;
 }
+
+/* Custom Grid Styles */
+.custom-col {
+  position: relative;
+
+  @media (min-width: 649px) {
+    float: left;
+    width: 50%;
+
+    &.even {
+      float: right;
+    }
+  }
+
+  @media (min-width: 899px) {
+    width: 33.333333333%;
+
+    &.even {
+      float: left;
+    }
+
+    &.three-last {
+      float: right;
+    }
+  }
+
+  @media (min-width: 1149px) {
+    width: 25%;
+
+    &.three-last {
+      float: left;
+    }
+
+    &.four-last {
+      float: right;
+    }
+  }
+}

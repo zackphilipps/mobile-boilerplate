@@ -1,0 +1,140 @@
+body {
+  background-color: #eee;
+}
+
+#sidebar {
+  padding: 1.625rem 0;
+}
+
+#sidebar #docs-nav {
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+@media (min-width: 767px) {
+  #sidebar #docs-nav.fixed {
+    position: fixed;
+    top: 111px;
+    width: 100%;
+  }
+}
+
+#sidebar #docs-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#sidebar #docs-nav ul li {
+  display: block;
+}
+
+#sidebar #docs-nav ul li.active {
+  border-left: 3px solid #eee;
+}
+
+#sidebar #docs-nav ul li a {
+  display: block;
+  border-top: 1px solid #eee;
+  padding: 0.5rem 1rem;
+  color: #66c299;
+  transition: color 0.25s ease-in-out 0s;
+}
+
+#sidebar #docs-nav ul li a:active,
+#sidebar #docs-nav ul li a:link,
+#sidebar #docs-nav ul li a:visited {
+  color: #66c299;
+}
+
+#sidebar #docs-nav ul li a:focus,
+#sidebar #docs-nav ul li a:hover {
+  color: #3d9970;
+  text-decoration: none;
+}
+
+#sidebar #docs-nav ul li ul {
+  display: none;
+}
+
+#sidebar #docs-nav ul li ul li a {
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  max-width: 236px;
+  border-right: 1px solid #eee;
+}
+
+#sidebar #docs-nav ul li:hover ul {
+  display: block;
+}
+
+#docs-main {
+  background-color: #fff;
+  position: relative;
+}
+
+#docs-main p:first-of-type {
+  margin-top: 1.625rem;
+}
+
+@media (min-width: 767px) {
+  #docs-main {
+    padding-right: 0;
+  }
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+#masthead {
+  height: 220px;
+}
+
+#masthead .title div {
+  font-family: "Alegreya","Georgia",serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+}
+
+#masthead .title h1 {
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+pre {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+pre code {
+  border: 0;
+}
+
+main img {
+  border-radius: 4px;
+  display: block;
+  margin-top: 1.625rem;
+}
+
+main {
+  padding-top: 82px;
+}
+
+#header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  background-color: rgb(61,153,112);
+}
+
+@media (min-width: 767px) {
+  #header {
+    background-color: rgba(61,153,112,0.9);
+  }
+  nav ul.main-nav li a:link, nav ul.main-nav li a:active, nav ul.main-nav li a:visited {
+    background-color: transparent;
+  }
+  nav ul.main-nav li a:hover, nav ul.main-nav li a:focus {
+    background-color: rgba(0,0,0,0.05);
+  }
+}

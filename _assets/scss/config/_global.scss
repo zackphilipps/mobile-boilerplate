@@ -148,8 +148,8 @@ figure.alignright {
 blockquote {
   background: $gray;
   border-left: 0.25rem solid $silver;
-  margin: 1.5rem 0;
-  padding: 1rem 0.5rem;
+  @include margin(1.5, 0);
+  @include padding(1, 0.5);
   quotes: "\201C""\201D""\2018""\2019";
   position: relative;
   &:before {
@@ -183,13 +183,12 @@ small {
 
 }
 
-/* Paragraph
+/* Paragraphs and Lists
    ========================================================================== */
 
-p {
+p, ul, ol {
   @include margin(0, 0, 1);
   @include m {
-    @include margin-bottom(1);
     margin-left: auto;
     margin-right: auto;
   }
@@ -408,61 +407,6 @@ iframe, object, embed {
   max-width: 450px;
 }
 
-/* Custom Grid Styles */
-@media (min-width: 767px) {
-  .twoptfourcol {
-    position: relative;
-    float: left;
-    margin-left: 2.762430939%;
-    width: 17.73757%;
-
-    &.first {
-      margin-left: 0;
-    }
-
-    &.last {
-      float: right;
-    }
-  }
-}
-
-.custom-col {
-  position: relative;
-
-  @media (min-width: 649px) {
-    float: left;
-    width: 50%;
-
-    &.even {
-      float: right;
-    }
-  }
-
-  @media (min-width: 899px) {
-    width: 33.333333333%;
-
-    &.even {
-      float: left;
-    }
-
-    &.three-last {
-      float: right;
-    }
-  }
-
-  @media (min-width: 1149px) {
-    width: 25%;
-
-    &.three-last {
-      float: left;
-    }
-
-    &.four-last {
-      float: right;
-    }
-  }
-}
-
 /* Toggles */
 .toggle-content {
   display: none;
@@ -512,14 +456,18 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   background-color: $gray;
   color: $color-font-light;
   padding: 1px 3px;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.4;
   border-radius: 4px;
   border: 1px solid $silver;
 }
 
 pre, .pre {
   display: block;
-  margin: 2rem auto;
+  @include margin-top(1);
+  @include margin-bottom(1);
+  margin-left: auto;
+  margin-right: auto;
   padding: 8px 12px 10px;
   overflow-x: auto;
 }
