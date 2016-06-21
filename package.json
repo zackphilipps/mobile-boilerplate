@@ -1,7 +1,7 @@
 {
   "name": "scratch-theme",
-  "version": "1.6.0",
-  "description": "Scratch is the world's absolute most minimal, extendable, and ultimately useful WordPress theme.",
+  "version": "1.6.1",
+  "description": "Scratch is the world's first Advanced Custom Fields-ready WordPress theme. It's not so much a theme as a springboard for building your own fully custom WordPress themes.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zackphilipps/scratch-theme.git"

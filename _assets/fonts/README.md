@@ -2,4 +2,4 @@
 
 ## Fonts
 
-View [`config/variables.scss`](https://github.com/zackphilipps/scratch-theme/blob/master/scss/_custom-variables.scss) to see where fonts are declared.
+View [`config/variables.scss`](https://github.com/zackphilipps/scratch-theme/blob/master/_assets/scss/config/_variables.scss) to see where fonts are declared.

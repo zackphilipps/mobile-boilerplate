@@ -10,10 +10,10 @@
 @import "config/color-classes";
 @import "../core/scss/normalize";
 @import "../core/scss/main";
-@import "../core/scss/grid-always";
+@import "config/grid-always";
 
 @media (min-width: #{ $max-width + 5 + 'em' }) {
-  @import "../core/scss/grid";
+  @import "config/grid";
 }
 
 @import "config/global";

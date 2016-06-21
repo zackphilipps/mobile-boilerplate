@@ -2,9 +2,9 @@
 
 ## SCSS
 
-View [`master.scss`](https://github.com/zackphilipps/scratch-theme/blob/master/scss/master.scss) and have a look at the structure.
+View [`master.scss`](https://github.com/zackphilipps/scratch-theme/blob/master/_assets/scss/master.scss) and have a look at the structure.
 
-Also note the `sass` task in [`Gruntfile.js`](https://github.com/zackphilipps/scratch-theme/blob/master/grunt/Gruntfile.js).
+Also note the `sass` task in [`Gruntfile.js`](https://github.com/zackphilipps/scratch-theme/blob/master/_assets/grunt/Gruntfile.js) or the `styles` task in  [`gulpfile.js`](https://github.com/zackphilipps/scratch-theme/blob/master/_assets/gulp/gulpfile.js).
 
 If you name your files prefixed with an underscore, they will not be compiled into a `.css` file. This ensures that you're only compiling what you want to [enqueue](http://codex.wordpress.org/Function_Reference/wp_enqueue_style) and vice versa.
 
