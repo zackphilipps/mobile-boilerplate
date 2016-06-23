@@ -143,7 +143,7 @@ scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = 
 
 To play around with this, create a new page in WordPress and set its template to "Layouts." With Scratch, you can now add robust layouts on the fly, including sliders, hero units, flexible columns, and more. In addition, you have full control over `_parts/layouts/layout-*.php` and `_layouts.scss` for customization.
 
-![Scratch's Layouts in action](/_assets/img/marketing-page.gif)
+![Scratch's Layouts in action](/assets/img/marketing-page.gif)
 
 ACF does not currently support editing the field groups themselves, but as per [this post](http://www.advancedcustomfields.com/resources/local-json/), that feature should be in the roadmap.
 

@@ -22,7 +22,7 @@ Scratch makes use of the excellent [Gutenberg](http://matejlatin.github.io/Guten
 
 ```
 scratch-theme/
-├── _assets/
+├── assets/
 │   └── scss/
 │   │   ├── config/
 │   │   │   ├── _global.scss
