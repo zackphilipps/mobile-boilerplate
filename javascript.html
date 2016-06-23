@@ -1,0 +1,510 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JavaScript [/] Scratch: ACF-Ready WordPress Theme</title>
+    <meta name="description" content="Scratch provides a powerful automated workflow for custom WordPress + Advanced Custom Fields theme development. Minified assets, Sass, BrowserSync, and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico?v=2">
+
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/master.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/website.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/highlight.dark.css">
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="header">
+      <div class="wrap hpad clearfix">
+
+        <a class="logo"
+           href="http://zackphilipps.github.io/scratch-theme">
+          <img src="http://zackphilipps.github.io/scratch-theme/_assets/img/site-logo.svg" alt="JavaScript">
+        </a>
+
+        <span class="nav-toggle"
+              data-direction="down">
+          <i class="icon ion-navicon"></i>
+        </span>
+
+        <nav id="nav">
+          <ul class="main-nav">
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme/releases" target="_blank">
+                  Changelog
+                </a>
+              </li>
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme/archive/master.zip" target="_blank">
+                  Download v1.6
+                </a>
+              </li>
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme" target="_blank">
+                  GitHub
+                </a>
+              </li>
+                      </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <header id="masthead"
+              role="banner">
+        <div class="title center">
+          <div>Scratch Docs</div>
+          <h1>JavaScript</h1>
+        </div>
+      </header>
+
+      <div class="wrap hpad clearfix" id="docs-main">
+
+        <aside id="sidebar" class="fourcol last">
+          <nav id="docs-nav" class="clearfix">
+            <ul>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/" class="">
+                    Introduction
+                  </a>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/getting-started.html" class="">
+                    Getting Started
+                  </a>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/screencasts.html" class="">
+                    Screencasts
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#using-mamp-to-complete-the-wordpress-installation">
+                          Installing WordPress
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#activating-scratch-amp-installing-recommended-plugins">
+                          Activating Scratch
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#running-grunt-browsersync-and-compiling-scss-and-javascript">
+                          Running Grunt/Gulp
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#adding-scratchs-style-guide-and-main-navigation-menu">
+                          Style Guide/Main Nav
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#implementing-your-own-typography-with-scratch">
+                          Editing Fonts
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#implementing-your-own-color-scheme-with-scratch">
+                          Editing Colors
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#moving-the-right-files-to-the-root-of-your-site-amp-editing-the-permalink-structure">
+                          Root Files/Permalink Structure
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/css.html" class="">
+                    CSS
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#overview">
+                          Overview
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#ionicons-overview">
+                          Icon Font
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#autoprefixer">
+                          So Long, Vendor Prefixes!
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#grid-system">
+                          Grid System
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#typography">
+                          Typography
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#buttons">
+                          Buttons
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#helper-classes">
+                          Helper Classes
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#mixins">
+                          Mixins
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/javascript.html" class="active">
+                    JavaScript
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/javascript.html#overview">
+                          Overview
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/javascript.html#modals-via-magnific-popup">
+                          Modals
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/javascript.html#jquery-waypoints">
+                          Waypoints
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/javascript.html#animations-with-velocityjs">
+                          Animations
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/javascript.html#sliders-via-glidejs">
+                          Sliders
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/acf.html" class="">
+                    Advanced Custom Fields
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/acf.html#using-scratchs-layout-functions">
+                          Layout Functions
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/acf.html#layouts-page-template">
+                          Layouts Page Template
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/acf.html#html5-audiovideo">
+                          HTML5 Audio/Video
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/acf.html#image-gallery-via">
+                          Image Gallery
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/acf.html#slider-via">
+                          Slider
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                          </ul>
+          </nav>
+        </aside>
+
+        <article class="eightcol first">
+          <h2 id="overview">Overview</h2>
+<h3 id="html5-boilerplate">HTML5 Boilerplate</h3>
+<p>Scratch is built on the <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>. Here are the Javascript features that Scratch utilizes in full:</p>
+<ul>
+<li>HTML5 ready. Use the new elements with confidence.</li>
+<li>Designed with progressive enhancement in mind.</li>
+<li>Includes:
+<ul>
+<li><a href="https://jquery.com/">jQuery</a> via CDN, with a local fallback</li>
+<li>A custom build of <a href="https://modernizr.com/">Modernizr</a> for feature detection</li>
+</ul></li>
+<li>An optimized version of the Google Universal Analytics snippet.</li>
+<li>Protection against any stray <code>console</code> statements causing JavaScript errors in older browsers.</li>
+<li>Extensive inline and accompanying documentation.</li>
+</ul>
+<h3 id="gutenberg">Gutenberg</h3>
+<p>Scratch makes use of the excellent <a href="http://matejlatin.github.io/Gutenberg/">Gutenberg</a> framework for responsive typography with the proper vertical rhythm. There is a small snippet in <code>core/js/gutenberg.js</code> that resizes images so that their height fits within the Gutenberg grid.</p>
+<hr />
+<h2 id="modals-via-magnific-popup">Modals via Magnific Popup</h2>
+<p>Scratch is bundled with <a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a> for the best responsive modals in the biz. <code>main.js</code> includes several helper functions to make modal usage trivial.</p>
+<h3 id="image-link">Image Link</h3>
+<p>This is what it would look like if you added the image via the WordPress content editor, and then added the class <code>.image-link</code> to its parent link in the advanced options. See <a href="http://codex.wordpress.org/Inserting_Images_into_Posts_and_Pages">Inserting Images into Posts and Pages</a>.</p>
+<p>Basically all you need is an <code>&lt;a&gt;</code> tag with an <code>href</code> of the image source and a <code>class</code> of <code>.image-link</code>.</p>
+<div class="example image-link-example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <div id="attachment_112" style="width: 310px" class="wp-caption aligncenter">
+    <a class="image-link" href="https://unsplash.it/600/600/?image=0">
+      <img class="wp-image-112 size-medium" src="https://unsplash.it/300/200/?image=0" alt="Click to view larger image" width="300" height="200"></a>
+    <p class="wp-caption-text">
+      Click to view larger image.
+    </p>
+  </div>
+</div>
+<p>The code is generated automatically, but it should look like this:</p>
+<pre><code>&lt;div id="attachment_112" style="width: 310px" class="wp-caption aligncenter"&gt;
+  &lt;a class="image-link" href="https://unsplash.it/600/600/?image=0"&gt;
+    &lt;img class="wp-image-112 size-medium" src="https://unsplash.it/300/200/?image=0" alt="Click to view larger image" width="300" height="200"&gt;
+  &lt;/a&gt;
+  &lt;p class="wp-caption-text"&gt;
+    Click to view larger image.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="popup-link">Popup Link</h3>
+<p>Add class <code>.popup-link</code> to an <code>&lt;a&gt;</code> tag with an <code>href</code> that matches the target popup's <code>id</code>.</p>
+<div class="example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <p>
+    <a href="#popup" class="button popup-link">Click</a>
+  </p>
+</div>
+<div id="popup" class="white-popup mfp-hide">
+  Popup content.
+</div>
+<pre><code>&lt;p&gt;
+  &lt;a href="#popup" class="button popup-link"&gt;Click&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+<h3 id="iframe-link">Iframe Link</h3>
+<p>Add class <code>.iframe-link</code> to an <code>&lt;a&gt;</code> tag with an <code>href</code> that is a YouTube or Vimeo video URL.</p>
+<div class="example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <p>
+    <a href="https://www.youtube.com/watch?v=ndnjBq8ROpo" class="button iframe-link">Click</a>
+  </p>
+</div>
+<pre><code>&lt;p&gt;
+  &lt;a href="https://www.youtube.com/watch?v=ndnjBq8ROpo" class="button iframe-link"&gt;Click&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+<h3 id="use-magnific-popup-directly">Use Magnific Popup Directly</h3>
+<p>Check out the <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#api">Magnific Popup API</a> if you need something more custom than what Scratch comes with.</p>
+<hr />
+<h2 id="jquery-waypoints">jQuery Waypoints</h2>
+<p>Scratch comes with <a href="http://imakewebthings.com/waypoints/guides/jquery-zepto/">jQuery Waypoints</a>. Scratch does not use this library by default, but it's a great utility, especially for sticky navs. This documentation page uses Waypoints to set its sticky nav:</p>
+<pre><code>jQuery(document).ready(function($) {
+  if (!Modernizr.touch) {
+    $('#docs-main').waypoint(function(dir) {
+      if (dir === 'down') {
+        $('#docs-nav').addClass('fixed').css('width', $('#sidebar').width());
+      } else {
+        $('#docs-nav').removeClass('fixed').css('width', 'auto');
+      }
+    });
+  }
+});</code></pre>
+<hr />
+<h2 id="animations-with-velocityjs">Animations with Velocity.js</h2>
+<p>Scratch comes with <a href="http://velocityjs.org/">Velocity.js</a>, a JavaScript library for highly performant animations. <code>main.js</code> includes snippets for smooth &quot;scroll-to&quot; links and accordions, or &quot;toggles&quot; as we call them.</p>
+<h3 id="scroll-link">Scroll Link</h3>
+<div class="example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <p>
+    <a href="#scroll-here" class="button scroll-link-example">Click</a>
+  </p>
+  <div id="scroll-here" class="scratch-bg gray-bg">
+    <div class="valign-always center">
+      Scroll here.
+    </div>
+  </div>
+</div>
+<pre><code>&lt;p&gt;
+  &lt;a href="#scroll-here" class="button scroll-link"&gt;Click&lt;/a&gt;
+&lt;/p&gt;
+&lt;div id="scroll-here" class="scratch-bg gray-bg"&gt;
+  &lt;div class="valign-always center"&gt;
+    Scroll here.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="toggles">Toggles</h3>
+<div class="example toggles-example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <h5 class="toggle-heading" data-direction="down">
+    Toggle Heading 1
+  </h5>
+  <div class="toggle-content">
+    <p>Toggle content 1.</p>
+  </div>
+  <h5 class="toggle-heading" data-direction="down">
+    Toggle Heading 2
+  </h5>
+  <div class="toggle-content">
+    <p>Toggle content 2.</p>
+  </div>
+  <h5 class="toggle-heading" data-direction="down">
+    Toggle Heading 3
+  </h5>
+  <div class="toggle-content">
+    <p>Toggle content 3.</p>
+  </div>
+</div>
+<pre><code>&lt;h5 class="toggle-heading"
+    data-direction="down"&gt;
+  Toggle Heading 1
+&lt;/h5&gt;
+&lt;div class="toggle-content"&gt;
+  &lt;p&gt;Toggle content 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h5 class="toggle-heading"
+    data-direction="down"&gt;
+  Toggle Heading 2
+&lt;/h5&gt;
+&lt;div class="toggle-content"&gt;
+  &lt;p&gt;Toggle content 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h5 class="toggle-heading"
+    data-direction="down"&gt;
+  Toggle Heading 3
+&lt;/h5&gt;
+&lt;div class="toggle-content"&gt;
+  &lt;p&gt;Toggle content 3.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="use-velocityjs-directly">Use Velocity.js Directly</h3>
+<blockquote>
+<p><strong>Never</strong> use jQuery's <code>$.animate()</code> and <code>$.fade()</code> functions. They slow everything else down, including other animation libraries. <strong>Always</strong> use Velocity's built-in solutions instead of rolling your own (or relying on jQuery): looping, reversing, delaying, hiding/showing elements, property math (+, -, *, /), and hardware acceleration can all be done within Velocity.</p>
+</blockquote>
+<p>Example usage:</p>
+<pre><code>jQuery(document).ready(function($) {
+  $element.velocity("fadeIn", {
+    duration: 1500
+  }).velocity("fadeOut", {
+    delay: 500,
+    duration: 1500
+  });
+});</code></pre>
+<p>Check out <a href="http://velocityjs.org/">Velocity's excellent documentation</a> for more info.</p>
+<hr />
+<h2 id="sliders-via-glidejs">Sliders via Glide.js</h2>
+<p>Scratch includes <a href="http://glide.jedrzejchalubek.com/">Glide.js</a>, a simple, responsive, and fast slider. Use a slider in your project:</p>
+<div class="example slider-example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <div id="Glide" class="glide">
+
+    <div class="glide__arrows">
+      <button class="glide__arrow prev" data-glide-dir="&lt;">
+        <i class="ion-chevron-left"></i>
+      </button>
+      <button class="glide__arrow next" data-glide-dir="&gt;">
+        <i class="ion-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="glide__wrapper">
+      <ul class="glide__track"><li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=1');">
+        </li>
+        <li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=2');">
+        </li>
+        <li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=3');">
+        </li>
+      </ul></div>
+
+    <div class="glide__bullets"></div>
+
+  </div>
+</div>
+<pre><code>&lt;div id="Glide" class="glide"&gt;
+
+  &lt;div class="glide__arrows"&gt;
+    &lt;button class="glide__arrow prev" data-glide-dir="&lt;"&gt;
+      &lt;i class="ion-chevron-left"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button class="glide__arrow next" data-glide-dir="&gt;"&gt;
+      &lt;i class="ion-chevron-right"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="glide__wrapper"&gt;
+    &lt;ul class="glide__track"&gt;
+      &lt;li class="glide__slide"
+          style="background-image: url('https://unsplash.it/1800/1200?image=1');"&gt;
+      &lt;/li&gt;
+      &lt;li class="glide__slide"
+          style="background-image: url('https://unsplash.it/1800/1200?image=2');"&gt;
+      &lt;/li&gt;
+      &lt;li class="glide__slide"
+          style="background-image: url('https://unsplash.it/1800/1200?image=3');"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class="glide__bullets"&gt;&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+<p>Armed with the knowledge of <a href="http://glide.jedrzejchalubek.com/docs.html#options">Glide.js's options</a>, control the slider's configuration in <code>main.js</code>:</p>
+<pre><code>jQuery(document).ready(function($) {
+  $('.glide').glide({
+    autoplay: false
+  });
+});</code></pre>
+<hr />
+<p><strong>Next up:</strong> <a href="/acf.html">Advanced Custom Fields</a></p>
+        </article>
+
+      </div>
+    </main>
+
+    <footer id="footer"
+            class="clearfix">
+      <p class="center">
+        &copy; 2016 Scratch Theme for WordPress + ACF //
+        Created by <a href="http://zackphilipps.com" target="_blank">Zack Philipps</a> //
+        Licensed under <a href="http://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL</a>
+      </p>
+    </footer>
+
+    <!-- BEGIN FOOTER -->
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+
+    <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+    <script>
+      $(function() {
+        // Syntax highlighting
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    <!-- FOR DEVELOPMENT -->
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/concat/main.js"></script>
+    <!-- FOR PRODUCTION -->
+    <!-- <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/compiled/main.min.js"></script> -->
+
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/website.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <!-- END FOOTER -->
+  </body>
+</html>

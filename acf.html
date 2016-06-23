@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Advanced Custom Fields [/] Scratch: ACF-Ready WordPress Theme</title>
+    <meta name="description" content="Scratch provides a powerful automated workflow for custom WordPress + Advanced Custom Fields theme development. Minified assets, Sass, BrowserSync, and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico?v=2">
+
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/master.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/website.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/highlight.dark.css">
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="header">
+      <div class="wrap hpad clearfix">
+
+        <a class="logo"
+           href="http://zackphilipps.github.io/scratch-theme">
+          <img src="http://zackphilipps.github.io/scratch-theme/_assets/img/site-logo.svg" alt="Advanced Custom Fields">
+        </a>
+
+        <span class="nav-toggle"
+              data-direction="down">
+          <i class="icon ion-navicon"></i>
+        </span>
+
+        <nav id="nav">
+          <ul class="main-nav">
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme/releases" target="_blank">
+                  Changelog
+                </a>
+              </li>
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme/archive/master.zip" target="_blank">
+                  Download v1.6
+                </a>
+              </li>
+                          <li class="">
+                <a href="https://github.com/zackphilipps/scratch-theme" target="_blank">
+                  GitHub
+                </a>
+              </li>
+                      </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <header id="masthead"
+              role="banner">
+        <div class="title center">
+          <div>Scratch Docs</div>
+          <h1>Advanced Custom Fields</h1>
+        </div>
+      </header>
+
+      <div class="wrap hpad clearfix" id="docs-main">
+
+        <aside id="sidebar" class="fourcol last">
+          <nav id="docs-nav" class="clearfix">
+            <ul>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/" class="">
+                    Introduction
+                  </a>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/getting-started.html" class="">
+                    Getting Started
+                  </a>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/screencasts.html" class="">
+                    Screencasts
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#using-mamp-to-complete-the-wordpress-installation">
+                          Installing WordPress
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#activating-scratch-amp-installing-recommended-plugins">
+                          Activating Scratch
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#running-grunt-browsersync-and-compiling-scss-and-javascript">
+                          Running Grunt/Gulp
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#adding-scratchs-style-guide-and-main-navigation-menu">
+                          Style Guide/Main Nav
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#implementing-your-own-typography-with-scratch">
+                          Editing Fonts
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#implementing-your-own-color-scheme-with-scratch">
+                          Editing Colors
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/screencasts.html#moving-the-right-files-to-the-root-of-your-site-amp-editing-the-permalink-structure">
+                          Root Files/Permalink Structure
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/css.html" class="">
+                    CSS
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#overview">
+                          Overview
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#ionicons-overview">
+                          Icon Font
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#autoprefixer">
+                          So Long, Vendor Prefixes!
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#grid-system">
+                          Grid System
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#typography">
+                          Typography
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#buttons">
+                          Buttons
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#helper-classes">
+                          Helper Classes
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/css.html#mixins">
+                          Mixins
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/javascript.html" class="">
+                    JavaScript
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/javascript.html#overview">
+                          Overview
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/javascript.html#modals-via-magnific-popup">
+                          Modals
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/javascript.html#jquery-waypoints">
+                          Waypoints
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/javascript.html#animations-with-velocityjs">
+                          Animations
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="" href="http://zackphilipps.github.io/scratch-theme/javascript.html#sliders-via-glidejs">
+                          Sliders
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                              <li>
+                  <a href="http://zackphilipps.github.io/scratch-theme/acf.html" class="active">
+                    Advanced Custom Fields
+                  </a>
+                                      <ul>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/acf.html#using-scratchs-layout-functions">
+                          Layout Functions
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/acf.html#layouts-page-template">
+                          Layouts Page Template
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/acf.html#html5-audiovideo">
+                          HTML5 Audio/Video
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/acf.html#image-gallery-via">
+                          Image Gallery
+                        </a>
+                      </li>
+                                          <li>
+                        <a class="scroll-link" href="http://zackphilipps.github.io/scratch-theme/acf.html#slider-via">
+                          Slider
+                        </a>
+                      </li>
+                                        </ul>
+                                  </li>
+                          </ul>
+          </nav>
+        </aside>
+
+        <article class="eightcol first">
+          <p>This section is meant to provide easy, paste-able snippets to get you quickly up and running with some Scratch + <a href="http://advancedcustomfields.com">Advanced Custom Fields</a> awesomeness. You should purchase and install <a href="http://advancedcustomfields.com/pro">ACF Pro</a>, otherwise this section (aside from Layout Functions) will be pretty useless to you.</p>
+<hr />
+<h2 id="using-scratchs-layout-functions">Using Scratch's Layout Functions</h2>
+<p>Layout Functions are <strong>awesome.</strong> They're great for plugging posts within <a href="http://codex.wordpress.org/The_Loop">The Loop</a> into a CSS grid, or plugging <a href="http://www.advancedcustomfields.com/resources/field-types/repeater/">ACF Repeater</a> rows into a CSS grid. Let's call the space occupied by these posts and repeater rows <em>cells</em>.</p>
+<p>Each row of <em>cells</em> is automatically wrapped in a <code>div.clearfix</code>. A global counter keeps track of the rows and columns behind the scenes, and injects classes so you have tons of control when it comes to styling. For example, you can apply a style to <code>.row-3 .column-2</code>.</p>
+<p><strong>Another cool thing:</strong> Let's say you wanted a 4-column layout, but didn't have a number of <em>cells</em> divisible by 4. By default, if you had 7 <em>cells</em>, Scratch would convert the layout in the second row to 3 columns instead of 4. Pretty sweet, right? You can't do that with plain ol' HTML.</p>
+<p>Below are some examples of how to use these bad boys.</p>
+<p><a href="http://codex.wordpress.org/The_Loop">The Loop</a> example:</p>
+<pre><code>&lt;?php  
+  $args = array(); // WP_Query arguments
+  scratch_layout_declare($args, 4); // build to 4 columns and fill the remaining space with the number of cells left over
+  global $blocks;
+  foreach($blocks as $post) {
+    setup_postdata($post);
+    scratch_layout_start();
+?&gt;
+  ...
+&lt;?php  
+    scratch_layout_end();
+  }
+  wp_reset_postdata();
+?&gt;</code></pre>
+<p><a href="http://www.advancedcustomfields.com/resources/field-types/repeater/">ACF Repeater</a> example:</p>
+<pre><code>&lt;?php  
+  scratch_layout_declare('repeater', 4); // build to 4 columns and fill the remaining space with the number of cells left over
+  while(has_sub_field('repeater')) {
+    scratch_layout_start();
+?&gt;
+  ...
+&lt;?php  
+    scratch_layout_end();
+  }
+?&gt;</code></pre>
+<p>If you had 7 <em>cells</em> – <em>posts</em> or <em>repeater rows</em> – both of the above functions would compile to:</p>
+<div class="clearfix row-1">
+  <div class="threecol first column-1 scratch-bg gray-bg">
+  </div>
+  <div class="threecol column-2 scratch-bg gray-bg">
+  </div>
+  <div class="threecol column-3 scratch-bg gray-bg">
+  </div>
+  <div class="threecol last column-4 scratch-bg gray-bg">
+  </div>
+</div>
+<div class="clearfix row-2">
+  <div class="fourcol first column-1 scratch-bg gray-bg">
+  </div>
+  <div class="fourcol column-2 scratch-bg gray-bg">
+  </div>
+  <div class="fourcol last column-3 scratch-bg gray-bg">
+  </div>
+</div>
+<pre><code>&lt;div class="clearfix row-1"&gt;
+  &lt;div class="threecol first column-1"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-1 --&gt;
+  &lt;div class="threecol column-2"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-2 --&gt;
+  &lt;div class="threecol column-3"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-3 --&gt;
+  &lt;div class="threecol last column-4"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-4 --&gt;
+&lt;/div&gt; &lt;!-- /.row-1 --&gt;
+
+&lt;div class="clearfix row-2"&gt;
+  &lt;div class="fourcol first column-1"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-1 --&gt;
+  &lt;div class="fourcol column-2"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-2 --&gt;
+  &lt;div class="fourcol last column-3"&gt;
+    ...
+  &lt;/div&gt; &lt;!-- /.column-3 --&gt;
+&lt;/div&gt; &lt;!-- /.row-2 --&gt;</code></pre>
+<p>The full function to declare the layout looks like this (parameters below):</p>
+<pre><code>scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = null)</code></pre>
+<h3 id="parameters">Parameters</h3>
+<h4 id="args">$args</h4>
+<ul>
+<li>(array) <code>WP_Query</code> arguments</li>
+<li>(string) ACF <code>$field_name</code></li>
+</ul>
+<h4 id="columns">$columns</h4>
+<ul>
+<li>(int) Number of columns to build to</li>
+<li>(string) custom (<code>.custom-col</code> from <code>config/_grid-always.scss</code> will be used)</li>
+</ul>
+<h4 id="flex">$flex</h4>
+<ul>
+<li>(bool) Whether or not to fill the space in the last row with the remaining <em>cells</em></li>
+</ul>
+<h4 id="offset">$offset</h4>
+<ul>
+<li>(string) Offset to use, if any <strong>*Only applicable for 2 and 3 column layouts</strong>
+<ul>
+<li><code>1:2</code></li>
+<li><code>2:1</code></li>
+<li><code>1:1:2</code></li>
+<li><code>1:2:1</code></li>
+<li><code>2:1:1</code></li>
+</ul></li>
+</ul>
+<h4 id="option">$option</h4>
+<p>(mixed) ACF option, if any (<code>get_field($field_name, $option)</code>)</p>
+<hr />
+<h2 id="layouts-page-template">Layouts Page Template</h2>
+<p>To play around with this, create a new page in WordPress and set its template to &quot;Layouts.&quot; With Scratch, you can now add robust layouts on the fly, including sliders, hero units, flexible columns, and more. In addition, you have full control over <code>_parts/layouts/layout-*.php</code> and <code>_layouts.scss</code> for customization.</p>
+<p><img src="/_assets/img/marketing-page.gif" alt="Scratch's Layouts in action" /></p>
+<p>ACF does not currently support editing the field groups themselves, but as per <a href="http://www.advancedcustomfields.com/resources/local-json/">this post</a>, that feature should be in the roadmap.</p>
+<p><strong>Update:</strong> Editing the field groups from the Custom Fields screen is now possible through <a href="http://www.advancedcustomfields.com/resources/synchronized-json/">synchronized JSON</a>!</p>
+<hr />
+<h2 id="html5-audiovideo">HTML5 Audio/Video</h2>
+<h3 id="audio">Audio</h3>
+<p>Create a Text field called &quot;Audio Attributes&quot;. Then, create 3 <a href="http://www.advancedcustomfields.com/resources/field-types/file/">File</a> fields that return their URLs called &quot;Audio File&quot;, &quot;Audio WAV File&quot;, and &quot;Audio OGG File&quot;.</p>
+<p>Paste this code into your template file:</p>
+<pre><code>&lt;?php if(get_field('audio_file')): ?&gt;
+&lt;audio class="scratch-audio"
+       &lt;?php the_field('audio_attributes'); ?&gt;&gt;
+       &lt;source src="&lt;?php the_field('audio_ogg_file'); ?&gt;" type="audio/ogg"&gt;
+       &lt;source src="&lt;?php the_field('audio_wav_file'); ?&gt;" type="audio/wav"&gt;
+       &lt;source src="&lt;?php the_field('audio_file'); ?&gt;" type="audio/mpeg"&gt;
+  &lt;p&gt;Your browser does not support the audio element.&lt;/p&gt;
+&lt;/audio&gt;
+&lt;?php endif; ?&gt;</code></pre>
+<h3 id="video">Video</h3>
+<p>Create an <a href="http://www.advancedcustomfields.com/resources/field-types/image/">Image</a> field that returns the URL called &quot;Video Fallback Image&quot;, and a Text field called &quot;Video Attributes&quot;. Then, create 2 <a href="http://www.advancedcustomfields.com/resources/field-types/file/">File</a> fields that return their URLs called &quot;Video MP4 File&quot; and &quot;Video WEBM File&quot;.</p>
+<p>Paste this code into your template file:</p>
+<pre><code>&lt;?php if(get_field('video_file')): ?&gt;
+  &lt;?php if(wp_is_mobile()) { ?&gt;
+    &lt;div class="scratch-video" style="background-image: url('&lt;?php the_field('video_fallback_image'); ?&gt;');"&gt;
+    &lt;/div&gt;
+  &lt;?php } else { ?&gt;
+    &lt;video class="scratch-video"
+           &lt;?php the_field('video_attributes'); ?&gt;
+           poster="&lt;?php the_field('video_fallback_image'); ?&gt;"
+           style="background-image: url('&lt;?php the_field('video_fallback_image'); ?&gt;');"&gt;
+      &lt;source src="&lt;?php the_field('video_webm_file'); ?&gt;" type="video/webm"&gt;
+      &lt;source src="&lt;?php the_field('video_mp4_file'); ?&gt;" type="video/mp4"&gt;
+    &lt;/video&gt;
+  &lt;?php } ?&gt;
+&lt;?php endif; ?&gt;</code></pre>
+<hr />
+<h2 id="image-gallery-via">Image Gallery via <a href="/javascript.html#modals-via-magnific-popup">Magnific Popup</a></h2>
+<p>Click the images to view popup.</p>
+<div class="example slider-example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <div class="popup-gallery clearfix">
+    <a href="https://unsplash.it/1800/1200?image=1" title="">
+      <div class="custom-col odd three-first four-first scratch-bg" style="background-image: url('https://unsplash.it/1800/1200?image=1');">
+      </div>
+    </a>
+    <a href="https://unsplash.it/1800/1200?image=2" title="">
+      <div class="custom-col even scratch-bg" style="background-image: url('https://unsplash.it/1800/1200?image=2');">
+      </div>
+    </a>
+    <a href="https://unsplash.it/1800/1200?image=3" title="">
+      <div class="custom-col odd three-last scratch-bg" style="background-image: url('https://unsplash.it/1800/1200?image=3');">
+      </div>
+    </a>
+    <a href="https://unsplash.it/1800/1200?image=4" title="">
+      <div class="custom-col even three-first four-last scratch-bg" style="background-image: url('https://unsplash.it/1800/1200?image=4');">
+      </div>
+    </a>
+  </div>
+</div>
+<p>Create a <a href="http://www.advancedcustomfields.com/add-ons/gallery-field/">Gallery</a> field named &quot;Gallery&quot;.</p>
+<p>Paste this code in your template file:</p>
+<pre><code>&lt;?php $images = get_field('gallery'); ?&gt;
+&lt;?php if($images): ?&gt;
+  &lt;div class="popup-gallery clearfix"&gt;
+    &lt;?php $count = 1; ?&gt;
+    &lt;?php foreach( $images as $image ): ?&gt;
+      &lt;a href="&lt;?php echo $image['url']; ?&gt;"
+         title="&lt;?php echo $image['caption']; ?&gt;"&gt;
+        &lt;div class="&lt;?php echo custom_columns($count); ?&gt; scratch-bg"
+             style="background-image: url('&lt;?php echo $image['url']; ?&gt;');"&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+      &lt;?php $count++; ?&gt;
+    &lt;?php endforeach; ?&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;</code></pre>
+<hr />
+<h2 id="slider-via">Slider via <a href="/javascript.html#sliders-via-glidejs">Glide.js</a></h2>
+<div class="example slider-example hpad clearfix">
+  <small class="label uppercase">Example</small>
+  <div id="Glide" class="glide">
+
+    <div class="glide__arrows">
+      <button class="glide__arrow prev" data-glide-dir="&lt;">
+        <i class="ion-chevron-left"></i>
+      </button>
+      <button class="glide__arrow next" data-glide-dir="&gt;">
+        <i class="ion-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="glide__wrapper">
+      <ul class="glide__track"><li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=1');">
+        </li>
+        <li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=2');">
+        </li>
+        <li class="glide__slide" style="background-image: url('https://unsplash.it/1800/1200?image=3');">
+        </li>
+      </ul></div>
+
+    <div class="glide__bullets"></div>
+
+  </div>
+</div>
+<p>Create a <a href="http://www.advancedcustomfields.com/add-ons/repeater-field/">Repeater</a> field named &quot;Slides&quot;. Add an <a href="http://www.advancedcustomfields.com/resources/field-types/image/">Image</a> sub-field named &quot;Slide BG&quot;.</p>
+<p>Paste this code in your template file:</p>
+<pre><code>&lt;?php if(get_field('slides')) { ?&gt;
+  &lt;div class="glide"&gt;
+    &lt;div class="glide__arrows"&gt;
+      &lt;button class="glide__arrow prev" data-glide-dir="&lt;"&gt;
+        &lt;i class="ion-chevron-left"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;button class="glide__arrow next" data-glide-dir="&gt;"&gt;
+        &lt;i class="ion-chevron-right"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="glide__wrapper"&gt;
+      &lt;ul class="glide__track"&gt;
+        &lt;?php while(has_sub_field('slides')) { ?&gt;
+          &lt;li class="glide__slide"
+              style="background-image: url('&lt;?php the_sub_field('slide_bg'); ?&gt;');"&gt;
+            ...
+          &lt;/li&gt;
+        &lt;?php } ?&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="glide__bullets"&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;?php } ?&gt;</code></pre>
+<hr />
+        </article>
+
+      </div>
+    </main>
+
+    <footer id="footer"
+            class="clearfix">
+      <p class="center">
+        &copy; 2016 Scratch Theme for WordPress + ACF //
+        Created by <a href="http://zackphilipps.com" target="_blank">Zack Philipps</a> //
+        Licensed under <a href="http://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL</a>
+      </p>
+    </footer>
+
+    <!-- BEGIN FOOTER -->
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+
+    <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+    <script>
+      $(function() {
+        // Syntax highlighting
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    <!-- FOR DEVELOPMENT -->
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/concat/main.js"></script>
+    <!-- FOR PRODUCTION -->
+    <!-- <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/compiled/main.min.js"></script> -->
+
+    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/website.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <!-- END FOOTER -->
+  </body>
+</html>
