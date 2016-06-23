@@ -12,7 +12,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ### Rapidize your development time and add robust layouts on-the-fly with the [Layouts Page Template](http://scratchtheme.com/docs/advanced/#layouts)
 
-![Scratch's Layouts in action](http://scratchtheme.com/assets/img/marketing-page-slower.gif)
+![Scratch's Layouts in action](http://scratchtheme.com/assets/img/marketing-page.gif)
 
 **NOTE:** must have [Advanced Custom Fields Pro](http://www.advancedcustomfields.com/pro) installed and activated.
 
@@ -26,7 +26,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ### Keep your WordPress pages lightweight by [automatically optimizing images](https://github.com/gruntjs/grunt-contrib-imagemin) as you upload them to the Media Library
 
-![WordPress Image Optimization](http://scratchtheme.com/assets/img/imagemin.gif)
+![WordPress Image Optimization](http://scratchtheme.com/assets/img/image-optimization.gif)
 
 ---
 
