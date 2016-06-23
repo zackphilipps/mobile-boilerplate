@@ -51,7 +51,7 @@ $ npm install
 
 ```
 scratch-theme/
-├── assets/
+├── _assets/
 │   ├── core/
 │   ├── css/
 │   ├── fonts/
@@ -68,7 +68,7 @@ scratch-theme/
 └── acf-json/
 ```
 
-The `assets/` directory contains all SCSS, CSS, JS, images, and fonts as well as the `Gruntfile` and `gulpfile` and their respective `package.json` files. [There are also helpful READMEs in most directories.](https://github.com/zackphilipps/scratch-theme)
+The `_assets/` directory contains all SCSS, CSS, JS, images, and fonts as well as the `Gruntfile` and `gulpfile` and their respective `package.json` files. [There are also helpful READMEs in most directories.](https://github.com/zackphilipps/scratch-theme)
 
 The `_docs/` directory contains the markdown files you are reading right now. `_includes/` has additional PHP that's loaded into `functions.php`. `_parts/` are partial templates like `header.php` and `footer.php`. `_root/` contains files that should be moved to the root of your site if you desire to use the configuration that comes with [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
 

@@ -21,9 +21,9 @@ Once logged in to WordPress, navigate to _Appearance > Themes_ and activate Scra
 
 ## Running Grunt, BrowserSync, and Compiling SCSS and JavaScript
 
-Run `npm install` in the `assets/grunt/` directory from your command line to install all of the Node packages. Once that's done, you can run `grunt` from the same directory to begin your automated workflow.
+Run `npm install` in the `_assets/grunt/` directory from your command line to install all of the Node packages. Once that's done, you can run `grunt` from the same directory to begin your automated workflow.
 
-**Update:** as of [v1.5.9](https://github.com/zackphilipps/scratch-theme/tree/v1.5.9), Gulp is also available. Run `npm install` and then `gulp` in the `assets/gulp/` directory.
+**Update:** as of [v1.5.9](https://github.com/zackphilipps/scratch-theme/tree/v1.5.9), Gulp is also available. Run `npm install` and then `gulp` in the `_assets/gulp/` directory.
 
 ![Running Grunt, BrowserSync, and Compiling SCSS and JavaScript](/assets/img/screencast4-pattern.gif)
 
