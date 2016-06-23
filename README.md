@@ -5,35 +5,33 @@
 Powerful automated workflow for WordPress + [Advanced Custom Fields](http://advancedcustomfields.com) developers.
 
 - [Download](https://github.com/zackphilipps/scratch-theme/archive/master.zip)
-- [Getting Started](http://scratchtheme.com/docs/getting-started)
-- [Screencasts](http://scratchtheme.com/docs/screencasts/)
+- [Getting Started](http://scratchtheme.com/getting-started.html)
+- [Screencasts](http://scratchtheme.com/screencasts.html)
 
 ## Features
 
 ### Rapidize your development time and add robust layouts on-the-fly with the [Layouts Page Template](http://scratchtheme.com/docs/advanced/#layouts)
 
-![Scratch's Layouts in action](http://scratchtheme.com/wp-content/themes/scratch-theme/img/marketing-page-slower.gif)
+![Scratch's Layouts in action](_assets/img/marketing-page-slower.gif)
 
 **NOTE:** must have [Advanced Custom Fields Pro](http://www.advancedcustomfields.com/pro) installed and activated.
 
 ### Mobile-Friendly
 
-![Mobile-Friendly](http://scratchtheme.com/wp-content/themes/scratch-theme/img/mobile.gif)
+![Mobile-Friendly](_assets/img/mobile.gif)
 
 ### Save a file, and watch your site instantly refresh across all browsers & devices via [BrowserSync](http://www.browsersync.io/)
 
-![BrowserSync](http://scratchtheme.com/wp-content/themes/scratch-theme/img/browsersync.gif)
+![BrowserSync](_assets/img/browsersync.gif)
 
 ### Keep your WordPress pages lightweight by [automatically optimizing images](https://github.com/gruntjs/grunt-contrib-imagemin) as you upload them to the Media Library
 
-![WordPress Image Optimization](http://scratchtheme.com/wp-content/themes/scratch-theme/img/imagemin.gif)
+![WordPress Image Optimization](_assets/img/imagemin.gif)
 
 ---
 
 - Homepage: [http://scratchtheme.com](http://scratchtheme.com)
 - HTML5 Boilerplate Docs: [https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/TOC.md](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/TOC.md)
-- Scratch Docs: [http://scratchtheme.com/docs](http://scratchtheme.com/docs)
-- About: [http://www.tribeswell.com/custom-wordpress-theme-framework-scratch-tribeswell/](http://www.tribeswell.com/custom-wordpress-theme-framework-scratch-tribeswell/)
 - Changelog: [https://github.com/zackphilipps/scratch-theme/releases](https://github.com/zackphilipps/scratch-theme/releases)
 
 Created by [Tribeswell](http://tribeswell.com)
