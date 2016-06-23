@@ -13,7 +13,7 @@ body {
 @media (min-width: 767px) {
   #sidebar #docs-nav.fixed {
     position: fixed;
-    top: 111px;
+    top: 1.625rem;
     width: 100%;
   }
 }
@@ -28,16 +28,16 @@ body {
   display: block;
 }
 
-#sidebar #docs-nav ul li.active {
-  border-left: 3px solid #eee;
-}
-
 #sidebar #docs-nav ul li a {
   display: block;
   border-top: 1px solid #eee;
   padding: 0.5rem 1rem;
   color: #66c299;
   transition: color 0.25s ease-in-out 0s;
+}
+
+#sidebar #docs-nav ul li a.active {
+  border-left: 3px solid #eee;
 }
 
 #sidebar #docs-nav ul li a:active,
@@ -71,7 +71,15 @@ body {
   position: relative;
 }
 
-#docs-main p:first-of-type {
+#docs-main .scratch-bg {
+  margin-bottom: 2.762430939%;
+}
+
+#docs-main .custom-col {
+  border: 2px solid white;
+}
+
+#docs-main article > p:first-of-type, #docs-main article > h2:first-of-type {
   margin-top: 1.625rem;
 }
 
@@ -81,12 +89,9 @@ body {
   }
 }
 
-hr {
-  margin-bottom: 0;
-}
-
 #masthead {
-  height: 220px;
+  padding-top: 1.625rem;
+  padding-bottom: 1.625rem;
 }
 
 #masthead .title div {
@@ -110,26 +115,26 @@ pre code {
   border: 0;
 }
 
-main img {
+main img, main .scratch-bg {
   border-radius: 4px;
   display: block;
+}
+
+main > img {
   margin-top: 1.625rem;
 }
 
-main {
-  padding-top: 82px;
+#header {
+  background-color: rgb(61,153,112);
 }
 
-#header {
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  background-color: rgb(61,153,112);
+nav ul.main-nav {
+  z-index: 21;
 }
 
 @media (min-width: 767px) {
   #header {
-    background-color: rgba(61,153,112,0.9);
+    z-index: 20;
   }
   nav ul.main-nav li a:link, nav ul.main-nav li a:active, nav ul.main-nav li a:visited {
     background-color: transparent;
@@ -137,4 +142,47 @@ main {
   nav ul.main-nav li a:hover, nav ul.main-nav li a:focus {
     background-color: rgba(0,0,0,0.05);
   }
+}
+
+[class^="hljs"], [class*=" hljs"], [class^="hljs-"], [class*=" hljs-"], [class^="hljs"] span, [class*=" hljs"] span, [class^="hljs-"] span, [class*=" hljs-"] span {
+  line-height: 1.4;
+}
+
+.example {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.example .label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #ccc;
+}
+
+.example .ion-load-d:before {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#docs-main .scratch-bg-example .scratch-bg {
+  margin-top: 1.625rem;
+  margin-bottom: 1.625rem;
+  background-image: url('https://unsplash.it/600/600/?random');
+}
+
+.image-link-example {
+  margin-bottom: 1.625rem;
+}
+
+.image-link-example img {
+  border-radius: 0;
+}
+
+.toggles-example {
+  padding-bottom: 1.625rem;
+}
+
+.slider-example, .slider-example .glide {
+  margin-bottom: 1.625rem;
 }

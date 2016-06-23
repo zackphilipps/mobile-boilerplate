@@ -20,7 +20,7 @@
             <?php endif; ?>
           <?php else: ?>
             <?php if(get_sub_field('image')): ?>
-              <div class="scratch-image circle"
+              <div class="scratch-bg circle"
                    style="background-image: url('<?php the_sub_field('image'); ?>');">
               </div>
             <?php endif; ?>

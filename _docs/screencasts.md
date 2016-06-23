@@ -3,7 +3,7 @@ title: Screencasts
 currentMenu: screencasts
 ---
 
-These screencasts pick up after you've set up your environment, set up your `wp-config.php` file, and run the WordPress installation. For instructions on how to do that, specifically via the command line, [click here](/).
+These screencasts pick up after you've set up your environment, set up your `wp-config.php` file, and run the WordPress installation. For instructions on how to do that, specifically via the command line, [click here](/getting-started.html).
 
 ## Using MAMP to Complete the WordPress Installation
 
@@ -15,7 +15,7 @@ Now, navigate to `localhost:xxxx` where `xxxx` is the web port you configured in
 
 ## Activating Scratch & Installing Recommended Plugins
 
-Once logged in to WordPress navigate to _Appearance > Themes_ and activate Scratch. Follow the subsequent prompts to install the recommended plugins. If you want, delete Akismet and Hello Dolly.
+Once logged in to WordPress, navigate to _Appearance > Themes_ and activate Scratch. Follow the subsequent prompts to install the recommended plugins. If you want, delete Akismet and Hello Dolly.
 
 ![Activating Scratch & Installing Recommended Plugins](/_assets/img/screencast3.gif)
 
@@ -23,7 +23,7 @@ Once logged in to WordPress navigate to _Appearance > Themes_ and activate Scrat
 
 Run `npm install` in the `_assets/grunt/` directory from your command line to install all of the Node packages. Once that's done, you can run `grunt` from the same directory to begin your automated workflow.
 
-**Update:** as of [v1.5.9](https://github.com/zackphilipps/scratch-theme/tree/v1.5.9), Gulp is also available.
+**Update:** as of [v1.5.9](https://github.com/zackphilipps/scratch-theme/tree/v1.5.9), Gulp is also available. Run `npm install` and then `gulp` in the `_assets/gulp/` directory.
 
 ![Running Grunt, BrowserSync, and Compiling SCSS and JavaScript](/_assets/img/screencast4-pattern.gif)
 
@@ -47,7 +47,7 @@ Edit [config/_variables.scss](https://github.com/zackphilipps/scratch-theme/blob
 
 ## Moving the Right Files to the Root of Your Site & Editing the Permalink Structure
 
-Basically, you should move `.htaccess`, `crossdomain.xml`, `humans.txt`, `icons.html`, `manifest.webapp`, and `robots.txt` to the root of your site.
+Basically, `_root/` contains files that should be moved to the root of your site if you desire to use the configuration that comes with [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
 
 Navigate to _Settings > Permalinks_, and change the Permalink Structure to _Post Name_ for cleaner, SEO-friendly URLs.
 
@@ -56,3 +56,7 @@ Navigate to _Settings > Permalinks_, and change the Permalink Structure to _Post
 ## Congratulations!
 
 High fives, you're all finished! If you're having trouble, feel free to [submit an issue on GitHub](https://github.com/zackphilipps/scratch-theme/issues).
+
+---
+
+**Next up:** [CSS](/css.html)

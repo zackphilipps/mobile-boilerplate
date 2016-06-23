@@ -6,8 +6,13 @@ jQuery(document).ready(function($) {
       } else {
         $('#docs-nav').removeClass('fixed').css('width', 'auto');
       }
-    }, {
-      offset: 82
+    });
+    $('.scroll-link-example').click(function(e) {
+      e.preventDefault();
+      $(this).blur();
+      var string = $(this).attr('href').split('#')[1];
+      $('#' + string)
+        .velocity('scroll', { duration: 400 });
     });
   }
 });

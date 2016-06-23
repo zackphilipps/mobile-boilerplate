@@ -30,9 +30,11 @@ gulp.task('javascript', function() {
       newLine: ';'
     }))
     .pipe(gulp.dest('../js/concat/'))
+    .pipe(gulp.dest('../../_website/_assets/js/concat/'))
     .pipe($.uglify(false))
     .pipe($.rename('main.min.js'))
     .pipe(gulp.dest('../js/compiled'))
+    .pipe(gulp.dest('../../_website/_assets/js/compiled'))
     .pipe(browserSync.stream());
 });
 
@@ -47,6 +49,7 @@ gulp.task('styles', function() {
     }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('../css'))
+    .pipe(gulp.dest('../../_website/_assets/css'))
     .pipe(browserSync.stream());
 });
 

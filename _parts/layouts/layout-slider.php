@@ -5,12 +5,12 @@
     <?php if(get_sub_field('slides')) { ?>
       <div class="glide">
         <div class="glide__arrows">
-          <span class="glide__arrow prev" data-glide-dir="<">
+          <button class="glide__arrow prev" data-glide-dir="<">
             <i class="ion-chevron-left"></i>
-          </span>
-          <span class="glide__arrow next" data-glide-dir=">">
+          </button>
+          <button class="glide__arrow next" data-glide-dir=">">
             <i class="ion-chevron-right"></i>
-          </span>
+          </button>
         </div>
         <div class="glide__wrapper">
           <ul class="glide__track">

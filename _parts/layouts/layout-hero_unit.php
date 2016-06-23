@@ -22,7 +22,7 @@ function scratch_bg_position() {
 <?php global $layout_count; ?>
 <section id="scratch-layout-<?php echo $layout_count; ?>-id-<?php the_ID(); ?>"
          class="hero-unit">
-  <div class="scratch-image"
+  <div class="scratch-bg"
           style="background-image: url('<?php the_sub_field('image'); ?>'); background-position: <?php scratch_bg_position(); ?>">
     <div class="overlay clearfix">
       <?php

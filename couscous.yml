@@ -53,18 +53,100 @@ menu:
 
 sidebarMenu:
   items:
+    introduction:
+      text: Introduction
+      relativeUrl: /
     gettingStarted:
       text: Getting Started
-      relativeUrl: /
+      relativeUrl: /getting-started.html
     screencasts:
       text: Screencasts
       relativeUrl: /screencasts.html
+      children:
+        installingWordPress:
+          text: Installing WordPress
+          relativeUrl: /screencasts.html#using-mamp-to-complete-the-wordpress-installation
+        activatingScratch:
+          text: Activating Scratch
+          relativeUrl: /screencasts.html#activating-scratch-amp-installing-recommended-plugins
+        runningGruntGulp:
+          text: Running Grunt/Gulp
+          relativeUrl: /screencasts.html#running-grunt-browsersync-and-compiling-scss-and-javascript
+        styleGuideMainNav:
+          text: Style Guide/Main Nav
+          relativeUrl: /screencasts.html#adding-scratchs-style-guide-and-main-navigation-menu
+        editingFonts:
+          text: Editing Fonts
+          relativeUrl: /screencasts.html#implementing-your-own-typography-with-scratch
+        editingColors:
+          text: Editing Colors
+          relativeUrl: /screencasts.html#implementing-your-own-color-scheme-with-scratch
+        rootFilesPermalinkStructure:
+          text: Root Files/Permalink Structure
+          relativeUrl: /screencasts.html#moving-the-right-files-to-the-root-of-your-site-amp-editing-the-permalink-structure
     css:
       text: CSS
       relativeUrl: /css.html
-    js:
-      text: JS
-      relativeUrl: /js.html
+      children:
+        overview:
+          text: Overview
+          relativeUrl: /css.html#overview
+        iconFont:
+          text: Icon Font
+          relativeUrl: /css.html#ionicons-overview
+        soLongVendorPrefixes:
+          text: So Long, Vendor Prefixes!
+          relativeUrl: /css.html#autoprefixer
+        gridSystem:
+          text: Grid System
+          relativeUrl: /css.html#grid-system
+        typography:
+          text: Typography
+          relativeUrl: /css.html#typography
+        buttons:
+          text: Buttons
+          relativeUrl: /css.html#buttons
+        helperClasses:
+          text: Helper Classes
+          relativeUrl: /css.html#helper-classes
+        mixins:
+          text: Mixins
+          relativeUrl: /css.html#mixins
+    javascript:
+      text: JavaScript
+      relativeUrl: /javascript.html
+      children:
+        overview:
+          text: Overview
+          relativeUrl: /javascript.html#overview
+        modals:
+          text: Modals
+          relativeUrl: /javascript.html#modals-via-magnific-popup
+        waypoints:
+          text: Waypoints
+          relativeUrl: /javascript.html#jquery-waypoints
+        animations:
+          text: Animations
+          relativeUrl: /javascript.html#animations-with-velocityjs
+        sliders:
+          text: Sliders
+          relativeUrl: /javascript.html#sliders-via-glidejs
     acf:
-      text: ACF
+      text: Advanced Custom Fields
       relativeUrl: /acf.html
+      children:
+        layoutFunctions:
+          text: Layout Functions
+          relativeUrl: /acf.html#using-scratchs-layout-functions
+        layoutsPageTemplate:
+          text: Layouts Page Template
+          relativeUrl: /acf.html#layouts-page-template
+        html5AudioVideo:
+          text: HTML5 Audio/Video
+          relativeUrl: /acf.html#html5-audiovideo
+        imageGallery:
+          text: Image Gallery
+          relativeUrl: /acf.html#image-gallery-via
+        slider:
+          text: Slider
+          relativeUrl: /acf.html#slider-via

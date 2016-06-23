@@ -14,10 +14,10 @@ $custom-font-headings: "Alegreya Sans", sans-serif;
 $paragraph-indent: false; // [ true / false ]
 
 // Base sizes
-$base-font-size: 100; // In %. Also used for mobile. Number only, no units.
-$base-font-size-desktop: 112.5; // In %. Used to calculate the desktop font size. Number only, no units.
-$line-height: 1.625;
-$line-height-desktop: 1.7;
+$base-font-size: 112.5; // In %. Also used for mobile. Number only, no units. Value here equates to 18px.
+$base-font-size-desktop: 125; // In %. Used to calculate the desktop font size. Number only, no units. Value here equates to 20px.
+$line-height: 1.5; // In REMs. Value here equates to 27px.
+$line-height-desktop: 1.625; // In REMs. Value here equates to 32.5px.
 $max-width: 35; // Number only, no units. Gets converted to REMs.
 
 // Modular Scale
@@ -33,6 +33,50 @@ $modular-scale: (
   xxxs: 1,
   xxxxs: .8125
 );
+
+/* Calculations
+   ========================================================================== */
+
+// Mobile base & leading
+$base: 16 * ($base-font-size / 100);
+$leading-rem: $line-height;
+
+// Desktop base & leading
+$base-desktop: 16 * ($base-font-size-desktop / 100);
+$leading-rem-desktop: $line-height-desktop;
+
+/* Font themes
+   ========================================================================== */
+
+$font-body: null;
+$font-headings: null;
+
+@if $theme == Merriweather {
+
+  // Import Merriweather
+  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+
+  // Set body font
+  $font-body: Merriweather, Georgia, serif;
+
+} @else if $theme == OpenSans {
+
+  // Import Open Sans
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+  // Set body font
+  $font-body: Open Sans, Arial, Helvetica, Sans-serif;
+
+} @else if $theme == custom {
+
+  // Set custom body font
+  $font-body: $custom-font-body;
+
+  // Set custom headings font
+  @if $custom-font-headings != $custom-font-body {
+    $font-headings: $custom-font-headings;
+  }
+}
 
 /********* Custom colors example (modify as needed) *********/
 
@@ -73,49 +117,3 @@ $color-font-body: $black;
 $color-font-headings: $color-font-body;
 $color-font-light: lighten($black, 20%);
 $color-font-figcaption: $color-font-body;
-
-/* Calculations
-   ========================================================================== */
-
-// Mobile base & leading
-$base: 16 * ($base-font-size / 100);
-$leading: round($base * $line-height);
-$leading-rem: $leading / $base;
-
-// Desktop base & leading
-$base-desktop: 16 * ($base-font-size-desktop / 100);
-$leading-desktop: round($base-desktop * $line-height-desktop);
-$leading-rem-desktop: $leading-desktop / $base-desktop;
-
-/* Font themes
-   ========================================================================== */
-
-$font-body: null;
-$font-headings: null;
-
-@if $theme == Merriweather {
-
-  // Import Merriweather
-  @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
-
-  // Set body font
-  $font-body: Merriweather, Georgia, serif;
-
-} @else if $theme == OpenSans {
-
-  // Import Open Sans
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
-
-  // Set body font
-  $font-body: Open Sans, Arial, Helvetica, Sans-serif;
-
-} @else if $theme == custom {
-
-  // Set custom body font
-  $font-body: $custom-font-body;
-
-  // Set custom headings font
-  @if $custom-font-headings != $custom-font-body {
-    $font-headings: $custom-font-headings;
-  }
-}

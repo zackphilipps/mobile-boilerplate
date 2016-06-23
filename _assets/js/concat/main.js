@@ -1,46 +1,32 @@
-(function(window, document) {
+jQuery(document).ready(function($) {
   'use strict';
 
-  // 2. THE JAVASCRIPT WAY
-  // Construct the function
-  function fixImgHeight() {
+  function imgFixHeight(el) {
 
-    // Get all images
-    var images = document.querySelectorAll('img');
+    setTimeout(function() {
+      el.each(function() {
+        // get image original height
+        var imgOriginalHeight = $(this).height();
 
-    // Get line-height
-    var element = document.getElementsByTagName('body')[0];
-    var style = window.getComputedStyle(element);
-    var lineHeight = parseInt(style.getPropertyValue('line-height'));
-    var i;
-    var length = images.length;
-    var imgOriginalHeight;
-    var div;
-    var imgNewHeight;
+        // Get Line-height
+        var lineHeight = parseInt($('p').css('line-height'));
 
-    // For each image in images get original height, calculate height rounded to baseline grid, set new height
-    for (i = 0; i < length; ++i) {
+        // Calculate the new image height
+        var div = Math.floor(imgOriginalHeight/lineHeight);
+        var imgNewHeight = lineHeight * div;
 
-      //Reset height first
-      images[i].style.height = 'auto';
+        // Apply the new image height
+        $(this).css('height', imgNewHeight);
+      });
+    }, 100);
 
-      // Get original height
-      imgOriginalHeight = images[i].offsetHeight;
-
-      // Calculate new height
-      div = Math.floor(imgOriginalHeight / lineHeight);
-      imgNewHeight = lineHeight * div;
-
-      // Set new height
-      images[i].style.height = imgNewHeight + 'px';
-    }
-  }
+  };
 
   //Fix once on first page load
-  fixImgHeight();
+  imgFixHeight($('img:not(#header .logo img, .glide__slide img)'));
 
   //Make sure that we fix images on each window resize (add debounce for performance)
-  window.addEventListener('resize', debounce(fixImgHeight, 50), true);
+  window.addEventListener('resize', debounce(imgFixHeight($('img:not(#header .logo img, .glide__slide img)')), 50), true);
 
 
   //helper: debounce
@@ -59,7 +45,7 @@
     };
   };
 
-}(window, document));
+});
 ;/*!
  * glidejs
  * Version: 2.0.8

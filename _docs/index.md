@@ -1,62 +1,90 @@
 ---
-title: Getting Started
-currentMenu: gettingStarted
+title: Introduction
+currentMenu: introduction
 ---
 
-**For those who have never used a terminal:** When copying and pasting from here to your terminal, do NOT include `$ ` (dollar sign followed by a space). `$ ` is used to indicate the beginning of a new command. Enter commands one at a time and press return after each one.
+## Welcome!
 
-If you're working locally, you'll need something like [MAMP](http://www.mamp.info/en/) to work with the PHP and MySQL required by WordPress. If you're working remotely, you'll have to deal with the pitfalls of SSH (lagging and broken pipes), unless you use something like [Mosh](http://mosh.mit.edu/) (which I highly recommend).
+Scratch is the world's first [Advanced Custom Fields](http://advancedcustomfields.com)-ready WordPress theme. It's not so much a theme as a springboard for building your own fully custom WordPress themes.
 
-## Setting Up Your Environment
+Scratch starts with the [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate). Then, we add our custom SCSS and JS frameworks. After that, our custom `Gruntfile` and `gulpfile`. Finally, we add our bare-bones template files and `scratch.php`, a very small file that packs a punch.
 
-First, you'll need to [install git](http://git-scm.com/book/en/Getting-Started-Installing-Git). Then, you will need `nodejs` (and `npm`). [Head here for the most complete instructions I've found.](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) Once you have `npm`, you can install the [Grunt Command Line Interface](http://gruntjs.com/getting-started) or [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md), and `node-sass` globally:
+### Can I use Scratch outside of WordPress?
 
-```
-$ npm install -g grunt-cli
-$ npm install -g gulp-cli
-$ npm install -g node-sass
-```
+Sure! Simply strip out all of the PHP and work from the `index.html` file.
 
-## Installing WordPress and Scratch
+---
 
-Navigate to the root directory of your site. Copy and paste this into your terminal:
+## Features
 
-```
-$ wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz && mv wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz
-```
+### Forked from HTML5 Boilerplate
 
-Now you can do this:
+Enjoy all of the benefits of the best mobile-first framework out there. Plus, we regularly pull H5BP updates down to Scratch, so you never have to worry about Scratch falling behind.
 
-```
-$ cd wp-content/themes/
-$ git clone https://github.com/zackphilipps/scratch-theme.git
-```
+New to HTML5 Boilerplate? [Read the docs here.](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/TOC.md)
 
-![Getting Started Screencast](/_assets/img/screencast1.gif)
+### Completely ACF-ready!
 
-## What's Included
+Scratch is the only WordPress theme out there that is locked & loaded for [Advanced Custom Fields](http://advancedcustomfields.com). Enjoy:
 
-```
-scratch-theme/
-├── _assets/
-│   ├── core/
-│   ├── css/
-│   ├── fonts/
-│   ├── grunt/
-│   ├── gulp/
-│   ├── img/
-│   ├── js/
-│   └── scss/
-├── _docs/
-├── _includes/
-├── _parts/
-│   └── layouts/
-├── _root/
-└── acf-json/
-```
+- Enqueueing of scripts and styles for [ACF Google Maps](http://www.advancedcustomfields.com/resources/google-map/) field
+- Declaration of Header, Sidebar, and Footer Options pages
+- Inclusion of `acf-json/` directory with `index.php`
+- [Layouts](/acf.html#layouts-page-template) field group & page template
+- Front end styles for `acf_form()`
 
-The `_assets` directory contains all SCSS, CSS, JS, images, and fonts as well as the `Gruntfile` and `gulpfile` and their respective `package.json` files. [There are also helpful READMEs in most directories.](https://github.com/zackphilipps/scratch-theme)
+### CSS on Steroids
 
-The `_docs` directory contains the markdown files you are reading right now. `_includes` has additional PHP that's loaded into `functions.php`. `_parts` are partial templates like `header.php` and `footer.php`. `_root` contains files that should be moved to the root of your site if you desire to use the configuration that comes with [H5BP](https://html5boilerplate.com/).
+Scratch is built on [SCSS](http://sass-lang.com/), the popular CSS preprocessor. Our SCSS framework includes:
 
-[Check out these screencasts](/screencasts.html) to see Scratch in action, but bear in mind that they may be out of date. Who has time to make gifs?!
+- The [CSS grid from Bones](/css.html#grid-system)
+- [Ionicons](/css.html#ionicons-overview), the icon font
+- An awesome [mixin library](/css.html#mixins)
+- Beautiful default colors, courtesy of [clrs.cc](http://clrs.cc/)
+- Placeholder files that marry perfectly with WordPress, including a custom login stylesheet
+
+### Only the Best JS
+
+The JavaScript we include is "the best" because it fits in with the WordPress philosophy – **flexible, extendable, and customizable.** Quickly research the following tools and you'll find that they are extremely valuable.
+
+- [Glide.js](/javascript.html#sliders-via-glidejs), the slider
+- [Magnific Popup](/javascript.html#modals-via-magnific-popup)
+- [Velocity.js](/javascript.html#animations-with-velocityjs) for high-performance animations
+- [jQuery Waypoints](/javascript.html#jquery-waypoints)
+
+### Custom Automated Workflow
+
+Too many plugins? Site running slow? With Scratch, you serve **one stylesheet** and **one script file**.
+
+Cross-browser compatibility issues? With Scratch, you can write CSS according to the W3 spec and **vendor prefixes are automatically added.**
+
+- SCSS compiling & minification
+- [Automatic CSS vendor-prefixing](/css.html#autoprefixer)
+- JS concatenation & minification
+- Images are [automatically optimized on upload](https://github.com/imagemin/imagemin)
+- Save a file, and watch your site instantly refresh across all browsers & devices via [BrowserSync](https://www.browsersync.io/)
+
+### The List (of WordPress plugins)
+
+Once you activate Scratch, you'll be asked to install & activate a few plugins. Install all, any, or none of them with a few clicks.
+
+This list may change, but for now, Scratch recommends:
+
+- [Advanced Custom Fields Pro (premium)](http://www.advancedcustomfields.com/pro/)
+- [Resize Image After Upload](https://wordpress.org/plugins/resize-image-after-upload/screenshots/)
+- [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/)
+
+### Clean, minimal PHP
+
+Jump in to your template files and find everything you need, and nothing you don't.
+
+Improve the functionality of WordPress with Scratch. Get acquainted with [Layout Functions](/acf.html#using-scratchs-layout-functions), the cherry on top of WordPress as a CMS + a CSS grid. Other goodies:
+
+- Hide the WordPress admin toolbar from the front-end
+- The [Bones](http://themble.com/bones/) "head cleanup" function
+
+---
+
+Like what you see?
+
+**Next Up:** [Getting Started](/getting-started.html)

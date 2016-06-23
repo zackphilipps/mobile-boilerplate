@@ -17,9 +17,12 @@ $overlay-color: rgba($black, 0.4);
   background-color: $overlay-color;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 .hero-unit, .flexible-columns, .staggered, .wysiwygs, .slider {
   .circle {
-    border-radius: 50%;
     width: $circle-size;
     height: $circle-size;
     background-color: $button-color;
@@ -36,7 +39,7 @@ $overlay-color: rgba($black, 0.4);
       transition: color 0.25s ease-in-out 0s;
     }
 
-    &.scratch-image {
+    &.scratch-bg {
       background-color: transparent;
     }
   }
@@ -44,7 +47,7 @@ $overlay-color: rgba($black, 0.4);
 
 /* Hero Unit */
 .hero-unit {
-  .scratch-image {
+  .scratch-bg {
     height: auto;
   }
 
@@ -90,7 +93,7 @@ $overlay-color: rgba($black, 0.4);
         .circle {
           background-color: $button-hover-color;
 
-          &.scratch-image {
+          &.scratch-bg {
             background-color: transparent;
             opacity: 0.8;
           }
@@ -153,56 +156,57 @@ $overlay-color: rgba($black, 0.4);
 
 /* Slider */
 .slider-row {
-  .glide {
-    /***** Customizations of glide-core *****/
-    height: 350px;
+  .slide-text {
+    margin: 0 auto;
+    padding: 1rem;
+    color: $white;
 
-    @media (min-width: 567px) {
-      height: 500px;
+    @include m {
+      padding: 1rem 6rem;
     }
+  }
+}
 
-    @media (min-width: 767px) {
-      height: 620px;
+.glide {
+  /***** Customizations of glide-core *****/
+  height: 350px;
+
+  @media (min-width: 567px) {
+    height: 500px;
+  }
+  
+  overflow: hidden;
+
+  .glide__wrapper {
+    height: 100%;
+  }
+
+  .glide__track {
+    padding: 0;
+    margin: 0;
+  }
+
+  .glide__slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+
+  /***** Customizations of glide-theme *****/
+  .glide__bullets {
+    margin: 0;
+    padding: 0;
+  }
+
+  .glide__arrow {
+    border: 0;
+    padding: 0;
+    i {
+      font-size: 1.5rem;
     }
-    overflow: hidden;
-
-    .glide__wrapper {
-      height: 100%;
-    }
-
-    .glide__track {
-      padding: 0;
-      margin: 0;
-    }
-
-    .glide__slide {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100%;
-    }
-
-    /***** Customizations of glide-theme *****/
-    .glide__bullets {
-      margin: 0;
-      padding: 0;
-    }
-
-    .glide__arrow {
-      border: 0;
-      padding: 0;
-      i {
-        font-size: 1.5rem;
-      }
-    }
-    .slide-text {
-      margin: 0 auto;
-      padding: 1rem;
-      color: $white;
-
-      @include m {
-        padding: 1rem 6rem;
-      }
+    &:hover, &:focus {
+      background-color: transparent;
     }
   }
 }

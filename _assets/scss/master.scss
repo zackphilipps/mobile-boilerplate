@@ -12,11 +12,15 @@
 @import "../core/scss/main";
 @import "config/grid-always";
 
-@media (min-width: #{ $max-width + 5 + 'em' }) {
+@media (min-width: 767px) {
   @import "config/grid";
 }
 
 @import "config/global";
+
+@import "../core/scss/glide/glide-core";
+@import "../core/scss/glide/glide-theme";
+@import "../core/scss/magnific";
 
 /*
  * MIDDLE STUFF
@@ -31,9 +35,6 @@
 @import "sidebar";
 @import "home";
 @import "footer";
-@import "../core/scss/glide/glide-core";
-@import "../core/scss/glide/glide-theme";
-@import "../core/scss/magnific";
 
 /*
  * RESPONSIVE

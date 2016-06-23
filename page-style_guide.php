@@ -38,40 +38,40 @@ get_template_part('_parts/header'); ?>
 
   <section class="clearfix">
     <h2 class="center">Colors</h2>
-    <div class="threecol first scratch-image black-bg">
+    <div class="threecol first scratch-bg black-bg">
       <div class="white center valign-always">Black</div>
     </div>
-    <div class="threecol scratch-image red-bg">
+    <div class="threecol scratch-bg red-bg">
       <div class="white center valign-always">Red</div>
     </div>
-    <div class="threecol scratch-image orange-bg">
+    <div class="threecol scratch-bg orange-bg">
       <div class="white center valign-always">Orange</div>
     </div>
-    <div class="threecol last scratch-image yellow-bg">
+    <div class="threecol last scratch-bg yellow-bg">
       <div class="center valign-always">Yellow</div>
     </div>
   </section>
   <section class="clearfix">
-    <div class="threecol first scratch-image green-bg">
+    <div class="threecol first scratch-bg green-bg">
       <div class="white center valign-always">Green</div>
     </div>
-    <div class="threecol scratch-image blue-bg">
+    <div class="threecol scratch-bg blue-bg">
       <div class="white center valign-always">Blue</div>
     </div>
-    <div class="threecol scratch-image purple-bg">
+    <div class="threecol scratch-bg purple-bg">
       <div class="white center valign-always">Purple</div>
     </div>
-    <div class="threecol last scratch-image gray-bg">
+    <div class="threecol last scratch-bg gray-bg">
       <div class="center valign-always">Gray</div>
     </div>
   </section>
 
   <section class="clearfix">
     <h2 class="center">Links</h2>
-    <div class="sixcol first scratch-image gray-bg">
+    <div class="sixcol first scratch-bg gray-bg">
       <div class="center valign-always"><a href="">Normal</a></div>
     </div>
-    <div class="sixcol last scratch-image gray-bg">
+    <div class="sixcol last scratch-bg gray-bg">
       <div class="center valign-always">
         <a href="" class="button">Button</a><br><br>
         <a href="" class="button black">Button</a>

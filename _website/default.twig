@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ title }}</title>
-    <meta name="description" content="">
+    <title>{{ title }} // Scratch: ACF-Ready WordPress Theme</title>
+    <meta name="description" content="Scratch provides a powerful automated workflow for custom WordPress + Advanced Custom Fields theme development. Minified assets, Sass, BrowserSync, and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -51,7 +51,7 @@
     <main>
       <header id="masthead"
               role="banner">
-        <div class="title center valign-always">
+        <div class="title center">
           <div>Scratch Docs</div>
           <h1>{{ title }}</h1>
         </div>
@@ -63,10 +63,21 @@
           <nav id="docs-nav" class="clearfix">
             <ul>
               {% for itemId, item in sidebarMenu.items %}
-                <li class="{{ itemId == currentMenu ? 'active' }}">
-                  <a href="{{ item.absoluteUrl|default(baseUrl ~ item.relativeUrl) }}">
+                <li>
+                  <a href="{{ item.absoluteUrl|default(baseUrl ~ item.relativeUrl) }}" class="{{ itemId == currentMenu ? 'active' }}">
                     {{ item.text|raw }}
                   </a>
+                  {% if item.children is defined %}
+                    <ul>
+                    {% for childItemId, child in item.children %}
+                      <li>
+                        <a class="{{ itemId == currentMenu ? 'scroll-link' }}" href="{{ child.absoluteUrl|default(baseUrl ~ child.relativeUrl) }}">
+                          {{ child.text|raw }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
                 </li>
               {% endfor %}
             </ul>
@@ -103,9 +114,10 @@
     </script>
 
     <!-- FOR DEVELOPMENT -->
-    <!-- <script src="{{ baseUrl }}/_assets/js/concat/main.js"></script> -->
+    <script src="{{ baseUrl }}/_assets/js/concat/main.js"></script>
     <!-- FOR PRODUCTION -->
-    <script src="{{ baseUrl }}/_assets/js/compiled/main.min.js"></script>
+    <!-- <script src="{{ baseUrl }}/_assets/js/compiled/main.min.js"></script> -->
+
     <script src="{{ baseUrl }}/_assets/js/website.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

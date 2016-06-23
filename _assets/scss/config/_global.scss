@@ -13,9 +13,8 @@
   // @include margin(0, 0, 1);
 
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
+    @import 'config/mixins';
     @include line-height(1);
     // @include margin-bottom(1);
     // margin-left: auto;
@@ -23,18 +22,20 @@
   }
 }
 
-html, body {
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $white;
-  color: $color-font-body;
-  overflow-x: hidden;
-  font-size: #{$base + 'px'};
   font-size: #{$base-font-size + '%'};
   font-family: $font-body;
+  color: $color-font-body;
   @include m {
     font-size: #{$base-font-size-desktop / 100 + 'rem'};
   }
+}
+
+body {
+  background-color: $white;
+  overflow-x: hidden;
 }
 
 /* Links */
@@ -110,29 +111,20 @@ a.acf-button {
 
 /* Figures and Blockquotes */
 figcaption {
-  @include line-height(1);
   color: $color-font-figcaption;
   font-size: 0.8125rem;
   font-style: italic;
   text-align: center;
-
-  @include m {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    @include line-height(1);
-  }
-
 }
 
 figure.alignleft,
 figure.alignright {
 
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
+    @import 'config/mixins';
 
-    max-width: #{.5 * $max-width + 'rem'};
+    max-width: #{0.5 * $max-width + 'rem'};
 
     @if $paragraph-indent == true {
       @include padding-equal(1);
@@ -150,7 +142,7 @@ blockquote {
   border-left: 0.25rem solid $silver;
   @include margin(1.5, 0);
   @include padding(1, 0.5);
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C""\201D";
   position: relative;
   &:before {
     color: $silver;
@@ -169,18 +161,14 @@ cite {
   font-style: normal;
 }
 
-small {
-  @include line-height(.5);
-
+small, .small {
+  @include line-height(0.5);
   font-size: 70%;
-
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
-    @include line-height(.5);
+    @import 'config/mixins';
+    @include line-height(0.5);
   }
-
 }
 
 /* Paragraphs and Lists
@@ -189,8 +177,17 @@ small {
 p, ul, ol {
   @include margin(0, 0, 1);
   @include m {
+    $leading-rem: $leading-rem-desktop;
+    @import 'config/mixins';
+    @include margin(0, 0, 1);
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+ul, ol {
+  ul, ol {
+    margin-bottom: 0;
   }
 }
 
@@ -204,7 +201,6 @@ p, ul, ol {
     .alignright + p {
 
       @include m {
-        $leading: $leading-desktop;
         $leading-rem: $leading-rem-desktop;
         text-indent: #{ $leading-rem + 'rem'};
       }
@@ -214,8 +210,8 @@ p, ul, ol {
 }
 
 @include m {
-  $leading: $leading-desktop;
   $leading-rem: $leading-rem-desktop;
+  @import 'config/mixins';
 
   @if $paragraph-indent == true {
 
@@ -233,24 +229,72 @@ p, ul, ol {
 .uppercase {
   letter-spacing: .1em;
   text-transform: uppercase;
+  font-family: $font-headings;
+  font-weight: bold;
 }
 
+// Horizontal rule
+$hr-style: line; // [ line / type ]
+$hr-type-content: '***'; // [ '***' ]
+$hr-type-char-spacing: .2em; // [ .2em ]
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-color: $color-font-body;
+$hr-width: 100; // [ 100 ] — In pixels, only for line style
+$hr-height: 4; // [ 2 ] — In pixels, only for line style
+
 hr {
-  height: 1px;
-  width: 100%;
+  @include margin-top($hr-margin);
+  @include margin-bottom($hr-margin);
+
+  box-sizing: content-box;
   border: 0;
-  background-color: $gray;
-  margin: 3rem auto;
+  color: $hr-color;
+  display: block;
+  height: #{$leading-rem + 'rem'};
+  margin-right: auto;
+  margin-left: auto;
+
+  @if $hr-style == 'line' {
+    background-size: 100% #{$leading-rem + 'rem'};
+    background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'},  $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading  - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+
+    @if $hr-width == null {
+      width: 100%;
+    } @else {
+      width: #{$hr-width + 'px'};
+    }
+  }
+
+  @include m {
+    $leading-rem: $leading-rem-desktop;
+    $hr-margin: $hr-margin-desktop;
+
+    @if $hr-style == 'line' {
+      background-size: 100% #{$leading-rem + 'rem'};
+      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ 0.5 * $leading - (0.5 * $hr-height) + 'px'}, $hr-color #{ (0.5 * $leading - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (0.5 * $leading - (0.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
+    }
+
+  }
+
+  @if $hr-style == 'type' {
+    text-align: center;
+
+    &:before {
+      content: $hr-type-content;
+      letter-spacing: $hr-type-char-spacing;
+    }
+  }
 }
 
 /* Headings */
 $headings: (
   h1: (2.5, 2, 4, 1),
-  h2: (1.6875, 1.5, 2.5, .5),
-  h3: (1.375, 1, 2, .5),
-  h4: (1.2, 1, 1.5, .5),
-  h5: (1, 1, 2.5, .5),
-  h6: (1, 1, 2.5, .5)
+  h2: (1.6875, 1.5, 2.5, 0.5),
+  h3: (1.375, 1, 2, 0.5),
+  h4: (1.2, 1, 1.5, 0.5),
+  h5: (1, 1, 2.5, 0.5),
+  h6: (1, 1, 2.5, 0.5)
 );
 
 // Set headings sizes, line-heights and margins
@@ -260,20 +304,32 @@ $headings: (
     @include line-height(nth($properties, 2));
     @include margin-top(nth($properties, 3));
     @include margin-bottom(nth($properties, 4));
+    font-weight: bold;
+  }
+}
+
+@include m {
+  $leading-rem: $leading-rem-desktop;
+
+  @import 'config/mixins';
+
+  @each $heading, $properties in $headings {
+    #{$heading}, .#{$heading} {
+      @include line-height(nth($properties, 2));
+      @include margin-top(nth($properties, 3));
+      @include margin-bottom(nth($properties, 4));
+    }
   }
 }
 
 // Set margins between headings
 h1 + h2, .h1 + .h2 {
   @include margin-top(1);
-
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
+    @import 'config/mixins';
     @include margin-top(1);
   }
-
 }
 
 h2 + h3,
@@ -282,27 +338,21 @@ h3 + h4,
 .h3 + .h4,
 h4 + h5,
 .h4 + .h5 {
-  @include margin-top(.5);
-
+  @include margin-top(0.5);
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
-    @include margin-top(.5);
+    @import 'config/mixins';
+    @include margin-top(0.5);
   }
-
 }
 
 h5 + h6, .h5 + .h6 {
-  @include margin-top(-.5);
-
+  @include margin-top(-0.5);
   @include m {
-    $leading: $leading-desktop;
     $leading-rem: $leading-rem-desktop;
-
-    @include margin-top(-.5);
+    @import 'config/mixins';
+    @include margin-top(-0.5);
   }
-
 }
 
 h6, .h6 {
@@ -371,12 +421,31 @@ img {
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  @include margin-top(1);
+  @include margin-bottom(1);
+  margin-left: auto;
+  margin-right: auto;
+  @include m {
+    $leading-rem: $leading-rem-desktop;
+    @import 'config/mixins';
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
 }
 
 iframe, object, embed {
   max-width: 100%;
   display: block;
-  margin: 1rem auto;
+  @include margin-top(1);
+  @include margin-bottom(1);
+  margin-left: auto;
+  margin-right: auto;
+  @include m {
+    $leading-rem: $leading-rem-desktop;
+    @import 'config/mixins';
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
 
   .embed-container & {
     position: absolute;
@@ -440,8 +509,9 @@ iframe, object, embed {
     color: $olive;
     position: absolute;
     display: block;
-    bottom: 0.25rem;
+    bottom: 0.2rem;
     right: 0.5rem;
+    line-height: inherit;
   }
 
   &.active {
@@ -452,7 +522,7 @@ iframe, object, embed {
 }
 
 /* Code */
-code, kbd, pre, samp, .code, .kbd, .pre, .samp {
+code, kbd, pre, samp, .code {
   background-color: $gray;
   color: $color-font-light;
   padding: 1px 3px;
@@ -462,10 +532,21 @@ code, kbd, pre, samp, .code, .kbd, .pre, .samp {
   border: 1px solid $silver;
 }
 
+code, kbd, samp, .code {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 pre, .pre {
   display: block;
   @include margin-top(1);
   @include margin-bottom(1);
+  @include m {
+    $leading-rem: $leading-rem-desktop;
+    @import 'config/mixins';
+    @include margin-top(1);
+    @include margin-bottom(1);
+  }
   margin-left: auto;
   margin-right: auto;
   padding: 8px 12px 10px;
@@ -473,7 +554,7 @@ pre, .pre {
 }
 
 /* Misc. */
-.scratch-image, .scratch-video {
+.scratch-bg {
   height: 200px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -541,20 +622,22 @@ br {
 }
 
 .alignleft {
+  margin: 1rem auto;
   @include m {
+    margin: 0 1rem 1rem 0;
     float: left;
   }
 }
 
 .aligncenter {
-  @include m {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin: 1rem auto;
+  clear: both;
 }
 
 .alignright {
+  margin: 1rem auto;
   @include m {
+    margin: 0 0 1rem 1rem;
     float: right;
   }
 }

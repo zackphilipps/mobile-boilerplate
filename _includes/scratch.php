@@ -73,23 +73,6 @@ function my_theme_register_required_plugins() {
 $plugins = array(
   // This is an example of how to include a plugin from the WordPress Plugin Repository
   array(
-    'name'         => 'Custom Post Type UI',
-    'slug'         => 'custom-post-type-ui',
-    'required'     => false,
-  ),
-  array(
-    'name'         => 'Github Updater',
-    'slug'         => 'github-updater',
-    'source'       => 'https://github.com/afragen/github-updater/archive/develop.zip',
-    'required'     => false,
-    'external_url' => 'https://github.com/afragen/github-updater',
-  ),
-  array(
-    'name'         => 'Relevanssi - A Better Search',
-    'slug'         => 'relevanssi',
-    'required'     => false,
-  ),
-  array(
     'name'         => 'Resize Image After Upload',
     'slug'         => 'resize-image-after-upload',
     'required'     => false,
@@ -98,13 +81,6 @@ $plugins = array(
     'name'         => 'WordPress SEO by Yoast',
     'slug'         => 'wordpress-seo',
     'required'     => false,
-  ),
-  array(
-    'name'         => 'WP Sync DB',
-    'slug'         => 'wp-sync-db',
-    'source'       => 'https://github.com/wp-sync-db/wp-sync-db/archive/master.zip',
-    'required'     => false,
-    'external_url' => 'https://github.com/wp-sync-db/wp-sync-db',
   )
 );
 
