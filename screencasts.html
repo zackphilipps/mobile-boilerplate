@@ -9,10 +9,10 @@
 
     <link rel="icon" href="favicon.ico?v=2">
 
-    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/master.css">
-    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/website.css">
-    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/_assets/css/highlight.dark.css">
-    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/assets/css/master.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/assets/css/website.css">
+    <link rel="stylesheet" href="http://zackphilipps.github.io/scratch-theme/assets/css/highlight.dark.css">
+    <script src="http://zackphilipps.github.io/scratch-theme/assets/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -24,7 +24,7 @@
 
         <a class="logo"
            href="http://zackphilipps.github.io/scratch-theme">
-          <img src="http://zackphilipps.github.io/scratch-theme/_assets/img/site-logo.svg" alt="Screencasts">
+          <img src="http://zackphilipps.github.io/scratch-theme/assets/img/site-logo.svg" alt="Screencasts">
         </a>
 
         <span class="nav-toggle"
@@ -241,27 +241,27 @@
 <h2 id="using-mamp-to-complete-the-wordpress-installation">Using MAMP to Complete the WordPress Installation</h2>
 <p>Open the MAMP start page, and then head over to phpMyAdmin. Click on the <em>Users</em> tab, then scroll down and click <em>Add User.</em> Create a memorable username, strong password, and set the host to <code>localhost</code>. Check <em>Create database with same name and grant all privileges,</em> then click <em>Go.</em></p>
 <p>Now, navigate to <code>localhost:xxxx</code> where <code>xxxx</code> is the web port you configured in MAMP's preferences. Complete the WordPress installation and log in.</p>
-<p><img src="/_assets/img/screencast2-slower.gif" alt="Using MAMP to Complete the WordPress Installation" /></p>
+<p><img src="/assets/img/screencast2-slower.gif" alt="Using MAMP to Complete the WordPress Installation" /></p>
 <h2 id="activating-scratch-amp-installing-recommended-plugins">Activating Scratch &amp; Installing Recommended Plugins</h2>
 <p>Once logged in to WordPress, navigate to <em>Appearance &gt; Themes</em> and activate Scratch. Follow the subsequent prompts to install the recommended plugins. If you want, delete Akismet and Hello Dolly.</p>
-<p><img src="/_assets/img/screencast3.gif" alt="Activating Scratch & Installing Recommended Plugins" /></p>
+<p><img src="/assets/img/screencast3.gif" alt="Activating Scratch & Installing Recommended Plugins" /></p>
 <h2 id="running-grunt-browsersync-and-compiling-scss-and-javascript">Running Grunt, BrowserSync, and Compiling SCSS and JavaScript</h2>
-<p>Run <code>npm install</code> in the <code>_assets/grunt/</code> directory from your command line to install all of the Node packages. Once that's done, you can run <code>grunt</code> from the same directory to begin your automated workflow.</p>
-<p><strong>Update:</strong> as of <a href="https://github.com/zackphilipps/scratch-theme/tree/v1.5.9">v1.5.9</a>, Gulp is also available. Run <code>npm install</code> and then <code>gulp</code> in the <code>_assets/gulp/</code> directory.</p>
-<p><img src="/_assets/img/screencast4-pattern.gif" alt="Running Grunt, BrowserSync, and Compiling SCSS and JavaScript" /></p>
+<p>Run <code>npm install</code> in the <code>assets/grunt/</code> directory from your command line to install all of the Node packages. Once that's done, you can run <code>grunt</code> from the same directory to begin your automated workflow.</p>
+<p><strong>Update:</strong> as of <a href="https://github.com/zackphilipps/scratch-theme/tree/v1.5.9">v1.5.9</a>, Gulp is also available. Run <code>npm install</code> and then <code>gulp</code> in the <code>assets/gulp/</code> directory.</p>
+<p><img src="/assets/img/screencast4-pattern.gif" alt="Running Grunt, BrowserSync, and Compiling SCSS and JavaScript" /></p>
 <h2 id="adding-scratchs-style-guide-and-main-navigation-menu">Adding Scratch's Style Guide and Main Navigation Menu</h2>
 <p>Navigate to <em>Appearance &gt; Menus</em> and click <em>Create Menu.</em> Make sure the menu points to the <em>Main Nav</em> location, and then save it again. Next, go to <em>Pages &gt; Add New</em> and set the Page Template to <em>Style Guide.</em> Publish and view the page.</p>
-<p><img src="/_assets/img/screencast5.gif" alt="Adding Scratch's Style Guide and Main Navigation Menu" /></p>
+<p><img src="/assets/img/screencast5.gif" alt="Adding Scratch's Style Guide and Main Navigation Menu" /></p>
 <h2 id="implementing-your-own-typography-with-scratch">Implementing Your Own Typography with Scratch</h2>
-<p>This example uses Google Fonts and sets them to SCSS variables in <a href="https://github.com/zackphilipps/scratch-theme/blob/master/_assets/scss/config/_variables.scss">config/_variables.scss</a>.</p>
-<p><img src="/_assets/img/screencast6-pattern.gif" alt="Implementing Your Own Typography with Scratch" /></p>
+<p>This example uses Google Fonts and sets them to SCSS variables in <a href="https://github.com/zackphilipps/scratch-theme/blob/master/assets/scss/config/_variables.scss">config/_variables.scss</a>.</p>
+<p><img src="/assets/img/screencast6-pattern.gif" alt="Implementing Your Own Typography with Scratch" /></p>
 <h2 id="implementing-your-own-color-scheme-with-scratch">Implementing Your Own Color Scheme with Scratch</h2>
-<p>Edit <a href="https://github.com/zackphilipps/scratch-theme/blob/master/_assets/scss/config/_variables.scss">config/_variables.scss</a> and <a href="https://github.com/zackphilipps/scratch-theme/blob/master/page-style_guide.php">page-style_guide.php</a>.</p>
-<p><img src="/_assets/img/screencast7-pattern.gif" alt="Implementing Your Own Color Scheme with Scratch" /></p>
+<p>Edit <a href="https://github.com/zackphilipps/scratch-theme/blob/master/assets/scss/config/_variables.scss">config/_variables.scss</a> and <a href="https://github.com/zackphilipps/scratch-theme/blob/master/page-style_guide.php">page-style_guide.php</a>.</p>
+<p><img src="/assets/img/screencast7-pattern.gif" alt="Implementing Your Own Color Scheme with Scratch" /></p>
 <h2 id="moving-the-right-files-to-the-root-of-your-site-amp-editing-the-permalink-structure">Moving the Right Files to the Root of Your Site &amp; Editing the Permalink Structure</h2>
 <p>Basically, <code>_root/</code> contains files that should be moved to the root of your site if you desire to use the configuration that comes with <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
 <p>Navigate to <em>Settings &gt; Permalinks</em>, and change the Permalink Structure to <em>Post Name</em> for cleaner, SEO-friendly URLs.</p>
-<p><img src="/_assets/img/screencast8-pattern.gif" alt="Moving the Right Files to the Root of Your Site & Editing the Permalink Structure" /></p>
+<p><img src="/assets/img/screencast8-pattern.gif" alt="Moving the Right Files to the Root of Your Site & Editing the Permalink Structure" /></p>
 <h2 id="congratulations">Congratulations!</h2>
 <p>High fives, you're all finished! If you're having trouble, feel free to <a href="https://github.com/zackphilipps/scratch-theme/issues">submit an issue on GitHub</a>.</p>
 <hr />
@@ -282,7 +282,7 @@
 
     <!-- BEGIN FOOTER -->
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-    <script>window.jQuery || document.write('<script src="http://zackphilipps.github.io/scratch-theme/_assets/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://zackphilipps.github.io/scratch-theme/assets/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
 
     <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
 
@@ -294,11 +294,11 @@
     </script>
 
     <!-- FOR DEVELOPMENT -->
-    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/concat/main.js"></script>
+    <script src="http://zackphilipps.github.io/scratch-theme/assets/js/concat/main.js"></script>
     <!-- FOR PRODUCTION -->
-    <!-- <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/compiled/main.min.js"></script> -->
+    <!-- <script src="http://zackphilipps.github.io/scratch-theme/assets/js/compiled/main.min.js"></script> -->
 
-    <script src="http://zackphilipps.github.io/scratch-theme/_assets/js/website.js"></script>
+    <script src="http://zackphilipps.github.io/scratch-theme/assets/js/website.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
