@@ -18,7 +18,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ### Mobile-Friendly
 
-![Mobile-Friendly](http://scratchtheme.com/assets/img/mobile.gif)
+![Mobile-Friendly](http://scratchtheme.com/assets/img/mobile-friendly.gif)
 
 ### Save a file, and watch your site instantly refresh across all browsers & devices via [BrowserSync](http://www.browsersync.io/)
 
