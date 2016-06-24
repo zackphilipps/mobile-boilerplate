@@ -128,10 +128,6 @@ main > img {
   background-color: rgb(61,153,112);
 }
 
-nav ul.main-nav {
-  z-index: 21;
-}
-
 @media (min-width: 767px) {
   #header {
     z-index: 20;
