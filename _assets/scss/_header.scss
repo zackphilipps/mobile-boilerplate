@@ -29,6 +29,7 @@ nav {
     display: none;
     list-style: none;
     position: absolute;
+    z-index: 100;
     width: 100%;
     top: 80px;
     left: 0;
@@ -119,15 +120,18 @@ nav {
 }
 
 .nav-toggle {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  font-size: 2rem;
+  @include m {
+    top: 1rem;
+  }
   @media (min-width: 767px) {
     display: none;
   }
   color: $white;
   cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
   i {
     vertical-align: middle;
   }
