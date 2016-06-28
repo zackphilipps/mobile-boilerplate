@@ -155,7 +155,7 @@ ACF does not currently support editing the field groups themselves, but as per [
 
 ### Audio
 
-Create a Text field called "Audio Attributes". Then, create 3 [File](http://www.advancedcustomfields.com/resources/field-types/file/) fields that return their URLs called "Audio File", "Audio WAV File", and "Audio OGG File".
+Create a Text field called "Audio Attributes". Then, create 2 [File](http://www.advancedcustomfields.com/resources/field-types/file/) fields that return their URLs called "Audio MP4 File" and "Audio WAV File."
 
 Paste this code into your template file:
 
@@ -163,9 +163,8 @@ Paste this code into your template file:
 <?php if(get_field('audio_file')): ?>
 <audio class="scratch-audio"
        <?php the_field('audio_attributes'); ?>>
-       <source src="<?php the_field('audio_ogg_file'); ?>" type="audio/ogg">
        <source src="<?php the_field('audio_wav_file'); ?>" type="audio/wav">
-       <source src="<?php the_field('audio_file'); ?>" type="audio/mpeg">
+       <source src="<?php the_field('audio_mp4_file'); ?>" type="audio/mpeg">
   <p>Your browser does not support the audio element.</p>
 </audio>
 <?php endif; ?>

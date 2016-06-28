@@ -73,6 +73,11 @@ function my_theme_register_required_plugins() {
 $plugins = array(
   // This is an example of how to include a plugin from the WordPress Plugin Repository
   array(
+    'name'         => 'ACF-Content Analysis for Yoast SEO',
+    'slug'         => 'acf-content-analysis-for-yoast-seo',
+    'required'     => false,
+  ),
+  array(
     'name'         => 'Resize Image After Upload',
     'slug'         => 'resize-image-after-upload',
     'required'     => false,

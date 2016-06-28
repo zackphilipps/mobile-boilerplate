@@ -29,6 +29,12 @@ Navigate to the root directory of your site. Copy and paste this into your termi
 $ wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz && mv wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz
 ```
 
+or, if you have [WP-CLI](https://wp-cli.org/):
+
+```
+$ wp core install
+```
+
 Now you can do this:
 
 ```

@@ -71,6 +71,7 @@ Once you activate Scratch, you'll be asked to install & activate a few plugins. 
 This list may change, but for now, Scratch recommends:
 
 - [Advanced Custom Fields Pro (premium)](http://www.advancedcustomfields.com/pro/)
+- [ACF-Content Analysis for Yoast SEO](https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo)
 - [Resize Image After Upload](https://wordpress.org/plugins/resize-image-after-upload/screenshots/)
 - [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/)
 
