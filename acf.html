@@ -354,14 +354,13 @@
 <hr />
 <h2 id="html5-audiovideo">HTML5 Audio/Video</h2>
 <h3 id="audio">Audio</h3>
-<p>Create a Text field called &quot;Audio Attributes&quot;. Then, create 3 <a href="http://www.advancedcustomfields.com/resources/field-types/file/">File</a> fields that return their URLs called &quot;Audio File&quot;, &quot;Audio WAV File&quot;, and &quot;Audio OGG File&quot;.</p>
+<p>Create a Text field called &quot;Audio Attributes&quot;. Then, create 2 <a href="http://www.advancedcustomfields.com/resources/field-types/file/">File</a> fields that return their URLs called &quot;Audio MP4 File&quot; and &quot;Audio WAV File.&quot;</p>
 <p>Paste this code into your template file:</p>
 <pre><code>&lt;?php if(get_field('audio_file')): ?&gt;
 &lt;audio class="scratch-audio"
        &lt;?php the_field('audio_attributes'); ?&gt;&gt;
-       &lt;source src="&lt;?php the_field('audio_ogg_file'); ?&gt;" type="audio/ogg"&gt;
        &lt;source src="&lt;?php the_field('audio_wav_file'); ?&gt;" type="audio/wav"&gt;
-       &lt;source src="&lt;?php the_field('audio_file'); ?&gt;" type="audio/mpeg"&gt;
+       &lt;source src="&lt;?php the_field('audio_mp4_file'); ?&gt;" type="audio/mpeg"&gt;
   &lt;p&gt;Your browser does not support the audio element.&lt;/p&gt;
 &lt;/audio&gt;
 &lt;?php endif; ?&gt;</code></pre>
@@ -486,7 +485,7 @@
             class="clearfix">
       <p class="center">
         &copy; 2016 Scratch Theme for WordPress + ACF //
-        Created by <a href="http://zackphilipps.com" target="_blank">Zack Philipps</a> //
+        Created by <a href="http://tribeswell.com" target="_blank">Tribeswell</a> //
         Licensed under <a href="http://choosealicense.com/licenses/gpl-3.0/" target="_blank">GPL</a>
       </p>
     </footer>

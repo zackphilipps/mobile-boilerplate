@@ -10,7 +10,7 @@ body {
   border-left: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-@media (min-width: 767px) {
+@media (min-width: 767px) and (min-height: 767px) {
   #sidebar #docs-nav.fixed {
     position: fixed;
     top: 1.625rem;
@@ -26,6 +26,7 @@ body {
 
 #sidebar #docs-nav ul li {
   display: block;
+  background-color: white;
 }
 
 #sidebar #docs-nav ul li a {
@@ -57,9 +58,11 @@ body {
 }
 
 #sidebar #docs-nav ul li ul li a {
-  padding: 0.5rem 1rem 0.5rem 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   max-width: 236px;
   border-right: 1px solid #eee;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 #sidebar #docs-nav ul li:hover ul {

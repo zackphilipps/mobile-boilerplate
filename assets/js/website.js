@@ -14,5 +14,16 @@ jQuery(document).ready(function($) {
       $('#' + string)
         .velocity('scroll', { duration: 400 });
     });
+    $('article hr:last-of-type').waypoint({
+      handler: function(dir) {
+        if (dir === 'down') {
+          $('#docs-nav').velocity({ opacity: 0, translateY: '-1rem' }, { duration: 250 });
+        } else {
+          $('#docs-nav').velocity({ opacity: 1, translateY: 0 }, { duration: 250 });
+        }
+      },
+      context: '#docs-nav',
+      offset: $('#docs-nav').height()
+    });
   }
 });
