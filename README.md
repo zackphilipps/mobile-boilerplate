@@ -34,4 +34,4 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 - HTML5 Boilerplate Docs: [https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/TOC.md](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/TOC.md)
 - Changelog: [https://github.com/zackphilipps/scratch-theme/releases](https://github.com/zackphilipps/scratch-theme/releases)
 
-Created by [Zack Philipps](http://zackphilipps.com)
+Created by [Tribeswell](http://tribeswell.com)
