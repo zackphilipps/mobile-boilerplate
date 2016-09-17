@@ -1,52 +1,4 @@
-jQuery(document).ready(function($) {
-  'use strict';
-
-  function imgFixHeight(el) {
-
-    setTimeout(function() {
-      el.each(function() {
-        // get image original height
-        var imgOriginalHeight = $(this).height();
-
-        // Get Line-height
-        var lineHeight = parseInt($('p').css('line-height'));
-
-        // Calculate the new image height
-        var div = Math.floor(imgOriginalHeight/lineHeight);
-        var imgNewHeight = lineHeight * div;
-
-        // Apply the new image height
-        $(this).css('height', imgNewHeight);
-      });
-    }, 100);
-
-  };
-
-  //Fix once on first page load
-  imgFixHeight($('img:not(#header .logo img, .glide__slide img)'));
-
-  //Make sure that we fix images on each window resize (add debounce for performance)
-  window.addEventListener('resize', debounce(imgFixHeight($('img:not(#header .logo img, .glide__slide img)')), 50), true);
-
-
-  //helper: debounce
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
-
-});
-;/*!
+/*!
  * glidejs
  * Version: 2.0.8
  * Glide is a responsive and touch-friendly jQuery slider. Based on CSS3 transitions with fallback to older broswers. It's simple, lightweight and fast.
@@ -76,6 +28,7 @@ var Animation = function(Glide, Core) {
      * Animation constructor.
      */
     function Animation() {
+
     }
 
     /**
@@ -85,6 +38,11 @@ var Animation = function(Glide, Core) {
      * @return {self}
      */
     Animation.prototype.make = function(displacement) {
+        // Do not run if we have only one slide.
+        if (! Core.Run.canProcess()) {
+            return Core.Arrows.disable();
+        }
+
         // Parse displacement to integer before use.
         offset = (typeof displacement !== 'undefined') ? parseInt(displacement) : 0;
 
@@ -274,6 +232,7 @@ var Api = function(Glide, Core) {
      * Api constructor.
      */
     function Api() {
+
     }
 
     /**
@@ -404,6 +363,8 @@ var Api = function(Glide, Core) {
                 Core.Arrows.unbind();
                 Core.Bullets.unbind();
 
+                Glide.destroyed = true;
+
                 delete Glide.slider;
                 delete Glide.track;
                 delete Glide.slides;
@@ -469,13 +430,17 @@ var Arrows = function(Glide, Core) {
 
 
     /**
-     * Disable next/previous arrow.
+     * Disable next/previous arrow and enable another.
      *
      * @param {String} type
      * @return {Void}
      */
     Arrows.prototype.disable = function(type) {
         var classes = Glide.options.classes;
+
+        if (!type) {
+            return this.disableBoth();
+        }
 
         this.items.filter('.' + classes['arrow' + Core.Helper.capitalise(type)])
             .unbind('click.glide touchstart.glide')
@@ -485,6 +450,17 @@ var Arrows = function(Glide, Core) {
             .bind('mouseenter.glide', this.hover)
             .bind('mouseleave.glide', this.hover)
             .removeClass(classes.disabled);
+    };
+
+    /**
+     * Disable both arrows.
+     *
+     * @return {Void}
+     */
+    Arrows.prototype.disableBoth = function() {
+        this.items
+            .unbind('click.glide touchstart.glide')
+            .addClass(Glide.options.classes.disabled);
     };
 
 
@@ -1097,12 +1073,14 @@ var Events = function(Glide, Core) {
     Events.prototype.resize = function() {
 
         $(window).on('resize.glide.' + Glide.uuid, Core.Helper.throttle(function() {
-            Core.Transition.jumping = true;
-            Glide.setup();
-            Core.Build.init();
-            Core.Run.make('=' + Glide.current, false);
-            Core.Run.play();
-            Core.Transition.jumping = false;
+            if(!Glide.destroyed) {
+                Core.Transition.jumping = true;
+                Glide.setup();
+                Core.Build.init();
+                Core.Run.make('=' + Glide.current, false);
+                Core.Run.play();
+                Core.Transition.jumping = false;
+            }
         }, Glide.options.throttle));
 
     };
@@ -1264,7 +1242,7 @@ var Events = function(Glide, Core) {
 
         $(window)
             .off('keyup.glide')
-            .off('resize.glide.' + Glide._uid);
+            .off('resize.glide.' + Glide.uuid);
 
     };
 
@@ -1469,6 +1447,10 @@ var Run = function(Glide, Core) {
 
         var that = this;
 
+        if (! this.canProcess()) {
+            return;
+        }
+
         if (Glide.options.autoplay || this.running) {
 
             if (typeof this.interval === 'undefined') {
@@ -1555,6 +1537,11 @@ var Run = function(Glide, Core) {
 
         // Extract move steps.
         this.steps = (move.substr(1)) ? move.substr(1) : 0;
+
+        // Do not run if we have only one slide.
+        if (! this.canProcess()) {
+            return this.stop();
+        }
 
         // Stop autoplay until hoverpause is not set.
         if (!Glide.options.hoverpause) {
@@ -1646,6 +1633,24 @@ var Run = function(Glide, Core) {
             .call(Glide.options.duringTransition)
             .trigger('duringTransition');
 
+    };
+
+    /**
+     * Stop slider from running.
+     *
+     * @return {void}
+     */
+    Run.prototype.stop = function() {
+        this.pause();
+    };
+
+    /**
+     * Stop slider from running.
+     *
+     * @return {void}
+     */
+    Run.prototype.canProcess = function() {
+        return Glide.slides.length > 1;
     };
 
     // Return class.
@@ -2091,6 +2096,9 @@ var Glide = function(element, options) {
     this.collect();
     this.setup();
 
+    // Mark the glide as not destroyed
+    this.destroyed = false;
+
     // Call before init callback.
     this.options.beforeInit({
         index: this.current,
@@ -2108,11 +2116,11 @@ var Glide = function(element, options) {
         Helper: Helper,
         Translate: Translate,
         Transition: Transition,
+        Arrows: Arrows,
+        Bullets: Bullets,
         Run: Run,
         Animation: Animation,
         Clones: Clones,
-        Arrows: Arrows,
-        Bullets: Bullets,
         Height: Height,
         Build: Build,
         Events: Events,
@@ -8751,10 +8759,10 @@ return function (global, window, document, undefined) {
     };
 }((window.jQuery || window.Zepto || window), window, document);
 }));;/*!
-Waypoints - 4.0.0
-Copyright © 2011-2015 Caleb Troughton
+Waypoints - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
 Licensed under the MIT license.
-https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 */
 (function() {
   'use strict'
@@ -8873,7 +8881,11 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   /* Public */
   /* http://imakewebthings.com/waypoints/api/enable-all */
   Waypoint.enableAll = function() {
-    Waypoint.invokeAll('enable')
+    Waypoint.Context.refreshAll()
+    for (var waypointKey in allWaypoints) {
+      allWaypoints[waypointKey].enabled = true
+    }
+    return this
   }
 
   /* Public */
@@ -8948,6 +8960,10 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
     element.waypointContextKey = this.key
     contexts[element.waypointContextKey] = this
     keyCounter += 1
+    if (!Waypoint.windowContext) {
+      Waypoint.windowContext = true
+      Waypoint.windowContext = new Context(window)
+    }
 
     this.createThrottledScrollHandler()
     this.createThrottledResizeHandler()
@@ -8964,7 +8980,8 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   Context.prototype.checkEmpty = function() {
     var horizontalEmpty = this.Adapter.isEmptyObject(this.waypoints.horizontal)
     var verticalEmpty = this.Adapter.isEmptyObject(this.waypoints.vertical)
-    if (horizontalEmpty && verticalEmpty) {
+    var isWindow = this.element == this.element.window
+    if (horizontalEmpty && verticalEmpty && !isWindow) {
       this.adapter.off('.waypoints')
       delete contexts[this.key]
     }
@@ -9033,6 +9050,9 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
       for (var waypointKey in this.waypoints[axisKey]) {
         var waypoint = this.waypoints[axisKey][waypointKey]
+        if (waypoint.triggerPoint === null) {
+          continue
+        }
         var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint
         var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint
         var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint
@@ -9152,7 +9172,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
         }
 
         contextModifier = axis.contextScroll - axis.contextOffset
-        waypoint.triggerPoint = elementOffset + contextModifier - adjustment
+        waypoint.triggerPoint = Math.floor(elementOffset + contextModifier - adjustment)
         wasBeforeScroll = oldTriggerPoint < axis.oldScroll
         nowAfterScroll = waypoint.triggerPoint >= axis.oldScroll
         triggeredBackward = wasBeforeScroll && nowAfterScroll
@@ -9206,6 +9226,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
     }
     Context.refreshAll()
   }
+
 
   Waypoint.requestAnimationFrame = function(callback) {
     var requestFn = window.requestAnimationFrame ||

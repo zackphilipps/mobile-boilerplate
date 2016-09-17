@@ -250,7 +250,9 @@ $ npm install -g node-sass</code></pre>
 <p>Navigate to the root directory of your site. Copy and paste this into your terminal:</p>
 <pre><code>$ wget http://wordpress.org/latest.tar.gz &amp;&amp; tar xfz latest.tar.gz &amp;&amp; mv wordpress/* ./ &amp;&amp; rmdir ./wordpress/ &amp;&amp; rm -f latest.tar.gz</code></pre>
 <p>or, if you have <a href="https://wp-cli.org/">WP-CLI</a>:</p>
-<pre><code>$ wp core install</code></pre>
+<pre><code>$ wp core download
+$ wp core config # you'll need some arguments here
+$ wp core install # and here</code></pre>
 <p>Now you can do this:</p>
 <pre><code>$ cd wp-content/themes/
 $ git clone https://github.com/zackphilipps/scratch-theme.git</code></pre>
@@ -261,7 +263,7 @@ $ npm install</code></pre>
 <hr />
 <h2 id="whats-included">What's Included</h2>
 <pre><code>scratch-theme/
-├── _assets/
+├── assets/
 │   ├── core/
 │   ├── css/
 │   ├── fonts/
@@ -270,14 +272,14 @@ $ npm install</code></pre>
 │   ├── img/
 │   ├── js/
 │   └── scss/
-├── _docs/
-├── _includes/
-├── _parts/
+├── docs/
+├── includes/
+├── parts/
 │   └── layouts/
-├── _root/
+├── root/
 └── acf-json/</code></pre>
-<p>The <code>_assets/</code> directory contains all SCSS, CSS, JS, images, and fonts as well as the <code>Gruntfile</code> and <code>gulpfile</code> and their respective <code>package.json</code> files. <a href="https://github.com/zackphilipps/scratch-theme">There are also helpful READMEs in most directories.</a></p>
-<p>The <code>_docs/</code> directory contains the markdown files you are reading right now. <code>_includes/</code> has additional PHP that's loaded into <code>functions.php</code>. <code>_parts/</code> are partial templates like <code>header.php</code> and <code>footer.php</code>. <code>_root/</code> contains files that should be moved to the root of your site if you desire to use the configuration that comes with <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
+<p>The <code>assets/</code> directory contains all SCSS, CSS, JS, images, and fonts as well as the <code>Gruntfile</code> and <code>gulpfile</code> and their respective <code>package.json</code> files. <a href="https://github.com/zackphilipps/scratch-theme">There are also helpful READMEs in most directories.</a></p>
+<p>The <code>docs/</code> directory contains the markdown files you are reading right now. <code>includes/</code> has additional PHP that's loaded into <code>functions.php</code>. <code>parts/</code> are partial templates like <code>header.php</code> and <code>footer.php</code>. <code>root/</code> contains files that should be moved to the root of your site if you desire to use the configuration that comes with <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
 <hr />
 <p><strong>Next up:</strong> <a href="/screencasts.html">Check out these screencasts</a> to see Scratch in action, but bear in mind that they may be out of date. Who has time to make gifs?!</p>
         </article>
