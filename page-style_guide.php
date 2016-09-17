@@ -4,7 +4,7 @@
  * Template Name: Style Guide
  */
 
-get_template_part('_parts/header'); ?>
+get_template_part('parts/header'); ?>
 
 <header class="wrap hpad clearfix">
   <h1 class="center">Scratch Theme Style Guide</h1>
@@ -81,4 +81,4 @@ get_template_part('_parts/header'); ?>
 
 </main>
 
-<?php get_template_part('_parts/footer'); ?>
+<?php get_template_part('parts/footer'); ?>

@@ -1,7 +1,7 @@
 <?php
 
 /* Do not remove this line. */
-require_once('_includes/scratch.php');
+require_once('includes/scratch.php');
 
 
 
@@ -32,7 +32,7 @@ add_action('wp_head', 'scratch_meta');
 
 function theme_styles() {
 
-  wp_register_style( 'scratch-main', get_template_directory_uri() . '/_assets/css/master.css', false, filemtime(dirname(__FILE__) . '/_assets/css/master.css') );
+  wp_register_style( 'scratch-main', get_template_directory_uri() . '/assets/css/master.css', false, filemtime(dirname(__FILE__) . '/assets/css/master.css') );
   wp_enqueue_style( 'scratch-main' );
 
   wp_register_style( 'scratch-custom', get_template_directory_uri() . '/custom.css', false, filemtime(dirname(__FILE__) . '/custom.css') );
@@ -46,11 +46,11 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function theme_js() {
 
-  wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/_assets/js/vendor/modernizr-2.8.3.min.js', false, false, false );
+  wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.8.3.min.js', false, false, false );
 
-  wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/_assets/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/_assets/js/concat/main.js'), true );
+  wp_register_script( 'scratch-main-concat', get_template_directory_uri() . '/assets/js/concat/main.js', array('jquery'), filemtime(dirname(__FILE__) . '/assets/js/concat/main.js'), true );
 
-  wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/_assets/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/_assets/js/compiled/main.min.js'), true );
+  wp_register_script( 'scratch-main-min', get_template_directory_uri() . '/assets/js/compiled/main.min.js', array('jquery'), filemtime(dirname(__FILE__) . '/assets/js/compiled/main.min.js'), true );
 
   /* FOR DEVELOPMENT */
   wp_enqueue_script( 'scratch-main-concat' );
@@ -106,8 +106,8 @@ function scratch_main_nav() {
 function scratch_login_stylesheet() { ?>
   <link rel="stylesheet"
         id="custom_wp_admin_css"
-        href="<?php echo get_template_directory_uri() . '/_assets/css/login.css?ver=' . filemtime(dirname(__FILE__) . '/_assets/css/login.css'); ?>"
-        type="/text_assets/css"
+        href="<?php echo get_template_directory_uri() . '/assets/css/login.css?ver=' . filemtime(dirname(__FILE__) . '/assets/css/login.css'); ?>"
+        type="/textassets/css"
         media="all" />
 <?php }
 add_action( 'login_enqueue_scripts', 'scratch_login_stylesheet' );

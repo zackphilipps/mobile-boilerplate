@@ -1,9 +1,9 @@
-<?php get_template_part('_parts/header'); ?>
+<?php get_template_part('parts/header'); ?>
 
 <main>
 
-  <?php get_template_part('_parts/content', 'layouts'); ?>
+  <?php get_template_part('parts/content', 'layouts'); ?>
 
 </main>
 
-<?php get_template_part('_parts/footer'); ?>
+<?php get_template_part('parts/footer'); ?>
