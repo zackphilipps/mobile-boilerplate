@@ -41,7 +41,7 @@ if( have_rows('layout') ) {
 <?php
 } else {
 ?>
-
+  <p class="center">You haven't added any layouts yet. <?php edit_post_link('Add one now.'); ?></p>
 <?php
 }
 ?>

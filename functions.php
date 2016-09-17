@@ -83,7 +83,7 @@ add_theme_support( 'menus' );
 
 register_nav_menus(
   array(
-    'main-nav' => __( 'Main Nav', 'scratch' )   // main nav in header
+    'scratch-main-nav' => __( 'Main Nav', 'scratch' )   // main nav in header
   )
 );
 
@@ -94,7 +94,7 @@ function scratch_main_nav() {
     'container_class' => '', // class of container (should you choose to use it)
     'menu' => __( 'Main Nav', 'scratch' ), // nav name
     'menu_class' => 'main-nav', // adding custom nav class
-    'theme_location' => 'main-nav', // where it's located in the theme
+    'theme_location' => 'scratch-main-nav', // where it's located in the theme
     'before' => '', // before the menu
     'after' => '', // after the menu
     'link_before' => '', // before each link

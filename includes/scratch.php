@@ -1,5 +1,86 @@
 <?php
 
+add_action( 'after_switch_theme', 'scratch_setup' );
+function scratch_setup() {
+  // create Style Guide
+  $postarr = array(
+    'post_type' => 'page',
+    'post_title' => 'Style Guide'
+  );
+  $style_guide_id = wp_insert_post( $postarr );
+  update_post_meta( $style_guide_id, '_wp_page_template', 'page-style_guide.php' );
+
+  // set up home page
+  $home_page = get_page_by_title( 'Front Page' );
+  $home_page_id = null;
+  if( !$home_page ) {
+    $postarr = array(
+      'post_type' => 'page',
+      'post_title' => 'Front Page',
+      'post_status' => 'publish'
+    );
+    $home_page_id = wp_insert_post( $postarr );
+  } else {
+    $home_page_id = $home_page->ID;
+  }
+
+  if( $home_page_id ) {
+    update_option( 'page_on_front', $home_page_id );
+    update_option( 'show_on_front', 'page' );
+    update_post_meta( $home_page_id, '_wp_page_template', 'page-layouts.php' );
+  }
+
+  // add main menu
+  // Check if the menu exists
+  $menu_name = 'Main Nav';
+  $menu_exists = wp_get_nav_menu_object( $menu_name );
+
+  // If it doesn't exist, let's create it.
+  if(!$menu_exists) {
+    $menu_id = wp_create_nav_menu($menu_name);
+
+    // Set up default menu items
+    $args = array(
+      'menu-item-title' =>  __('Home'),
+      'menu-item-url' => home_url( '/' ),
+      'menu-item-status' => 'publish'
+    );
+    wp_update_nav_menu_item($menu_id, 0, $args);
+
+    $args = array(
+      'menu-item-title' =>  __('Style Guide'),
+      'menu-item-url' => get_permalink($style_guide_id),
+      'menu-item-status' => 'publish'
+    );
+    wp_update_nav_menu_item($menu_id, 0, $args);
+  }
+
+  // assign menu location
+  $locations = get_theme_mod( 'nav_menu_locations' );
+
+  if(!empty($locations))
+  {
+    foreach($locations as $locationId => $menuValue)
+    {
+      switch($locationId)
+      {
+        case 'scratch-main-nav':
+        $menu = get_term_by('name', 'Main Nav', 'nav_menu');
+        break;
+      }
+
+      if(isset($menu))
+      {
+        $locations[$locationId] = $menu->term_id;
+      }
+    }
+
+    set_theme_mod('nav_menu_locations', $locations);
+  }
+}
+
+// // //
+
 function hide_admin_bar_from_front_end() {
   if (is_blog_admin()) {
     return true;
@@ -8,6 +89,8 @@ function hide_admin_bar_from_front_end() {
 }
 
 add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
+
+// // //
 
 add_action('init', 'bones_head_cleanup');
 
@@ -39,12 +122,16 @@ function bones_head_cleanup() {
 
 } /* end bones head cleanup */
 
+// // //
+
 /*
  * Include Layout Functions and Layout Declarations.
  */
 
 require_once dirname( __FILE__ ) . '/layout-functions.php';
 require_once dirname( __FILE__ ) . '/layout-declarations.php';
+
+// // //
 
 /**
  * Include the TGM_Plugin_Activation class.
