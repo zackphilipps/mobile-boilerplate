@@ -18,10 +18,6 @@ Scratch is built on the [HTML5 Boilerplate](https://github.com/h5bp/html5-boiler
 - Protection against any stray `console` statements causing JavaScript errors in older browsers.
 - Extensive inline and accompanying documentation.
 
-### Gutenberg
-
-Scratch makes use of the excellent [Gutenberg](http://matejlatin.github.io/Gutenberg/) framework for responsive typography with the proper vertical rhythm. There is a small snippet in `core/js/gutenberg.js` that resizes images so that their height fits within the Gutenberg grid.
-
 ---
 
 ## Modals via Magnific Popup

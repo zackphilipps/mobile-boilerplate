@@ -8,9 +8,7 @@ get_template_part('parts/header'); ?>
 
 <header class="wrap hpad clearfix">
   <h1 class="center">Scratch Theme Style Guide</h1>
-  <p class="center">To make visible changes to the Style Guide, you'll need to edit <a href="https://github.com/zackphilipps/scratch-theme/blob/master/scss/_custom-variables.scss">scss/_custom-variables.scss</a>, <a href="https://github.com/zackphilipps/scratch-theme/blob/master/scss/_custom-global.scss">scss/_custom-global.scss</a>, and <a href="https://github.com/zackphilipps/scratch-theme/blob/master/page-style_guide.php">page-style_guide.php</a>.</p>
-  <p class="center">Feel free to right-click anything and select "Inspect Element" to see color codes, fonts, etc. See the <a href="http://www.html5rocks.com/en/tutorials/developertools/part1/">Introduction to Chrome Developer Tools.</a></p>
-  <p class="center">View <a href="http://scratchtheme.com">the Scratch Theme website</a> for further documentation.</p>
+  <p class="center">To make visible changes to the Style Guide, you'll need to edit <a href="https://github.com/zackphilipps/scratch-theme/tree/master/assets/scss/config">the SCSS config files</a> and <a href="https://github.com/zackphilipps/scratch-theme/blob/master/page-style_guide.php">page-style_guide.php</a>. View <a href="http://scratchtheme.com">the Scratch Theme website</a> for further documentation.</p>
 </header>
 
 <main class="wrap hpad clearfix">
