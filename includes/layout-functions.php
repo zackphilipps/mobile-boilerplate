@@ -107,35 +107,35 @@ function six_columns($count) {
 function custom_columns($count) {
 
   $string = "custom-col";
-  
+
   if($count % 2 == 0) {
     $string .= " even";
   } else {
     $string .= " odd";
   }
-  
+
   if($count % 3 == 0) {
     $string .= " three-last";
   } elseif(($count - 1) % 3 == 0) {
     $string .= " three-first";
   }
-  
+
   if($count % 4 == 0) {
     $string .= " four-last";
   } elseif(($count - 1) % 4 == 0) {
     $string .= " four-first";
   }
-  
+
   return $string;
-  
+
 }
 
-function two_columns_flex($blocks, $count) {
-  $block_count = count($blocks);
-  if($block_count % 2 == 0) {
+function two_columns_flex($cells, $count) {
+  $cell_count = count($cells);
+  if($cell_count % 2 == 0) {
     return two_columns($count);
-  } elseif(($block_count - 1) % 2 == 0) {
-    if($count == $block_count) {
+  } elseif(($cell_count - 1) % 2 == 0) {
+    if($count == $cell_count) {
       return "twelvecol first";
     } else {
       return two_columns($count);
@@ -145,12 +145,12 @@ function two_columns_flex($blocks, $count) {
   }
 }
 
-function three_columns_flex($blocks, $count) {
-  $block_count = count($blocks);
-  if($block_count % 3 == 0) {
+function three_columns_flex($cells, $count) {
+  $cell_count = count($cells);
+  if($cell_count % 3 == 0) {
     return three_columns($count);
-  } elseif(($block_count + 1) % 3 == 0) {
-    if($count == $block_count || $count == ($block_count - 1)) {
+  } elseif(($cell_count + 1) % 3 == 0) {
+    if($count == $cell_count || $count == ($cell_count - 1)) {
       if(($count - 1) % 3 == 0) {
         return "sixcol first";
       } else {
@@ -159,8 +159,8 @@ function three_columns_flex($blocks, $count) {
     } else {
       return three_columns($count);
     }
-  } elseif(($block_count - 1) % 3 == 0) {
-    if($count == $block_count) {
+  } elseif(($cell_count - 1) % 3 == 0) {
+    if($count == $cell_count) {
       return "twelvecol first";
     } else {
       return three_columns($count);
@@ -170,14 +170,14 @@ function three_columns_flex($blocks, $count) {
   }
 }
 
-function four_columns_flex($blocks, $count) {
-  $block_count = count($blocks);
-  if($block_count % 4 == 0) {
+function four_columns_flex($cells, $count) {
+  $cell_count = count($cells);
+  if($cell_count % 4 == 0) {
     return four_columns($count);
-  } elseif(($block_count + 1) % 4 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2)) {
+  } elseif(($cell_count + 1) % 4 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2)) {
       if(($count - 1) % 4 == 0) {
         return "fourcol first";
       } elseif(($count - 2) % 4 == 0) {
@@ -188,8 +188,8 @@ function four_columns_flex($blocks, $count) {
     } else {
       return four_columns($count);
     }
-  } elseif(($block_count + 2) % 4 == 0) {
-    if($count == $block_count || $count == ($block_count - 1)) {
+  } elseif(($cell_count + 2) % 4 == 0) {
+    if($count == $cell_count || $count == ($cell_count - 1)) {
       if(($count - 1) % 4 == 0) {
         return "sixcol first";
       } else {
@@ -198,8 +198,8 @@ function four_columns_flex($blocks, $count) {
     } else {
       return four_columns($count);
     }
-  } elseif(($block_count - 1) % 4 == 0) {
-    if($count == $block_count) {
+  } elseif(($cell_count - 1) % 4 == 0) {
+    if($count == $cell_count) {
       return "twelvecol first";
     } else {
       return four_columns($count);
@@ -209,15 +209,15 @@ function four_columns_flex($blocks, $count) {
   }
 }
 
-function five_columns_flex($blocks, $count) {
-  $block_count = count($blocks);
-  if($block_count % 5 == 0) {
+function five_columns_flex($cells, $count) {
+  $cell_count = count($cells);
+  if($cell_count % 5 == 0) {
     return five_columns($count);
-  } elseif(($block_count + 1) % 5 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2) ||
-       $count == ($block_count - 3)) {
+  } elseif(($cell_count + 1) % 5 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2) ||
+       $count == ($cell_count - 3)) {
       if(($count - 1) % 5 == 0) {
         return "threecol first";
       } elseif(($count - 2) % 5 == 0 ||
@@ -229,10 +229,10 @@ function five_columns_flex($blocks, $count) {
     } else {
       return five_columns($count);
     }
-  } elseif(($block_count + 2) % 5 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2)) {
+  } elseif(($cell_count + 2) % 5 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2)) {
       if(($count - 1) % 4 == 0) {
         return "fourcol first";
       } elseif(($count - 2) % 4 == 0) {
@@ -243,9 +243,9 @@ function five_columns_flex($blocks, $count) {
     } else {
       return five_columns($count);
     }
-  } elseif(($block_count + 3) % 5 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1)) {
+  } elseif(($cell_count + 3) % 5 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1)) {
       if(($count - 1) % 5 == 0) {
         return "sixcol first";
       } else {
@@ -254,8 +254,8 @@ function five_columns_flex($blocks, $count) {
     } else {
       return five_columns($count);
     }
-  } elseif(($block_count - 1) % 5 == 0) {
-    if($count == $block_count) {
+  } elseif(($cell_count - 1) % 5 == 0) {
+    if($count == $cell_count) {
       return "twelvecol first";
     } else {
       return five_columns($count);
@@ -265,16 +265,16 @@ function five_columns_flex($blocks, $count) {
   }
 }
 
-function six_columns_flex($blocks, $count) {
-  $block_count = count($blocks);
-  if($block_count % 6 == 0) {
+function six_columns_flex($cells, $count) {
+  $cell_count = count($cells);
+  if($cell_count % 6 == 0) {
     return six_columns($count);
-  } elseif(($block_count + 1) % 6 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2) ||
-       $count == ($block_count - 3) ||
-       $count == ($block_count - 4)) {
+  } elseif(($cell_count + 1) % 6 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2) ||
+       $count == ($cell_count - 3) ||
+       $count == ($cell_count - 4)) {
       if(($count - 1) % 6 == 0) {
         return "twoptfourcol first";
       } elseif(($count - 2) % 5 == 0 ||
@@ -287,11 +287,11 @@ function six_columns_flex($blocks, $count) {
     } else {
       return six_columns($count);
     }
-  } elseif(($block_count + 2) % 6 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2) ||
-       $count == ($block_count - 3)) {
+  } elseif(($cell_count + 2) % 6 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2) ||
+       $count == ($cell_count - 3)) {
       if(($count - 1) % 6 == 0) {
         return "threecol first";
       } elseif(($count - 2) % 6 == 0 ||
@@ -303,10 +303,10 @@ function six_columns_flex($blocks, $count) {
     } else {
       return six_columns($count);
     }
-  } elseif(($block_count + 3) % 6 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1) ||
-       $count == ($block_count - 2)) {
+  } elseif(($cell_count + 3) % 6 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1) ||
+       $count == ($cell_count - 2)) {
       if(($count - 1) % 6 == 0) {
         return "fourcol first";
       } elseif(($count - 2) % 6 == 0) {
@@ -317,9 +317,9 @@ function six_columns_flex($blocks, $count) {
     } else {
       return six_columns($count);
     }
-  } elseif(($block_count + 4) % 6 == 0) {
-    if($count == $block_count ||
-       $count == ($block_count - 1)) {
+  } elseif(($cell_count + 4) % 6 == 0) {
+    if($count == $cell_count ||
+       $count == ($cell_count - 1)) {
       if(($count - 1) % 6 == 0) {
         return "sixcol first";
       } else {
@@ -328,8 +328,8 @@ function six_columns_flex($blocks, $count) {
     } else {
       return six_columns($count);
     }
-  } elseif(($block_count - 1) % 6 == 0) {
-    if($count == $block_count) {
+  } elseif(($cell_count - 1) % 6 == 0) {
+    if($count == $cell_count) {
       return "twelvecol first";
     } else {
       return six_columns($count);

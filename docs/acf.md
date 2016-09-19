@@ -22,9 +22,9 @@ Below are some examples of how to use these bad boys.
 ```
 <?php  
   $args = array(); // WP_Query arguments
-  scratch_layout_declare($args, 4); // build to 4 columns and fill the remaining space with the number of cells left over
-  global $blocks;
-  foreach($blocks as $post) {
+  $posts = get_posts($args);
+  scratch_layout_declare($posts, 4); // build to 4 columns and fill the remaining space with the number of cells left over
+  foreach($posts as $post) {
     setup_postdata($post);
     scratch_layout_start();
 ?>
@@ -40,7 +40,8 @@ Below are some examples of how to use these bad boys.
 
 ```
 <?php  
-  scratch_layout_declare('repeater', 4); // build to 4 columns and fill the remaining space with the number of cells left over
+  $repeater = get_field('repeater');
+  scratch_layout_declare($repeater, 4); // build to 4 columns and fill the remaining space with the number of cells left over
   while(has_sub_field('repeater')) {
     scratch_layout_start();
 ?>

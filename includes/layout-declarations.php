@@ -14,7 +14,7 @@ function scratch_row_start() {
 }
 
 function scratch_column_start() {
-  global $blocks, $column_count, $last, $twelvecol, $columns;
+  global $cells, $column_count, $last, $twelvecol, $columns;
   $class = scratch_column_class();
   echo '<div class="' . $class . ' column-' . $column_count . '">';
   $last = strpos($class, 'last');
@@ -38,7 +38,7 @@ function scratch_row_end() {
 }
 
 function scratch_column_class() {
-  global $blocks, $column_count, $columns, $flex, $offset;
+  global $cells, $column_count, $columns, $flex, $offset;
   switch($columns) {
     case 2:
       if($offset === '1:2') {
@@ -47,7 +47,7 @@ function scratch_column_class() {
         return two_columns_21($column_count);
       } else {
         if($flex === true) {
-          return two_columns_flex($blocks, $column_count);
+          return two_columns_flex($cells, $column_count);
         } else {
           return two_columns($column_count);
         }
@@ -62,7 +62,7 @@ function scratch_column_class() {
         return three_columns_211($column_count);
       } else {
         if($flex === true) {
-          return three_columns_flex($blocks, $column_count);
+          return three_columns_flex($cells, $column_count);
         } else {
           return three_columns($column_count);
         }
@@ -70,21 +70,21 @@ function scratch_column_class() {
       break;
     case 4:
       if($flex === true) {
-        return four_columns_flex($blocks, $column_count);
+        return four_columns_flex($cells, $column_count);
       } else {
         return four_columns($column_count);
       }
       break;
     case 5:
       if($flex === true) {
-        return five_columns_flex($blocks, $column_count);
+        return five_columns_flex($cells, $column_count);
       } else {
         return five_columns($column_count);
       }
       break;
     case 6:
       if($flex === true) {
-        return six_columns_flex($blocks, $column_count);
+        return six_columns_flex($cells, $column_count);
       } else {
         return six_columns($column_count);
       }
@@ -98,33 +98,8 @@ function scratch_column_class() {
   }
 }
 
-function scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = null) {
-  if(is_array($args)) {
-    $GLOBALS['blocks'] = get_posts($args);
-  } else {
-    if($option !== null) {
-      $GLOBALS['blocks'] = get_field($args, $option);
-    } else {
-      $GLOBALS['blocks'] = get_field($args);
-    }
-  }
-  $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
-  $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
-  $GLOBALS['columns'] = $columns;
-  $GLOBALS['flex'] = $flex;
-  $GLOBALS['offset'] = $offset;
-}
-
-function scratch_sub_layout_declare($args, $columns, $flex = true, $offset = null, $option = null) {
-  if(is_array($args)) {
-    $GLOBALS['blocks'] = get_posts($args);
-  } else {
-    if($option !== null) {
-      $GLOBALS['blocks'] = get_sub_field($args, $option);
-    } else {
-      $GLOBALS['blocks'] = get_sub_field($args);
-    }
-  }
+function scratch_layout_declare($cells, $columns, $flex = true, $offset = null) {
+  $GLOBALS['cells'] = $cells;
   $GLOBALS['row_count'] = $GLOBALS['column_count'] = 1;
   $GLOBALS['last'] = $GLOBALS['twelvecol'] = false;
   $GLOBALS['columns'] = $columns;

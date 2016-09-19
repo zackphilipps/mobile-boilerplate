@@ -9,7 +9,7 @@
     <?php
       $columns = get_sub_field('use_custom_columns') ? 'custom' : 4;
       $icon_or_image = get_sub_field('icon_or_image') === 'Icon' ? 'icon' : 'image';
-      scratch_sub_layout_declare('columns', $columns);
+      scratch_layout_declare(get_sub_field('columns'), $columns);
       while(has_sub_field('columns')):
         scratch_layout_start();
     ?>
