@@ -9,7 +9,7 @@ These screencasts pick up after you've set up your environment, set up your `wp-
 
 Open the MAMP start page, and then head over to phpMyAdmin. Click on the _Users_ tab, then scroll down and click _Add User._ Create a memorable username, strong password, and set the host to `localhost`. Check _Create database with same name and grant all privileges,_ then click _Go._
 
-Now, navigate to `localhost:xxxx` where `xxxx` is the web port you configured in MAMP's preferences. Complete the WordPress installation and log in.
+Now, navigate to the host you configured in MAMP. Complete the WordPress installation and log in. (You won't need to do this specific part if you ran `wp core install`.)
 
 ![Using MAMP to Complete the WordPress Installation](/assets/img/screencast2-slower.gif)
 
@@ -21,7 +21,7 @@ Once logged in to WordPress, navigate to _Appearance > Themes_ and activate Scra
 
 ## Running Grunt, BrowserSync, and Compiling SCSS and JavaScript
 
-Run `npm install` in the `assets/grunt/` directory from your command line to install all of the Node packages. Once that's done, you can run `grunt` from the same directory to begin your automated workflow.
+Run `npm install` in the `assets/grunt/` directory from your command line to install all of the Node packages. Make sure to [change your proxied host](https://github.com/zackphilipps/scratch-theme/blob/master/assets/grunt/Gruntfile.js#L94) for BrowserSync. Once that's done, you can run `grunt` from the same directory to begin your automated workflow.
 
 **Update:** as of [v1.5.9](https://github.com/zackphilipps/scratch-theme/tree/v1.5.9), Gulp is also available. Run `npm install` and then `gulp` in the `assets/gulp/` directory.
 
@@ -30,6 +30,8 @@ Run `npm install` in the `assets/grunt/` directory from your command line to ins
 ## Adding Scratch's Style Guide and Main Navigation Menu
 
 Navigate to _Appearance > Menus_ and click _Create Menu._ Make sure the menu points to the _Main Nav_ location, and then save it again. Next, go to _Pages > Add New_ and set the Page Template to _Style Guide._ Publish and view the page.
+
+**Update:** as of [v1.6.8](https://github.com/zackphilipps/scratch-theme/tree/v1.6.8), the pages and navigation menu are automatically generated on theme activation.
 
 ![Adding Scratch's Style Guide and Main Navigation Menu](/assets/img/screencast5.gif)
 
