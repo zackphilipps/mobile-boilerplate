@@ -106,15 +106,14 @@ If you had 7 _cells_ – _posts_ or _repeater rows_ – both of the above functi
 The full function to declare the layout looks like this (parameters below):
 
 ```
-scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = null)
+scratch_layout_declare($cells, $columns, $flex = true, $offset = null)
 ```
 
 ### Parameters
 
-#### $args
+#### $cells
 
-- (array) `WP_Query` arguments
-- (string) ACF `$field_name`
+- (array) Any array
 
 #### $columns
 
@@ -133,10 +132,6 @@ scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = 
   - `1:1:2`
   - `1:2:1`
   - `2:1:1`
-
-#### $option
-
-(mixed) ACF option, if any (`get_field($field_name, $option)`)
 
 ---
 
