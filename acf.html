@@ -317,12 +317,11 @@
   &lt;/div&gt; &lt;!-- /.column-3 --&gt;
 &lt;/div&gt; &lt;!-- /.row-2 --&gt;</code></pre>
 <p>The full function to declare the layout looks like this (parameters below):</p>
-<pre><code>scratch_layout_declare($args, $columns, $flex = true, $offset = null, $option = null)</code></pre>
+<pre><code>scratch_layout_declare($cells, $columns, $flex = true, $offset = null)</code></pre>
 <h3 id="parameters">Parameters</h3>
-<h4 id="args">$args</h4>
+<h4 id="cells">$cells</h4>
 <ul>
-<li>(array) <code>WP_Query</code> arguments</li>
-<li>(string) ACF <code>$field_name</code></li>
+<li>(array) Any array</li>
 </ul>
 <h4 id="columns">$columns</h4>
 <ul>
@@ -344,8 +343,6 @@
 <li><code>2:1:1</code></li>
 </ul></li>
 </ul>
-<h4 id="option">$option</h4>
-<p>(mixed) ACF option, if any (<code>get_field($field_name, $option)</code>)</p>
 <hr />
 <h2 id="layouts-page-template">Layouts Page Template</h2>
 <p>To play around with this, create a new page in WordPress and set its template to &quot;Layouts.&quot; With Scratch, you can now add robust layouts on the fly, including sliders, hero units, flexible columns, and more. In addition, you have full control over <code>parts/layouts/layout-*.php</code> and <code>_layouts.scss</code> for customization.</p>
