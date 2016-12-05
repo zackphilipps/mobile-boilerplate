@@ -25,7 +25,15 @@ gulp.task('images', function() {
 });
 
 gulp.task('javascript', function() {
-  return gulp.src(['../core/js/*.js', '../js/plugins.js', '../js/acf-google-maps.js', '../js/main.js'])
+  return gulp.src([
+    '../../node_modules/glidejs/dist/glide.js',
+    '../../node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    '../../node_modules/velocity-animate/velocity.js',
+    '../../node_modules/waypoints/lib/jquery.waypoints.js',
+    '../js/plugins.js',
+    '../js/acf-google-maps.js',
+    '../js/main.js'
+  ])
     .pipe($.concat('main.js', {
       newLine: ';'
     }))
@@ -56,7 +64,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
   gulp.watch(['../../**/*.html', '../../**/*.php']).on('change', browserSync.reload);
   gulp.watch(['../../../../uploads/**/*'], ['images']);
-  gulp.watch(['../js/*.js', '../js/vendor/*.js', '../core/js/*.js'], ['javascript']);
+  gulp.watch(['../js/*.js', '../js/vendor/*.js'], ['javascript']);
   gulp.watch(['../scss/**/*.scss', '../core/scss/**/*.scss'], ['styles']);
 });
 

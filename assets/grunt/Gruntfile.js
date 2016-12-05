@@ -19,7 +19,15 @@ module.exports = function(grunt) {
         options: {
           separator: ';'
         },
-        src: ['../core/js/*.js', '../js/plugins.js', '../js/acf-google-maps.js', '../js/main.js'], // add moar js here, but keep main.js last
+        src: [
+          '../../node_modules/glidejs/dist/glide.js',
+          '../../node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+          '../../node_modules/velocity-animate/velocity.js',
+          '../../node_modules/waypoints/lib/jquery.waypoints.js',
+          '../js/plugins.js',
+          '../js/acf-google-maps.js',
+          '../js/main.js'
+        ], // add moar js here, but keep main.js last
         dest: '../js/concat/main.js'
       }
     },
@@ -74,7 +82,7 @@ module.exports = function(grunt) {
         tasks: ['newer:imagemin']
       },
       js: {
-        files: ['../js/*.js', '../js/vendor/*.js', '../core/js/*.js'],
+        files: ['../js/*.js', '../js/vendor/*.js'],
         tasks: ['concat:js', 'uglify:js'],
         options: {
           interrupt: true

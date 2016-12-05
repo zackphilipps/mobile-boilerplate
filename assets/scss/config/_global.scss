@@ -14,7 +14,7 @@
 
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include line-height(1);
     // @include margin-bottom(1);
     // margin-left: auto;
@@ -122,7 +122,7 @@ figure.alignright {
 
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
 
     max-width: #{0.5 * $max-width + 'rem'};
 
@@ -166,7 +166,7 @@ small, .small {
   font-size: 70%;
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include line-height(0.5);
   }
 }
@@ -178,7 +178,7 @@ p, ul, ol {
   @include margin(0, 0, 1);
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin(0, 0, 1);
     margin-left: auto;
     margin-right: auto;
@@ -211,7 +211,7 @@ ul, ol {
 
 @include m {
   $leading-rem: $leading-rem-desktop;
-  @import 'config/mixins';
+  @import 'mixins';
 
   @if $paragraph-indent == true {
 
@@ -311,7 +311,7 @@ $headings: (
 @include m {
   $leading-rem: $leading-rem-desktop;
 
-  @import 'config/mixins';
+  @import 'mixins';
 
   @each $heading, $properties in $headings {
     #{$heading}, .#{$heading} {
@@ -327,7 +327,7 @@ h1 + h2, .h1 + .h2 {
   @include margin-top(1);
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(1);
   }
 }
@@ -341,7 +341,7 @@ h4 + h5,
   @include margin-top(0.5);
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(0.5);
   }
 }
@@ -350,7 +350,7 @@ h5 + h6, .h5 + .h6 {
   @include margin-top(-0.5);
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(-0.5);
   }
 }
@@ -427,7 +427,7 @@ img {
   margin-right: auto;
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(1);
     @include margin-bottom(1);
   }
@@ -442,7 +442,7 @@ iframe, object, embed {
   margin-right: auto;
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(1);
     @include margin-bottom(1);
   }
@@ -543,7 +543,7 @@ pre, .pre {
   @include margin-bottom(1);
   @include m {
     $leading-rem: $leading-rem-desktop;
-    @import 'config/mixins';
+    @import 'mixins';
     @include margin-top(1);
     @include margin-bottom(1);
   }
