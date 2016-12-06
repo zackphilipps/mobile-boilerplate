@@ -56,7 +56,7 @@ function scratch_setup() {
   }
 
   // assign menu location
-  $locations = get_theme_mod( 'nav_menu_locations' );
+  $locations = get_registered_nav_menus();
 
   if(!empty($locations))
   {
