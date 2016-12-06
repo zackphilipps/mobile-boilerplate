@@ -1,4 +1,4 @@
-/********************STANDARD MARKETING PAGE********************/
+/********************LAYOUTS********************/
 
 /* Base Styles */
 $circle-size: 160px;
@@ -21,7 +21,7 @@ $overlay-color: rgba($black, 0.4);
   border-radius: 50%;
 }
 
-.hero-unit, .flexible-columns, .staggered, .wysiwygs, .slider {
+.hero-unit, .flexible-columns, .staggered, .wysiwygs {
   .circle {
     width: $circle-size;
     height: $circle-size;
@@ -174,7 +174,7 @@ $overlay-color: rgba($black, 0.4);
   @media (min-width: 567px) {
     height: 500px;
   }
-  
+
   overflow: hidden;
 
   .glide__wrapper {
