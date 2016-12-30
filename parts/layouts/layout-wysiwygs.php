@@ -15,7 +15,8 @@
       } else {
         $offset = null;
       }
-      scratch_layout_declare(get_sub_field('wysiwygs'), 2, $offset);
+      $sub_field_count = count( (get_sub_field('wysiwygs') ) );
+      scratch_layout_declare(get_sub_field('wysiwygs'), $sub_field_count, $offset);
       while(has_sub_field('wysiwygs')) {
         scratch_layout_start();
           the_sub_field('wysiwyg');
