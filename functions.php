@@ -107,7 +107,7 @@ function scratch_login_stylesheet() { ?>
   <link rel="stylesheet"
         id="custom_wp_admin_css"
         href="<?php echo get_template_directory_uri() . '/assets/css/login.css?ver=' . filemtime(dirname(__FILE__) . '/assets/css/login.css'); ?>"
-        type="/textassets/css"
+        type="text/css"
         media="all" />
 <?php }
 add_action( 'login_enqueue_scripts', 'scratch_login_stylesheet' );
