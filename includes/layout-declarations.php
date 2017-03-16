@@ -27,9 +27,9 @@ function scratch_column_end() {
 }
 
 function scratch_row_end() {
-  global $row_count, $column_count, $last, $twelvecol, $columns;
+  global $cells, $flex, $row_count, $column_count, $last, $twelvecol, $columns;
   if($columns !== 'custom') {
-    if($last !== false || $twelvecol !== false) {
+    if($last !== false || $twelvecol !== false || $column_count === count($cells) && $flex === false) {
       echo '</div> <!-- /.row-' . $row_count . ' -->';
       $row_count++;
     }
