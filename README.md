@@ -10,7 +10,7 @@ Powerful automated workflow for WordPress + [Advanced Custom Fields](http://adva
 
 ## Features
 
-### Rapidize your development time and add robust layouts on-the-fly with the [Layouts Page Template](http://scratchtheme.com/docs/advanced/#layouts)
+### Rapidize your development time and add robust layouts on-the-fly with the [Layouts Page Template](http://scratchtheme.com/acf.html#layouts-page-template)
 
 ![Scratch's Layouts in action](http://scratchtheme.com/assets/img/marketing-page.gif)
 
